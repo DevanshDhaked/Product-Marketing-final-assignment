@@ -10,6 +10,11 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-25: Host iteration-a at /v2/
+
+- **Decision:** iteration-a is published on the `gh-pages` branch under `v2/` (https://devanshdhaked.github.io/Product-Marketing-final-assignment/v2/). The old site stays at the root for comparison until submission. Every absolute link in the content (meta tags, the LinkedIn first-comment links, the ad's printed address) points to `/v2/`, and the ad QR code was regenerated and decoded for `/v2/demo.html`. If the team later moves the new site to the root, these links and the QR code must change back.
+- **Hero:** the headline and the lede start at the same height (top aligned, trimmed to cap height).
+
 ## 2026-11-25: Concise content that still makes every point the brief asks for
 
 - **Principle:** shorter is better when every point the brief asks for is on the page with its reason. An old-vs-new review (`docs/handoffs/compare_report.md`) found seven points missing, and the user approved filling each with one or two sentences (about 130 words in all, `docs/handoffs/content_report.md`, `docs/handoffs/jargon_report.md`).
