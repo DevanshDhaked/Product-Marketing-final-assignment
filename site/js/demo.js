@@ -78,7 +78,7 @@
     if (answer === "none") {
       reply = took + " This card tells Sphyr you didn't work with " + p.first + " this fortnight, so it adds nothing to " + p.first + "'s record. The option is there so that people with nothing to rate don't have to make something up.";
     } else {
-      reply = took + " Your card goes into " + p.first + "'s record with the cards from " + p.others + " other colleagues, and " + p.first + " sees what you said without your name on it.";
+      reply = took + " Your card joins those from " + p.others + " other colleagues in " + p.first + "'s record, and " + p.first + " sees what you said without your name on it.";
       var resp = $(".fx-kpi .v", col);
       resp.textContent = Number(resp.textContent) + 1;
       var list = answer === "good" ? ".wt-tags" : ".wt-areas";
