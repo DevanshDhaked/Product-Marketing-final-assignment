@@ -32,6 +32,8 @@
 .before-after > div + div { border-left: 1px solid var(--border); padding-left: var(--s-8); }
 .before-after p { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.375rem, 1.1rem + 0.9vw, 1.75rem); line-height: 1.25; max-width: 32ch; }
 .before-after > div:first-child p { color: var(--text-muted); }
+/* The one accent (brand green, text-safe token) marks the payoff lines and the proof numbers. */
+.hero h1 em, .before-after > div + div p, .proof .v { color: var(--link); }
 @media (max-width: 760px) {
   .before-after { grid-template-columns: 1fr; }
   .before-after > div + div { border-left: 0; padding-left: 0; border-top: 1px solid var(--border); padding-top: var(--s-5); }
