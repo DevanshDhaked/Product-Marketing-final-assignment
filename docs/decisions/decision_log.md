@@ -10,6 +10,13 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-24: Gate 1a results
+
+- **Central message and positioning approved:** "The engagement ends. The evidence stays." with the vision and product lines in [positioning](../strategy/positioning.md). Condition: all copy must read as written by people. Run every piece of public copy through the `humanizer:humanizer` skill before it ships.
+- **Persona use approved:** the brief grades persona use, not a persona deliverable (brief lines 66, 129, 170, 330, 351). Kavya, Vikram and Meera stay an internal base that shapes copy, channel and call to action. They are named only in the propaganda strategy's audience section, not on a site page.
+- **Three LinkedIn posts approved** as mapped in [the deliverable map](../strategy/deliverable_map.md).
+- **Ad medium reopened:** the professor's class notes ([communication objectives](../brief/communication_objectives_notes.md)) define advertising as the push route where "money is involved". A free event poster would be word of mouth or PR, not an advertisement. The ad should be a small, paid, non-invasive placement. The exact placement is open until specific events or slots are verified with dates and prices.
+
 ## 2026-11-24: Segment definition confirmed, persona, ad medium, plan approved
 
 - **Segment:** the consulting definition below is confirmed by the team. It replaces the "proposed" status.
