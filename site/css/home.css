@@ -102,3 +102,6 @@
 .close p.manifesto { font-family: var(--font-display); font-weight: 500; font-size: clamp(2rem, 1.2rem + 3vw, 3.5rem); line-height: 1.12; letter-spacing: -0.015em; max-width: 20ch; }
 .close .accent { color: var(--link); font-style: italic; font-weight: 400; }
 .close .btn { margin-top: var(--s-6); }
+
+/* Nav anchors: land below the sticky nav. */
+#how, #partners, #pricing { scroll-margin-top: calc(var(--nav-h, 64px) + var(--s-5)); }

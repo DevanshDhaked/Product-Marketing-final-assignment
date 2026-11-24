@@ -73,7 +73,10 @@
 .circle { width: 100%; height: auto; display: block; }
 .circle .rbn { fill: none; stroke-width: 9; stroke-linecap: round; transition: opacity 200ms var(--ease); }
 .circle .core { fill: var(--surface); stroke: var(--border-strong); stroke-width: 1.5; }
-.circle .core-label { font: 700 13px var(--font); fill: var(--text); }
+/* 24 user units: at the narrowest desktop circle (scale 0.51 at 901 px) this renders at 12 px. The core grows to
+   r 72 so the word fits; it covers the strand ends as before. Phone hides the label (below). */
+.circle .core { r: 72px; }
+.circle .core-label { font: 700 24px var(--font); fill: var(--text); }
 .circle .grp-label { font: 700 17px var(--font); fill: var(--text); }
 /* Phone: the drawing shrinks to about 0.37, so labels grow to stay at 11px or more; the centre label goes
    (the caption says who is at the centre). */
