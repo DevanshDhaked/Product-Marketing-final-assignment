@@ -10,6 +10,14 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-25: Final pass layout and copy
+
+- **Pricing:** "What a pilot measures" moves out of the pilot card into a full-width row under both cards, beside "How we set the price", so opening it never leaves a dead area under the plan card. The pilot card gets its own row, "Results stay with your firm unless you agree to share them." Replaces the toggle placement in "Pricing section trimmed".
+- **Price figures:** set on the same scale as the proof numbers (40 to 56px). Reason: five pricing pages measured at 1280px put prices between 17 and 56px (median 38px); ours at 44px sat below the proof numbers on the same page.
+- **Hero:** one sentence per line; the headline size follows its column (about 58px at 1280).
+- **Course quotes:** the propaganda intro no longer quotes the course definition, and the ad's Medium row says "the course treats advertising as the route where money is spent" in place of the quoted class notes. Closes the open question in the entry below.
+- **"Anonymized" wording:** kept. Prototype labels match the product, and "comments are anonymized to the person rated" is scoped.
+
 ## 2026-11-25: Accent on the home page, gaming answer, no repeated proof line
 
 - **Accent:** the home page was too plain. The brand green (`--link`, the text-safe token) now marks the hero's "The evidence stays.", the "With Sphyr" statement and the three proof numbers. Still one accent family; the logo colours stay in the ribbon only.
