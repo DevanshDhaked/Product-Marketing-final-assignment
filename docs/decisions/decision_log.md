@@ -10,6 +10,10 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-25: Short deliverable pages
+
+- **Decision:** deliverable pages stay short. `ad.html` rationale about 200 to 250 words (it is about 530 now). `linkedin.html` keeps the full text of the three posts, but the notes around them shrink to one short line each for job, stage and call to action (the page is about 1,170 words now). The mockups carry the page; the reasoning supports it.
+
 ## 2026-11-25: Walkthrough card follows the pick
 
 - **Decision:** in `demo.html` the visitor fills the card for whichever consultant they picked (Tara or Nikhil), and the partner view and the ending change to match. Replaces the agent's design, where the card was always for Nikhil, which read as a bug.
