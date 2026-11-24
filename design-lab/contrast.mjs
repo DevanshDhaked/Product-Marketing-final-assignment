@@ -30,6 +30,8 @@ const pairs = [
   ["on-constructive-soft", "constructive-soft", TEXT],
   ["text", "avatar-blue", TEXT], ["text", "avatar-mint", TEXT], ["text", "avatar-amber", TEXT], ["text", "avatar-rose", TEXT], ["text", "avatar-violet", TEXT],
   ["text-muted", "stage-ground", TEXT],
+  ["text", "positive-soft", TEXT], ["text-muted", "positive-soft", TEXT], ["on-positive-soft", "surface-raised", TEXT],
+  ["text-muted", "constructive-soft", TEXT], ["text", "constructive-soft", TEXT],
   ["destructive", "bg", TEXT], ["destructive", "surface", TEXT],
   ["border-strong", "bg", UI], ["border-strong", "surface", UI],
   ["focus", "bg", UI], ["focus", "surface", UI],

@@ -41,7 +41,7 @@
 <main>
   <div class="wrap lab-intro">
     <h1>Product views</h1>
-    <p class="lede" style="margin-top:var(--s-4)">Real screens from the Sphyr prototype, rebuilt in HTML and cropped to the part that carries the point. Layout, labels and microcopy follow the prototype. People, roles and team names are neutral placeholders until the persona copy is final.</p>
+    <p class="lede" style="margin-top:var(--s-4)">Real screens from the Sphyr prototype, rebuilt in HTML and cropped to the part that carries the point. Layout, labels and microcopy follow the prototype. People, roles and team names are neutral placeholders, as the message guideline asks.</p>
   </div>
 
   <!-- 1. Feedback card: home hero or walkthrough. Interactive: the three answers switch step 2. -->
@@ -68,18 +68,18 @@
                 <div class="fx-step-head"><b>What stood out?</b><span>Select all that apply.</span></div>
                 <span class="fx-team-tag">Engagement team VBAs</span>
                 <div class="fx-vba">
-                  <div><h4>Values</h4><div class="chips"><span class="chip">Transparency</span><span class="chip on">Customer First</span><span class="chip">Innovation</span></div></div>
-                  <div><h4>Behaviors</h4><div class="chips"><span class="chip">Punctual</span><span class="chip">Respectful</span><span class="chip on">Stakeholder-centric</span></div></div>
-                  <div><h4>Attitudes</h4><div class="chips"><span class="chip on">Takes Initiative</span><span class="chip">Solution-oriented</span><span class="chip">Resilient</span></div></div>
+                  <div><div class="fx-vba-h">Values</div><div class="chips"><span class="chip">Transparency</span><span class="chip on">Customer First</span><span class="chip">Innovation</span></div></div>
+                  <div><div class="fx-vba-h">Behaviors</div><div class="chips"><span class="chip">Punctual</span><span class="chip">Respectful</span><span class="chip on">Stakeholder-centric</span></div></div>
+                  <div><div class="fx-vba-h">Attitudes</div><div class="chips"><span class="chip on">Takes Initiative</span><span class="chip">Solution-oriented</span><span class="chip">Resilient</span></div></div>
                 </div>
               </div>
               <div class="fx-step fx-step-improve">
                 <div class="fx-step-head"><b>Where did you experience friction?</b><span>Choose the clearest signals. Your response is anonymized.</span></div>
                 <span class="fx-team-tag">Engagement team VBAs</span>
                 <div class="fx-vba">
-                  <div><h4>Values</h4><div class="chips"><span class="chip on">Share context earlier</span><span class="chip">Consider customer impact</span></div></div>
-                  <div><h4>Behaviors</h4><div class="chips"><span class="chip">Improve punctuality</span><span class="chip">Respond more consistently</span><span class="chip on">Resolve dependencies sooner</span></div></div>
-                  <div><h4>Attitudes</h4><div class="chips"><span class="chip">Take greater ownership</span><span class="chip">Stay open to feedback</span></div></div>
+                  <div><div class="fx-vba-h">Values</div><div class="chips"><span class="chip on">Share context earlier</span><span class="chip">Consider customer impact</span></div></div>
+                  <div><div class="fx-vba-h">Behaviors</div><div class="chips"><span class="chip">Improve punctuality</span><span class="chip">Respond more consistently</span><span class="chip on">Resolve dependencies sooner</span></div></div>
+                  <div><div class="fx-vba-h">Attitudes</div><div class="chips"><span class="chip">Take greater ownership</span><span class="chip">Stay open to feedback</span></div></div>
                 </div>
               </div>
             </div>
@@ -138,10 +138,10 @@
     <div class="wrap">
       <div class="spec-head">
         <h2>What a manager sees</h2>
-        <p>For the home page or how-it-works. The prototype's Team Insights screen: team score and participation, then standouts and members needing support. No satellite here: any card over this window would cover a name or a score.</p>
+        <p>For the home page or how-it-works. The prototype's Team Insights screen: team score and participation, how the last cycle's ratings split, and anonymized comments about the team. It shows the team, not ranked people: the message guideline rules out the "Members Needing Support" list and any screen that names a low performer.</p>
       </div>
       <figure class="figure">
-        <div class="stage fx-flow fx-team" role="img" aria-label="Sample manager team insights screen from the Sphyr prototype: team score 82, participation 96 percent, 3 edit requests; two top performing members and two members needing support with their feedback tags.">
+        <div class="stage fx-flow fx-team" role="img" aria-label="Sample manager team insights screen from the Sphyr prototype: team score 82, participation 96 percent, 3 edit requests; last-cycle ratings 68 percent positive, 21 percent no interaction, 11 percent could improve; two anonymized comments about the team.">
           <div class="fx-window fx-fade" aria-hidden="true">
             <div class="fx-eyebrow">Manager view</div>
             <div class="fx-title">Team Insights</div>
@@ -153,14 +153,19 @@
             </div>
             <div class="fx-standouts">
               <div class="fx-list">
-                <div class="fx-list-head"><svg class="icon"><use href="assets/icons.svg#i-award"/></svg>Top Performing Members</div>
-                <div class="fx-member"><span class="fx-avatar av-mint">MA</span><div><div class="fx-name">Member A</div><div class="fx-meta">Consultant</div><div class="chips"><span class="chip chip-positive">Did a good job</span><span class="chip chip-positive">Was helpful</span></div></div><span class="score">86</span></div>
-                <div class="fx-member"><span class="fx-avatar av-blue">MB</span><div><div class="fx-name">Member B</div><div class="fx-meta">Senior consultant</div><div class="chips"><span class="chip chip-positive">Took initiative</span><span class="chip chip-positive">Met targets</span></div></div><span class="score">82</span></div>
+                <div class="fx-list-head">Rating distribution</div>
+                <div class="fx-dist">
+                  <p class="fx-meta">Aggregated last-cycle responses</p>
+                  <div class="fx-dist-row"><svg class="icon"><use href="assets/icons.svg#i-thumbs-up"/></svg><span>Positive</span><b>68%</b><i class="fx-track"><i style="width:68%;background:var(--chart-1)"></i></i></div>
+                  <div class="fx-dist-row"><svg class="icon"><use href="assets/icons.svg#i-circle-minus"/></svg><span>No interaction</span><b>21%</b><i class="fx-track"><i style="width:21%;background:var(--neutral-state)"></i></i></div>
+                  <div class="fx-dist-row"><svg class="icon"><use href="assets/icons.svg#i-thumbs-down"/></svg><span>Could improve</span><b>11%</b><i class="fx-track"><i style="width:11%;background:var(--constructive)"></i></i></div>
+                </div>
               </div>
-              <div class="fx-list support">
-                <div class="fx-list-head support"><svg class="icon"><use href="assets/icons.svg#i-trending-up"/></svg>Members Needing Support</div>
-                <div class="fx-member"><span class="fx-avatar av-amber">MC</span><div><div class="fx-name">Member C</div><div class="fx-meta">Analyst</div><div class="chips"><span class="chip chip-constructive">Delayed my work</span><span class="chip chip-constructive">Was unresponsive</span></div></div><span class="score">76</span></div>
-                <div class="fx-member"><span class="fx-avatar av-rose">MD</span><div><div class="fx-name">Member D</div><div class="fx-meta">Associate</div><div class="chips"><span class="chip chip-constructive">Missed work or meetings</span><span class="chip chip-constructive">Delayed my work</span></div></div><span class="score">79</span></div>
+              <div class="fx-list fx-team-fb">
+                <div class="fx-list-head"><svg class="icon"><use href="assets/icons.svg#i-message-square-text"/></svg>Anonymized team feedback</div>
+                <div class="fx-dist"><p class="fx-meta">Last cycle · Latest first</p></div>
+                <div class="fx-fb-item"><div class="fx-fb-label"><span>Anonymized Feedback</span><span>Jul 25</span></div><p class="fx-fb-text">"The team stayed calm under pressure and protected quality through a difficult release."</p></div>
+                <div class="fx-fb-item"><div class="fx-fb-label"><span>Anonymized Feedback</span><span>Jul 22</span></div><p class="fx-fb-text">"Dependency risks need to be surfaced earlier, especially when another team owns the handoff."</p></div>
               </div>
             </div>
             <div class="fx-filler"><span class="fx-bar" style="width:38%"></span><span class="fx-bar" style="width:72%"></span><span class="fx-bar" style="width:55%"></span></div>
@@ -204,7 +209,7 @@
     <div class="wrap">
       <div class="spec-head">
         <h2>Edit approvals, shown honestly</h2>
-        <p>For the trust page. The whole card, not a crop, because it shows the one place where a manager sees who gave feedback to whom. The caption says so in plain words.</p>
+        <p>For the trust page. The whole card, not a crop, because it shows the manager who gave feedback to whom. The caption says so in plain words.</p>
       </div>
       <figure class="figure slot-md">
         <div class="stage fx-approvals" role="img" aria-label="Sample feedback edit approvals card from the Sphyr prototype. Each request shows who gave the feedback, who it was given to, the reason for the edit, and Reject and Approve buttons.">

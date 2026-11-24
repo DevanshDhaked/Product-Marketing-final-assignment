@@ -4,7 +4,7 @@
    Placement and copy rules: docs/design/faux_ui.md. */
 
 /* The figure around a stage is the size container, so the stage itself can switch design. */
-.figure { container-type: inline-size; }
+.figure:has(> .stage) { container-type: inline-size; }
 
 /* The stage is the shot: a rounded well that masks everything. Size queries switch to the compact design. */
 .stage { position: relative; overflow: hidden; border-radius: var(--r-surface); background: var(--stage-ground); font-size: 14px; line-height: 1.45; color: var(--text); }
@@ -52,11 +52,23 @@
 .fx-step-head span { font-size: 12px; color: var(--text-muted); }
 .fx-team-tag { display: inline-block; margin-top: 8px; font-size: 11.5px; font-weight: 700; color: var(--on-positive-soft); background: var(--positive-soft); padding: 2px 8px; border-radius: var(--r-pill); }
 .fx-vba { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
-.fx-vba h4 { margin: 0 0 6px; font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); }
+.fx-vba-h { margin: 0 0 6px; font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); }
 .fx-vba .chips { gap: 6px; }
 .fx-vba .chip { white-space: nowrap; min-height: 26px; padding: 0 10px; font-size: 12px; font-weight: 600; background: var(--surface); box-shadow: inset 0 0 0 1px var(--border); }
 .fx-vba .chip.on { background: var(--positive-soft); color: var(--on-positive-soft); box-shadow: inset 0 0 0 1px var(--brand); }
 .fx-step-improve .chip.on { background: var(--constructive-soft); color: var(--on-constructive-soft); box-shadow: inset 0 0 0 1px var(--constructive); }
+
+/* Team-level panels (prototype team insights): rating distribution and anonymized team feedback. */
+.fx-dist { padding: 12px 16px 14px; }
+.fx-dist .fx-meta { margin: 0 0 10px; }
+.fx-dist-row { display: grid; grid-template-columns: 18px 1fr auto; align-items: center; gap: 4px 10px; font-size: 13px; font-weight: 600; }
+.fx-dist-row + .fx-dist-row { margin-top: 12px; }
+.fx-dist-row .icon { color: var(--text-muted); }
+.fx-dist-row b { font-variant-numeric: tabular-nums; }
+.fx-track { grid-column: 1 / -1; display: block; height: 6px; border-radius: 3px; background: var(--surface-sunk); overflow: hidden; }
+.fx-track > i { display: block; height: 100%; border-radius: 3px; }
+.fx-fb-item { padding: 10px 16px 12px; border-top: 1px solid var(--border); }
+.fx-team-fb .fx-dist { padding-bottom: 6px; }
 
 /* Composition: feedback frame. Card in flow (the stage grows with it), cut by the stage's bottom edge
    inside its own padding; the satellite straddles the card's top edge over the empty side of its header row. */
@@ -121,17 +133,11 @@
   .fx-insights .fx-card { padding-bottom: 150px; }
 }
 
-/* Standouts (prototype team insights) */
+/* Two-panel row and list panels (prototype team insights) */
 .fx-standouts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
 .fx-list { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-surface); overflow: hidden; }
 .fx-list-head { display: flex; align-items: center; gap: 8px; padding: 12px 16px; font-weight: 700; border-bottom: 1px solid var(--border); }
 .fx-list-head .icon { color: var(--brand); }
-.fx-list-head.support .icon { color: var(--constructive); }
-.fx-member { display: grid; grid-template-columns: 36px 1fr auto; gap: 12px; padding: 12px 16px; }
-.fx-member + .fx-member { border-top: 1px solid var(--border); }
-.fx-member .score { font-weight: 700; font-variant-numeric: tabular-nums; }
-.fx-member .chips { margin-top: 8px; gap: 6px; }
-.fx-member .chip { white-space: nowrap; min-height: 24px; font-size: 11.5px; padding: 0 9px; }
 .fx-radar { display: block; width: 100%; height: auto; }
 .fx-radar .web { fill: none; stroke: var(--border); }
 .fx-radar .org { fill: var(--chart-2); fill-opacity: .14; stroke: var(--chart-2); stroke-width: 1.5; }
@@ -140,13 +146,13 @@
 .fx-legend { display: flex; gap: 14px; font-size: 12px; color: var(--text-muted); margin-top: 4px; }
 .fx-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
 
-/* Team: the window alone, whole across, faded at its foot over a filler card. No satellite:
-   a card over this window would cover names or scores. The benchmark radar is its own frame. */
+/* Team: the window alone, whole across, faded at its foot over a filler card. Team-level panels only,
+   never ranked people (message guideline, visual rules). The benchmark radar is its own frame. */
 @container (max-width: 600px) {
   .fx-team .fx-kpis { grid-template-columns: 1fr 1fr; }
   .fx-team .fx-kpi:nth-child(3) { display: none; }
   .fx-team .fx-standouts { grid-template-columns: 1fr; }
-  .fx-team .fx-list.support { display: none; }
+  .fx-team .fx-team-fb .fx-fb-item + .fx-fb-item { display: none; }
 }
 
 /* Benchmark: the radar card whole in a well, sized for a column beside copy. */
