@@ -1,115 +1,277 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Sphyr 2-minute walkthrough</title>
-<link rel="stylesheet" href="style.css">
-<meta name="description" content="Play a founder before a promotion round: fill one five-click card, then see the pooled view. Two minutes, no sign-up, sample data.">
-<link rel="icon" type="image/svg+xml" href="sphere.svg">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem("sphyr-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}document.documentElement.classList.add("js")</script>
+<link rel="preload" href="fonts/manrope-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/newsreader-display-normal-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/demo.css">
+<link rel="icon" href="assets/sphyr-logo.svg" type="image/svg+xml">
+
+<title>The 2-minute walkthrough | Sphyr</title>
+<meta name="description" content="Pick a consultant to promote, fill one Sphyr card and see what partners would see. Sample data, fictional people, no sign-up.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sphyr">
-<meta property="og:title" content="Sphyr 2-minute walkthrough">
-<meta property="og:description" content="Play a founder before a promotion round: fill one five-click card, then see the pooled view. Two minutes, no sign-up, sample data.">
+<meta property="og:title" content="The 2-minute walkthrough | Sphyr">
+<meta property="og:description" content="Pick a consultant to promote, fill one Sphyr card and see what partners would see. Sample data, fictional people, no sign-up.">
 <meta property="og:url" content="https://devanshdhaked.github.io/Product-Marketing-final-assignment/demo.html">
-<meta property="og:image" content="https://devanshdhaked.github.io/Product-Marketing-final-assignment/og.png">
+<meta property="og:image" content="https://devanshdhaked.github.io/Product-Marketing-final-assignment/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-
-<style>
-  .step { display: none; } .step.on { display: block; }
-  .progress { display: flex; gap: 6px; margin-bottom: 32px; } .progress i { flex: 1; height: 4px; background: var(--line); border-radius: 2px; } .progress i.on { background: var(--accent-hi); }
-  .cand { cursor: pointer; text-align: left; font: inherit; color: inherit; width: 100%; }
-  .cand:hover { border-color: var(--accent-hi); }
-  .bars td:nth-child(2), .bars td:nth-child(3) { width: 34%; }
-  .bar { height: 10px; border-radius: 5px; background: var(--accent-hi); } .bar.k { background: #6b7781; }
-  .bars .v { font: 600 13px var(--mono); color: var(--muted); }
-</style>
 </head>
 <body>
-<header class="nav"><div class="wrap"><a class="logo" href="index.html"><i></i>Sphyr</a><nav><a href="how-it-works.html">How it works</a><a href="demo.html" aria-current="page">Walkthrough</a><a href="pricing.html">Pricing</a><a href="trust.html">Trust</a></nav><a class="nav-deliv" href="deliverables.html">Deliverables (4)</a></div></header>
+<a class="skip" href="#main">Skip to content</a>
 
-<main><section class="hero" style="border:0"><div class="wrap narrow">
-  <span class="label">Sample data · fictional people and company</span>
-  <div class="progress" style="margin-top:20px"><i class="on"></i><i></i><i></i><i></i></div>
-
-  <div class="step on" id="s1">
-    <span class="eyebrow">Step 1 of 4 · You're the founder</span>
-    <h2>Promotion round next week. One senior engineer slot.</h2>
-    <p class="lede">Your company has 180 people now. You signed off every promotion when it was 30. Two names are on your desk. Who gets it?</p>
-    <div class="grid g2" style="margin-top:28px">
-      <button class="card cand" data-pick="Karan"><div class="who" style="display:flex;gap:12px;align-items:center"><div class="av">KM</div><b>Karan M.</b></div><p class="small">Manager's note: "Runs every sprint demo. Very visible. Clients know him."</p></button>
-      <button class="card cand" data-pick="Priya"><div class="who" style="display:flex;gap:12px;align-items:center"><div class="av">PR</div><b>Priya R.</b></div><p class="small">Manager's note: "Solid. Quiet. Gets things done."</p></button>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><svg class="mark mark--mono" viewBox="0 0 1254 1254" aria-hidden="true"><use href="assets/sphyr-mark.svg#mark"/></svg>Sphyr</a>
+    <nav class="nav-links" aria-label="Main">
+      <a class="nav-wide" href="index.html#how">How it works</a>
+      <a class="nav-wide" href="index.html#partners">For partners</a>
+      <a class="nav-wide" href="index.html#pricing">Pricing</a>
+      <a href="deliverables.html">Deliverables</a>
+    </nav>
+    <div class="nav-end">
+      <a class="btn btn-primary" href="demo.html">See the 2-minute walkthrough</a>
+      <button class="nav-menu-btn" type="button" popovertarget="nav-menu" aria-controls="nav-menu" aria-expanded="false">Menu<svg class="icon icon-sm" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"/></svg></button>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Dark theme">
+        <svg class="icon icon-sm" aria-hidden="true"><use href="assets/icons.svg#i-moon"/></svg><span class="track" aria-hidden="true"><span class="knob"></span></span>
+      </button>
     </div>
   </div>
+  <nav id="nav-menu" class="nav-menu" popover aria-label="Menu">
+    <ul>
+      <li><a href="index.html#how">How it works</a></li>
+      <li><a href="index.html#partners">For partners</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="deliverables.html">Deliverables</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <div class="step" id="s2">
-    <span class="eyebrow">Step 2 of 4 · Now be a reviewer</span>
-    <h2>This is what everyone around Priya does, every fortnight.</h2>
-    <p class="lede">Fill one card. It takes about five clicks.</p>
-    <div class="fcard" style="margin-top:24px">
-      <div class="body">
-        <div class="who"><div class="av">PR</div><div><b>Priya R.</b><div class="small">Backend engineer · in your Sphere</div></div></div>
-        <div class="q">1 · How was working with Priya this fortnight?</div>
-        <div class="stars"><button data-v="1">1</button><button data-v="2">2</button><button data-v="3">3</button><button data-v="4">4</button><button data-v="5">5</button></div>
-        <div class="q">2 · What stood out?</div>
-        <div class="tags"><button>Ownership</button><button>Quality of work</button><button>On-time delivery</button><button>Unblocks others</button><button>Teamwork</button></div>
-        <div class="q">3 · Anything to add? (optional)</div>
-        <textarea placeholder="Anonymous. Released later, in a batch."></textarea>
-        <div class="foot"><span class="clicks">0 clicks</span><button class="btn btn-p send">Send anonymously</button></div>
+<main id="main">
+
+<section class="section wt-intro">
+  <div class="wrap"><div class="doc">
+    <h1>The 2-minute walkthrough</h1>
+    <p class="lede">You pick a consultant to promote and fill in one card for a colleague. Then you see the record partners would have open when they decide, with no sign-up needed.</p>
+    <p class="sample-label"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-info"/></svg>Sample data, fictional people. Tara and Nikhil are an example, not real consultants. Nothing you choose or type here leaves this page.</p>
+    <ol class="wt-progress" aria-label="Walkthrough progress">
+      <li data-mark="1">Pick someone</li>
+      <li data-mark="2">Fill one card</li>
+      <li data-mark="3">See what partners see</li>
+      <li data-mark="4">What it adds up to</li>
+    </ol>
+  </div></div>
+</section>
+
+<section class="section wt-step" id="step-1" aria-labelledby="h-step-1">
+  <div class="wrap split wt-split">
+    <div class="stack">
+      <h2 id="h-step-1" tabindex="-1">A promotion round is coming, with one senior consultant slot</h2>
+      <p>You're one of the partners deciding. Two consultants from the practice are up, and this is what you remember of each.</p>
+      <p class="wt-reply" id="reply-1" aria-live="polite"></p>
+    </div>
+    <fieldset class="wt-picks">
+      <legend class="visually-hidden">Who would you promote?</legend>
+      <p class="wt-legend" aria-hidden="true">Who would you promote?</p>
+      <label class="wt-pick">
+        <input type="radio" name="wt-pick" value="tara">
+        <span class="wt-pick-body">
+          <span class="wt-person"><span class="fx-avatar av-amber" aria-hidden="true">TM</span><span><b>Tara Menon</b><span class="muted">Consultant</span></span></span>
+          <span class="wt-memory">She presented the findings to the client's leadership on your last two engagements, so you've seen her work up close.</span>
+        </span>
+      </label>
+      <label class="wt-pick">
+        <input type="radio" name="wt-pick" value="nikhil">
+        <span class="wt-pick-body">
+          <span class="wt-person"><span class="fx-avatar av-blue" aria-hidden="true">NR</span><span><b>Nikhil Rao</b><span class="muted">Consultant</span></span></span>
+          <span class="wt-memory">He was on the same two engagements. You rarely saw him in client meetings and couldn't say much about what he did.</span>
+        </span>
+      </label>
+    </fieldset>
+  </div>
+</section>
+
+<section class="section wt-step wt-locked" id="step-2" aria-labelledby="h-step-2">
+  <div class="wrap split wt-split wt-split-card">
+    <div class="stack">
+      <h2 id="h-step-2" tabindex="-1">Now fill in one card the way Nikhil's colleagues do</h2>
+      <p>Every two weeks, each person in a consultant's circle fills in a short card about them. Imagine you were on Nikhil's engagement team this fortnight.</p>
+      <p class="wt-reply" id="reply-2" aria-live="polite"></p>
+    </div>
+    <figure class="figure">
+      <div class="stage fx-feedback wt-card" role="group" aria-label="Sample feedback card from the Sphyr prototype">
+        <div class="fx-panel fx-hero-card">
+          <div class="fx-person"><span class="fx-avatar av-blue" aria-hidden="true">NR</span><div><div class="fx-name">Nikhil Rao</div><div class="fx-meta">Consultant · Peers</div></div></div>
+          <div class="fx-body" id="card-body">
+            <fieldset class="fx-fieldset">
+              <legend class="fx-q">How was your experience with Nikhil Rao this fortnight?</legend>
+              <div class="fx-tiles">
+                <label><input class="fx-opt" type="radio" name="wt-exp" value="good"><span class="fx-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-smile"/></svg><b>Was good</b><span>Great interaction</span></span></label>
+                <label><input class="fx-opt" type="radio" name="wt-exp" value="improve"><span class="fx-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-frown"/></svg><b>Could improve</b><span>Some friction</span></span></label>
+                <label><input class="fx-opt" type="radio" name="wt-exp" value="none"><span class="fx-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-minus"/></svg><b>No interaction</b><span>Nothing to review</span></span></label>
+              </div>
+            </fieldset>
+            <fieldset class="fx-fieldset fx-step fx-step-good">
+              <legend class="fx-step-head"><b>What stood out?</b> <span>Select all that apply.</span></legend>
+              <span class="fx-team-tag">Engagement team VBAs</span>
+              <div class="fx-vba">
+                <div><div class="fx-vba-h">Values</div><div class="chips"><label class="wt-tag"><input type="checkbox" value="Transparency"><span class="chip">Transparency</span></label><label class="wt-tag"><input type="checkbox" value="Customer First"><span class="chip">Customer First</span></label><label class="wt-tag"><input type="checkbox" value="Innovation"><span class="chip">Innovation</span></label></div></div>
+                <div><div class="fx-vba-h">Behaviors</div><div class="chips"><label class="wt-tag"><input type="checkbox" value="Punctual"><span class="chip">Punctual</span></label><label class="wt-tag"><input type="checkbox" value="Respectful"><span class="chip">Respectful</span></label><label class="wt-tag"><input type="checkbox" value="Stakeholder-centric"><span class="chip">Stakeholder-centric</span></label></div></div>
+                <div><div class="fx-vba-h">Attitudes</div><div class="chips"><label class="wt-tag"><input type="checkbox" value="Takes Initiative"><span class="chip">Takes Initiative</span></label><label class="wt-tag"><input type="checkbox" value="Solution-oriented"><span class="chip">Solution-oriented</span></label><label class="wt-tag"><input type="checkbox" value="Resilient"><span class="chip">Resilient</span></label></div></div>
+              </div>
+            </fieldset>
+            <fieldset class="fx-fieldset fx-step fx-step-improve">
+              <legend class="fx-step-head"><b>Where did you experience friction?</b> <span>Choose the clearest signals. Your response is anonymized.</span></legend>
+              <span class="fx-team-tag">Engagement team VBAs</span>
+              <div class="fx-vba">
+                <div><div class="fx-vba-h">Values</div><div class="chips"><label class="wt-tag"><input type="checkbox" value="Share context earlier"><span class="chip">Share context earlier</span></label><label class="wt-tag"><input type="checkbox" value="Consider customer impact"><span class="chip">Consider customer impact</span></label></div></div>
+                <div><div class="fx-vba-h">Behaviors</div><div class="chips"><label class="wt-tag"><input type="checkbox" value="Improve punctuality"><span class="chip">Improve punctuality</span></label><label class="wt-tag"><input type="checkbox" value="Respond more consistently"><span class="chip">Respond more consistently</span></label><label class="wt-tag"><input type="checkbox" value="Resolve dependencies sooner"><span class="chip">Resolve dependencies sooner</span></label></div></div>
+                <div><div class="fx-vba-h">Attitudes</div><div class="chips"><label class="wt-tag"><input type="checkbox" value="Take greater ownership"><span class="chip">Take greater ownership</span></label><label class="wt-tag"><input type="checkbox" value="Stay open to feedback"><span class="chip">Stay open to feedback</span></label></div></div>
+              </div>
+            </fieldset>
+            <details class="fx-step wt-comment">
+              <summary class="fx-btn"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-message-square-text"/></svg>Add a comment</summary>
+              <label class="wt-comment-label" for="wt-text">Let Nikhil know what's on your mind?</label>
+              <p class="fx-meta" id="wt-text-help">Your comments and review are always anonymized.</p>
+              <textarea id="wt-text" maxlength="400" rows="3" placeholder="Share a helpful example or context…" aria-describedby="wt-text-help wt-count"></textarea>
+              <p class="fx-meta wt-count" id="wt-count">0/400</p>
+            </details>
+            <div class="wt-actions"><button class="fx-btn primary" type="button" id="wt-submit" disabled>Submit</button></div>
+          </div>
+          <div class="fx-body wt-done" id="card-done" hidden>
+            <div class="fx-vba-h">Submitted</div>
+            <div class="fx-row-title">Completed Feedback This Fortnight</div>
+            <div class="wt-done-row"><span class="fx-avatar av-blue" aria-hidden="true">NR</span><div><div class="fx-name">Nikhil Rao</div><div class="fx-meta">Submitted · Read only</div></div><svg class="icon" aria-hidden="true"><use id="done-icon" href="assets/icons.svg#i-smile"/></svg></div>
+          </div>
+        </div>
+        <div class="fx-sat fx-private">
+          <div class="fx-row-title"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-lock"/></svg>Private by design</div>
+          <p>Individual responses are normalized and grouped before anyone sees them.</p>
+        </div>
       </div>
-      <div class="done"><p><b><span class="clicks-final"></span> clicks.</b> Pooled with everyone else's…</p></div>
+      <figcaption><span class="sample-label"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-info"/></svg>Prototype screen. Sample data, fictional people.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section wt-step wt-locked" id="step-3" aria-labelledby="h-step-3">
+  <div class="wrap">
+    <div class="doc stack">
+      <h2 id="h-step-3" tabindex="-1">What partners see for both of them</h2>
+      <p>This is Sphyr's Member Insights view after six cycles of cards, about 12 weeks, from the 14 people in each consultant's circle. Nikhil's cards came from 13 of the 14 people in his circle, against 10 for Tara. The tags they picked most for him were Takes Initiative and Solution-oriented.</p>
+    </div>
+    <figure class="figure wt-figure">
+      <div class="stage wt-insights" role="group" aria-label="Sample Member Insights screen from the Sphyr prototype, showing Tara Menon and Nikhil Rao">
+        <div class="fx-window">
+          <div class="wt-head">
+            <div>
+              <div class="fx-eyebrow">Manager view</div>
+              <div class="fx-title">Member Insights</div>
+              <p class="fx-sub">Review individual performance signals, comparisons, feedback, and improvement areas.</p>
+            </div>
+            <div class="wt-period"><span class="fx-meta">Review period</span><span class="wt-seg"><span>Last Cycle</span><span class="on">All Cycles</span></span><span class="fx-delta">6 cycles</span></div>
+          </div>
+          <div class="wt-cols">
+            <section class="wt-col" aria-label="Tara Menon">
+              <div class="wt-colhead"><span class="fx-avatar av-amber" aria-hidden="true">TM</span><div><div class="fx-name">Tara Menon</div><div class="fx-meta">Consultant</div></div></div>
+              <div class="fx-kpi"><div class="k">Responses received</div><div class="v">65</div><div class="d">From 10 collaborators</div></div>
+              <div class="fx-card">
+                <div class="fx-card-head"><div><b>Top feedback received</b><p>Most frequent positive anonymized signals</p></div></div>
+                <ul class="wt-tags">
+                  <li><span>Stakeholder-centric</span><b class="num">31</b><span class="fx-track"><i style="--w:.62"></i></span></li>
+                  <li><span>Customer First</span><b class="num">27</b><span class="fx-track"><i style="--w:.54"></i></span></li>
+                  <li><span>Respectful</span><b class="num">14</b><span class="fx-track"><i style="--w:.28"></i></span></li>
+                  <li><span>Solution-oriented</span><b class="num">9</b><span class="fx-track"><i style="--w:.18"></i></span></li>
+                </ul>
+              </div>
+              <div class="fx-card">
+                <div class="fx-card-head"><div><b>Improvement areas</b><p>Recurring constructive signals to coach</p></div></div>
+                <ul class="wt-areas">
+                  <li><div><b>Share context earlier</b><span class="fx-meta">Repeated across 4 cycles</span></div><span class="wt-count-badge num">9</span></li>
+                  <li><div><b>Resolve dependencies sooner</b><span class="fx-meta">Repeated across 3 cycles</span></div><span class="wt-count-badge num">6</span></li>
+                </ul>
+              </div>
+              <div class="fx-card wt-feed">
+                <div class="fx-card-head"><div><b>Anonymized Feedback</b></div></div>
+                <div class="fx-fb-item"><div class="fx-fb-label"><span>Anonymized Feedback</span><span>Cycle 5</span></div><p class="fx-fb-text">The client meeting went well because you knew what their CFO would ask. Please bring us in earlier when the storyline changes.</p></div>
+              </div>
+            </section>
+            <section class="wt-col" aria-label="Nikhil Rao">
+              <div class="wt-colhead"><span class="fx-avatar av-blue" aria-hidden="true">NR</span><div><div class="fx-name">Nikhil Rao</div><div class="fx-meta">Consultant</div></div></div>
+              <div class="fx-kpi"><div class="k">Responses received</div><div class="v" id="n-responses">74</div><div class="d">From 13 collaborators</div></div>
+              <div class="fx-card">
+                <div class="fx-card-head"><div><b>Top feedback received</b><p>Most frequent positive anonymized signals</p></div></div>
+                <ul class="wt-tags" id="n-tags">
+                  <li data-tag="Takes Initiative"><span>Takes Initiative</span><b class="num">41</b><span class="fx-track"><i style="--w:.82"></i></span></li>
+                  <li data-tag="Solution-oriented"><span>Solution-oriented</span><b class="num">38</b><span class="fx-track"><i style="--w:.76"></i></span></li>
+                  <li data-tag="Respectful"><span>Respectful</span><b class="num">22</b><span class="fx-track"><i style="--w:.44"></i></span></li>
+                  <li data-tag="Transparency"><span>Transparency</span><b class="num">17</b><span class="fx-track"><i style="--w:.34"></i></span></li>
+                </ul>
+              </div>
+              <div class="fx-card">
+                <div class="fx-card-head"><div><b>Improvement areas</b><p>Recurring constructive signals to coach</p></div></div>
+                <ul class="wt-areas" id="n-areas">
+                  <li data-tag="Share context earlier"><div><b>Share context earlier</b><span class="fx-meta">Repeated across 2 cycles</span></div><span class="wt-count-badge num">4</span></li>
+                </ul>
+              </div>
+              <div class="fx-card wt-feed" id="n-feed">
+                <div class="fx-card-head"><div><b>Anonymized Feedback</b></div></div>
+                <div class="fx-fb-item"><div class="fx-fb-label"><span>Anonymized Feedback</span><span>Cycle 6</span></div><p class="fx-fb-text">You rebuilt the cost model after the scope change and walked two of us through it before the client call. It saved us the week.</p></div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <figcaption><span class="sample-label"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-info"/></svg>Prototype screen. Sample data, fictional people.</span><span class="wt-yours" id="yours" hidden>Nikhil's column includes the card you just filled in.</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section wt-step wt-locked" id="step-4" aria-labelledby="h-step-4">
+  <div class="wrap pair wt-end">
+    <div class="stack">
+      <h2 id="h-step-4" tabindex="-1">The engagement ends. The evidence stays.</h2>
+      <p id="turn" class="lede">Partners still decide. Sphyr gives them the view of the people who saw the work, cycle by cycle, while the engagement team is still together.</p>
+      <p>In a firm that uses Sphyr, a record like this builds up for every consultant, two minutes at a time.</p>
+    </div>
+    <div class="wt-next">
+      <div class="btn-row">
+        <button class="btn btn-primary" type="button" popovertarget="call-note">Book a 20-minute call</button>
+        <a class="btn btn-secondary" href="index.html">Back to home</a>
+      </div>
     </div>
   </div>
+</section>
 
-  <div class="step" id="s3">
-    <span class="eyebrow">Step 3 of 4 · The pooled view</span>
-    <h2>Six fortnights. Fourteen people each. One picture.</h2>
-    <p class="lede" id="pickline"></p>
-    <div class="card" style="margin-top:24px">
-      <div class="tbl"><table class="bars" id="bars"><tr><th>Parameter</th><th>Priya R.</th><th>Karan M.</th></tr></table></div>
-      <p class="small" style="margin-top:16px">Average pooled rating out of 5 · 14 reviewers each · 6 fortnightly cycles · individual ratings and reviewer names never shown.</p>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="index.html"><svg class="mark mark--mono" viewBox="0 0 1254 1254" aria-hidden="true"><use href="assets/sphyr-mark.svg#mark"/></svg>Sphyr</a>
+      <p>Made by Team 03 (Aryan, Abhinav, Devansh and Bheema) for the Product Marketing course (PD2.501) at IIIT Hyderabad, from the Sphyr Overview Whitepaper v0.3 (2018) and the Sphyr.io product documentation. It is a course project, and Sphyr is not on sale here.</p>
     </div>
-    <div class="grid g2" style="margin-top:20px">
-      <div class="card"><span class="label">Most-used tag · Priya</span><h3 style="margin-top:10px">"Unblocks others": 31 times</h3><p class="small">From 9 different people across 3 teams.</p></div>
-      <div class="card"><span class="label">Most-used tag · Karan</span><h3 style="margin-top:10px">"Ownership": 18 times</h3><p class="small">Mostly from client-facing colleagues and a client.</p></div>
-    </div>
-    <div class="btns"><button class="btn btn-p" id="to4">Continue</button></div>
+    <ul>
+      <li><a href="demo.html">See the 2-minute walkthrough</a></li>
+      <li><a href="deliverables.html">Deliverables</a></li>
+      <li><button class="linkbtn" type="button" popovertarget="call-note">Book a 20-minute call</button></li>
+    </ul>
   </div>
+</footer>
 
-  <div class="step" id="s4">
-    <span class="eyebrow">Step 4 of 4 · You still decide</span>
-    <h2>Same two people. Now you can see the work.</h2>
-    <p class="lede">Sphyr didn't pick anyone. It showed you what fourteen colleagues saw, so the decision rests on evidence instead of whoever was most visible. Maybe Karan still gets it. If so, it's because the evidence says so.</p>
-    <h3 style="margin-top:32px">Built from everyone who actually worked with them, not one manager's memory. <span class="hl">That's Sphyr.</span></h3>
-    <div class="btns"><a class="btn btn-p" href="pricing.html#order">Start a ₹15,000 six-week pilot</a><a class="btn btn-g" href="pricing.html">See pricing</a><a class="btn btn-g" href="trust.html">How anonymity works</a></div>
-    <p class="small" style="margin-top:20px">The pilot fee is credited against your first bill. <a href="demo.html">Restart the walkthrough</a></p>
-  </div>
-</div></section></main>
+<div id="call-note" class="note-pop" popover>
+  <p>Course project: in a live launch this books a 20-minute call with our team.</p>
+  <button class="linkbtn" type="button" popovertarget="call-note" popovertargetaction="hide">Close</button>
+</div>
 
-<footer><div class="wrap cols"><div><b>Sphyr</b> · Promote on merit, not politics.<br>Team 03 final assignment, Product Marketing (PD2.501), IIIT Hyderabad · Aryan, Abhinav, Devansh, Bheema.<br>Course project based on the Sphyr Overview Whitepaper v0.3 (2018) and Sphyr.io documentation. Not a live commercial offer.</div><div><b>Deliverables</b><br><a href="propaganda.html">Propaganda strategy</a><br><a href="linkedin.html">Three LinkedIn posts</a><br><a href="ad.html">Advertisement</a><br><a href="deliverables.html">All deliverables</a></div></div></footer>
-<script src="main.js"></script>
-<script>
-const go = n => {
-  document.querySelectorAll('.step').forEach((s, i) => s.classList.toggle('on', i === n - 1));
-  document.querySelectorAll('.progress i').forEach((b, i) => b.classList.toggle('on', i < n));
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-};
-let pick;
-document.querySelectorAll('.cand').forEach(b => b.addEventListener('click', () => { pick = b.dataset.pick; go(2); }));
-document.addEventListener('sent', () => setTimeout(() => {
-  document.getElementById('pickline').textContent = pick === 'Karan'
-    ? 'You picked Karan. Here is what the people around both of them saw.'
-    : 'You picked Priya. Here is what backs that up, or doesn\'t.';
-  go(3);
-}, 900));
-document.getElementById('to4').addEventListener('click', () => go(4));
-// Sample pooled scores out of 5: [parameter, Priya, Karan]
-const rows = [['Professional behaviour', 4.3, 4.4], ['Timeliness of delivery', 4.6, 3.7], ['Quality of work', 4.7, 3.9],
-  ['Adherence to policies', 4.4, 4.2], ['Resolving dependencies', 4.8, 3.4], ['Teamwork', 4.6, 3.8], ['Engagement', 4.0, 4.5]];
-const bar = (v, k) => `<div class="bar ${k}" style="width:${v / 5 * 100}%"></div><span class="v">${v.toFixed(1)}</span>`;
-document.getElementById('bars').insertAdjacentHTML('beforeend',
-  rows.map(([p, a, b]) => `<tr><td>${p}</td><td>${bar(a, '')}</td><td>${bar(b, 'k')}</td></tr>`).join(''));
-</script>
+<script src="js/theme.js" defer></script>
+<script src="js/nav.js" defer></script>
+<script src="js/demo.js" defer></script>
 </body>
 </html>
