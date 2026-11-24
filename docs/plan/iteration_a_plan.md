@@ -4,7 +4,7 @@ title: "Iteration A plan"
 description: "Sequenced plan to rebuild the Sphyr site and four deliverables for the consulting segment, answer every professor feedback point, and redesign with light and dark themes, with approval gates."
 tags: [plan, iteration-a]
 generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:55:00Z }
-status: draft
+status: stable
 ---
 
 # Iteration A plan

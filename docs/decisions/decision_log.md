@@ -10,6 +10,13 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-24: Segment definition confirmed, persona, ad medium, plan approved
+
+- **Segment:** the consulting definition below is confirmed by the team. It replaces the "proposed" status.
+- **Primary persona:** the head of talent (champion), who finds Sphyr, runs the pilot and takes the case to the managing partner. The managing partner is the secondary buyer persona. Meera, a senior consultant, is the person being rated.
+- **Ad medium:** the brief asks for "one advertisement designed for an appropriate medium and audience", not a LinkedIn ad. Only the three LinkedIn posts must be on LinkedIn. The strategy work proposes the ad medium with its reasoning, and the team approves it at gate 1a.
+- **Plan:** [the iteration A plan](../plan/iteration_a_plan.md) is approved. Phase 1a starts.
+
 ## 2026-11-24: Segment is consulting (exact definition proposed, awaiting confirmation)
 
 - **Status:** the team chose consulting. The exact definition below is a proposal until the team confirms it.
