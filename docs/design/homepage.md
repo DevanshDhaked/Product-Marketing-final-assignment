@@ -81,3 +81,38 @@ Notes, not failures:
 
 - Prototype sample dates (chart axis May 05 to Jun 30, comment dates Jul 22 and Jul 25) still show inside the product frames. They are the product's sample data; replacing them would change the real screen. Decide whether the no-month rule covers them.
 - Engagement names in the core visual (pricing review, market entry, cost programme, due diligence) are examples of engagement types, not clients.
+
+## Addendum 2026-11-25: site build of the home page
+
+Built as `site/index.html` with `site/css/home.css` (no page script: the shared `js/theme.js`, `js/nav.js` and `js/motif.js` cover every interaction). The mockup above stays as the record of gate 1b. Decisions behind the changes: "Gate 1b, homepage approved" and "Top navigation and pricing section" in the [decision log](../decisions/decision_log.md).
+
+Changes from the mockup:
+- Hero: the sentence under the core line is now 12 words ("Sphyr asks each engagement team about your consultants and keeps every answer."). The ribbon figure is copied from `site/_motif.html` with two-line box labels ("Project 1" over "3 teammates").
+- New section `#problem` before the mechanism: the trigger from journey map stage 1 in second person, four scenes as labelled rows, and a before and after pair ("Today" and "With Sphyr"). The pair is the page's one "X, not Y".
+- `#how`: the first sentence was trimmed, since `#problem` now says it; a short passage says the card tags are the firm's own values, set once for the firm, and each team can add its own (prototype "Organization VBAs", "Save & cascade", team VBA modes).
+- `#back` became `#partners`, the nav target. Its headline is now "Partners decide with the whole year of work in front of them." (no contrast, no promotion word).
+- Product frames: chart axis "Cycle 1" to "Cycle 6" (every other label hidden below 640 px); comment dates "2 days ago" and "5 days ago". No month name remains in the page.
+- `#pricing` rebuilt as cards: the plan card first ("Sphyr, everything included", ₹149, the included items, outside raters free, example bills for 100, 150 and 300 people, month and year, plus GST), and beside it the smaller "Getting started" pilot card, the four-item scorecard with "Results stay with your firm unless you agree to share them.", and the 02:09 number. "How we set the price" now gives the pilot cost (about 30 hours plus running costs; the plan rate for the same seats would be about ₹16,500) and the value case; the competitor price comparison and its access date left the page and stay in `docs/pricing/`.
+- Promotion moment in visible copy: once (the ribbon label "Promotion round"). The page title and descriptions were rewritten without a promotion word.
+- People named by role: where a passage has more than one person (partner, consultant, engagement manager), each is named by role instead of switching pronouns, per the message guideline rule "roles over pronouns".
+
+Checks (2026-11-25), page served at `http://127.0.0.1:8822/site/index.html`, headless Chrome through playwright-core, 8 runs (reduced motion and motion on; 1440 by 900 and 390 by 844; dark and light):
+
+| Check | Limit | Result | Method |
+|---|---|---|---|
+| Copy scan | 0 unreviewed | 293 strings, 0 unreviewed hits, 6 reviewed denials | `python3 design-lab/copy_scan.py site/index.html` |
+| Contrasts and triads | 1 contrast, 0 triads | script: 0 contrast sentences, 6 possible triads; by eye 1 contrast (the before and after pair), 0 triads (the six are a citation, the team names and two-item lists) | `python3 design-lab/copy_tells.py site/index.html` |
+| Hero copy words | about 30 | 22 (core line 6, sentence 12, button 4) | `innerText` of h1, lede and button |
+| Sideways scroll, phone | none | 0 in all 4 phone runs | scrollWidth minus clientWidth, scrollX at the end |
+| Smallest text, phone | 11 px | 11 px | computed size; SVG text scaled by its screen matrix |
+| Idle frames | 0 in 2 s | 0 in all 8 runs, measured 8.5 s after load | wrapped requestAnimationFrame |
+| Running animations | 0 at rest | reduced motion 0 at 2 s; motion on 40 at 2 s, 0 at 8.5 s | `document.getAnimations()` |
+| Contrast, HTML text | 4.5:1, 3:1 at 24 px | 0 failures in 235 desktop and 208 phone text elements, both themes | computed colour against the nearest opaque background; SVG text not included |
+| Modes | right first frame | stored light under a dark system loads light; toggling back clears the stored value | init script reads the theme at the first ready-state change |
+| Links | all resolve | 7 of 7 (3 in-page anchors present) | request per href, id lookup for anchors |
+| Hosts and errors | 0 foreign, 0 errors | 0 other hosts, 0 console errors, 0 failed requests | request and console log |
+
+Open points:
+- At 1440 and 1280 the circle's centre label "Consultant" renders at 8.5 px. The size comes from the shared `site/css/motif.css`; the page does not override it.
+- Not measured this time: changed share per interaction and time to rest. The interactions are the mockup's, unchanged; the only new one is the "How we set the price" disclosure, which uses the shared FAQ style.
+- Screenshots in `site/_shots/home-*.png` are taken with reduced motion, so they show the finished ribbon picture.
