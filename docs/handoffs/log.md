@@ -20,6 +20,8 @@ timestamp: 2026-11-24T17:11:40Z
 * **Creation**: Added [Design teammate report, phases 1a and 1b](design_report.md).
 
 ## 2026-11-24
+* **Creation**: Added [Headline line analysis report](message_report.md).
+* **Creation**: Added [Home clarity fixes report](clarity_report.md).
 * **Creation**: Added [Favicon and row heights report](polish_report.md).
 * **Creation**: Added [Old vs new site comparison report](compare_report.md).
 * **Creation**: Added [Layman clarity test report](layman_report.md).
