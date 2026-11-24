@@ -35,19 +35,19 @@ sources:
 
 > **Section heading:** What happens after you sign
 >
-> **Intro:** Your first cards go out on a Friday you pick. This is what each person gets, and when.
+> **Intro:** Your first cards go out on a date you agree with us. This is what each person gets, and when.
 
 **Step 1. Your firm's words go on the card.** (Before the first cycle)
 
-> In a short kickoff with our team, your head of talent adds the firm's own values. Those words become the tags on every card. Pick the Friday your first cycle opens. That's the day your April starts.
+> In a short kickoff with our team, your head of talent adds the firm's own values. Those words become the tags on every card. Together you set the day your first cycle opens. That's the day your April starts.
 
 **Step 2. Partners see what April will look like.** (Before the first cycle)
 
-> We show your partners a sample record across four engagements, then the same screen for their own practice, still empty. It starts filling on the date you picked. Your partners still make the decisions. In April they'll have the whole year in front of them.
+> We show your partners a sample record built from people on four engagements, then the same screen for their own practice, still empty. It starts filling on the date you picked. Your partners still make the decisions. In April they'll have the whole year in front of them.
 
 **Step 3. Everyone picks who gets a say.** (The week before)
 
-> Each consultant gets a note from the managing partner, and adds the people they work with to their circle: engagement managers, peers, juniors. Client leads can join later, but only if a partner adds them.
+> Each consultant gets a note from the managing partner, and adds the people they work with to their circle: engagement managers, peers, juniors. Client leads can join from the second cycle: the consultant invites them by email, with the partner's agreement.
 
 **Step 4. The first deck opens.** (First cycle)
 
@@ -57,7 +57,7 @@ sources:
 
 > Consultants start to see what the people they worked with noticed, and notes written to them. Engagement managers see how their current team is landing while the engagement is still running. Your head of talent sees who took part, team by team, without chasing anyone.
 
-> **After that:** a new deck every second Friday. After a few cycles, each person has a line showing how their work is landing. By April, partners have the whole year to look at.
+> **After that:** a new deck every two weeks. After a few cycles, each person has a line showing how their work is landing. By April, partners have the whole year to look at.
 
 ## "What you see after your first card" block
 
@@ -69,7 +69,7 @@ sources:
 >
 > **After a few cycles:** your trend line, your strongest areas, and the things that keep coming up.
 
-Timing check before publishing: "After the first cycle" is an assumption. No source states when the Insights page first shows results or how many ratings it needs. Confirm against the product, or change the line to "after your first few cycles". The "Sphyr tells you" line comes from notification text found in the prototype's code, not seen on screen.
+Timing check before publishing: "After the first cycle" is an assumption. No source states when the Insights page first shows results or how many ratings it needs. The same applies to step 5. Confirm against the product, or change both to "after your first few cycles". The "Sphyr tells you" line comes from notification text found in the prototype's code, not seen on screen.
 
 ## FAQ lines for this section (reassurance goes here)
 
@@ -77,7 +77,7 @@ Timing check before publishing: "After the first cycle" is an assumption. No sou
 >
 > **What if I didn't work with someone this fortnight?** Choose "No interaction" and move on.
 >
-> **Can clients rate me?** Only if a partner adds them to your circle, and not in the first cycle.
+> **Can clients rate me?** Only if you invite them with your partner's agreement, and not in the first cycle.
 >
 > **What if I miss a cycle?** The next one opens two weeks later. Your Insights page notes the missed cycle, and that is all.
 

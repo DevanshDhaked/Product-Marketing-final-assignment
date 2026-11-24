@@ -56,15 +56,15 @@ Both are about consumer experiences, not workplace software. We use them only as
 | D | Choosing the circle | Consultants | Before cycle 1 opens | They decide who gets a say in their year | Product: My Sphyr[^proto] |
 | E | The first deck opens | Everyone | Cycle 1, day 1 | Two minutes; the people they worked with hear how it went; their circle is filling cards for them too | Product ("FEEDBACK THIS FORTNIGHT"), plus a short team-drafted note |
 
-Timing caveat for C and E: no source says when a person's Insights page first shows numbers, or how many raters it needs. "After the first cycle" is our assumption. Confirm it against the product before any copy goes out.
+Timing caveat for A, B, C and E: no source says when a person's Insights page or a team's Team Insights first shows results, or how many raters they need. "After the first cycle" is our assumption. Confirm it against the product before any copy goes out.
 
 ## A. Kickoff and the "your April starts" card (Kavya)
 
-In the kickoff, Kavya types her firm's values into the product, presses "Save & cascade" and sees them as tags on a sample card.[^proto] She picks the date cycle 1 opens from the schedule preview. She leaves with one card from our team:
+In the kickoff, Kavya types her firm's values into the product, presses "Save & cascade" and sees them as tags on a sample card.[^proto] She agrees the go-live date with our team and reads the cycle dates from the schedule preview. The prototype shows the frequency choice and the resulting dates, not a start-date control. She leaves with one card from our team:
 
 > **Your April starts on [date].**
 >
-> That's the Friday [number] people open their first card, written in your firm's own words.
+> That's the [day] [number] people open their first card, written in your firm's own words.
 >
 > Two weeks later you'll see how many filled it in, team by team, without chasing anyone.
 >
@@ -82,7 +82,7 @@ Sent by the managing partner, drafted by us:
 >
 > Every April we end up rating people we saw for a few weeks of their year. This year we'll have more to go on.
 >
-> From [date], everyone in [practice] spends about two minutes every second Friday on short cards for the people they work with. You fill them too, for your team.
+> From [date], everyone in [practice] spends about two minutes every two weeks on short cards for the people they work with. You fill them too, for your team.
 >
 > From the end of that first fortnight, you'll see how your current engagement team is landing, while the engagement is still running. And at calibration, you'll open each person's record and see what the people who worked with them said at the time, on every engagement, not only yours.
 >
@@ -92,7 +92,7 @@ Sent by the managing partner, drafted by us:
 >
 > [Managing partner]
 
-**The April preview** (ten minutes at the partners' meeting, team service). Screen one, marked "Sample data": one consultant's Member Insights across four engagements. Screen two: the same view for their own practice, empty. Caption for screen two:
+**The April preview** (ten minutes at the partners' meeting, team service). Screen one, marked "Sample data": one consultant's Member Insights, built from people on all four of their engagements. The screen pools results; it does not split them by engagement. Screen two: the same view for their own practice, empty. Caption for screen two:
 
 > This is [practice] today. It starts filling on [date].
 
@@ -108,7 +108,7 @@ Sent by the managing partner, drafted by us. It leads with what the consultant g
 >
 > From [date], those people get a say in your record.
 >
-> Before then, open Sphyr and add the people you work with to your circle. Every second Friday you'll get a short deck of cards, one per person: how did working with them go, what stood out, and a note if you want to leave one. About two minutes. While you fill in theirs, they're filling in yours.
+> Before then, open Sphyr and add the people you work with to your circle. Every two weeks you'll get a short deck of cards, one per person: how did working with them go, what stood out, and a note if you want to leave one. About two minutes. While you fill in theirs, they're filling in yours.
 >
 > What comes back to you: notes from the people you worked with, and the things they noticed most. The person you write about won't see your name, and you won't see theirs. Ratings are pooled before anyone sees them. After a few cycles you'll have a line that shows how your work is landing, early enough to do something about it.
 >
@@ -124,7 +124,7 @@ The product step is "My Sphyr": "Keep this circle focused on people you work wit
 
 > Your circle is the people who get a say in your year. Add everyone you've worked with since [month] who's still here: engagement managers, peers from each team, the juniors you've been bringing up.
 >
-> If a client lead saw a lot of your work, tell your partner. From the second cycle, they can add them.
+> If a client lead saw a lot of your work, talk to your partner. From the second cycle, with the partner's OK, you can invite them by email.
 
 ## E. The first deck opens (everyone)
 
@@ -138,7 +138,7 @@ The product shows "FEEDBACK THIS FORTNIGHT" with one card per person in the circ
 
 ## Never in this copy
 
-"Anonymous" without qualification; "the system decides"; "track"; "real-time"; any number, chart or trend promised for the first fortnight; clients rating in cycle 1. Full list: [do-not-claim](../product/do_not_claim.md).
+"Anonymous" without qualification; "the system decides"; "track"; "real-time"; any score or trend about an individual promised for the first fortnight; clients rating in cycle 1. Full list: [do-not-claim](../product/do_not_claim.md).
 
 [^kumar]: Kumar, Killingsworth and Gilovich, 2014
 [^chun]: Chun, Diehl and MacInnis, 2017

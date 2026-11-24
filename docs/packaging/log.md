@@ -7,6 +7,7 @@ timestamp: 2026-11-24T17:40:07Z
 ---
 
 ## 2026-11-24
+* **Update**: Review fixes: clients are invited by the consultant by email with the partner's agreement (not added by a partner); cycle dates come from the schedule preview, not a chosen Friday; timing caveat extended to Team Insights; April preview no longer implies a per-engagement split.
 * **Creation**: Added [Packaging summary](packaging_summary.md) for the website's "what happens after you sign" section.
 * **Creation**: Added [First card reward](first_card_reward.md): what the first card gives the rater and the person rated, and the reason to return.
 * **Creation**: Added [Anticipation plan](anticipation_plan.md) with five moments before the first card and humanized draft copy.

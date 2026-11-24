@@ -72,7 +72,7 @@ In the product they are the "Manager" role. They are also rated by their own cir
 | The partner note | End of cycle 0 | A short note from Kavya or the managing partner: what partners will open in April, in partner words ([moment B](anticipation_plan.md)) | Anticipation | Team service (we draft) |
 | The April preview | Cycle 0, at the partners' meeting | Ten minutes showing one sample consultant's record across four engagements, labelled as sample data, then the same screen empty for their own people | Anticipation: they see the record they will have, and that it starts filling now | Team service, using the prototype's Member Insights screen[^proto] |
 | Their own first cards | Cycle 1 | The same two-minute deck as everyone else | Contribution matters: their view goes into the record like anyone else's | Product: Provide Feedback[^proto] |
-| First Team Insights | End of cycle 1 | Team score, participation, rating distribution, anonymized team feedback, for the engagement team they run now | Discovery: how the team is landing while the engagement still runs | Product: Manager, Team Insights[^proto] |
+| First Team Insights | End of cycle 1 | Team score, participation, rating distribution, anonymized team feedback, for the engagement team they run now | Discovery: how the team is landing while the engagement still runs | Product: Manager, Team Insights.[^proto] **Timing is our assumption**: no source says how soon this view fills |
 | Feedback edit approvals | Any time from cycle 1 | They approve or reject requests to reopen submitted feedback. This queue shows who gave feedback to whom | (Governance, no effect claimed) | Product. This is why no copy may say "anonymous to everyone" |
 
 ## Consultants (Meera)
@@ -82,7 +82,7 @@ Her first encounter is the invite. She did not choose to buy Sphyr, so the first
 | Element | When | What it is | Intended effect | Product or team service |
 |---|---|---|---|---|
 | The invite | End of cycle 0 | From the managing partner: the people who saw your work get a say, they rate you as you rate them, and what you get back and when ([moment C](anticipation_plan.md)) | Anticipation | Team service (we draft, the firm sends) |
-| Building her circle | Before cycle 1 opens | In "My Sphyr" she adds peers, seniors and juniors she works with. Clients are added only by a partner, from cycle 2 | Anticipation: she is choosing who gets a say in her year | Product: My Sphyr[^proto] |
+| Building her circle | Before cycle 1 opens | In "My Sphyr" she adds peers, seniors and juniors she works with. From cycle 2 she may invite a client counterpart by email, only with the partner's agreement | Anticipation: she is choosing who gets a say in her year | Product: My Sphyr and email invites for external members (product guide p5).[^proto] The partner-agreement rule is the firm's rule, not a product setting |
 | The cycle opens | Cycle 1, day 1 | "FEEDBACK THIS FORTNIGHT": a short deck, one card per person in her circle | Anticipation turns into use | Product: Provide Feedback[^proto] |
 | Her first card | Cycle 1 | Was good / Could improve / No interaction, then tags in her firm's words, then an optional note to the person by name | Contribution matters ([first card reward](first_card_reward.md)) | Product |
 | Feedback arrives for her | During cycle 1 | A notification that new anonymized feedback has been received | Discovery and reason to return | Product, from bundle text only: "Feedback received: You received 4 new items of Anonymized ..."; not seen rendered[^dnc] |
@@ -102,7 +102,7 @@ Her first encounter is the invite. She did not choose to buy Sphyr, so the first
 - **No interaction is a real answer.** A consultant on the bench taps "No interaction" and is done. The card does not force a rating.
 - **Small engagement teams.** In a team of three to five, a first-cycle note can be easy to attribute. No source gives a pooling threshold. The kickoff tells Kavya this plainly, and copy promises only that ratings are pooled and comments are anonymized to the person rated.
 - **A thin circle.** A consultant with three people in her circle gets three cards and few ratings. The invite asks her to add everyone she worked with this year who is still at the firm.
-- **Cycle 1 in a deadline week.** Kavya picks the first date in the schedule preview. The kickoff checks it against known client deadlines.
+- **Cycle 1 in a deadline week.** The go-live date is agreed at the kickoff and read from the schedule preview, which shows cycle dates "based on the current organization calendar". The prototype shows no control for picking a start date (its demo cycle starts on a Monday). The kickoff checks the date against known client deadlines.
 - **A missed first cycle.** The Insights page counts missed cycles ("Missed Fortnightly Cycle"). Nobody is chased; the next cycle opens in two weeks.
 - **A partner who will not fill cards.** His view is simply missing from the record. Kavya raises it in the readout session; the product does not enforce it.
 
