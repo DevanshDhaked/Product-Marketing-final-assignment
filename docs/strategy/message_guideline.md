@@ -79,7 +79,7 @@ Short formats: never drop steps 1 and 5. An ad may use 1, 3 and 5 only. A Linked
 | Real-time | "Every two weeks." |
 | Tracks, monitors, measures productivity | "Collects the view of the people they worked with." |
 | Integrates with Keka, Darwinbox, Slack, Teams, SSO | "Import your people from a file." |
-| Trusted by, our customers, loved by, reviews, ratings, logos | Nothing. We have no customers yet. Offer the pilot. |
+| Trusted by, our customers, loved by, reviews, ratings, logos | Never invent customers, and never announce their absence either. Show proof that is built in the open: the method, the 2018 pilot labelled exactly, and what every pilot measures. Offer the pilot. |
 | Sphyr customers see 94% fairness / 88% less resistance | Pilot percentages are not software results. Use only 02:09, attributed. |
 | Who Should We Promote? | It is described in the product guide, not built in the prototype. Leave it out. |
 | Any endorsement by the professor, IIIT Hyderabad, IMCI, NHRDN or any firm | Nothing. Name communities only as places we take part in. |
@@ -174,7 +174,7 @@ Colours, type and components come from the design work in `docs/design/` and mus
 | "Partners still decide. They see the whole year." | "Let the data decide promotions." |
 | "In a 2018 paper-and-pen pilot run by Sphyr's founder, cards took about two minutes." | "Sphyr users finish in two minutes." |
 | "With the partner's agreement, a consultant can invite a client to add their view." | "Get your clients to rate your consultants." |
-| "We have no customers yet. Here is our pilot and what we will publish." | "Join leading consulting firms." |
+| "Every pilot is measured on the same scorecard, agreed before it starts." | "Join leading consulting firms." or "We have no customers yet." |
 | "Two minutes, every two weeks." | "Real-time continuous performance intelligence." |
 | Label every persona and story as an example. | Present Kavya, Meera or Vikram as real. |
 

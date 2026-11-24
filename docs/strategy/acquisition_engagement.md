@@ -50,7 +50,7 @@ Kavya can stop at any step. If she does, she keeps what she already got and hear
 
 ## The pilot scorecard (proof without reviews)
 
-Sphyr has no customers and no reviews. The pilot scorecard is how proof gets built in public.
+Sphyr is new, so there are no reviews to point to. The pilot scorecard is how proof gets built in public. Public copy never claims customers and never leads with their absence.
 
 - **Before the pilot starts**, we publish on our site what every pilot measures and how. The firm agrees the targets.
 - **What is measured** (to be confirmed with the pricing and first-use work):

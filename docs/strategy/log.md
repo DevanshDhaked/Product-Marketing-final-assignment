@@ -6,6 +6,9 @@ tags: [log]
 timestamp: 2026-11-24T18:20:50Z
 ---
 
+## 2026-11-25
+* **Update**: Public copy never claims customers and never leads with their absence. Changed [message guideline](message_guideline.md) (never-say row and do/don't example), [deliverable map](deliverable_map.md) (post 3 angle) and [acquisition and engagement](acquisition_engagement.md).
+
 ## 2026-11-24
 * **Update**: Gate 1b pilot terms replace the open pilot-length conflict in [Acquisition and engagement](acquisition_engagement.md); [Vikram, managing partner](persona_managing_partner.md) now answers "What does it cost?" with the decided price and adds the HR-system (Keka) objection.
 * **Update**: Noted in [channel plan](channel_plan.md) that SHRM India's 2026 conference (26 to 27 Nov) falls before the selling window.
