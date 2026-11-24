@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Sphyr page template. Copy this file to site/<page>.html and fill the marked places. Do not edit the
+     shared files it links (css/base.css, css/motif.css, js/theme.js, js/motif.js, fonts/, assets/).
+     Order matters: the colour-scheme meta and the inline theme script come before any stylesheet, so a
+     stored theme applies on the first frame (no flash). Every page sits at the site/ root, so paths are relative to it. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem("sphyr-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preload" href="fonts/manrope-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/newsreader-display-normal-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/base.css">
+<!-- PAGE CSS: add motif.css only if the page shows the ribbon motif, then your own page file.
+<link rel="stylesheet" href="css/motif.css">
+<link rel="stylesheet" href="css/<page>.css">
+-->
+<link rel="icon" href="assets/sphyr-logo.svg" type="image/svg+xml">
+
+<!-- PAGE TITLE AND DESCRIPTION: replace both, and the og:title, og:description and og:url to match. -->
+<title>Sphyr</title>
+<meta name="description" content="Every two weeks, Sphyr asks the people on each engagement how working with a consultant went, so partners can look at the whole year when they decide promotions.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sphyr">
+<meta property="og:title" content="Sphyr">
+<meta property="og:description" content="Every two weeks, Sphyr asks the people on each engagement how working with a consultant went, so partners can look at the whole year when they decide promotions.">
+<meta property="og:url" content="https://devanshdhaked.github.io/Product-Marketing-final-assignment/">
+<meta property="og:image" content="https://devanshdhaked.github.io/Product-Marketing-final-assignment/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Canonical nav: logo (home), Deliverables, theme switch, the walkthrough button. Three links on every page.
+     On the current page add aria-current="page" to its link (the brand link on index.html, the Deliverables
+     link on deliverables.html and the three deliverable pages, the button on demo.html).
+     Under 760px the button hides; the page itself must carry a link to demo.html. -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><svg class="mark mark--mono" viewBox="0 0 1254 1254" aria-hidden="true"><use href="assets/sphyr-mark.svg#mark"/></svg>Sphyr</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="deliverables.html">Deliverables</a>
+    </nav>
+    <div class="nav-end">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Dark theme">
+        <svg class="icon icon-sm" aria-hidden="true"><use href="assets/icons.svg#i-moon"/></svg><span class="track" aria-hidden="true"><span class="knob"></span></span>
+      </button>
+      <a class="btn btn-primary" href="demo.html">See the 2-minute walkthrough</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<!-- PAGE CONTENT: sections go here. Use <section class="section"><div class="wrap">...</div></section>;
+     sections are parted by air and one hairline, never boxes. One h1 per page. -->
+</main>
+
+<!-- Canonical footer. "Book a 20-minute call" opens the #call-note popover below. -->
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="index.html"><svg class="mark mark--mono" viewBox="0 0 1254 1254" aria-hidden="true"><use href="assets/sphyr-mark.svg#mark"/></svg>Sphyr</a>
+      <p>Made by Team 03 (Aryan, Abhinav, Devansh and Bheema) for the Product Marketing course (PD2.501) at IIIT Hyderabad, from the Sphyr Overview Whitepaper v0.3 (2018) and the Sphyr.io product documentation. It is a course project, and Sphyr is not on sale here.</p>
+    </div>
+    <ul>
+      <li><a href="demo.html">See the 2-minute walkthrough</a></li>
+      <li><a href="deliverables.html">Deliverables</a></li>
+      <li><button class="linkbtn" type="button" popovertarget="call-note">Book a 20-minute call</button></li>
+    </ul>
+  </div>
+</footer>
+
+<div id="call-note" class="note-pop" popover>
+  <p>Course project: in a live launch this books a 20-minute call with our team.</p>
+  <button class="linkbtn" type="button" popovertarget="call-note" popovertargetaction="hide">Close</button>
+</div>
+
+<script src="js/theme.js" defer></script>
+<!-- PAGE JS: add js/motif.js only with the motif, then your own js/<page>.js, both with defer. -->
+</body>
+</html>
