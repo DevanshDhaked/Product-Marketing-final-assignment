@@ -45,7 +45,7 @@ The vision behind it ([positioning](positioning.md)): careers earned in front of
 
 | Step | Say | Example |
 |---|---|---|
-| 1. The moment | The engagement ended; the people who saw the work moved on | "By April, the people who saw Meera's best work are on three other engagements." |
+| 1. The moment | The engagement ended; the people who saw the work moved on | "By April, the people who saw your senior consultant's best work are on three other engagements." |
 | 2. The mechanism | Two minutes, every two weeks, from the people they work with | "Every two weeks, each person spends about two minutes on short cards for the people they worked with." |
 | 3. The result | At calibration partners see the whole year, and still decide | "In April, partners calibrate on the whole year, not the last engagement." |
 | 4. The vision | Careers earned in front of the people who saw the work | "Because careers should be earned in front of the people who saw the work." |
@@ -116,11 +116,24 @@ Product terms you may use with the head of talent only, once explained: "sphere"
 | Vikram, managing partner | Partners still decide, on the whole year; a small paid pilot before April | HR process, dashboards |
 | Meera, consultant | The people who saw your work get a say; two minutes; you see your own record | Anything about ratings of you or monitoring |
 
+### Lead with what they look forward to, not only what they fear
+
+Reassurance (what Sphyr does not do) belongs lower on the page or in answers to questions. The opening of every piece should give the reader something to look forward to. The whitepaper's own words for what employees gain are "a voice in the assessment of peers", "insights into their blind spots" and "an opportunity to improve their bonds with their fellow team members".[^wp]
+
+| Listener | What they can look forward to (true today) | Example line |
+|---|---|---|
+| Kavya | Walking into April with a record for every consultant, and not chasing a single form in March | "This April, open the file and find the whole year in it." |
+| Vikram | A calibration where partners argue less about what happened and more about what to decide | "Calibrate on what happened, not on who remembers it." |
+| Meera | Seeing how her work is landing every few weeks, from people who saw it, while it still matters | "Find out how your work landed while you can still use it." |
+| Partners and engagement managers | Knowing how their team is landing during the engagement, not after it | "See how the engagement is going for your team, while it is still going." |
+
+The trend line needs several cycles. In the first weeks, the honest promise is the voice ("the people who saw your work get a say"), not the chart.
+
 ## 8. Headline formulas, with three worked examples each
 
 **Web hero.** Formula: *[the moment] + [what stays]*, or *[the April fact] + [the turn]*.
 1. "The engagement ends. The evidence stays."
-2. "In April your partners will calibrate 140 people. Each partner saw only part of their year."
+2. "In April your partners will calibrate [number] people. Each partner saw only part of their year." (Use a placeholder or a general line; never Kavya's firm size.)
 3. "Promotions decided on the whole year, not the last engagement."
 
 **LinkedIn post opener** (first two lines, before "see more"). Formula: *a scene the reader has lived*, *a sourced number*, or *a question in partner words*. Never a made-up first-hand story.
@@ -131,7 +144,9 @@ Product terms you may use with the head of talent only, once explained: "sphere"
 **Ad.** Formula: *[benefit in partner words] + [mechanism in 8 words or fewer] + [call to action]*.
 1. "Calibrate on the whole year. Two minutes, every two weeks. See the 2-minute walkthrough."
 2. "The engagement ends. The evidence stays. Two-minute feedback from the people who saw the work. Take the 2-minute walkthrough."
-3. "Before April: who saw Meera's best work? Sphyr keeps their view. The 2-minute walkthrough at [our site]."
+3. "Before April: who saw your senior consultant's best work? Sphyr keeps their view. The 2-minute walkthrough at [our site]."
+
+**Persona names in public pieces.** Kavya, Vikram, Meera and Siddharth never appear in the ad or the LinkedIn posts, because those formats cannot carry the "illustrative example" label. Use "your senior consultant", "a partner", "the head of talent". On the website a named example is allowed only with a visible label such as "An example, not a real person".
 
 ## 9. Visual rules
 

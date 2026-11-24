@@ -16,8 +16,8 @@ sources:
     resource: https://sphyr-prototype.raviwarrier.com/
     title: "Sphyr prototype, screens recorded in docs/product/prototype_screens.md (captured 2026-11-24)"
   - id: foundit
-    resource: https://www.ptinews.com/press-release/appraisal-season-half-of-india-s-professionals-are-already-job-hunting-foundit-appraisal-survey-finds/3893922
-    title: "foundit Appraisal Survey press release, 2026-07-24 (accessed 2026-11-24)"
+    resource: https://hr.economictimes.indiatimes.com/news/workplace-4-0/half-of-indias-professionals-are-already-job-hunting-during-appraisal-season-survey/132602041
+    title: "ETHRWorld, report on foundit's Appraisal Survey 2026, July 2026 (accessed 2026-11-24)"
 ---
 
 # Persona: Kavya, head of talent
@@ -69,7 +69,7 @@ She runs campus and lateral hiring, onboarding, the project-end feedback forms, 
 - *"I can't take this to the partners as 'HR wants a tool'. It has to be about their calibration."*
 - *"Show me someone like us who tried it. Not a logo. Someone I can call."*
 
-Context that supports her view: in a July 2026 foundit survey of Indian professionals, 52% of respondents said they were actively looking for a job during appraisal season, and among people who felt well represented in their appraisal, 37% said their manager actively advocated for them.[^foundit] The release does not state the sample size, and it covers all sectors, not consulting.
+Context that supports her view: in foundit's Appraisal Survey 2026 (fieldwork closed June 2026), 52% of respondents said they were actively looking for a job, and among people who felt well represented in their appraisal, 37% said their manager actively advocated for them.[^foundit] The report does not state the sample size, and it covers professionals across industries, not consulting.
 
 ## How she wins internally
 
@@ -115,5 +115,5 @@ Detail per stage is in [the journey map](journey_map.md).
 - HR software jargon: "VBA", "sphere score", "ONA", "talent suite".
 - Pressure tactics, countdown offers, or follow-ups she did not ask for.
 
-[^foundit]: foundit Appraisal Survey, 2026-07-24
+[^foundit]: ETHRWorld report on foundit Appraisal Survey 2026
 [^proto]: Sphyr prototype

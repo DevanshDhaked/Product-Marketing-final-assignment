@@ -26,16 +26,16 @@ sources:
     title: "Umbrex, How Do Consulting Performance Reviews Actually Work? (accessed 2026-11-24)"
   - id: ambition_primus
     resource: https://www.ambitionbox.com/reviews/primus-partners-reviews
-    title: "AmbitionBox, Primus Partners employee reviews, 197 reviews (accessed 2026-11-24)"
+    title: "AmbitionBox, Primus Partners employee reviews (accessed 2026-11-24)"
   - id: ambition_avalon
     resource: https://www.ambitionbox.com/reviews/avalon-consulting-reviews
-    title: "AmbitionBox, Avalon Consulting employee reviews, 264 reviews (accessed 2026-11-24)"
+    title: "AmbitionBox, Avalon Consulting employee reviews (accessed 2026-11-24)"
   - id: roadtooffer
     resource: https://www.roadtooffer.com/blog/consulting-firms-in-india
     title: "roadtooffer, Consulting Firms in India 2026 (accessed 2026-11-24)"
   - id: spi
     resource: https://get.kantata.com/rs/677-LEJ-696/images/2025-ps-maturity-benchmark.pdf
-    title: "SPI Research / Kantata, 2025 Professional Services Maturity Benchmark (read 2026-10-05, not re-read)"
+    title: "SPI Research / Kantata, 2025 Professional Services Maturity Benchmark, Table 170, p148 (accessed 2026-11-24)"
   - id: pain
     resource: "tasks/saas/positioning-statement/consulting_pain.md"
     title: "Team research note on consulting pain, 2026-10-05"
@@ -68,14 +68,14 @@ In a product company a person mostly works for one manager, who sees the work. I
 6. **The bench.** Between engagements nobody sees the work. The Big 4 in India left "more than 1000 mid-level professionals" on the bench in 2023.[^financestory] Sphyr cannot help here (see [journey map](journey_map.md)).
 
 What employees of homegrown firms write (verbatim, unattributed in public copy):
-- "Partiality is rampant. If you become a yesman to the leadership they might still think of giving you a promotion" (one review among 197 for one homegrown firm).[^ambition_primus]
-- "Firm gives good visibility and learning opportunities since partners are closely involved in the studies" (one review among 264 for another).[^ambition_avalon] This is the positive case: when the partner is close to the work, the problem disappears. It is also why the lower size edge sits near 40.
+- "Partiality is rampant. If you become a yesman to the leadership they might still think of giving you a promotion" (one employee review of one homegrown firm).[^ambition_primus]
+- "Firm gives good visibility and learning opportunities since partners are closely involved in the studies" (one employee review of another).[^ambition_avalon] This is the positive case: when the partner is close to the work, the problem disappears. It is also why the lower size edge sits near 40.
 
-Two reviews out of 461 are illustrations, not a measure of how common the problem is.
+Two reviews are illustrations, not a measure of how common the problem is. Each firm's page holds a few hundred reviews; the exact counts could not be read reliably.
 
 ## Why homegrown firms, and why now
 
-- **They are growing.** The India management consulting services market is expected to grow from USD 9.36 billion in 2026 to USD 18.93 billion by 2032, and small and medium-sized enterprises are "the fastest-growing segment" (13.05% forecast CAGR).[^mordor] The Hindu (2025) describes a "new generation of homegrown firms" winning work by offering "hands-on execution and shared accountability for results".[^hindu]
+- **The market is growing.** The India management consulting services market is expected to grow from USD 9.36 billion in 2026 to USD 18.93 billion by 2032.[^mordor] Mordor's fastest-growing "organization size" segment is small and medium-sized enterprises as clients (13.05% forecast CAGR); that these smaller clients favour homegrown firms is our inference, not a source fact. The Hindu (2025) describes a "new generation of homegrown firms" winning work by offering "hands-on execution and shared accountability for results".[^hindu]
 - **They compete for the same talent as MBB and the Big 4, usually at lower pay.** "Pay isn't as high" appears in the same Avalon review quoted above.[^ambition_avalon] They cannot win people on pay or brand. A promotion system people trust is one of the few levers they control.
 - **Growth breaks partner memory.** A firm of 40 can rely on partners knowing everyone. A firm of 150 across three cities cannot. Primus Partners went from founding in 2019 to "400+ professionals, 240+ ongoing projects, and a presence across 18 Indian states and 14+ countries" in seven years.[^primus]
 - **Timing.** Promotions land April to June. Sphyr needs several fortnightly cycles before the record is useful, so the selling window is November to January. On 24 November 2026 we are at the start of that window.
@@ -84,7 +84,7 @@ Two reviews out of 461 are illustrations, not a measure of how common the proble
 
 | Edge | Reasoning | Confidence |
 |---|---|---|
-| Lower, about 40 | Below this, partners work on most studies themselves (see the Avalon review above). SPI's 2025 benchmark showed voluntary attrition stepping up from 6.1% (10 to 30 staff) to 7.7% (31 to 100).[^spi] | Low to medium. SPI is global and US-heavy, and was read in October, not re-read. |
+| Lower, about 40 | Below this, partners work on most studies themselves (see the Avalon review above). SPI's 2025 benchmark shows voluntary attrition stepping up from 6.1% (10 to 30 staff) to 7.7% (31 to 100) (Table 170).[^spi] | Low to medium. SPI covers professional services firms of all kinds, mostly outside India. |
 | Upper, about 400 | Primus Partners at "400+ professionals" marks the top of the homegrown band.[^primus] Above this, firms build HR functions and buy suites; the Big 4 and MBB run global systems and procurement. | Medium. |
 
 What would move the band: interviews showing 20-person firms already rotate staff across many partners (lower the floor), or 300-person firms already running per-engagement reviews well (lower the ceiling).

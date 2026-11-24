@@ -38,16 +38,20 @@ Kavya is the person who has to make April different. This map follows her, not a
 
 ## Stage 1. Trigger (October to November)
 
+It starts on a Tuesday, when a partner asks Kavya for "the file" on Meera, whom he has staffed for three weeks this year. She opens her tracker, finds two thin forms, and remembers sitting across from Siddharth in June.
+
 *"It's happening again. I can see exactly how Meera's April will go."* She feels a mix of guilt and dread. Her stake: another April like the last one.
 
 | Touchpoint | What she does | What she thinks and feels | Problem | Can we act on it? | What Sphyr or the team does |
 |---|---|---|---|---|---|
-| The firm grows to 150 people in three offices; partners can no longer see everyone's work | Notices it in small ways: partners rating people they barely know | *"Ten partners can't know a hundred and forty people."* | Growth itself | **No** on the growth (see below). **Yes** on the moment it shows | Content that names the moment in partner words, timed for November to January |
+| The firm grows to 150 people in three offices; partners can no longer see everyone's work | Notices it in small ways: partners rating people they barely know | *"Eleven partners can't know a hundred and fifty people."* | Growth itself | **No** on the growth (see below). **Yes** on the moment it shows | Content that names the moment in partner words, timed for November to January |
 | A partner asks her for "the file" on a consultant he did not lead | Sends two thin project-end forms and a forwarded client email | *"This is all I have. It isn't fair to her."* | The evidence was never collected while the team was together | **Yes** | This is the exact symptom our first LinkedIn post and the site hero describe |
 | She re-reads Siddharth's exit interview | Wonders who is next | *"I agreed with him. I couldn't say so."* | The exit already happened | **No** for Siddharth. **Partly** for the next one | Give her words for it: "the engagement ends, the evidence leaves with the team" |
 | The bench: a consultant between engagements | Nothing to review | *"Nobody's watching her work because there isn't any."* | No work, no witnesses | **No** | Say plainly that Sphyr cannot help on the bench |
 
 ## Stage 2. Naming the problem (November)
+
+On the train home she scrolls LinkedIn and stops at a post about consultants being rated by whoever remembers them. She reads it twice. It is the first time someone has described her April without blaming the partners.
 
 *"It isn't that partners are unfair. It's that by April they remember the last engagement."* Relief at having words for it. Her stake: whether she can say it in partner language.
 
@@ -57,6 +61,8 @@ Kavya is the person who has to make April different. This map follows her, not a
 | She searches "360 feedback for consulting firms" | Finds suites and HR software lists | *"These are built for companies with an HR department of fifty."* | Category language is HR jargon | **Yes** | The site speaks consulting, and says early who Sphyr is not for |
 
 ## Stage 3. Looking for answers (late November to December)
+
+On Sunday evening she opens three tabs: her HRMS vendor's appraisal module, a global suite, and Sphyr. She gives each one ten minutes, the time she has.
 
 *"I'll give it ten minutes. If I have to book a sales call to understand it, I'm out."* Impatient, sceptical. Her stake: her time.
 
@@ -68,6 +74,8 @@ Kavya is the person who has to make April different. This map follows her, not a
 
 ## Stage 4. Seeking validation (December)
 
+The walkthrough made sense. Then she searches for reviews and finds nothing, asks her HR peer group and hears nothing, and feels the familiar fear of backing something no one else has tried.
+
 *"No reviews. No customers. Am I really going to put my name on this?"* Anxious. Her stake: her credibility.
 
 | Touchpoint | What she does | What she thinks and feels | Problem | Can we act on it? | What Sphyr or the team does |
@@ -78,6 +86,8 @@ Kavya is the person who has to make April different. This map follows her, not a
 
 ## Stage 5. Making the case to the managing partner (December to January)
 
+She has one meeting with Vikram before the partners' offsite. She rewrites her one-page note three times, each time removing a word that sounds like HR.
+
 *"Vikram will ask one question: will my partners hate this?"* Nervous, prepared. Her stake: her one budget ask of the year.
 
 | Touchpoint | What she does | What she thinks and feels | Problem | Can we act on it? | What Sphyr or the team does |
@@ -87,6 +97,8 @@ Kavya is the person who has to make April different. This map follows her, not a
 | Vikram asks about clients | Has no answer ready | *"Clients are his, not mine."* | Client relationship belongs to partners | **Yes** | Rule: a client rates only when the partner adds them to the consultant's sphere |
 
 ## Stage 6. Paid pilot (January to March)
+
+Two practices are in. The first cycles go well. Then the strategy practice hits a client deadline week, and Kavya checks the participation number every morning before her coffee.
 
 Setup, invitations and the first card belong to the first-use plan in `docs/packaging/`. This stage starts after the first cycle.
 
@@ -102,6 +114,8 @@ Open conflict, not resolved here: the pilot length and price come from the prici
 
 ## Stage 7. First calibration on Sphyr (April to June)
 
+The night before calibration she opens Meera's record: four engagements, views from people on each of them, and a client counterpart the partner added in February. She does not know what the partners will decide. She knows what they will be looking at.
+
 *"For the first time, the partner talking about Meera had seen what three other engagement managers and a client thought."* Vindicated, but careful. Her stake: whether partners see something they did not already know.
 
 | Touchpoint | What she does | What she thinks and feels | Problem | Can we act on it? | What Sphyr or the team does |
@@ -111,6 +125,8 @@ Open conflict, not resolved here: the pilot length and price come from the prici
 | Meera's outcome | Waits | *"Whatever they decide, they decided on her whole year."* | We cannot promise a promotion | **No** on the outcome. **Yes** on the record | The record is there; the decision is the partners' |
 
 ## Stage 8. Renewal (after the first round)
+
+In June she sits down with Vikram and the scorecard they agreed in January. Some numbers are good and one is not.
 
 *"I said we'd measure it. Now I have to show him the numbers, good or bad."* Her stake: being the person who fixed April.
 
