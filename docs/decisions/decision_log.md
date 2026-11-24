@@ -19,6 +19,8 @@ Append new decisions on top. Do not edit an old decision; add a new one that rep
 ## 2026-11-25: Pricing section trimmed
 
 - **Decision:** the pricing section was too large. Plan card: ₹149, "per employee per month, billed yearly, plus GST", "Same rate for every employee and firm size", four short bullets (a two-minute card every two weeks; a record for each person, ratings pooled; your firm's values on the cards; setup, training and support by our team), "Clients you invite to give feedback: free", and one example line "A 150-person firm pays ₹22,350 a month, plus GST". Pilot card: ₹25,000 one time, "12 weeks, up to 40 people", and one line "Comes off your first annual bill if you sign. If not, you keep your data."
+- **Equal cards:** the plan and pilot cards are the same height on desktop.
+- **Price reasons on the site:** the closed "How we set the price" toggle adds four plain lines: ₹149 against the cheapest dedicated review tool found (PerformYard, about ₹464 a seat), break-even at about 49 firms of 150 people, why the pilot runs six cycles (12 weeks), and that a price survey of heads of talent and partners decides whether ₹149 moves. This partly reverses "Price and pilot (gate 1b)", which kept the reasoning internal.
 - **Moved out:** the bills table, OKRs, spreadsheet import and new-joiner billing stay in [pricing](../pricing/pricing_summary.md). The scorecard sits behind a small "What a pilot measures" toggle under the pilot card. The 02:09 stat moves to the proof section.
 
 ## 2026-11-25: Full-colour logo in nav and footer
