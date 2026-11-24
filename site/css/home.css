@@ -88,7 +88,7 @@
 .price-pair .pilot { background: var(--surface-sunk); border-color: var(--border); }
 .price-pair .term p { margin-top: 0; }
 .term .price { margin-top: var(--s-3); }
-.term .amount { display: block; font-family: var(--font-display); font-weight: 500; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; font-size: clamp(2.25rem, 1.8rem + 1.2vw, 2.75rem); }
+.term .amount { display: block; font-family: var(--font-display); font-weight: 500; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; font-size: clamp(2.5rem, 2rem + 1.8vw, 3.5rem); }
 /* The unit sits under the numeral; each phrase is unbreakable, so it never splits mid-phrase. */
 .term .per { display: block; margin-top: var(--s-2); font-size: var(--fs-small); font-weight: 600; color: var(--text); }
 .term .per > span { white-space: nowrap; }
