@@ -46,6 +46,13 @@
   .duo, .duo.flip { grid-template-columns: 1fr; gap: var(--s-6); }
   .duo.flip > :first-child { order: 0; }
 }
+/* Both tag steps share one cell, so picking an answer never changes the card's height or moves the text beside it. */
+.duo .fx-body { display: grid; }
+.duo .fx-body > .fx-step { display: block; grid-row: 2; grid-column: 1; visibility: hidden; }
+.duo .fx-feedback:has(.fx-opt[value="good"]:checked) .fx-step-good,
+.duo .fx-feedback:has(.fx-opt[value="improve"]:checked) .fx-step-improve,
+.duo .fx-feedback:has(.fx-opt[value="none"]:checked) .fx-step-none { visibility: visible; }
+.duo .fx-body > .fx-step-none { display: grid; place-items: center; color: var(--text-muted); }
 .text-col h2 { margin-bottom: var(--s-5); }
 .text-col h3 { margin-bottom: var(--s-3); }
 .text-col .values-h { margin-top: var(--s-6); }
