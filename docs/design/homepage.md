@@ -115,4 +115,4 @@ Checks (2026-11-25), page served at `http://127.0.0.1:8822/site/index.html`, hea
 Open points:
 - At 1440 and 1280 the circle's centre label "Consultant" renders at 8.5 px. The size comes from the shared `site/css/motif.css`; the page does not override it.
 - Not measured this time: changed share per interaction and time to rest. The interactions are the mockup's, unchanged; the only new one is the "How we set the price" disclosure, which uses the shared FAQ style.
-- Screenshots in `site/_shots/home-*.png` are taken with reduced motion, so they show the finished ribbon picture.
+- Screenshots in `design-lab/shots/site/home-*.png` are taken with reduced motion, so they show the finished ribbon picture.

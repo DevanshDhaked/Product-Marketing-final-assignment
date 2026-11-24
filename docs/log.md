@@ -6,6 +6,9 @@ tags: [log]
 timestamp: 2026-11-24T16:32:35Z
 ---
 
+## 2026-11-25
+* **Update**: Site cleanup: removed the old `how-it-works`, `pricing` and `trust` pages, `style.css`, `main.js`, root `og.png`, `sphere.svg` and `one.svg`; moved screenshots out of `site/`; replaced the stale root brief copy with a pointer to [the canonical brief](brief/assignment_brief.md).
+
 ## 2026-11-24
 * **Update**: Merged [pricing](pricing/index.md) from d1-pricing (terms await team approval) and added its report to [handoffs](handoffs/index.md).
 * **Update**: Added the ad medium research report to [handoffs](handoffs/index.md).

@@ -7,6 +7,7 @@ timestamp: 2026-11-24T17:04:27Z
 ---
 
 ## 2026-11-25
+* **Update**: Screenshots moved from `site/_shots/` to `design-lab/shots/site/` so they do not deploy; paths updated in [homepage](homepage.md) and [site build](site_build.md).
 * **Update**: [Homepage mockup](homepage.md): addendum for the site build of `site/index.html`: problem section, values passage, nav anchors, pricing cards, cycle dates in frames, and the measured checks.
 * **Creation**: Added [site build](site_build.md): shared files in `site/`, page contract, the four-link nav with the phone menu, class catalogue, do-nots and measured checks.
 

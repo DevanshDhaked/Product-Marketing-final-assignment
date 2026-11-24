@@ -35,7 +35,7 @@ The approved design in `design-lab/` is ported into shared files under `site/`. 
 | `site/assets/` | `sphyr-logo.svg`, `sphyr-mark.svg` (sprite, `#mark`), `icons.svg` (Lucide) with `LUCIDE-LICENSE.txt`, `favicon.svg`, `favicon.ico` (16, 32, 48), `apple-touch-icon.png` (180), `og.png` (1200 by 630) | lab assets; favicons and OG image are new |
 | `site/_template.html` | Blank page: head, nav, empty `main`, footer, call note, scripts | `design-lab/snippets/` |
 | `site/_motif.html` | Unlinked specimen of the core visual and the circle with the gate 1b labels | `design-lab/home.html` compositions |
-| `site/_shots/` | Screenshots of the two files above, both themes, 1280 and 375, plus the open menu at 375 | not linked from any page |
+| `design-lab/shots/site/` | Screenshots of the two files above, both themes, 1280 and 375, plus the open menu at 375 | not linked from any page |
 
 The `@font-face` paths in `base.css` are `../fonts/`; the head preloads are `fonts/` from the page. Both resolve to the same URL, so each font loads once.
 
