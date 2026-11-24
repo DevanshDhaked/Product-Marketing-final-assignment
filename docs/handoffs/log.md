@@ -20,6 +20,7 @@ timestamp: 2026-11-24T17:11:40Z
 * **Creation**: Added [Design teammate report, phases 1a and 1b](design_report.md).
 
 ## 2026-11-24
+* **Creation**: Added [LinkedIn posts rewrite report](posts2_report.md).
 * **Creation**: Added [Hero alignment report](hero_report.md).
 * **Creation**: Added [Six content gaps report](content_report.md).
 * **Creation**: Added [Plain words on walkthrough and LinkedIn report](jargon_report.md).

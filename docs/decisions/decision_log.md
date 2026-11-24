@@ -10,6 +10,10 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-25: LinkedIn posts rewritten
+
+- **Decision:** the three posts are rewritten in a person's voice, about 110 to 130 words each: post 1 a short story about one consultant, post 2 the Galton ox story as the hook, post 3 how a pilot is judged and what it costs. Disclaimers, author-and-year citation chains, the 02:09 figure and contract terms are out of the posts (they stay in the docs and on the home page). Replaces "LinkedIn posts unchanged" in "Short deliverable pages". Reason: the user read the posts and found them unreadable; verbose is not quality.
+
 ## 2026-11-25: Host iteration-a at /v2/
 
 - **Decision:** iteration-a is published on the `gh-pages` branch under `v2/` (https://devanshdhaked.github.io/Product-Marketing-final-assignment/v2/). The old site stays at the root for comparison until submission. Every absolute link in the content (meta tags, the LinkedIn first-comment links, the ad's printed address) points to `/v2/`, and the ad QR code was regenerated and decoded for `/v2/demo.html`. If the team later moves the new site to the root, these links and the QR code must change back.
