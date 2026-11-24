@@ -81,7 +81,7 @@ PASS. Clear message, benefit, medium rationale, CTA rationale. Gaps: "+ GST" mis
 Other notes:
 - The brief spells the product "Spyhr" (brief:31, 33); the site, README and course docs use "Sphyr". Note only, not a fail; consider one line in the footer if the grader is literal.
 - Scullen, Mount & Goff 2000 "62% and 53%" is still marked unverified in devansh_notes.md:157 yet appears at index.html:76, linkedin.html:86, propaganda.html:73, 83. The site's own guardrail (propaganda.html:160) makes an unverified figure a credibility risk. Status: VERIFY, not known wrong.
-- Lattice "$10 per seat per month" (pricing.html:81) not verified by this lane.
+- Lattice "$10 per seat per month" (pricing.html:81) not verified in this audit.
 
 ---
 

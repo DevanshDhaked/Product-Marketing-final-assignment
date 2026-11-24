@@ -15,7 +15,7 @@ sources:
 
 Paths like `tasks/saas/...` and `sphyr/...` are relative to the course folder `sem_3/pm/` on the team's machine, outside this repo.
 
-Source of feedback: `/Users/borah/.claude/jobs/b00b98da/tmp/feedback.md`. "Prior work in repo" lists drafts that already touch the point (not fixes, only pointers).
+Source of feedback: [professor feedback](professor_feedback.md). "Prior work in repo" lists drafts that already touch the point (not fixes, only pointers).
 
 ## 4.1 Pricing (70/100), `Sphyr_Pricing_OnePager.pdf`
 

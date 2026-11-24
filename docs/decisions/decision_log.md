@@ -10,8 +10,9 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
-## 2026-11-24: Segment is consulting
+## 2026-11-24: Segment is consulting (exact definition proposed, awaiting confirmation)
 
+- **Status:** the team chose consulting. The exact definition below is a proposal until the team confirms it.
 - **Decision:** the canonical segment is homegrown, partner-led Indian management and strategy consulting firms of about 40 to 400 professionals. The managing partner is the buyer, the head of talent is the champion, and Meera, a senior consultant, is the person being rated. IT and tech consulting are out.
 - **Why:** the course assigned Team 3 the consulting domain (`tasks/saas/positioning-statement/task.md`, 5 Oct). The professor's feedback asks for a personal journey and a message a junior copywriter can use, and a narrow, concrete segment serves both. The definition comes from `tasks/saas/positioning-statement/positioning-onepager.pdf`.
 - **Replaces:** the live site's segment (founders of 50 to 300 person IT services firms, Meera as Head of People) and the graded 29 Sep segment (founder-led product IT, 30 to 500, Rohan).

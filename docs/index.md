@@ -14,6 +14,7 @@ Read in this order: decisions, then brief (feedback and gap map), then product (
 <!-- okf-index:start -->
 * [brief](brief/index.md) - The canonical assignment brief and rubric, verbatim professor feedback, and a map of what each feedback point found missing.
 * [decisions](decisions/index.md) - Team decisions for iteration A, newest first, with reasons.
+* [plan](plan/index.md) - The sequenced iteration A plan with its approval gates.
 * [prior_work](prior_work/index.md) - Digests of the team's earlier Sphyr coursework: what was graded, where sources conflict, and research that can back numbers.
 * [product](product/index.md) - What Sphyr really is and does, per the product documentation, whitepaper and the professor's prototype, and what marketing must not claim.
 * [site_audit](site_audit/index.md) - Audit of the site at commit fc85cac: pages, brief compliance, feedback carry-over, design problems and bugs.
