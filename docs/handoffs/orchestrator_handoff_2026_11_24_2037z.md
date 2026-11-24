@@ -15,7 +15,7 @@ Deadline: final assignment due **27 Nov 2026, 23:59** (IST). The user pushes and
 | What | Path or value |
 |---|---|
 | Repo (user's checkout, on `main`) | `/Users/borah/resources/IIITH PDM/sem_3/pm/Product-Marketing-final-assignment` |
-| Working branch and worktree | `iteration-a` at `.claude/worktrees/iteration-a` inside the repo. Last commit before this file: `5c6ca4c`. Not pushed. |
+| Working branch and worktree | `iteration-a` at `.claude/worktrees/iteration-a` inside the repo. See `git log --oneline -15` on `iteration-a` for the latest commits. Not pushed. |
 | Live site (old, unchanged) | https://devanshdhaked.github.io/Product-Marketing-final-assignment/ served from the `gh-pages` branch. Redeploy steps are in `README.md`. |
 | Docs bundle (OKF v0.2) | `docs/` on `iteration-a`. Read `docs/index.md`, then `docs/decisions/decision_log.md` (every user decision, newest first). |
 | Swarm folder (outside git) | `/Users/borah/resources/IIITH PDM/sem_3/pm/Product-Marketing-final-assignment.swarm/`: `ledger.md` (run log), `briefs/` (common.md, phase2_common.md and one brief per teammate), `reports/` (every teammate report), `scripts/handoff.py` (copies a report into `docs/handoffs/`), `scripts/feedback.md`. |
@@ -27,18 +27,22 @@ Deadline: final assignment due **27 Nov 2026, 23:59** (IST). The user pushes and
 
 `site/index.html` (home: ribbon hero, problem scenes, how it works, for partners, proof, pricing cards, after you sign), `demo.html` (4-step interactive walkthrough), `deliverables.html` (hub: 01 website, 02 propaganda, 03 posts, 04 ad), `propaganda.html` (about 650 words, sticky contents), `linkedin.html` (3 post mockups), `ad.html` (paid roll-up standee and A6 card at an HR community event, planned, QR to demo.html). Shared files: `site/css/base.css`, `motif.css`, page CSS files, `site/js/*.js`, `site/fonts/`, `site/assets/`, `site/_template.html`. Screenshots live in `design-lab/shots/site/` (not deployed).
 
-## 3. Open work, in order
+## 3. Open work, in order (updated 2026-11-25)
 
-1. **Visuals teammate** (herdr agent `visuals`, pane `w8:p2E`, branch `d1-visuals`, worktree `Product-Marketing-final-assignment.d1-visuals`, preview server on 8829 started by the previous lead). It adds four visuals to `propaganda.html` (audience map, belief shift, channel table, campaign flow), brief at `briefs/visuals.md`. When it stops: read `reports/visuals.md`, look at its screenshots, merge with `git merge --no-ff d1-visuals`, copy its report with `python3 <swarm>/scripts/handoff.py visuals "<title>" "<one sentence>" <UTC time>` run from the worktree root, rebuild the docs index, commit, then `herdr agent prompt visuals "/exit"`, `herdr pane close w8:p2E`, stop the 8829 server.
-2. **Final pass (small, do it yourself or with one fresh agent):**
-   - Remove dated HTML comments copied from the template (for example `<!-- Canonical nav (2026-11-25, ...` ) from every page in `site/`.
-   - Remove the duplicate "Book a 20-minute call" text link at the end of `#pricing` on `index.html` (the pilot card already has the button; the user did not object when told).
-   - Scan all six pages: no access dates or ISO dates, no month names, no "anonymous"/"anonymized" overclaims, no he/she for unnamed roles, no claims of customers or of having none, no dashes, no emojis; all links and anchors resolve; no sideways scroll at 375 px; one screenshot per theme by eye.
-   - Optional reviewer nice-to-haves (`docs/handoffs/reviewer_report.md`): standee headline sits tight under the logo; ad URL under the QR is 11 px; demo "From 13 collaborators" count; index scene vs post 1 describe "the file" slightly differently.
-3. **Walkthrough change (user decision 2026-11-25):** the card in `demo.html` must follow the visitor's pick. Today `site/js/demo.js` always uses Nikhil. Spawn one fresh herdr agent for `site/demo.html`, `site/js/demo.js`, `site/css/demo.css`: card name and avatar, the reply lines, the step 3 partner view and the step 4 ending all switch on the pick; both paths must still show that the record holds what colleagues saw. Check both paths by eye in both themes.
-3b. **Trim deliverable pages (user decision 2026-11-25):** one fresh herdr agent for `site/ad.html` and `site/linkedin.html` (and their CSS): ad rationale down to about 200 to 250 words; LinkedIn notes down to one short line each per post (job, stage, call to action), posts themselves unchanged. Merge `d1-visuals` first so propaganda is settled; keep every page short.
-4. **Housekeeping:** ask the user before removing the finished teammate worktrees (`git worktree list`; all `d1-*` branches except `d1-visuals` are merged). Append a dated entry to `docs/log.md` and the ledger.
-5. **Hand to the user:** the local preview URL, the commit list, and the redeploy steps from `README.md`. The user reviews, pushes `iteration-a`, and redeploys `gh-pages`.
+State at this update: no agent is working. The `visuals` herdr agent (pane `w8:p2E`, tab `w8:t3`) is idle and done; its branch `d1-visuals` is not merged. The previous session's preview servers (8829, 8830) die with that session: start your own (`python3 -m http.server 8830 --bind 127.0.0.1 --directory <worktree>/site`).
+
+1. **Merge visuals.** Read `<swarm>/reports/visuals.md`, look at its screenshots in the `d1-visuals` worktree (`design-lab/shots/site/propaganda-visual-*`) yourself, then `git merge --no-ff d1-visuals`. From the worktree root run `python3 <swarm>/scripts/handoff.py visuals "<title>" "<one sentence>" <UTC time>`, rebuild the docs index, commit. Then `herdr agent prompt visuals "/exit"` and `herdr pane close w8:p2E`.
+2. **Walkthrough card follows the pick** (user decision 2026-11-25). Today `site/js/demo.js` always uses Nikhil. One fresh herdr agent for `site/demo.html`, `site/js/demo.js`, `site/css/demo.css`: the card name and avatar, the reply lines, the step 3 partner view and the step 4 ending all switch on the pick (Tara or Nikhil); both paths still show that the record holds what colleagues saw. Check both paths by eye in both themes.
+3. **Trim deliverable pages** (user decision 2026-11-25). One fresh herdr agent for `site/ad.html`, `site/linkedin.html` and their CSS: ad rationale down to about 200 to 250 words (now about 530); LinkedIn posts unchanged, notes around them one short line each (job, stage, call to action); the page is about 1,170 words now. Tasks 2 and 3 touch different files and can run in parallel.
+4. **Final pass** (you, after 1 to 3 are merged):
+   - Remove dated HTML comments copied from the template (for example `<!-- Canonical nav (2026-11-25, ...`) from every page in `site/`.
+   - Remove the duplicate "Book a 20-minute call" text link at the end of `#pricing` on `index.html` (the pilot card already has the button).
+   - Scan all six pages: no access dates or ISO dates, no month names, no "anonymous"/"anonymized" overclaims, no he/she for unnamed roles, no claims of customers or of having none, no dashes, no emojis. Links and anchors resolve. No sideways scroll at 375 px.
+   - Look at every page yourself in both themes, especially rows and horizontal lists: a base `li + li` margin misaligned the walkthrough steps once (fixed in `site/css/demo.css`); check the hub, footer and cards for the same.
+   - Keep every page short. Word counts at this update: propaganda about 730, hub about 130.
+   - Optional reviewer nice-to-haves (`docs/handoffs/reviewer_report.md`): standee headline tight under the logo; ad URL under the QR at 11 px; demo "From 13 collaborators" count.
+5. **Housekeeping:** ask the user before removing finished teammate worktrees (`git worktree list`; all `d1-*` branches are merged once visuals is). Append a dated entry to `docs/log.md` and the ledger.
+6. **Hand to the user:** the local preview URL, the commit list, and the redeploy steps from `README.md`. The user reviews, pushes `iteration-a` and redeploys `gh-pages`.
 
 ## 4. User rules (follow exactly)
 
