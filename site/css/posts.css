@@ -51,6 +51,8 @@
 
 /* The note beside each post: labels are structure in their own column, set small and muted. */
 .post-note h2 { margin-bottom: var(--s-5); }
+/* The short note stays beside its tall post while it scrolls; 65px clears the sticky nav. */
+@media (min-width: 961px) { .post-note { position: sticky; top: calc(65px + var(--s-5)); } }
 .post-note dl { margin: 0; border-top: 1px solid var(--border); }
 .post-note dl > div { display: grid; grid-template-columns: 9.5rem 1fr; gap: var(--s-4); padding-block: var(--s-3); border-bottom: 1px solid var(--border); }
 .post-note dt { font-size: var(--fs-small); font-weight: 600; color: var(--text-muted); }
