@@ -166,8 +166,10 @@ a:hover { text-decoration-thickness: 2px; }
 .icon { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .icon-sm { width: 16px; height: 16px; }
 
-/* Nav (canonical, phase 1b): logo left; Deliverables, theme switch and the walkthrough button right.
-   One line at every width. Under 760px the button hides because the hero carries the same link. */
+/* Nav (canonical, 2026-11-25 change, replaces the 3-item nav): logo left; How it works, For partners, Pricing
+   and Deliverables; then the walkthrough button and the theme switch. Below 1000px the first three links move
+   into the Menu popover (#nav-menu) and Deliverables stays in the bar. Below 760px the button also hides,
+   because the page itself carries a link to the walkthrough. Behaviour: js/nav.js. */
 .nav { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--border); }
 .nav-inner { display: flex; align-items: center; gap: var(--s-5); min-height: 64px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 700; font-size: 1.125rem; letter-spacing: -0.01em; }
@@ -178,13 +180,26 @@ a:hover { text-decoration-thickness: 2px; }
 .nav-links a[aria-current="page"] { color: var(--text); box-shadow: inset 0 -2px 0 var(--brand); }
 .nav-end { margin-left: var(--s-4); display: flex; align-items: center; gap: var(--s-3); }
 .nav-end .btn { min-height: 36px; padding: 0 14px; }
-@media (max-width: 760px) {
+.nav-menu-btn { display: none; align-items: center; gap: 6px; min-height: 44px; padding: 0 4px; border: 0; background: none; color: var(--text); font: 500 var(--fs-small)/1 var(--font); cursor: pointer; }
+.nav-menu-btn .icon { transition: transform var(--dur) var(--ease); }
+.nav-menu-btn[aria-expanded="true"] .icon { transform: rotate(180deg); }
+/* The menu sits under the bar at the right, in the top layer. Escape and an outside click close it (popover). */
+.nav-menu { inset: 64px var(--gutter) auto auto; margin: 0; width: min(280px, calc(100vw - 2 * var(--gutter))); padding: var(--s-2) var(--s-4); border: 1px solid var(--border-strong); border-radius: var(--r-surface); background: var(--surface-raised); color: var(--text); box-shadow: var(--shadow-satellite); }
+.nav-menu::backdrop { background: transparent; }
+.nav-menu ul { list-style: none; margin: 0; padding: 0; }
+.nav-menu li + li { border-top: 1px solid var(--border); }
+.nav-menu a { display: flex; align-items: center; min-height: 44px; color: var(--text); font: 500 var(--fs-body) var(--font); text-decoration: none; }
+.nav-menu a:hover { text-decoration: underline; }
+.nav-menu a[aria-current="page"] { box-shadow: inset 3px 0 0 var(--brand); padding-left: var(--s-3); }
+@media (max-width: 999px) {
   .nav-inner { gap: var(--s-3); }
   .nav-links { gap: var(--s-4); }
-  .nav-end { margin-left: var(--s-2); }
-  .nav-end .btn { display: none; }
+  .nav-links .nav-wide { display: none; }
+  .nav-end { margin-left: var(--s-2); gap: var(--s-2); }
+  .nav-menu-btn { display: inline-flex; }
 }
-
+@media (min-width: 1000px) { .nav-menu { display: none; } }
+@media (max-width: 760px) { .nav-end .btn { display: none; } }
 /* Theme toggle: a switch with no box around it. Its accessible name is "Dark theme" (aria-label or a visible
    label); aria-pressed carries the state. 44px target. */
 .theme-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-width: 44px; min-height: 44px; padding: 0; border: 0; background: none; color: var(--text); font: 500 var(--fs-caption)/1 var(--font); cursor: pointer; }

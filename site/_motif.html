@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <!-- Sphyr page template. Copy this file to site/<page>.html and fill the marked places. Do not edit the
-     shared files it links (css/base.css, css/motif.css, js/theme.js, js/motif.js, fonts/, assets/).
+     shared files it links (css/base.css, css/motif.css, js/theme.js, js/nav.js, js/motif.js, fonts/, assets/).
      Order matters: the colour-scheme meta and the inline theme script come before any stylesheet, so a
      stored theme applies on the first frame (no flash). Every page sits at the site/ root, so paths are relative to it. -->
 <meta charset="utf-8">
@@ -32,23 +32,37 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<!-- Canonical nav: logo (home), Deliverables, theme switch, the walkthrough button. Three links on every page.
-     On the current page add aria-current="page" to its link (the brand link on index.html, the Deliverables
-     link on deliverables.html and the three deliverable pages, the button on demo.html).
-     Under 760px the button hides; the page itself must carry a link to demo.html. -->
+<!-- Canonical nav (2026-11-25, replaces the 3-item nav): logo (home), How it works, For partners, Pricing,
+     Deliverables, the walkthrough button, the theme switch. The first three links point at anchors the home
+     page provides (#how, #partners, #pricing). Below 1000px they move into the Menu popover and Deliverables
+     stays in the bar; below 760px the button hides, so the page itself must carry a link to demo.html.
+     Current page: add aria-current="page" to its link in BOTH lists (the brand link on index.html, Deliverables
+     on deliverables.html and the three deliverable pages, the button on demo.html). -->
 <header class="nav">
   <div class="wrap nav-inner">
     <a class="brand" href="index.html"><svg class="mark mark--mono" viewBox="0 0 1254 1254" aria-hidden="true"><use href="assets/sphyr-mark.svg#mark"/></svg>Sphyr</a>
     <nav class="nav-links" aria-label="Main">
+      <a class="nav-wide" href="index.html#how">How it works</a>
+      <a class="nav-wide" href="index.html#partners">For partners</a>
+      <a class="nav-wide" href="index.html#pricing">Pricing</a>
       <a href="deliverables.html">Deliverables</a>
     </nav>
     <div class="nav-end">
+      <a class="btn btn-primary" href="demo.html">See the 2-minute walkthrough</a>
+      <button class="nav-menu-btn" type="button" popovertarget="nav-menu" aria-controls="nav-menu" aria-expanded="false">Menu<svg class="icon icon-sm" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"/></svg></button>
       <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Dark theme">
         <svg class="icon icon-sm" aria-hidden="true"><use href="assets/icons.svg#i-moon"/></svg><span class="track" aria-hidden="true"><span class="knob"></span></span>
       </button>
-      <a class="btn btn-primary" href="demo.html">See the 2-minute walkthrough</a>
     </div>
   </div>
+  <nav id="nav-menu" class="nav-menu" popover aria-label="Menu">
+    <ul>
+      <li><a href="index.html#how">How it works</a></li>
+      <li><a href="index.html#partners">For partners</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="deliverables.html">Deliverables</a></li>
+    </ul>
+  </nav>
 </header>
 
 <main id="main">
@@ -130,6 +144,7 @@
 </div>
 
 <script src="js/theme.js" defer></script>
+<script src="js/nav.js" defer></script>
 <script src="js/motif.js" defer></script>
 </body>
 </html>
