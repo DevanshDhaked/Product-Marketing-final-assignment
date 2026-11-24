@@ -30,6 +30,7 @@
 .wt-pick:last-of-type { border-bottom: 1px solid var(--border); }
 .wt-pick input { width: 20px; height: 20px; margin: 8px 0 0; accent-color: var(--action); }
 .wt-pick:hover { background: var(--surface-sunk); }
+.wt-pick:has(input:disabled) { cursor: default; } /* demo.js locks the pick once the card is in */
 .wt-pick:has(input:checked) { background: var(--positive-soft); }
 .wt-pick-body { display: grid; gap: var(--s-3); }
 .wt-person { display: flex; align-items: center; gap: var(--s-3); }
