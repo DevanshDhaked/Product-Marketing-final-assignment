@@ -11,6 +11,7 @@ timestamp: 2026-11-24T17:11:46Z
 * [Pricing cards redesign teammate report, phase 3](cards_report.md) - Pricing cards redesigned with stageshow rules: plan as hero, shared rows, one action each, aligned toggle.
 * [Home clarity fixes report](clarity_report.md) - Readable hero payoff label, a line on where sample scores come from, and plain words on the home sample screens.
 * [Old vs new site comparison report](compare_report.md) - Rubric-by-rubric comparison of the live old site and iteration-a: verdict mixed, losses in shown reasoning, gains in accuracy and pricing.
+* [Six content gaps report](content_report.md) - Segment reason, value line, per-tactic reasons, after the first year, hub thread and a plainer hero lede, each with its source.
 * [Design teammate report, phases 1a and 1b](design_report.md) - Design work from tokens to the homepage mockup: decisions, check results, known gaps and next steps for the site build.
 * [First-use packaging teammate report, phase 1b](firstuse_report.md) - Plan, progress and final summary from the first-use packaging work: feedback map, research, decisions, rejected approaches and open product questions.
 * [Home page teammate report, phase 2](home_report.md) - The new home page built from the approved mockup: problem scenes, nav anchors, pricing cards, checks and open points.
