@@ -10,6 +10,18 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-24: Price and pilot (gate 1b)
+
+- **Price:** ₹149 per employee per month, billed yearly, plus GST, the same for every firm size. This is the graded submission's price. The pricing work showed ₹149 passes the stated rule (cost floor ₹121 at 80% gross margin, at or below the low-case value ₹209). It needs about 49 firms of 150 to break even, against 35 at ₹199.
+- **Pilot:** 12 weeks (6 fortnightly cycles), up to 40 people, ₹25,000 plus GST (the cost to serve), credited against the first bill if the firm signs. If it does not sign, the firm gets its data as a CSV and the rest is deleted. Only the length changed from the graded six weeks, because three cycles are too few for a usable signal.
+- **Not adopted (scope):** the conditional refund, the early-customer price lock and the January start push. The final brief asks only that the site present pricing and packaging consistently and make the value understandable (brief section 3, rubric line "pricing, packaging, acquisition and engagement integration"). The reasoning that answers the pricing feedback stays in [pricing](../pricing/index.md) as internal backing.
+
+## 2026-11-24: Typeface and colour base
+
+- **Typeface:** Newsreader (SIL OFL 1.1) for display headlines, Manrope (SIL OFL 1.1) for body and UI. The team asked for the font that best fits the product and the segment. An editorial serif reads as credible to management consulting partners and heads of talent, who live with serif-set reports and decks. Bricolage Grotesque read as too loud and Apfel Grotezk as too quirky for that buyer. Playfulness comes from the ribbon motif, not the type.
+- **Colour base:** warm neutrals, light theme first. The blue-white `#F6FAFD` and navy `#040A16` from the prototype read as a generic AI palette and are replaced by warm paper and warm charcoal. Product greens stay for actions and positive states. Faux UI frames may keep the prototype's own colours because they show the real product.
+- **Replaces:** the phase 1a tokens and the open typeface item in "Site structure" below.
+
 ## 2026-11-24: Site structure
 
 - **Pages:** home (`index.html`, folds the old how-it-works, trust and pricing), the 2-minute walkthrough (`demo.html`), a deliverables hub (`deliverables.html`) and three deliverable pages (`propaganda.html`, `linkedin.html`, `ad.html`). Six pages in all, minimal links on each.

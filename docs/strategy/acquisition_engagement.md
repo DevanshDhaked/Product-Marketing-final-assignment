@@ -61,7 +61,7 @@ Sphyr has no customers and no reviews. The pilot scorecard is how proof gets bui
   5. A two-question consultant survey: "Did you see something useful in your own record?" and "Would you keep doing it?"
 - **After the pilot**, results are published only with the firm's consent, unnamed unless the firm agrees. Bad results are published the same way as good ones, or not at all.
 
-Open conflict carried from the sources: a 6-week pilot is 3 fortnightly cycles, while team sources say about 6 cycles (12 weeks) are needed for a useful record ([source conflicts, row 11](../prior_work/source_conflicts.md)). The pricing work decides; the scorecard targets must match the length it picks.
+Pilot terms, decided at gate 1b ([price and pilot](../pricing/price_and_pilot.md)): 12 weeks, six fortnightly cycles, up to 40 people, ₹25,000 plus GST, credited against the first annual bill if the firm signs. If it does not sign, the firm gets its data as a CSV file and the rest is deleted; there is no refund. This settles [source conflicts, row 11](../prior_work/source_conflicts.md): the graded six weeks gave only three cycles. The scorecard is measured over the six cycles.
 
 ## After the first touch (before any purchase)
 
