@@ -10,6 +10,10 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-25: No research stamps on public pages
+
+- **Decision:** no access dates ("accessed 2026-11-24"), ISO dates or "read on" notes on any public page. Sources are cited by name and year of publication only. Access dates stay in the docs.
+
 ## 2026-11-25: Hub numbering and a short propaganda page
 
 - **Hub:** the deliverables hub lists "01 The website" (linking to the home page) before 02 to 04, so all four graded deliverables read as one set.
