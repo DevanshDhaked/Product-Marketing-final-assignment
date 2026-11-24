@@ -10,6 +10,12 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-24: Simple site, new information architecture
+
+- **Decision:** the current site on `main` is a content reference only, not a design or navigation reference. The team finds it confusing and hard to navigate, with too many links.
+- **Direction:** simple and clear, yet pleasing and opinionated to look at, not a generalized average website. Use the fewest pages and links that still meet the brief: the website as hub with clear links to the propaganda strategy, the three LinkedIn posts and the ad, plus the 2-minute walkthrough.
+- **Replaces:** the phase 2 page split in [the plan](../plan/iteration_a_plan.md) (nine existing pages) until the new page list is approved at gate 1b.
+
 ## 2026-11-24: Design direction for phase 1b
 
 - **References:** study Awwwards and similar galleries for comparable products (HR tech, people analytics, feedback tools, editorial B2B SaaS) and borrow named patterns.
