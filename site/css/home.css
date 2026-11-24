@@ -11,8 +11,10 @@
 
 /* Hero: headline left, the line and the button right, the core visual full width below. */
 .home main > .hero { padding-block: var(--s-7) var(--s-6); }
-.hero-copy { display: grid; grid-template-columns: 1.45fr 1fr; gap: var(--s-6) var(--s-8); align-items: end; }
-.hero h1 { font-size: clamp(2.5rem, 1.4rem + 3.6vw, 4.25rem); line-height: 1.04; max-width: 13ch; }
+.hero-copy { display: grid; grid-template-columns: 1.45fr 1fr; gap: var(--s-6) var(--s-8); align-items: end; container-type: inline-size; }
+/* One sentence per line: the size follows the headline column so "The engagement ends." never wraps beside the lede. */
+.hero h1 { font-size: clamp(2.5rem, 5.8cqi - 0.25rem, 4.25rem); line-height: 1.04; }
+.hero h1 em { display: block; }
 .hero-side .lede { font-size: var(--fs-lede); color: var(--text); max-width: 30ch; }
 .hero-side .btn { margin-top: var(--s-5); }
 .hero-visual { margin: var(--s-7) auto 0; }
@@ -21,6 +23,7 @@
 .hero-visual .cv-compact { max-height: none; }
 @media (max-width: 900px) {
   .hero-copy { grid-template-columns: 1fr; gap: var(--s-4); }
+  .hero h1 { font-size: clamp(2.5rem, 1.4rem + 3.6vw, 4.25rem); }
   .hero-visual { margin-top: var(--s-6); }
 }
 
