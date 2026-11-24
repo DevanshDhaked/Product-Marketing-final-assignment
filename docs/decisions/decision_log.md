@@ -10,6 +10,12 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-25: Top navigation and pricing section
+
+- **Nav:** a corporate SaaS style nav: logo, "How it works" (`index.html#how`), "For partners" (`#partners`), "Pricing" (`#pricing`), "Deliverables" (`deliverables.html`), the "See the 2-minute walkthrough" button and the theme toggle. On phones a menu button opens the links and "Deliverables" stays visible. Replaces the three-item nav.
+- **Pricing section:** follows the graded one-pager's order. Plan card first: ₹149 per employee per month, billed yearly, plus GST; what is included (no AI); clients and other outside raters invited by email at no charge; example bills for 100, 150 and 300 people. Then a smaller "Getting started" pilot card: ₹25,000 one-time, 12 weeks, up to 40 people, credited to the first yearly bill; if the firm does not sign it gets its data and the rest is deleted. A "How we set the price" link opens the reasoning: the fee is the cost to serve a pilot (about 30 hours of setup, training and review at ₹809 an hour plus running costs, ₹25,324 to ₹25,965), list price for the same seats would lose about ₹9,500 per pilot, and a fee above cost would profit on a trial.
+- **Why:** the old pricing section was hard to read; the old site's single card and the graded one-pager put the per-person price first.
+
 ## 2026-11-25: Gate 1b, homepage approved
 
 - **Homepage:** `design-lab/home.html` is approved as the base for the site build, with these changes: the ribbon boxes say "Project 1 · 3 teammates" and so on; the first screen is trimmed to about 30 words (core line, one short sentence, the button; the rest moves below the fold); dates inside faux product frames become cycles ("Cycle 1" to "Cycle 6") and relative times, so no month name appears anywhere on the site.
