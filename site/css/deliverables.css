@@ -5,7 +5,8 @@
    .core-line   the central message, set once in the display serif
    .hub-index   the hub's index entries (number, display-serif title, one line, one link); nothing boxed
    .page-prop   propaganda page only: .prop-card summary card, .prop-layout body grid, .toc contents
-                (sticky column on wide screens, a sticky bar under the nav on phones once propaganda.js runs) */
+                (sticky column on wide screens, a sticky bar under the nav on phones once propaganda.js runs)
+   .viz         propaganda figures: .aud audience map, .shift belief shift, .chan channel table, .flow campaign flow */
 
 /* The hub title, and the core line set in the display serif where the strategy states it. */
 .doc h1 { margin: 0 0 var(--s-4); }
@@ -59,4 +60,94 @@
   /* With propaganda.js: a closed bar that sticks under the nav; without it, a normal list at the top. */
   .toc.is-live { position: sticky; top: 65px; z-index: 5; margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); background: var(--bg); border-bottom: 1px solid var(--border); }
   .prop-body section { scroll-margin-top: calc(65px + 45px + var(--s-4)); }
+}
+
+/* Propaganda visuals. Each is a <figure class="viz"> in semantic HTML, laid out by the width of the
+   figure itself (container queries), so the same rules serve the wide column and the phone. Figures
+   run wider than the text measure; paragraphs keep it. Brand green marks the one thing each visual
+   is about. */
+.prop-body { max-width: none; }
+.prop-body > section > :not(figure) { max-width: var(--measure); }
+.viz { container-type: inline-size; margin: var(--s-6) 0 0; }
+.viz figcaption { margin-top: var(--s-4); font-size: var(--fs-caption); color: var(--text-muted); }
+.viz + p { margin-top: var(--s-5); }
+
+/* 1. Audience map: three people side by side, the head of talent first with the brand rule. */
+.aud ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-5); margin: 0; padding: 0; list-style: none; }
+.aud li, .aud li + li { margin: 0; padding-top: var(--s-4); border-top: 2px solid var(--border-strong); }
+.aud li.aud-lead { border-top: 4px solid var(--brand); padding-top: calc(var(--s-4) - 2px); }
+.aud h3 { margin: 0; font-family: var(--font-display); font-weight: 500; }
+.aud p { margin: 0; }
+.aud .aud-job { margin-top: var(--s-1); font-size: var(--fs-small); color: var(--text-muted); }
+.aud .aud-belief { margin-top: var(--s-4); }
+.aud .aud-who { margin-top: var(--s-3); font-size: var(--fs-caption); color: var(--text-muted); }
+@container (max-width: 560px) {
+  .aud ul { grid-template-columns: 1fr; gap: var(--s-5); }
+}
+
+/* 2. Belief shift: today's belief, the tactics as the bridge, the belief we want. Wide: one row read
+   left to right. Narrow: one column read top to bottom, arrows turned down. */
+.shift-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.15fr) auto minmax(0, 1fr); gap: var(--s-4); align-items: center; }
+.shift-from, .shift-to { align-self: stretch; padding: var(--s-5); border-radius: var(--r-surface); }
+.shift-from { background: var(--surface-sunk); color: var(--text-muted); }
+.shift-to { background: var(--positive-soft); color: var(--on-positive-soft); }
+.shift p { margin: 0; }
+.shift-label { font-size: var(--fs-caption); font-weight: 600; }
+.shift-quote { margin-top: var(--s-3); font-family: var(--font-display); font-weight: 500; font-size: var(--fs-h3); line-height: var(--lh-head); }
+.shift-arrow { color: var(--brand); flex-shrink: 0; }
+.shift-bridge { margin: 0; padding: 0; list-style: none; counter-reset: tactic; font-size: var(--fs-small); }
+.shift-bridge li, .shift-bridge li + li { position: relative; margin: 0; padding-left: 32px; }
+.shift-bridge li + li { margin-top: var(--s-3); }
+.shift-bridge li::before { counter-increment: tactic; content: counter(tactic); position: absolute; left: 0; top: 1px; width: 22px; height: 22px; border: 1px solid var(--brand); border-radius: var(--r-pill); font-size: var(--fs-caption); font-weight: 600; line-height: 20px; text-align: center; color: var(--text); }
+@container (max-width: 640px) {
+  .shift-grid { grid-template-columns: 1fr; justify-items: start; }
+  .shift-from, .shift-to { justify-self: stretch; }
+  .shift-arrow { transform: rotate(90deg); margin-left: var(--s-5); }
+  .shift-bridge { padding-left: var(--s-5); }
+}
+
+/* 3. Channel table: a real table. The cost and tracking answers are tags so the column reads at a
+   glance. Narrow: each row becomes a block with its labels from data-label. */
+.chan table { font-size: var(--fs-small); }
+.chan thead th { white-space: nowrap; }
+.chan thead th:nth-child(2) { width: 1%; }
+.chan thead th:nth-child(3) { width: 150px; }
+.chan tbody th { font-weight: 600; color: var(--text); font-size: var(--fs-small); border: 0; }
+.chan tbody tr + tr > * { border-top: 1px solid var(--border); }
+.chan th:first-child, .chan td:first-child { padding-left: 0; }
+.chan td:last-child, .chan th:last-child { padding-right: 0; }
+.tag { display: inline-block; padding: 2px 10px; border-radius: var(--r-pill); font-size: var(--fs-caption); font-weight: 600; white-space: nowrap; }
+.tag-free { background: var(--positive-soft); color: var(--on-positive-soft); }
+.tag-paid { background: var(--constructive-soft); color: var(--on-constructive-soft); }
+.tag-note { display: block; margin-top: var(--s-1); font-size: var(--fs-caption); color: var(--text-muted); }
+@container (max-width: 640px) {
+  .chan thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .chan table, .chan tbody, .chan tr, .chan th, .chan td { display: block; }
+  .chan tbody tr { padding-block: var(--s-4); }
+  .chan tbody tr + tr { border-top: 1px solid var(--border); }
+  .chan tbody tr + tr > * { border-top: 0; }
+  .chan tbody th { padding: 0 0 var(--s-2); }
+  .chan td { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: var(--s-3); padding: var(--s-1) 0; }
+  .chan td::before { content: attr(data-label); font-size: var(--fs-caption); font-weight: 600; color: var(--text-muted); }
+  .chan td > * { justify-self: start; }
+  .chan td .tag-note { grid-column: 2; margin-top: 0; }
+}
+
+/* 4. Campaign flow: one strip of stops on a brand line. Wide: left to right. Narrow: top to bottom.
+   Each stop is a link to the piece it names; the last stop, the pilot, is a filled dot. */
+.flow ol { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: var(--s-4); margin: 0; padding: 0; list-style: none; }
+.flow li, .flow li + li { position: relative; margin: 0; padding-top: 52px; }
+.flow li::after { content: ""; position: absolute; top: 26px; left: 0; width: 14px; height: 14px; box-sizing: border-box; border: 2px solid var(--brand); border-radius: var(--r-pill); background: var(--bg); }
+.flow li:not(:last-child)::before { content: ""; position: absolute; top: 32px; left: 14px; right: calc(-1 * var(--s-4)); height: 2px; background: var(--brand); }
+.flow li.flow-end::after { background: var(--brand); }
+.flow-when { position: absolute; top: 0; left: 0; right: 0; font-size: var(--fs-caption); font-weight: 600; color: var(--text-muted); white-space: nowrap; }
+.flow-what { display: block; font-size: var(--fs-small); font-weight: 600; line-height: var(--lh-head); }
+.flow-what .linkbtn { min-height: 0; font: inherit; text-align: left; }
+.flow-job { display: block; margin-top: var(--s-2); font-size: var(--fs-caption); color: var(--text-muted); }
+@container (max-width: 720px) {
+  .flow ol { grid-auto-flow: row; gap: var(--s-5); }
+  .flow li, .flow li + li { padding: 0 0 0 32px; }
+  .flow li::after { top: 3px; }
+  .flow li:not(:last-child)::before { top: 17px; left: 6px; right: auto; bottom: calc(-1 * var(--s-5) - 3px); width: 2px; height: auto; }
+  .flow-when { position: static; display: block; margin-bottom: var(--s-1); white-space: normal; }
 }
