@@ -10,6 +10,35 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-24: Site structure
+
+- **Pages:** home (`index.html`, folds the old how-it-works, trust and pricing), the 2-minute walkthrough (`demo.html`), a deliverables hub (`deliverables.html`) and three deliverable pages (`propaganda.html`, `linkedin.html`, `ad.html`). Six pages in all, minimal links on each.
+- **Second call to action:** "Book a 20-minute call" opens an honest note: "Course project: in a live launch this books a 20-minute call with our team." No email address is published.
+- **Old URLs:** `how-it-works.html`, `pricing.html` and `trust.html` are dropped without redirects. The README links are updated to the new pages.
+- **Open:** the headline typeface (shortlist in `design-lab/type.html`), and whether the pricing reasoning needs its own page.
+
+## 2026-11-24: Ad placement chosen
+
+- **Decision:** the one advertisement is a paid sponsor standee (portrait roll-up) with matching A6 handout cards, placed at an HR community event of the kind run by NHRD Network chapters, in the December to January window before the April round. It tracks nobody: no pixel, no badge scan, no form; a QR code opens a plain URL for the 2-minute walkthrough.
+- **Naming:** the ad page does not name the specific real event (research found HR Showcase 2026, NHRD Bangalore, 4 to 5 Dec 2026). It describes the placement generically and says "planned", not "booked". No endorsement by any body is implied.
+- **Why:** advertising means money is involved ([class notes](../brief/communication_objectives_notes.md)); the event standee was the best verified paid option that reaches heads of talent among peers without tracking. Both newsletters measure clicks per subscriber ([research](../handoffs/admedium_report.md)).
+- **Replaces:** the LinkedIn Sponsored Content ad with retargeting on `main` (`site/ad.html`). Its reasoning layout (medium, audience, message, benefit, visual, call to action, journey stage) is kept as a content pattern only.
+- **Fix needed:** the channel plan lists SHRM India's 2026 conference (26 to 27 Nov 2026), which falls before the selling window; drop or move that row.
+
+## 2026-11-24: Simple site, new information architecture
+
+- **Decision:** the current site on `main` is a content reference only, not a design or navigation reference. The team finds it confusing and hard to navigate, with too many links.
+- **Direction:** simple and clear, yet pleasing and opinionated to look at, not a generalized average website. Use the fewest pages and links that still meet the brief: the website as hub with clear links to the propaganda strategy, the three LinkedIn posts and the ad, plus the 2-minute walkthrough.
+- **Replaces:** the phase 2 page split in [the plan](../plan/iteration_a_plan.md) (nine existing pages) until the new page list is approved at gate 1b.
+
+## 2026-11-24: Design direction for phase 1b
+
+- **References:** study Awwwards and similar galleries for comparable products (HR tech, people analytics, feedback tools, editorial B2B SaaS) and borrow named patterns.
+- **Logo:** use the ribbon-sphere logo in a playful way (motif, assembly, ribbons as the people around a consultant). It may be recoloured (all white, dark, mono) if the sphere stays recognisable and its ribbon sections stay distinct.
+- **Type:** not limited to Google Fonts, not excluding them. The font must be free to self-host on a public site, with its licence recorded.
+- **Skills:** use `design-taste-frontend` and `stageshow`. The prototype's UI language stays inside faux UI frames. Light and dark themes with the toggle stay.
+- **Replaces:** the phase 1a choice of Manrope as the only font is open again.
+
 ## 2026-11-24: Gate 1a results
 
 - **Central message and positioning approved:** "The engagement ends. The evidence stays." with the vision and product lines in [positioning](../strategy/positioning.md). Condition: all copy must read as written by people. Run every piece of public copy through the `humanizer:humanizer` skill before it ships.

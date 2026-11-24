@@ -94,7 +94,7 @@ She has one meeting with Vikram before the partners' offsite. She rewrites her o
 |---|---|---|---|---|---|
 | She forwards a page to Vikram | Picks the one link he will open | *"He reads two paragraphs, maximum."* | Partners need partner words, not HR words | **Yes** | A short "for partners" section: partners still decide, they see the whole year, it costs them two minutes |
 | The partners' meeting | Presents the pilot ask | *"If one partner says 'HR is rating my team', it's over."* | Partner veto | **Partly** | Answers for each veto (partners, consultants, clients); the partners still decide |
-| Vikram asks about clients | Has no answer ready | *"Clients are his, not mine."* | Client relationship belongs to partners | **Yes** | Rule: a client rates only when the partner adds them to the consultant's sphere |
+| Vikram asks about clients | Has no answer ready | *"Clients are his, not mine."* | Client relationship belongs to partners | **Yes** | Firm rule: a consultant invites a client by email from My Sphyr only with the partner's agreement |
 
 ## Stage 6. Paid pilot (January to March)
 
@@ -108,7 +108,7 @@ Setup, invitations and the first card belong to the first-use plan in `docs/pack
 |---|---|---|---|---|---|
 | A client-heavy fortnight | Watches the participation number | *"Please don't drop below the line we agreed."* | Long client weeks | **Partly** | Cards take about two minutes; the prototype's notification copy includes "Feedback reminder: 3 reviews remaining for this fortnight cycle"[^proto]; we cannot change client workload |
 | Meera opens her own insights | Kavya asks her what she thinks | *"She said it was the first time she'd seen what people thought while it still mattered."* | Consultants need a reason to keep going | **Yes** | Each person sees their own trend, strongest signals and anonymized comments |
-| A partner adds a client to a sphere | Checks the client was not bothered | *"One annoyed client and I'm done."* | Client fatigue | **Partly** | Partner opts the client in; we advise once per engagement phase at most |
+| A consultant invites a client, with the partner's agreement | Checks the client was not bothered | *"One annoyed client and I'm done."* | Client fatigue | **Partly** | The partner agrees before the consultant sends the email invite; we advise once per engagement phase at most |
 
 Open conflict, not resolved here: the pilot length and price come from the pricing work. A 6-week pilot is 3 fortnightly cycles, while team sources say about 6 cycles (12 weeks) are needed before the record is useful ([source conflicts, row 11](../prior_work/source_conflicts.md)).
 

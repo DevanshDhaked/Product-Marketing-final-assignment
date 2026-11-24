@@ -16,6 +16,7 @@ Read in this order: decisions, then brief (feedback and gap map), then product (
 * [decisions](decisions/index.md) - Team decisions for iteration A, newest first, with reasons.
 * [design](design/index.md) - Visual system, slop rules and faux UI placement for the Sphyr site.
 * [handoffs](handoffs/index.md) - Teammate reports copied into the bundle so their findings survive teardown.
+* [packaging](packaging/index.md) - First-use packaging: what happens between first encountering Sphyr and each audience's first readout, what builds anticipation, and what the first card gives back.
 * [plan](plan/index.md) - The sequenced iteration A plan with its approval gates.
 * [prior_work](prior_work/index.md) - Digests of the team's earlier Sphyr coursework: what was graded, where sources conflict, and research that can back numbers.
 * [product](product/index.md) - What Sphyr really is and does, per the product documentation, whitepaper and the professor's prototype, and what marketing must not claim.

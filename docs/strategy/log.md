@@ -7,6 +7,8 @@ timestamp: 2026-11-24T16:55:19Z
 ---
 
 ## 2026-11-24
+* **Update**: Noted in [channel plan](channel_plan.md) that SHRM India's 2026 conference (26 to 27 Nov) falls before the selling window.
+* **Update**: Corrected the client invite mechanism in [journey map](journey_map.md), [message guideline](message_guideline.md), both personas and [segment](segment.md): the consultant invites a client by email from My Sphyr (product guide p5); the partner's agreement is a firm rule, not a product setting.
 * **Update**: Review fixes: re-verified SPI Table 170 and the foundit report; restated the Mordor SME segment as client demand; reworded the fortnightly differentiation against PerformYard; added stage narratives to the [Journey map](journey_map.md); added an anticipation section and a persona-name rule to the [Message guideline](message_guideline.md); marked anticipation-led artefacts in the [Deliverable map](deliverable_map.md).
 * **Creation**: Added [Deliverable map](deliverable_map.md).
 * **Creation**: Added [Channel plan](channel_plan.md) and [Acquisition and engagement](acquisition_engagement.md).

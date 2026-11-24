@@ -78,7 +78,7 @@ Kavya cannot buy Sphyr herself. The managing partner signs. Her path:
 1. **Make it a partner problem, not an HR problem.** The pitch is "calibration on the whole year, not the last engagement", in partner words. See [the managing partner persona](persona_managing_partner.md).
 2. **Ask for a small, time-boxed paid pilot**, not a firm-wide rollout. One or two practices, before the April round. The amount and length come from the pricing work.
 3. **Bring proof a partner accepts:** the method in plain language, a 2-minute walkthrough he can click himself, the honest 2018 pilot, and a peer reference from another firm once one exists.
-4. **Pre-empt the vetoes.** For partners: Sphyr feeds calibration, it does not rate anyone for them. For consultants: two minutes every two weeks, comments are anonymized to the person rated. For clients: only when the partner opts the client in.
+4. **Pre-empt the vetoes.** For partners: Sphyr feeds calibration, it does not rate anyone for them. For consultants: two minutes every two weeks, comments are anonymized to the person rated. For clients: only when the consultant invites them with the partner's agreement.
 5. **Agree the success test before starting.** For example: participation by the fourth cycle, and how many senior consultants have feedback from three or more engagements by calibration. Then report it honestly, even if it is bad.
 
 ## What she gets from Sphyr (only what the product does)

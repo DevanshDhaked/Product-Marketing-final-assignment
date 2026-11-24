@@ -73,7 +73,7 @@ Only if money becomes available, and only after Layer 1 has shown which message 
 | Option | Rule | Cap (estimate) |
 |---|---|---|
 | A fixed-fee placement in an opt-in HR newsletter, such as ETHRWorld's daily newsletter[^ethrworld] (its site lists advertising formats such as "Advertorial" and "Digital Branding & Awareness"; newsletter slots and rates not checked) | Contextual: same ad for every reader. No tracking links beyond a plain URL | One placement per month, about ₹25,000 to ₹50,000 each, to be checked |
-| A small stall or session at an HR or consulting event (NHRDN chapter meet, TechHR India[^peoplematters], SHRM India conference[^shrmi]) | Clearly marked as Sphyr. No badge scanning; people leave details only if they ask | One event per quarter, about ₹50,000 to ₹1,50,000, to be checked |
+| A small stall or session at an HR or consulting event (NHRDN chapter meet, TechHR India[^peoplematters]; SHRM India's 2026 conference ran 26 to 27 Nov 2026, before this window[^shrmi]) | Clearly marked as Sphyr. No badge scanning; people leave details only if they ask | One event per quarter, about ₹50,000 to ₹1,50,000, to be checked |
 | LinkedIn sponsored post | Only job-function and industry targeting. No Insight Tag, no matched audiences, no retargeting, no lead-gen forms that prefill personal data | ₹30,000 per month for one test month, stop if no walkthroughs |
 
 Total paid layer cap in the first quarter (estimate): about ₹1,50,000. Stop rule: if a paid option brings fewer walkthrough visits than the same month's Layer 1 channels, cut it.
