@@ -10,7 +10,9 @@
 /* Intro and progress */
 .wt-intro .sample-label { margin-top: var(--s-5); }
 .wt-progress { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-5); margin: var(--s-6) 0 0; padding: 0; list-style: none; font-size: var(--fs-small); color: var(--text-muted); }
-.wt-progress li { display: inline-flex; align-items: center; gap: 8px; }
+.wt-progress { align-items: center; }
+.wt-progress li + li { margin-top: 0; } /* base list spacing pushed steps 2 to 4 down */
+.wt-progress li { display: inline-flex; align-items: center; gap: 8px; height: 24px; line-height: 24px; }
 .wt-progress li::before { content: attr(data-mark); display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; box-shadow: inset 0 0 0 1px var(--border-strong); font-size: var(--fs-caption); font-weight: 700; font-variant-numeric: tabular-nums; }
 .wt-progress li.is-done { color: var(--text); }
 .wt-progress li.is-done::before { background: var(--action); color: var(--on-action); box-shadow: none; }

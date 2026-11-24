@@ -77,3 +77,6 @@ Deadline: final assignment due **27 Nov 2026, 23:59** (IST). The user pushes and
 13. Left nine preview servers running after their agents finished.
 14. Started the deliverables hub at "02" with the website only mentioned in prose.
 Each was caught by the user. The fix for all of them: check the brief and the user's stated preferences before building, keep pages short, and look at every screenshot yourself before reporting.
+
+15. Treated automated checks as proof the pages looked right. The walkthrough's step indicator was misaligned (a base `li + li` margin pushed steps 2 to 4 down by 8px; fixed in `site/css/demo.css`) and nobody looked at it closely. Check every horizontal list and row on every page by eye for the same base-margin problem.
+16. The walkthrough always asks the visitor to rate Nikhil whatever they picked. That is the agent's design (the ending speaks to either pick), but the page never says why, so it reads as a bug. Open question to the user at handoff time.
