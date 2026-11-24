@@ -10,6 +10,11 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-25: Hub numbering and a short propaganda page
+
+- **Hub:** the deliverables hub lists "01 The website" (linking to the home page) before 02 to 04, so all four graded deliverables read as one set.
+- **Propaganda page:** cut from about 3,400 words to about 600. A summary card on top (audience, belief from and to, central message, tactics, channels, expected response), then one short paragraph for each point the brief requires (audience; belief; central message and reasoning; tactics and channels; why they fit; link to positioning; expected response). Everything else (persona shaping, limits, long sources, the long sequence and objections) stays in the strategy docs and the hub handoff report.
+
 ## 2026-11-25: Pricing section trimmed
 
 - **Decision:** the pricing section was too large. Plan card: ₹149, "per employee per month, billed yearly, plus GST", "Same rate for every employee and firm size", four short bullets (a two-minute card every two weeks; a record for each person, ratings pooled; your firm's values on the cards; setup, training and support by our team), "Clients you invite to give feedback: free", and one example line "A 150-person firm pays ₹22,350 a month, plus GST". Pilot card: ₹25,000 one time, "12 weeks, up to 40 people", and one line "Comes off your first annual bill if you sign. If not, you keep your data."
