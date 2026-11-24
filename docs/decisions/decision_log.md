@@ -10,6 +10,10 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-25: Strand colours and look approved
+
+- **Decision:** the ribbon strands use the cool logo colours (blues, teals, greens, violets, olive), never orange or red, which mean "could improve" and "destructive" in the product. The tonal green option is dropped. The warm palette and Newsreader headlines are approved as built in `design-lab/`.
+
 ## 2026-11-24: Limits on the untemplated skill
 
 - **Decision:** the `untemplated` skill is used only for its anti-template rules (no hero plus three equal cards, no glow, nothing invented, no busy motion, one local answer per interaction, two designed modes, a phone layout of its own) and its measured checks (first-screen words, idle frames, changed share, contrast, phone overflow, reduced motion).
