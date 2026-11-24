@@ -70,28 +70,31 @@
 .notdo h3, .faq-head { margin-bottom: var(--s-4); }
 .faq-head { margin-top: var(--s-8); }
 
-/* Pricing: two small, calm cards (plan, then pilot), stacked on phones. */
-.price-pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-5); max-width: 880px; margin-top: var(--s-6); align-items: start; }
+/* Pricing: two small, calm cards of equal height (plan, then pilot), stacked on phones. Each card is a flex
+   column; its last block (the free line and example, or the scorecard toggle) sits at the bottom. */
+.price-pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-5); max-width: 880px; margin-top: var(--s-6); align-items: stretch; }
 @media (max-width: 760px) { .price-pair { grid-template-columns: 1fr; } }
-.price-pair .term { padding: var(--s-5); }
+.price-pair .term { display: flex; flex-direction: column; padding: var(--s-5); }
 .price-pair .term p { margin-top: var(--s-3); }
 .term .price { margin-top: var(--s-2); display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s-1) var(--s-3); }
 .term .amount { font-family: var(--font-display); font-weight: 500; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; font-size: clamp(2rem, 1.7rem + 1vw, 2.5rem); }
 .term .per { font-size: var(--fs-small); font-weight: 600; max-width: 24ch; }
 .incl { margin: var(--s-3) 0 0; padding-left: 1.2em; }
 .incl li + li { margin-top: var(--s-1); }
-.price-pair p.free-line { margin-top: var(--s-4); padding-top: var(--s-3); border-top: 1px solid var(--border); color: var(--text); }
+.price-pair p.free-line { margin-top: auto; padding-top: var(--s-3); border-top: 1px solid var(--border); color: var(--text); }
+.plan .incl { margin-bottom: var(--s-4); }
 .free-line b { color: var(--on-positive-soft); }
 .price-pair p.example { margin-top: var(--s-2); font-size: var(--fs-small); }
 .price-pair .pilot-facts { font-weight: 600; color: var(--text); }
 
-/* Under the pilot card: the scorecard behind a small closed toggle. */
-.side > * + * { margin-top: var(--s-3); }
-.scorecard { border-top: 0; font-size: var(--fs-small); }
-.scorecard summary { padding: var(--s-2) var(--s-1); }
-.scorecard details > div { padding-inline: var(--s-1); padding-bottom: var(--s-4); }
+/* Inside the pilot card, at its bottom: the scorecard behind a small closed toggle. */
+.scorecard { margin-top: auto; padding-top: var(--s-4); border-top: 0; font-size: var(--fs-small); }
+.scorecard details { border-top: 1px solid var(--border); border-bottom: 0; }
+.scorecard summary { padding: var(--s-3) 0 0; }
+.scorecard details > div { padding-bottom: 0; }
 .scorecard details > div p { margin-top: var(--s-3); }
 .more { margin-top: var(--s-5); }
+.more .incl li + li { margin-top: var(--s-2); }
 
 /* Close: one large paragraph, a few words in the accent green. */
 .close p.manifesto { font-family: var(--font-display); font-weight: 500; font-size: clamp(2rem, 1.2rem + 3vw, 3.5rem); line-height: 1.12; letter-spacing: -0.015em; max-width: 20ch; }
