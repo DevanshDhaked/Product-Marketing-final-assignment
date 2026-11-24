@@ -130,6 +130,7 @@
   .chan td { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: var(--s-3); padding: var(--s-1) 0; }
   .chan td::before { content: attr(data-label); font-size: var(--fs-caption); font-weight: 600; color: var(--text-muted); }
   .chan td > * { justify-self: start; }
+  .chan td .tag-note { grid-column: 2; margin-top: 0; }
 }
 
 /* 4. Campaign flow: one strip of stops on a brand line. Wide: left to right. Narrow: top to bottom.
