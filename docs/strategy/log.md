@@ -7,6 +7,7 @@ timestamp: 2026-11-24T18:20:50Z
 ---
 
 ## 2026-11-25
+* **Update**: Added the people-and-pronouns rule to [message guideline](message_guideline.md) section 5.
 * **Update**: Locked the pilot scorecard in [acquisition and engagement](acquisition_engagement.md): four plain items, the engagement-count item dropped, results stay with the firm unless it agrees to share.
 * **Update**: Public copy names no month. Replaced "April" with "promotion time", "the promotion round" or "when partners calibrate" in [message guideline](message_guideline.md) (new timing rule in section 5), [deliverable map](deliverable_map.md) and [positioning](positioning.md).
 * **Update**: Public copy never claims customers and never leads with their absence. Changed [message guideline](message_guideline.md) (never-say row and do/don't example), [deliverable map](deliverable_map.md) (post 3 angle) and [acquisition and engagement](acquisition_engagement.md).

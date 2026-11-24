@@ -93,6 +93,8 @@ Short formats: never drop steps 1 and 5. An ad may use 1, 3 and 5 only. A Linked
 - **No urgency tricks.** No countdowns, "limited spots", or fear about losing people.
 - Simple English. No em dashes, no double dashes, no emojis, no hype words (revolutionary, game-changing, seamless, unlock, supercharge).
 
+**People and pronouns.** When a sentence has more than one person, name each by role ("the partner", "the consultant", "the head of talent") instead of switching pronouns. Use "they" for a person whose gender is not given. Never default partners to "he" or consultants to "she".
+
 **Timing words.** Name no month in public copy. Say "promotion time", "the promotion round" or "when partners calibrate", and use the moment at most once per piece. Indian firms often run promotion rounds around April to June, but that is research context, not copy.
 
 ## 6. Vocabulary
