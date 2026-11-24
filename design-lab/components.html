@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<!-- Applies a stored theme before first paint. Keep it inline, before the stylesheets, never deferred. -->
+<script>try{var t=localStorage.getItem("sphyr-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<title>Components | Sphyr design lab</title>
+<link rel="preload" href="fonts/manrope-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="components.css">
+<link rel="stylesheet" href="faux-ui.css">
+<link rel="icon" href="assets/sphyr-logo.svg" type="image/svg+xml">
+<style>
+  /* Lab-only scaffolding: specimen headers. Not part of the site system. */
+  .spec-head { margin-bottom: var(--s-6); }
+  .spec-head p { margin-top: var(--s-2); color: var(--text-muted); max-width: 70ch; font-size: var(--fs-small); }
+  .lab-intro { padding-block: var(--s-7) var(--s-5); }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="components.html"><img src="assets/sphyr-logo.svg" alt="" width="28" height="28">Sphyr</a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#" aria-current="page">How it works</a>
+      <a href="#">Walkthrough</a>
+      <a href="#">Pricing</a>
+      <a href="#">Trust</a>
+    </nav>
+    <div class="nav-end">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <span class="track" aria-hidden="true"><span class="knob"></span></span>Dark theme
+      </button>
+      <a class="btn btn-secondary" href="#">Deliverables</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap lab-intro">
+    <h1>Sphyr components</h1>
+    <p class="lede" style="margin-top:var(--s-4)">Every site component in one page. Use the Dark theme switch in the bar to check both themes. Text here is specimen copy that explains each component; page copy comes from the message guideline.</p>
+  </div>
+
+  <section class="section" id="split">
+    <div class="wrap">
+      <div class="spec-head"><h2>Split hero</h2><p>Copy left, a real product view right. Headline at most two lines, subtext at most 20 words, one primary and one secondary button. No eyebrow, no glow, no tagline under the buttons.</p></div>
+      <div class="split">
+        <div class="stack">
+          <h1>Feedback from everyone a person works with.</h1>
+          <p class="lede">Ratings from everyone they worked with are pooled every two weeks, so a decision rests on more than one view.</p>
+          <div class="btn-row" style="margin-top:var(--s-5)">
+            <a class="btn btn-primary" href="#">Try the walkthrough</a>
+            <a class="btn btn-secondary" href="#">See pricing</a>
+          </div>
+        </div>
+        <figure class="figure">
+          <div class="stage stage-card" aria-hidden="true">
+            <div class="fx-panel fx-hero-card">
+              <div class="fx-person"><span class="fx-avatar av-blue">PS</span><div><div class="fx-name">Person S.</div><div class="fx-meta">Role · Peers</div></div></div>
+              <div class="fx-body">
+                <div class="fx-q">How was your experience with Person S. this fortnight?</div>
+                <div class="fx-tiles">
+                  <div class="fx-tile is-selected"><svg class="icon"><use href="assets/icons.svg#i-smile"/></svg><b>Was good</b><span>Great interaction</span></div>
+                  <div class="fx-tile"><svg class="icon"><use href="assets/icons.svg#i-frown"/></svg><b>Could improve</b><span>Some friction</span></div>
+                  <div class="fx-tile"><svg class="icon"><use href="assets/icons.svg#i-minus"/></svg><b>No interaction</b><span>Nothing to review</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <figcaption><span class="sample-label"><svg class="icon"><use href="assets/icons.svg#i-info"/></svg>Prototype screen. Sample data, fictional people.</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="buttons">
+    <div class="wrap">
+      <div class="spec-head"><h2>Buttons and links</h2><p>Controls use the 8px radius. One primary button per view. Labels are one to three words and never wrap on desktop. Press shrinks the button slightly; reduced motion removes it.</p></div>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="#">Try the walkthrough</a>
+        <a class="btn btn-secondary" href="#">See pricing</a>
+        <a class="btn btn-text" href="#">Read the pricing logic <svg class="icon icon-sm"><use href="assets/icons.svg#i-arrow-right"/></svg></a>
+      </div>
+      <p style="margin-top:var(--s-5)">Inline links look like this: <a href="#">how ratings are pooled</a>. They keep an underline so they do not rely on colour alone.</p>
+    </div>
+  </section>
+
+  <section class="section" id="doc">
+    <div class="wrap">
+      <div class="spec-head"><h2>Document column</h2><p>For reasoning the reader must follow, such as the pricing logic or the propaganda strategy. One column at about 68 characters per line, plain headings, real lists.</p></div>
+      <div class="doc">
+        <h2>Why the price is per employee</h2>
+        <p>Specimen paragraph. The document column carries an argument from start to end. Each paragraph makes one point, and numbers carry their source in the same sentence or in a table below.</p>
+        <h3>What the column holds</h3>
+        <ul>
+          <li>Headings that say the point, not a category.</li>
+          <li>Short paragraphs, one claim each.</li>
+          <li>A table or a stat when a number needs a source.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="rows">
+    <div class="wrap">
+      <div class="spec-head"><h2>Labelled rows</h2><p>For a sequence or a set of answers. The label is the content itself, never "Step 1". Stacks to one column on phones.</p></div>
+      <dl class="rows">
+        <div><dt>Pick the people</dt><dd>Each member keeps a small circle of peers, seniors, juniors and external contacts they work with.</dd></div>
+        <div><dt>Rate in a few clicks</dt><dd>Every fortnight, one tap per person: was good, could improve, or no interaction. Tags and a comment are optional.</dd></div>
+        <div><dt>Read the pooled view</dt><dd>Members see trends and anonymized comments. Managers see team patterns and approve edit requests.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" id="cards">
+    <div class="wrap">
+      <div class="spec-head"><h2>Cards</h2><p>Hairline, 12px radius, no shadow. Use an unequal pair, never three equal cards. Tint a card only when the colour carries meaning: green for a strength, amber for a caution.</p></div>
+      <div class="pair">
+        <div class="card"><h3>Plain card</h3><p>For a grouped answer that needs its own boundary. Most content does not need a card; spacing and a rule are enough.</p></div>
+        <div class="stack">
+          <div class="card card-positive"><h3>Strength</h3><p>Uses the product's positive colours.</p></div>
+          <div class="card card-caution"><h3>Caution</h3><p>Uses the product's could-improve colours, for limits and honest caveats.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="table">
+    <div class="wrap">
+      <div class="spec-head"><h2>Table</h2><p>Sentence-case headers, tabular numbers aligned right, one rule per row, source in the caption. Scrolls sideways inside its frame on phones.</p></div>
+      <div class="table-wrap">
+        <table>
+          <caption>Specimen numbers only. Real figures come from the pricing work, with sources.</caption>
+          <thead><tr><th>Line</th><th>Basis</th><th class="n">Per employee</th><th class="n">Per month, 120 people</th></tr></thead>
+          <tbody>
+            <tr><td>Licence</td><td>Flat per employee</td><td class="n">₹100</td><td class="n">₹12,000</td></tr>
+            <tr><td>Set-up and training</td><td>Included</td><td class="n">₹0</td><td class="n">₹0</td></tr>
+          </tbody>
+          <tfoot><tr><td>Total</td><td></td><td class="n">₹100</td><td class="n">₹12,000</td></tr></tfoot>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="quote-stat">
+    <div class="wrap">
+      <div class="spec-head"><h2>Quote and stat</h2><p>The quote borrows the product's own anonymized feedback item. The stat shows one number with its label and source; a number without a source is not shown.</p></div>
+      <div class="pair" style="align-items:start">
+        <figure class="quote">
+          <div class="q-label"><span>Anonymized feedback</span><span>Sample</span></div>
+          <blockquote>"Your handoff was clear and thoughtful. An earlier signal on the research dependency would have helped us plan around it."</blockquote>
+          <figcaption>Comment text from the Sphyr prototype's sample data.</figcaption>
+        </figure>
+        <div class="stat">
+          <span class="v">2:09</span>
+          <span class="l">minutes, on average, to fill a feedback card for a circle of 14 people</span>
+          <span class="src">2018 paper-and-pen pilot of the method run by Sphyr's founder, four companies, self-reported. Sphyr whitepaper v0.3, p4.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="chips-notes">
+    <div class="wrap">
+      <div class="spec-head"><h2>Chips, labels and notes</h2><p>Chips are the product's VBA tags and keep its colour meaning. The sample label goes under every product view and every illustrative number.</p></div>
+      <div class="stack-lg">
+        <div class="chips">
+          <span class="chip chip-positive">Takes initiative</span>
+          <span class="chip chip-positive">Client-first</span>
+          <span class="chip chip-constructive">Share context earlier</span>
+          <span class="chip">No interaction</span>
+        </div>
+        <span class="sample-label"><svg class="icon"><use href="assets/icons.svg#i-info"/></svg>Prototype screen. Sample data, fictional people.</span>
+        <div class="callout"><svg class="icon"><use href="assets/icons.svg#i-lock"/></svg><p>Ratings are pooled and comments are anonymized to the person rated. A manager approving an edit request can see who gave the feedback being edited.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="form">
+    <div class="wrap">
+      <div class="spec-head"><h2>Form fields</h2><p>Label above, helper below, error below the field. No placeholder used as a label.</p></div>
+      <div class="pair">
+        <div class="field">
+          <label for="f-size">Number of employees</label>
+          <input id="f-size" inputmode="numeric" value="120">
+          <span class="help">Everyone who would give or receive feedback.</span>
+        </div>
+        <div class="field">
+          <label for="f-mail">Work email</label>
+          <input id="f-mail" type="email" value="talent@" aria-invalid="true" aria-describedby="f-mail-err">
+          <span class="err" id="f-mail-err">Enter a full email address, like name@firm.in.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="wrap">
+      <div class="spec-head"><h2>Questions</h2><p>Native details and summary. The question is the heading; the answer is short and plain.</p></div>
+      <div class="faq">
+        <details open><summary>Can the person rated see who wrote a comment?<svg class="icon"><use href="assets/icons.svg#i-chevron-down"/></svg></summary><div>No. Comments are anonymized to the person rated. In the prototype, the edit approvals card shows the manager who gave feedback to whom.</div></details>
+        <details><summary>How often does feedback run?<svg class="icon"><use href="assets/icons.svg#i-chevron-down"/></svg></summary><div>Every fortnight by default. An admin can change the frequency.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="frame">
+    <div class="wrap">
+      <div class="spec-head"><h2>Product view frame</h2><p>A real prototype screen, cropped to the part that carries the point, with the sample label below. Full set and placement rules: <a href="faux-ui.html">faux UI page</a>.</p></div>
+      <figure class="figure" style="max-width:560px">
+        <div class="stage stage-card" aria-hidden="true">
+          <div class="fx-panel fx-private">
+            <div class="fx-row-title"><svg class="icon icon-sm"><use href="assets/icons.svg#i-lock"/></svg>Private by design</div>
+            <p>Individual responses are normalized and grouped before anyone sees them.</p>
+          </div>
+        </div>
+        <figcaption><span class="sample-label"><svg class="icon"><use href="assets/icons.svg#i-info"/></svg>Prototype screen. Sample data, fictional people.</span></figcaption>
+      </figure>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div><b>Sphyr</b><p style="margin-top:var(--s-2)">Team 03 final assignment, Product Marketing (PD2.501), IIIT Hyderabad. Course project based on the Sphyr Overview Whitepaper v0.3 (2018) and the Sphyr.io product documentation. Not a live commercial offer.</p></div>
+    <div><b>Product</b><ul><li><a href="#">How it works</a></li><li><a href="#">Walkthrough</a></li><li><a href="#">Pricing</a></li><li><a href="#">Trust</a></li></ul></div>
+    <div><b>Deliverables</b><ul><li><a href="#">Propaganda strategy</a></li><li><a href="#">LinkedIn posts</a></li><li><a href="#">Advertisement</a></li><li><a href="#">All deliverables</a></li></ul></div>
+  </div>
+</footer>
+<script src="theme.js" defer></script>
+</body>
+</html>
