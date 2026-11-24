@@ -14,6 +14,7 @@ timestamp: 2026-11-24T17:11:46Z
 * [Six content gaps report](content_report.md) - Segment reason, value line, per-tactic reasons, after the first year, hub thread and a plainer hero lede, each with its source.
 * [Design teammate report, phases 1a and 1b](design_report.md) - Design work from tokens to the homepage mockup: decisions, check results, known gaps and next steps for the site build.
 * [First-use packaging teammate report, phase 1b](firstuse_report.md) - Plan, progress and final summary from the first-use packaging work: feedback map, research, decisions, rejected approaches and open product questions.
+* [Hero alignment report](hero_report.md) - The home hero's headline and lede now sit centred on each other at desktop widths.
 * [Home page teammate report, phase 2](home_report.md) - The new home page built from the approved mockup: problem scenes, nav anchors, pricing cards, checks and open points.
 * [Hub and propaganda teammate report, phase 2](hub_report.md) - The deliverables hub, the propaganda strategy page and the README rewrite: drafts, research, checks and open points.
 * [Plain words on walkthrough and LinkedIn report](jargon_report.md) - Walkthrough and LinkedIn post 2 prototype screens now use the same plain words as the home page.
