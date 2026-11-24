@@ -7,6 +7,8 @@ timestamp: 2026-11-24T17:04:27Z
 ---
 
 ## 2026-11-24
+* **Creation**: Added [homepage mockup](homepage.md): section map, copy sources, copy rules and measured checks for `design-lab/home.html`.
+* **Update**: [Ribbon motif](ribbon_motif.md): cool strands only, engagement types instead of months, the circle plays once instead of following the scroll.
 * **Update**: [Design references](references.md): addendum with 10 studio, agency and editorial product sites; Granola replaces Culture Amp, Two26 Studio replaces Make HR Work; three more picks.
 * **Creation**: Added [ribbon motif](ribbon_motif.md): core visual, circle, logo variants, strand palettes and motion rules.
 * **Update**: [Design system](design_system.md): dated phase 1b addendum for warm neutrals, Newsreader display type, prototype palette inside frames and logo variants.
