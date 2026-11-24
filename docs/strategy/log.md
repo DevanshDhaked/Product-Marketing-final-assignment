@@ -7,4 +7,5 @@ timestamp: 2026-11-24T16:55:19Z
 ---
 
 ## 2026-11-24
+* **Creation**: Added [Kavya, head of talent](persona_head_of_talent.md) and [Vikram, managing partner](persona_managing_partner.md).
 * **Creation**: Added [Segment](segment.md).
