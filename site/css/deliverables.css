@@ -1,53 +1,15 @@
 /* Deliverables pages: the hub (deliverables.html) and the propaganda strategy (propaganda.html).
    Owned by the hub build. The posts teammate may link this file for linkedin.html and ad.html, read-only.
-   Uses tokens and components from base.css only (.wrap, .section, .doc, .rows, .table-wrap, .figure, .src-note, .go).
+   Uses tokens and components from base.css only (.wrap, .section, .doc, .card).
    Classes added here:
-   .doc-head    split page head: title and summary on the left, the in-page index on the right
-   .doc-index   in-page section index, a plain ordered list of anchors
-   .doc-num     the small section number set before an h2
    .core-line   the central message, set once in the display serif
    .hub-index   the hub's index entries (number, display-serif title, one line, one link); nothing boxed
-   .seq         the campaign sequence figure: one row per stage, a bar across a week ruler; a plain list on phones
-   .table-stack a table that stacks into labelled blocks under 640px (cells need data-label)
-   .sources     numbered source list in small type
    .page-prop   propaganda page only: .prop-card summary card, .prop-layout body grid, .toc contents
                 (sticky column on wide screens, a sticky bar under the nav on phones once propaganda.js runs) */
-
-/* Page head */
-.doc-head { display: grid; grid-template-columns: 7fr 4fr; gap: var(--s-8); align-items: start; }
-.doc-head h1 { margin: 0 0 var(--s-5); }
-@media (max-width: 900px) { .doc-head { grid-template-columns: 1fr; gap: var(--s-6); } }
-
-.doc-index { margin: 0; padding: 0 0 0 var(--s-5); border-left: 1px solid var(--border); font-size: var(--fs-small); }
-.doc-index li { color: var(--text-muted); font-variant-numeric: tabular-nums; }
-.doc-index li + li { margin-top: var(--s-2); }
-.doc-index a { color: var(--text); text-decoration: none; }
-.doc-index a:hover { color: var(--link); text-decoration: underline; }
-.doc-index-title { margin: 0 0 var(--s-3); font-size: var(--fs-caption); font-weight: 600; color: var(--text-muted); }
-
-.doc-num { display: block; margin-bottom: var(--s-2); font-family: var(--font); font-size: var(--fs-small); font-weight: 600; color: var(--text-muted); font-variant-numeric: tabular-nums; letter-spacing: 0; }
 
 /* The hub title, and the core line set in the display serif where the strategy states it. */
 .doc h1 { margin: 0 0 var(--s-4); }
 .core-line { margin: 0 0 var(--s-5); font-family: var(--font-display); font-weight: 500; font-size: var(--fs-h2); line-height: var(--lh-head); color: var(--text); }
-
-/* Content widths inside a section: prose stays at the measure, rows and tables may run wider. */
-.section .doc + .rows, .section .doc + .table-wrap, .section .doc + .figure,
-.section .rows + .doc, .section .table-wrap + .doc { margin-top: var(--s-6); }
-.doc ol + p, .doc ul + p { margin-top: var(--s-4); }
-.section h3 { margin-top: var(--s-7); margin-bottom: var(--s-3); }
-.table-wrap th[scope="row"] { color: var(--text); font-size: var(--fs-small); border-bottom: 0; }
-.table-wrap td p { margin: 0; }
-
-/* .table-stack: a table whose rows become stacked blocks on phones; each td carries data-label. */
-@media (max-width: 640px) {
-  .table-stack thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
-  .table-stack tr, .table-stack th, .table-stack td { display: block; }
-  .table-stack tbody tr + tr { border-top: 1px solid var(--border); }
-  .table-stack tbody tr + tr td { border-top: 0; }
-  .table-stack th[scope="row"] { padding-bottom: 0; font-size: var(--fs-body); }
-  .table-stack td[data-label]::before { content: attr(data-label); display: block; margin-bottom: var(--s-1); font-size: var(--fs-caption); font-weight: 600; color: var(--text-muted); }
-}
 
 /* Hub index (Stripe Press pattern: titles in the display serif, one line each, nothing boxed) */
 .hub-index { list-style: none; margin: var(--s-7) 0 0; padding: 0; border-top: 1px solid var(--border); }
@@ -59,45 +21,6 @@
 .hub-index p { margin: 0; max-width: 60ch; color: var(--text-muted); }
 .hub-index .go { margin-top: var(--s-4); }
 @media (max-width: 640px) { .hub-index > li { grid-template-columns: 1fr; gap: var(--s-2); } .hub-index .hub-n { padding-top: 0; } }
-
-/* Campaign sequence: rows of [stage name][24 week columns]. Weeks 1 to 22, then two columns for "after". */
-.seq { list-style: none; margin: 0; padding: 0; }
-.seq-ruler, .seq > li { display: grid; grid-template-columns: minmax(150px, 210px) repeat(24, minmax(0, 1fr)); column-gap: 2px; align-items: center; }
-.seq-ruler { padding-bottom: var(--s-2); border-bottom: 1px solid var(--border); font-size: var(--fs-caption); color: var(--text-muted); font-variant-numeric: tabular-nums; }
-.seq-ruler span { grid-row: 1; white-space: nowrap; }
-.seq-ruler .w1 { grid-column: 2; }
-.seq-ruler .w8 { grid-column: 9; }
-.seq-ruler .w12 { grid-column: 13; }
-.seq-ruler .w16 { grid-column: 17; }
-.seq-ruler .w20 { grid-column: 21; }
-.seq-ruler .w22 { grid-column: 23; color: var(--text); font-weight: 600; }
-.seq > li { padding-block: var(--s-4); row-gap: var(--s-2); }
-.seq > li + li { border-top: 1px solid var(--border); }
-.seq-name { grid-column: 1; grid-row: 1 / span 2; align-self: start; padding-right: var(--s-4); }
-.seq-name b { display: block; font-weight: 700; }
-.seq-name span { font-size: var(--fs-small); color: var(--text-muted); font-variant-numeric: tabular-nums; }
-.seq-bar { grid-row: 1; height: 8px; border-radius: var(--r-pill); background: var(--brand); }
-.seq-text { grid-column: 2 / -1; grid-row: 2; margin: 0; font-size: var(--fs-small); color: var(--text-muted); max-width: 70ch; }
-.seq-text b { color: var(--text); font-weight: 600; }
-.st-1 .seq-bar { grid-column: 2 / span 2; }
-.st-2 .seq-bar { grid-column: 4 / span 2; }
-.st-3 .seq-bar { grid-column: 6 / span 2; }
-.st-4 .seq-bar { grid-column: 8 / span 2; }
-.st-5 .seq-bar { grid-column: 10 / span 12; }
-.st-6 .seq-bar { grid-column: 22 / span 2; }
-.st-7 .seq-bar { grid-column: 24 / span 2; background: var(--border-strong); }
-@media (max-width: 760px) {
-  .seq-ruler, .seq-bar { display: none; }
-  .seq > li { display: block; border-left: 3px solid var(--brand); padding-left: var(--s-4); }
-  .seq > li + li { border-top: 0; margin-top: var(--s-4); }
-  .seq > li.st-7 { border-left-color: var(--border-strong); }
-  .seq-name { padding-right: 0; margin-bottom: var(--s-2); }
-}
-
-/* Sources */
-.sources { margin: 0; padding-left: var(--s-5); font-size: var(--fs-small); color: var(--text-muted); max-width: 80ch; }
-.sources li + li { margin-top: var(--s-2); }
-.sources a { overflow-wrap: anywhere; }
 
 /* Propaganda page: a summary card, then seven short sections beside a contents list. */
 .page-prop .prop-top { padding-block: var(--s-7); }
