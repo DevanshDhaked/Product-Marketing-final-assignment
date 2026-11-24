@@ -1,67 +1,60 @@
-# Sphyr: Promote on merit, not politics.
+# Sphyr
 
-Team 03's final assignment for Product Marketing (PD2.501), IIIT Hyderabad.
-**Aryan · Abhinav · Devansh · Bheema**
+Team 03's final assignment for Product Marketing (PD2.501) at IIIT Hyderabad, by Aryan, Abhinav, Devansh and Bheema.
 
-### 🔗 Live site: **https://devanshdhaked.github.io/Product-Marketing-final-assignment/**
+Live site: https://devanshdhaked.github.io/Product-Marketing-final-assignment/
 
-## The four deliverables
+## The site and the deliverables
 
-| # | Deliverable | Link |
-|---|---|---|
-| 01 | Website (central hub) | [Home](https://devanshdhaked.github.io/Product-Marketing-final-assignment/) · [All deliverables](https://devanshdhaked.github.io/Product-Marketing-final-assignment/deliverables.html) |
-| 02 | Propaganda strategy | [propaganda.html](https://devanshdhaked.github.io/Product-Marketing-final-assignment/propaganda.html) |
-| 03 | Three LinkedIn posts | [linkedin.html](https://devanshdhaked.github.io/Product-Marketing-final-assignment/linkedin.html) |
-| 04 | Advertisement | [ad.html](https://devanshdhaked.github.io/Product-Marketing-final-assignment/ad.html) |
+The website is deliverable 1 and the hub for the other three. Nothing needs a sign-in.
 
-No sign-in is needed for anything.
+| Page | What it is |
+|---|---|
+| [Home](https://devanshdhaked.github.io/Product-Marketing-final-assignment/index.html) | Deliverable 1: how Sphyr works, what partners see, the price and the pilot |
+| [2-minute walkthrough](https://devanshdhaked.github.io/Product-Marketing-final-assignment/demo.html) | Part of deliverable 1: the product on sample data, no form |
+| [Deliverables](https://devanshdhaked.github.io/Product-Marketing-final-assignment/deliverables.html) | The index of deliverables 2 to 4 |
+| [Propaganda strategy](https://devanshdhaked.github.io/Product-Marketing-final-assignment/propaganda.html) | Deliverable 2 |
+| [Three LinkedIn posts](https://devanshdhaked.github.io/Product-Marketing-final-assignment/linkedin.html) | Deliverable 3 |
+| [Advertisement](https://devanshdhaked.github.io/Product-Marketing-final-assignment/ad.html) | Deliverable 4 |
 
 ## The product
 
-Sphyr is a continuous 360-degree feedback tool for performance appraisals. Every fortnight, each employee gets two-minute anonymous ratings from everyone they work with: manager, peers, juniors, other leads, and clients and vendors. Ratings are pooled before anyone sees them, so promotions run on months of evidence, not one manager's memory. It runs alongside the company's existing HR system.
+Sphyr is 360 feedback for performance appraisal. Every two weeks, each person spends about two minutes on short cards for the people they worked with. Ratings are pooled and comments are anonymized to the person rated, and each person can read their own record. Managers see team and member trends across cycles. Sphyr runs next to the firm's HR system, and people are imported from a spreadsheet.
 
-Sources: Sphyr Overview Whitepaper v0.3 (2018, Ravi Warrier) and the Sphyr.io product documentation.
+Sources: the Sphyr Overview Whitepaper v0.3 (2018), and the Sphyr product guide and prototype shared in class.
 
-## Strategy at a glance
+## Strategy in brief
 
 | | |
 |---|---|
-| **Segment** | Founders of growing companies (50–300 people) who sign off on promotions but can't see who did what |
-| **Persona** | Meera, Head of People at a growing IT services company: the champion who takes the case to the founder |
-| **Central message** | *Promote on merit, not politics.* Built from everyone who actually worked with them, not one manager's memory. |
-| **Belief to shift** | "My managers know who's good" → "One view is a guess; everyone's view over time is evidence" |
-| **Pricing** | ₹149 per employee per month, billed annually, + GST. One flat rate. Clients and vendors free. |
-| **Entry offer** | ₹15,000 six-week paid pilot, credited against the first bill. Full refund if the first six cycles show nothing new. |
-| **Channels** | LinkedIn organic + LinkedIn Sponsored Content → website → 2-minute walkthrough → pilot |
-
-## Website pages
-
-- **Home**: problem, interactive five-click feedback card, Meera's story, the fortnight loop, labelled 2018 pilot evidence
-- **How it works**: the Sphere, the card, pooling and anonymity, values cascade, works alongside your HRMS
-- **Walkthrough**: a 2-minute interactive demo on sample data, where you play a founder before a promotion round
-- **Pricing**: flat ₹149, cost calculator, pilot, renewal terms, how the price was set, one-page order (prototype)
-- **Trust**: who sees what, the three anonymity rules, feedback not surveillance, data handling
+| Segment | Homegrown Indian management and strategy consulting firms led by their partners, with about 40 to 400 professionals |
+| Persona | The head of talent, who finds Sphyr, runs the pilot and takes the case to the managing partner, who signs |
+| Central message | The engagement ends. The evidence stays. |
+| Price | ₹149 per employee per month, billed yearly, plus GST, the same for any firm size |
+| Pilot | 12 weeks (six fortnightly cycles) for up to 40 people at ₹25,000 plus GST, credited against the first annual bill if the firm signs |
+| Channels | The Sphyr LinkedIn page with team reshares, warm introductions, HR and consulting communities, our own site, and one paid standee at an HR community event |
 
 ## Repository layout
 
 ```
-site/                 the website (plain HTML/CSS/JS, no build step)
-assignments/          earlier team work: communication objectives, packaging, pricing one-pager
-final assignment.md   assignment brief and rubric
-devansh_notes.md      project notes and open items
+site/                 the website (plain HTML, CSS and JS, no build step)
+docs/                 strategy, pricing, packaging, design and decision records
+design-lab/           design mockups and the copy and contrast checks
+assignments/          earlier team work
+final assignment.md   the assignment brief and rubric
+devansh_notes.md      project notes
 ```
 
-## Run locally / redeploy
+## Run locally and redeploy
 
 ```bash
-cd site && python3 -m http.server 8765   # open http://localhost:8765
+cd site && python3 -m http.server 8765   # then open http://localhost:8765
 ```
 
-The live site is served by GitHub Pages from the `gh-pages` branch. After editing `site/`, commit and run:
+GitHub Pages serves the site from the `gh-pages` branch. After editing `site/`, commit and run:
 
 ```bash
 git subtree push --prefix site origin gh-pages
 ```
 
----
-*Course project. Not a live commercial offer. The pilot results are from a 2018 pen-and-paper trial of the method, not of today's software.*
+This is a course project and Sphyr is not on sale. The 2018 pilot was a paper-and-pen trial of the method, before today's software.
