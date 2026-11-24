@@ -34,7 +34,7 @@ The site should look like the documentation of the product it sells: calm, light
 
 ## Colour roles
 
-Every colour token is defined once with `light-dark(light, dark)`. Values come from the prototype's CSS[^proto] unless the table says "changed". Contrast is checked against WCAG 2.2[^wcag] by `node design-lab/contrast.mjs`, which parses `tokens.css` and exits non-zero on any failure. Current result: 70 checks (35 pairs in two themes), 0 failures.
+Every colour token is defined once with `light-dark(light, dark)`. Values come from the prototype's CSS[^proto] unless the table says "changed". Contrast is checked against WCAG 2.2[^wcag] by `node design-lab/contrast.mjs`, which parses `tokens.css` and exits non-zero on any failure. Current result: 80 checks (40 token pairs in two themes), 0 failures. The pairs were listed by hand from the components and frames. The script does not sweep rendered pages, so a pair a page uses but the list omits is not checked.
 
 | Role | Token | Light | Dark | Key check (light / dark) |
 |---|---|---|---|---|

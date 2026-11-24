@@ -8,8 +8,8 @@ status: draft
 commit: fc85cac
 sources:
   - resource: "docs/site_audit/design_audit.md"
-  - resource: "~/.claude/skills/design-taste-frontend/SKILL.md"
-  - resource: "~/.claude/skills/stageshow/references/craft.md"
+  - resource: "design-taste-frontend skill (local Claude Code skill, not in this repo)"
+  - resource: "stageshow skill, references/craft.md (local Claude Code skill, not in this repo)"
 ---
 
 # Slop rules for page builders
@@ -87,6 +87,7 @@ Do:
 
 Do not:
 - Crop the manager view in a way that hides the edit approvals and so suggests full anonymity.
+- Show the "Members Needing Support" list, any screen that names a low performer, or scores next to people (message guideline, section 9).
 - Use the prototype's demo names (John Smith, Maya Chen and others) or present any sample name as a real person or client.
 - Build fake dashboards or screens the prototype does not have.
 

@@ -11,7 +11,7 @@ sources:
     title: "Sphyr prototype, viewed 2026-11-24 at 1280px in light and dark"
   - resource: "docs/product/prototype_screens.md"
   - resource: "design-lab/faux-ui.html"
-  - resource: "~/.claude/skills/stageshow/references/framing.md"
+  - resource: "stageshow skill, references/framing.md (local Claude Code skill, not in this repo)"
 ---
 
 # Faux UI placement
@@ -36,9 +36,9 @@ Method: the framing and craft rules of the stageshow skill (`references/framing.
 |---|---|---|
 | Giving feedback | Home hero right column, or the walkthrough | Rating a colleague is a few clicks, and responses are private by design |
 | What the person rated sees | How it works | The rated person gets a trend and specific, anonymized comments, not one verdict |
-| What a manager sees | Home (lower) or how it works | A manager sees team patterns and who needs support, from many raters |
+| What a manager sees | Home (lower) or how it works | An engagement manager sees how the team is landing, from many raters, without a ranking of people |
 | Team against the organization | How it works, beside the manager view | Team results are compared with the organization on the same seven dimensions |
-| Edit approvals, shown honestly | Trust | The one place a manager sees who gave feedback to whom |
+| Edit approvals, shown honestly | Trust | In the prototype, the edit approvals card shows the manager who gave feedback to whom |
 
 ## The frames
 
@@ -55,8 +55,9 @@ Method: the framing and craft rules of the stageshow skill (`references/framing.
 
 ### What a manager sees
 - Source: manager Team Insights (`/manager?view=team-insights`).
-- Composition: the window alone, whole across, fading at its foot over a placeholder card. No satellite: any card over this window would cover a name or a score. Shows the page header, three of the four header tiles (team score, participation, edit requests) and Team Standouts.
-- Compact: one standout list (top performers) is shown; members needing support is dropped.
+- Composition: the window alone, whole across, fading at its foot over a placeholder card. Shows the page header, three of the four header tiles (team score, participation, edit requests), "Rating distribution" and "Anonymized team feedback" (two comments).
+- Not shown: "Team Standouts & Focus Areas". The message guideline (`docs/strategy/message_guideline.md`, section 9, on branch d1-strategy) rules out the "Members Needing Support" list, any screen that names a low performer, and scores on people. A first version of this frame showed standouts (commit e3e82ae) and was replaced.
+- Compact: rating distribution and one team comment.
 
 ### Team against the organization
 - Source: the "Team vs. Organization Benchmark" card on the same screen, radar view.
@@ -69,15 +70,13 @@ Method: the framing and craft rules of the stageshow skill (`references/framing.
 
 ## Copy changes from the prototype
 
-People and team names are neutral placeholders until the persona copy is final. When the strategy files land in `docs/strategy/`, replace the placeholders below with the consulting sample people, roles, team name and VBA tags from there. Only the names, roles, team and tag text change; layout and microcopy stay.
+The message guideline (section 9) asks for the prototype's real labels and for demo names to be replaced with neutral placeholders, so the placeholders below are the intended final form. Roles and the team name use the guideline's consulting vocabulary (engagement team, senior consultant). The guideline defines no consulting VBA tags, so the prototype's tags stay; it lists "VBA" as jargon to avoid in copy, but the word appears here only as the product's own label inside the frame.
 
 | Frame | Prototype | Site now | Why |
 |---|---|---|---|
 | Giving feedback | Lucas Martin, UX Researcher · Peers | Member B, Senior consultant · Peers | Demo names must not appear; consulting role |
 | Giving feedback | "Sphyr UI / UX VBAs" | "Engagement team VBAs" | Team name is sample data |
-| Giving feedback | VBA tags (Transparency, Customer First, and so on) | Unchanged for now | Placeholder until consulting tags arrive from strategy |
-| What a manager sees | Maya Chen 86, Arjun Mehta 82, Theo Brooks 76, Lucas Martin 79 | Member A 86, Member B 82, Member C 76, Member D 79 | Demo names; scores and tags unchanged |
-| What a manager sees | Product Designer, Senior Engineer, Visual Designer, UX Researcher | Consultant, Senior consultant, Analyst, Associate | Consulting roles |
+| Giving feedback | VBA tags (Transparency, Customer First, and so on) | Unchanged | No consulting tags defined in the message guideline |
 | Edit approvals | Maya Chen to Arjun Mehta; Leila Haddad to Lucas Martin | Member A to Member B; Member C to Member E | Demo names; reasons unchanged |
 | All frames | Uppercase green eyebrow in #009163 | Same text in #007652 | #009163 small text fails AA (3.83:1) |
 | Insights chart | Area line from the prototype's sample data | Curve traced by eye, May 05 to Jun 30 labels | Exact values are not in any source |
@@ -87,5 +86,6 @@ Em dashes: the prototype's Jul 18 member comment joins two clauses with an em da
 
 ## Not verified
 
-- The icon the prototype uses for "Members Needing Support" was matched by eye to Lucide `trending-up`.
+- The prototype's icons for "Rating distribution" rows and "Anonymized team feedback" were matched by eye to Lucide `thumbs-up`, `circle-minus`, `thumbs-down` and `message-square-text`.
+- Whether a radar chart reads as "radar sweeps", which the message guideline lists under never show, is a judgement call for the team. It is a data chart, not a sweep.
 - The compact frames were reviewed at 358px inside a 1280px page and at a 375px viewport, in light theme only for the compact row.
