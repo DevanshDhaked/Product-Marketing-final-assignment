@@ -130,3 +130,22 @@
   .chan td::before { content: attr(data-label); font-size: var(--fs-caption); font-weight: 600; color: var(--text-muted); }
   .chan td > * { justify-self: start; }
 }
+
+/* 4. Campaign flow: one strip of stops on a brand line. Wide: left to right. Narrow: top to bottom.
+   Each stop is a link to the piece it names; the last stop, the pilot, is a filled dot. */
+.flow ol { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: var(--s-4); margin: 0; padding: 0; list-style: none; }
+.flow li, .flow li + li { position: relative; margin: 0; padding-top: 52px; }
+.flow li::after { content: ""; position: absolute; top: 26px; left: 0; width: 14px; height: 14px; box-sizing: border-box; border: 2px solid var(--brand); border-radius: var(--r-pill); background: var(--bg); }
+.flow li:not(:last-child)::before { content: ""; position: absolute; top: 32px; left: 14px; right: calc(-1 * var(--s-4)); height: 2px; background: var(--brand); }
+.flow li.flow-end::after { background: var(--brand); }
+.flow-when { position: absolute; top: 0; left: 0; right: 0; font-size: var(--fs-caption); font-weight: 600; color: var(--text-muted); white-space: nowrap; }
+.flow-what { display: block; font-size: var(--fs-small); font-weight: 600; line-height: var(--lh-head); }
+.flow-what .linkbtn { min-height: 0; font: inherit; text-align: left; }
+.flow-job { display: block; margin-top: var(--s-2); font-size: var(--fs-caption); color: var(--text-muted); }
+@container (max-width: 720px) {
+  .flow ol { grid-auto-flow: row; gap: var(--s-5); }
+  .flow li, .flow li + li { padding: 0 0 0 32px; }
+  .flow li::after { top: 3px; }
+  .flow li:not(:last-child)::before { top: 17px; left: 6px; right: auto; bottom: calc(-1 * var(--s-5) - 3px); width: 2px; height: auto; }
+  .flow-when { position: static; display: block; margin-bottom: var(--s-1); white-space: normal; }
+}
