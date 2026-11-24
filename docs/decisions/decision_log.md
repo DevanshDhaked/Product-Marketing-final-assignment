@@ -10,6 +10,10 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-25: Walkthrough card follows the pick
+
+- **Decision:** in `demo.html` the visitor fills the card for whichever consultant they picked (Tara or Nikhil), and the partner view and the ending change to match. Replaces the agent's design, where the card was always for Nikhil, which read as a bug.
+
 ## 2026-11-25: Visuals on the propaganda page
 
 - **Decision:** the propaganda page gets four visuals in the site's own style (inline SVG or HTML, no PlantUML, no external images): an audience map, a belief shift graphic with the tactics as the bridge, a channel table (cost, tracking, stage, deliverable) and a campaign flow linking post 1 and the standee, post 2, the walkthrough, post 3, the call and the pilot. Each visual replaces prose, so the page does not grow in words.
