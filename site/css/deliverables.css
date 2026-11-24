@@ -83,3 +83,24 @@
 @container (max-width: 560px) {
   .aud ul { grid-template-columns: 1fr; gap: var(--s-5); }
 }
+
+/* 2. Belief shift: today's belief, the tactics as the bridge, the belief we want. Wide: one row read
+   left to right. Narrow: one column read top to bottom, arrows turned down. */
+.shift-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.15fr) auto minmax(0, 1fr); gap: var(--s-4); align-items: center; }
+.shift-from, .shift-to { align-self: stretch; padding: var(--s-5); border-radius: var(--r-surface); }
+.shift-from { background: var(--surface-sunk); color: var(--text-muted); }
+.shift-to { background: var(--positive-soft); color: var(--on-positive-soft); }
+.shift p { margin: 0; }
+.shift-label { font-size: var(--fs-caption); font-weight: 600; }
+.shift-quote { margin-top: var(--s-3); font-family: var(--font-display); font-weight: 500; font-size: var(--fs-h3); line-height: var(--lh-head); }
+.shift-arrow { color: var(--brand); flex-shrink: 0; }
+.shift-bridge { margin: 0; padding: 0; list-style: none; counter-reset: tactic; font-size: var(--fs-small); }
+.shift-bridge li, .shift-bridge li + li { position: relative; margin: 0; padding-left: 32px; }
+.shift-bridge li + li { margin-top: var(--s-3); }
+.shift-bridge li::before { counter-increment: tactic; content: counter(tactic); position: absolute; left: 0; top: 1px; width: 22px; height: 22px; border: 1px solid var(--brand); border-radius: var(--r-pill); font-size: var(--fs-caption); font-weight: 600; line-height: 20px; text-align: center; color: var(--text); }
+@container (max-width: 640px) {
+  .shift-grid { grid-template-columns: 1fr; justify-items: start; }
+  .shift-from, .shift-to { justify-self: stretch; }
+  .shift-arrow { transform: rotate(90deg); margin-left: var(--s-5); }
+  .shift-bridge { padding-left: var(--s-5); }
+}
