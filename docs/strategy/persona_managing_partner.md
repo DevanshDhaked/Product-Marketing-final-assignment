@@ -61,7 +61,7 @@ In this order:
 ## Questions he will ask (and the honest answer)
 
 - **"Will my partners have to change how they calibrate?"** No. They get a fuller record of each person to bring to the same discussion.
-- **"Will my clients be asked to rate my people?"** Only if the partner adds them. External people are invited by email into a consultant's sphere; the partner decides.
+- **"Will my clients be asked to rate my people?"** Only with the partner's agreement. The consultant invites external people by email into their own sphere; the firm sets the rule that the partner agrees first.
 - **"Is it anonymous?"** Ratings are pooled and comments are anonymized to the person rated. Managers approve requests to edit submitted feedback and can see who asked. Engagement teams are small, so be careful with the word.
 - **"Does it work with our HR system?"** Members are imported from a file. There are no integrations. It runs alongside whatever the firm uses today.
 - **"Who else uses it?"** Nobody yet. Say so, then offer the pilot and the scorecard.

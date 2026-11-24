@@ -64,7 +64,7 @@ Short formats: never drop steps 1 and 5. An ad may use 1, 3 and 5 only. A Linked
 | People doubt their reviews | 29% of employees strongly agree their reviews are fair, 26% that they are accurate (Gallup)[^gallup] | Cite Gallup. It is a global figure, not consulting or India. |
 | It takes about two minutes | 2018 pilot: "a little over two minutes (02:09 mins)" for an average sphere of 14[^wp] | Always: "in a 2018 paper-and-pen pilot run by Sphyr's founder". |
 | Consulting already knows this | Deloitte's snapshots "at the end of a project, phase, or at least quarterly"[^deloitte] | Never imply Deloitte uses or endorses Sphyr. |
-| Clients can give a view | External people are invited by email into a consultant's sphere (product guide p5; prototype "My Sphyr")[^proto] | Always "when the partner adds them". Never a headline. |
+| Clients can give a view | External people are invited by email into a consultant's sphere (product guide p5; prototype "My Sphyr")[^proto] | Always "with the partner's agreement" (the consultant sends the invite; the partner's say is a firm rule, not a product setting). Never a headline. |
 | Each person sees their own record | Prototype member "Insights": trend over cycles, strongest signal, areas to improve, anonymized comments[^proto] | Show the real screen. |
 | It works for firms like yours | **No proof yet.** | Do not claim it. Offer the pilot and its public scorecard instead. |
 

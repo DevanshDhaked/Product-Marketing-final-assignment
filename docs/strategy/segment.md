@@ -105,7 +105,7 @@ No source gives a count of Indian management consulting firms with 40 to 400 pro
 | Buyer | Managing partner ([persona](persona_managing_partner.md)) | Keeping good juniors; promotion calls the partner group can defend | Signs. Buyer language is a hypothesis: every quote we have is from employees. |
 | Veto: raters | Practice partners and engagement managers | Losing discretion; extra admin | Must hear that Sphyr feeds their judgement and does not replace it |
 | Veto: rated | Consultants and analysts, such as Meera | Surveillance fears; fatigue in client-heavy weeks | Need a two-minute task and to see their own record |
-| Veto: external | Client counterparts | Being asked too often; the partner owns the relationship | Rate only when the partner opts them in |
+| Veto: external | Client counterparts | Being asked too often; the partner owns the relationship | Rate only when invited with the partner's agreement |
 
 ## Anti-segment (do not pursue)
 
