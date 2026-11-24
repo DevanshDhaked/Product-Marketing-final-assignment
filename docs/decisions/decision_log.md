@@ -10,6 +10,13 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-25: Accent on the home page, gaming answer, no repeated proof line
+
+- **Accent:** the home page was too plain. The brand green (`--link`, the text-safe token) now marks the hero's "The evidence stays.", the "With Sphyr" statement and the three proof numbers. Still one accent family; the logo colours stay in the ribbon only.
+- **Gaming:** the home FAQ answers "Can one colleague sway my rating?" from product facts (pooled cards across the year, edits need manager approval, managers see the spread, partners decide). Reason: the professor's measurement lecture asks how any metric will be gamed.
+- **Propaganda page:** the "who else has tried it" sentence is removed because the home page already carries both points. The intro line quoting the course definition is still open with the user.
+- **Feedback card on the home page:** keeps one height in every state so the text beside it does not move.
+
 ## 2026-11-25: Short deliverable pages
 
 - **Decision:** deliverable pages stay short. `ad.html` rationale about 200 to 250 words (it is about 530 now). `linkedin.html` keeps the full text of the three posts, but the notes around them shrink to one short line each for job, stage and call to action (the page is about 1,170 words now). The mockups carry the page; the reasoning supports it.
