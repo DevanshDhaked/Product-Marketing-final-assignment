@@ -1,0 +1,134 @@
+/* Sphyr site tokens. Light and dark in one place via light-dark().
+   Theme rule: with no stored choice the page follows the system (color-scheme: light dark).
+   theme.js and the inline head script set data-theme on <html> to pin a choice.
+   Colour values come from the Sphyr prototype UI (sphyr-prototype.raviwarrier.com, read 2026-11-24),
+   except where a value failed WCAG AA as text; those changes are listed in docs/design/design_system.md.
+   Contrast is checked by design-lab/contrast.mjs, which parses this file. Keep every colour token
+   on one line in the form: --name: light-dark(#RRGGBB, #RRGGBB); */
+
+@font-face {
+  font-family: "Manrope";
+  src: url("fonts/manrope-latin-wght.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root { color-scheme: light dark; }
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; }
+
+:root {
+  /* Surfaces */
+  --bg: light-dark(#F6FAFD, #040A16);
+  --surface: light-dark(#FFFFFF, #0D1826);
+  --surface-raised: light-dark(#FFFFFF, #121C2B);
+  --surface-sunk: light-dark(#EAF1F8, #182230);
+  --stage-ground: light-dark(#E4EDF6, #08111F); /* the well a faux UI frame sits in */
+
+  /* Text */
+  --text: light-dark(#0D1828, #F4F7FB);
+  --text-muted: light-dark(#5E6A7A, #A5B3C1);
+
+  /* Lines. --border is decorative (no contrast need). --border-strong outlines controls (3:1). */
+  --border: light-dark(#DAE2EA, #2C394A);
+  --border-strong: light-dark(#7B8799, #5B6B80);
+
+  /* Action: filled buttons and links. Darker than the prototype's #009163 so white text passes AA. */
+  --action: light-dark(#007652, #34C696);
+  --action-hover: light-dark(#00664A, #5CD3AC);
+  --on-action: light-dark(#FFFFFF, #040A16);
+  --link: light-dark(#007652, #34C696);
+
+  /* Brand green for non-text use: chart lines, focus ring, large shapes. */
+  --brand: light-dark(#009163, #34C696);
+  --focus: light-dark(#009163, #34C696);
+
+  /* Positive (strength) and constructive (could improve). Orange is never a text colour on light. */
+  --positive-soft: light-dark(#DBF8EB, #043123);
+  --on-positive-soft: light-dark(#005B38, #A4E9CB);
+  --constructive: light-dark(#E1712D, #F7A224);
+  --constructive-soft: light-dark(#FFEED2, #3D1D00);
+  --on-constructive-soft: light-dark(#4C1E01, #FFD69A);
+  --destructive: light-dark(#C62B29, #FF655A);
+  --neutral-state: light-dark(#7B8799, #94A7BA);
+
+  /* Charts and avatars (from the prototype). Non-text. */
+  --chart-1: light-dark(#009163, #34C696);
+  --chart-2: light-dark(#238DD4, #4EB0F9);
+  --chart-3: light-dark(#E1712D, #F7A224);
+  --chart-4: light-dark(#7B8799, #94A7BA);
+  --avatar-blue: light-dark(#CCE9FF, #003355);
+  --avatar-mint: light-dark(#BCF3DB, #003A24);
+  --avatar-amber: light-dark(#FFE3B0, #4B2F00);
+  --avatar-rose: light-dark(#FFDADA, #501E22);
+  --avatar-violet: light-dark(#E9DEFF, #362650);
+
+  /* Elevation. Site cards use a hairline only. Shadows are for faux UI frames.
+     Values ported from the stageshow kit (kit/stage.css), tinted to the page. */
+  --shadow-frame: 0 0 0 1px light-dark(rgba(13, 24, 40, .06), rgba(255, 255, 255, .08)), 0 30px 60px -12px light-dark(rgba(13, 40, 70, .22), rgba(0, 0, 0, .6)), 0 18px 36px -18px light-dark(rgba(13, 24, 40, .22), rgba(0, 0, 0, .5));
+  --shadow-satellite: 0 0 0 1px light-dark(rgba(13, 24, 40, .05), rgba(255, 255, 255, .10)), 0 14px 32px -8px light-dark(rgba(13, 40, 70, .22), rgba(0, 0, 0, .7)), 0 4px 10px -4px light-dark(rgba(13, 24, 40, .10), rgba(0, 0, 0, .5));
+
+  /* Type: Manrope only. One display size step, no giant numerals. */
+  --font: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fs-display: clamp(2.25rem, 1.6rem + 2.6vw, 3.5rem);  /* 36 to 56px */
+  --fs-h2: clamp(1.625rem, 1.35rem + 1.1vw, 2.125rem);   /* 26 to 34px */
+  --fs-h3: 1.25rem;     /* 20px */
+  --fs-lede: 1.1875rem; /* 19px */
+  --fs-body: 1.0625rem; /* 17px */
+  --fs-small: 0.9375rem;/* 15px */
+  --fs-caption: 0.8125rem; /* 13px */
+  --lh-tight: 1.12;
+  --lh-head: 1.25;
+  --lh-body: 1.6;
+
+  /* Space: 4px base. */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px;
+  --s-6: 32px; --s-7: 48px; --s-8: 64px; --s-9: 96px;
+  --section-y: clamp(64px, 8vw, 96px);
+  --wrap: 1120px;
+  --measure: 68ch;
+  --gutter: 24px;
+
+  /* Radius rule: surfaces 12px (prototype .75rem), controls 8px, status chips full. */
+  --r-surface: 12px;
+  --r-control: 8px;
+  --r-pill: 999px;
+
+  /* Motion: feedback only. Disabled under prefers-reduced-motion. */
+  --ease: cubic-bezier(.2, 0, 0, 1);
+  --dur: 160ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur: 0ms; }
+  *, *::before, *::after { transition-duration: 0ms !important; animation: none !important; scroll-behavior: auto !important; }
+}
+
+/* Base */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  font-feature-settings: "tnum" 0;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 { margin: 0; font-weight: 700; letter-spacing: -0.015em; text-wrap: balance; }
+h1 { font-size: var(--fs-display); line-height: var(--lh-tight); letter-spacing: -0.025em; }
+h2 { font-size: var(--fs-h2); line-height: var(--lh-head); }
+h3 { font-size: var(--fs-h3); line-height: var(--lh-head); }
+p { margin: 0; text-wrap: pretty; }
+a { color: var(--link); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 4px; }
+.num { font-variant-numeric: tabular-nums; }
+.muted { color: var(--text-muted); }
+.wrap { max-width: var(--wrap); margin-inline: auto; padding-inline: var(--gutter); }
+.measure { max-width: var(--measure); }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (max-width: 640px) { :root { --gutter: 16px; } }
