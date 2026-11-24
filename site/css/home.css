@@ -58,45 +58,43 @@
 /* Chart axis in the member frame: every other cycle label on phones. */
 @media (max-width: 640px) { .fx-chart .ax-even { display: none; } }
 
-/* Proof: two numbers, set large in the display face, unboxed. */
-.proof { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-8); margin-top: var(--s-7); }
-.proof .v, .proof-one .v { font-family: var(--font-display); font-weight: 500; font-size: clamp(2.75rem, 2rem + 2.4vw, 4rem); line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+/* Proof: three numbers, set large in the display face, unboxed. */
+/* The first column is a little wider so "62% and 53%" stays on one line. */
+.proof { display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: var(--s-7); margin-top: var(--s-7); }
+.proof .v { font-family: var(--font-display); font-weight: 500; font-size: clamp(2.5rem, 2rem + 1.8vw, 3.5rem); line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
 .proof .l { margin-top: var(--s-3); max-width: 38ch; }
 .proof .src { margin-top: var(--s-2); font-size: var(--fs-caption); color: var(--text-muted); max-width: 44ch; }
-@media (max-width: 760px) { .proof { grid-template-columns: 1fr; gap: var(--s-7); } }
+@media (max-width: 1100px) { .proof { grid-template-columns: 1fr 1fr; } .proof > :nth-child(3) { grid-column: 1 / -1; } }
+@media (max-width: 760px) { .proof { grid-template-columns: 1fr; } }
 .notdo { margin-top: var(--s-8); }
 .notdo h3, .faq-head { margin-bottom: var(--s-4); }
 .faq-head { margin-top: var(--s-8); }
 
-/* Pricing: the plan card first and larger, the pilot card beside it (unequal pair). */
-.price-pair { display: grid; grid-template-columns: 7fr 5fr; gap: var(--s-5); margin-top: var(--s-7); align-items: start; }
-@media (max-width: 900px) { .price-pair { grid-template-columns: 1fr; } }
-.term .price { margin-top: var(--s-3); display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s-2) var(--s-4); }
-.term .amount { font-family: var(--font-display); font-weight: 500; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
-.plan .amount { font-size: clamp(3.25rem, 2.4rem + 3vw, 4.75rem); }
-.pilot .amount { font-size: clamp(2.25rem, 1.7rem + 1.8vw, 3rem); }
-.term .per { font-weight: 600; max-width: 26ch; }
-.term h3 { margin-top: var(--s-6); font-size: var(--fs-h3); }
+/* Pricing: two small, calm cards of equal height (plan, then pilot), stacked on phones. Each card is a flex
+   column; its last block (the free line and example, or the scorecard toggle) sits at the bottom. */
+.price-pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-5); max-width: 880px; margin-top: var(--s-6); align-items: stretch; }
+@media (max-width: 760px) { .price-pair { grid-template-columns: 1fr; } }
+.price-pair .term { display: flex; flex-direction: column; padding: var(--s-5); }
+.price-pair .term p { margin-top: var(--s-3); }
+.term .price { margin-top: var(--s-2); display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s-1) var(--s-3); }
+.term .amount { font-family: var(--font-display); font-weight: 500; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; font-size: clamp(2rem, 1.7rem + 1vw, 2.5rem); }
+.term .per { font-size: var(--fs-small); font-weight: 600; max-width: 24ch; }
 .incl { margin: var(--s-3) 0 0; padding-left: 1.2em; }
-.incl li + li { margin-top: var(--s-2); }
-.free-line { display: flex; justify-content: space-between; gap: var(--s-4); margin-top: var(--s-5) !important; padding-block: var(--s-3); border-block: 1px solid var(--border); color: var(--text) !important; }
+.incl li + li { margin-top: var(--s-1); }
+.price-pair p.free-line { margin-top: auto; padding-top: var(--s-3); border-top: 1px solid var(--border); color: var(--text); }
+.plan .incl { margin-bottom: var(--s-4); }
 .free-line b { color: var(--on-positive-soft); }
-.bills { width: 100%; margin-top: var(--s-5); border-collapse: collapse; font-variant-numeric: tabular-nums; }
-.bills caption { caption-side: top; text-align: left; padding-inline: 0; font-size: var(--fs-small); font-weight: 600; color: var(--text-muted); padding-bottom: var(--s-2); }
-.bills th, .bills td { padding: var(--s-2) 0; border-bottom: 1px solid var(--border); text-align: right; font-weight: 400; }
-.bills thead th { font-size: var(--fs-small); color: var(--text-muted); font-weight: 600; }
-.bills th:first-child { text-align: left; }
-.bills tbody th { font-size: inherit; color: var(--text); }
-.pilot-facts { font-weight: 600; color: var(--text) !important; margin-top: var(--s-3) !important; }
+.price-pair p.example { margin-top: var(--s-2); font-size: var(--fs-small); }
+.price-pair .pilot-facts { font-weight: 600; color: var(--text); }
 
-/* Right column: the pilot card, then its scorecard, then the one number from the 2018 paper pilot. Unboxed. */
-.side > * + * { margin-top: var(--s-7); }
-.scorecard { padding-inline: var(--s-2); }
-.scorecard h3 { margin-bottom: var(--s-2); font-size: var(--fs-h3); }
-.scorecard .sc-intro { margin-top: 0; }
-.proof-one { padding-inline: var(--s-2); }
-.proof-one .l { margin-top: var(--s-3); max-width: 32ch; }
-.proof-one .src { margin-top: var(--s-2); font-size: var(--fs-caption); color: var(--text-muted); max-width: 40ch; }
+/* Inside the pilot card, at its bottom: the scorecard behind a small closed toggle. */
+.scorecard { margin-top: auto; padding-top: var(--s-4); border-top: 0; font-size: var(--fs-small); }
+.scorecard details { border-top: 1px solid var(--border); border-bottom: 0; }
+.scorecard summary { padding: var(--s-3) 0 0; }
+.scorecard details > div { padding-bottom: 0; }
+.scorecard details > div p { margin-top: var(--s-3); }
+.more { margin-top: var(--s-5); }
+.more .incl li + li { margin-top: var(--s-2); }
 
 /* Close: one large paragraph, a few words in the accent green. */
 .close p.manifesto { font-family: var(--font-display); font-weight: 500; font-size: clamp(2rem, 1.2rem + 3vw, 3.5rem); line-height: 1.12; letter-spacing: -0.015em; max-width: 20ch; }
