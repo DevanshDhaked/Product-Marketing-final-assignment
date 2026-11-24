@@ -10,6 +10,12 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-25: Concise content that still makes every point the brief asks for
+
+- **Principle:** shorter is better when every point the brief asks for is on the page with its reason. An old-vs-new review (`docs/handoffs/compare_report.md`) found seven points missing, and the user approved filling each with one or two sentences (about 130 words in all, `docs/handoffs/content_report.md`, `docs/handoffs/jargon_report.md`).
+- **Added:** why 40 to 400 person consulting firms and who is left out (propaganda); the estimated cost of one exit against the plan price, marked as our estimate (home pricing); a reason per tactic (propaganda); a row for after the first year with no refund or price lock (home); one line tying the four deliverables to the campaign flow (hub); a plainer hero lede under the unchanged tagline (home); the home page's plain words on the walkthrough and post 2 screens.
+- **Tagline:** "The engagement ends. The evidence stays." stays verbatim. It is the compressed central message and grew from the graded line "Built from everyone who actually worked with them, not one manager's memory." (`docs/handoffs/tagline_report.md`, `docs/handoffs/message_report.md`).
+
 ## 2026-11-25: Full-colour favicon and row heights
 
 - **Favicon:** every page uses the full-colour logo as its favicon (svg, ico, apple-touch, root `favicon.ico`). Replaces the mono favicon in `docs/design/design_system.md` (line 172) and `docs/design/ribbon_motif.md` (line 39).
