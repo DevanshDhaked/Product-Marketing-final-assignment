@@ -4,27 +4,28 @@
 .icon { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .icon-sm { width: 16px; height: 16px; }
 
-/* Nav: one line on desktop, 64px tall. On narrow screens the links move to a second,
-   horizontally scrollable row (no menu script). */
+/* Nav (canonical, phase 1b): logo left; Deliverables, theme switch and the walkthrough button right.
+   One line at every width. Under 760px the button hides because the hero carries the same link. */
 .nav { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--border); }
 .nav-inner { display: flex; align-items: center; gap: var(--s-5); min-height: 64px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 700; font-size: 1.125rem; letter-spacing: -0.01em; }
-.brand img { width: 28px; height: 28px; }
-.nav-links { display: flex; gap: var(--s-5); margin-left: var(--s-4); }
+.brand img, .brand svg { width: 28px; height: 28px; flex: none; }
+.nav-links { display: flex; gap: var(--s-5); margin-left: auto; }
 .nav-links a { color: var(--text-muted); text-decoration: none; font-size: var(--fs-small); font-weight: 500; padding-block: 6px; white-space: nowrap; }
 .nav-links a:hover { color: var(--text); }
 .nav-links a[aria-current="page"] { color: var(--text); box-shadow: inset 0 -2px 0 var(--brand); }
-.nav-end { margin-left: auto; display: flex; align-items: center; gap: var(--s-3); }
+.nav-end { margin-left: var(--s-4); display: flex; align-items: center; gap: var(--s-3); }
 .nav-end .btn { min-height: 36px; padding: 0 14px; }
 @media (max-width: 760px) {
-  .nav-inner { flex-wrap: wrap; gap: 0 var(--s-3); padding-block: 10px 0; }
-  .nav-links { order: 3; width: 100%; margin: 0; overflow-x: auto; gap: var(--s-5); padding-block: 6px 8px; scrollbar-width: none; }
+  .nav-inner { gap: var(--s-3); }
+  .nav-links { gap: var(--s-4); }
+  .nav-end { margin-left: var(--s-2); }
   .nav-end .btn { display: none; }
 }
 
-/* Theme toggle: a labelled switch. The label stays "Dark theme"; aria-pressed carries the state. */
-.theme-toggle { display: inline-flex; align-items: center; gap: 8px; min-height: 36px; padding: 0 10px 0 8px; border: 1px solid var(--border); border-radius: var(--r-control); background: var(--surface); color: var(--text); font: 500 var(--fs-caption)/1 var(--font); cursor: pointer; }
-.theme-toggle:hover { border-color: var(--border-strong); }
+/* Theme toggle: a switch with no box around it. Its accessible name is "Dark theme" (aria-label or a visible
+   label); aria-pressed carries the state. 44px target. */
+.theme-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-width: 44px; min-height: 44px; padding: 0; border: 0; background: none; color: var(--text); font: 500 var(--fs-caption)/1 var(--font); cursor: pointer; }
 .theme-toggle .track { position: relative; width: 30px; height: 18px; border-radius: var(--r-pill); background: var(--surface-sunk); box-shadow: inset 0 0 0 1px var(--border-strong); transition: background var(--dur) var(--ease); }
 .theme-toggle .knob { position: absolute; top: 3px; left: 3px; width: 12px; height: 12px; border-radius: 50%; background: var(--text-muted); transition: transform var(--dur) var(--ease), background var(--dur) var(--ease); }
 .theme-toggle[aria-pressed="true"] .track { background: var(--action); box-shadow: none; }
