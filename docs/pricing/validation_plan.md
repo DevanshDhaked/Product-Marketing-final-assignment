@@ -3,7 +3,7 @@ type: Research Note
 title: "Validation plan: how survey and pilot results set the real price"
 description: "The Van Westendorp study for consulting buyers (who, how many, how recruited without scraped lists), the decision rule fixed before data that turns the curves into a list price, and the pilot-to-paid conversion and margin checks with thresholds and the action each one triggers."
 tags: [pricing, validation, van-westendorp, pilot]
-generated: { by: claude-code/opus-5-5, at: 2026-11-24T18:11:26Z }
+generated: { by: claude-code/opus-5-5, at: 2026-11-24T18:20:12Z }
 status: draft
 sources:
   - id: psm_cran
@@ -75,11 +75,11 @@ The incentive is a short summary of the anonymised results, so firms see what pe
 
 ### When
 
-December 2026 to January 2027, alongside the first pilot conversations. The list price can change until the first annual contract is signed. Firms that already hold a lock pay the lower of the locked and the new price.
+December 2026 to January 2027, alongside the first pilot conversations. The decided list price is ₹149. The survey checks it; any change applies to new firms only, never to firms already signed.
 
 ## 2. The decision rule (fixed before data)
 
-Candidate prices: **₹149 and ₹199**, the two that pass the price rule in [price and pilot](price_and_pilot.md): at or above the ₹121 floor and no higher than the low-case value of ₹209. ₹249 becomes a candidate only if pilot and first-year data raise the low-case value above ₹249.
+Decided price: **₹149**. Candidates the survey can choose between: **₹149 and ₹199**, the two that pass the price rule in [price and pilot](price_and_pilot.md): at or above the ₹121 floor and no higher than the low-case value of ₹209. ₹249 becomes a candidate only if pilot and first-year data raise the low-case value above ₹249.
 
 1. Drop any candidate below the ₹121 margin floor (none today) or outside the acceptable range [PMC, PME].
 2. Among the remaining candidates, pick the one with the highest expected revenue per respondent from the Newton-Miller-Smith curve (take-up x price).
@@ -87,15 +87,15 @@ Candidate prices: **₹149 and ₹199**, the two that pass the price rule in [pr
 4. If managing partners and talent leads disagree and both groups have 15 or more answers, the managing partners' range wins. They sign.
 5. **If fewer than 30 responses arrive**, Van Westendorp alone does not move the price. It moves only if the pilot calls point the same way: price raised as an objection in at least half of the calls.
 
-### What would change ₹199
+### What would change ₹149
 
 | Result | Action |
 |---|---|
-| PME below ₹199 | Move to ₹149 |
 | PME below ₹149 | Do not go below the floor. Stop and rework the value message and the offer, then re-test |
-| ₹249 inside the range | Record it. Move to ₹249 only once pilot data raise the low-case value above ₹249 and its expected revenue is at least 10% above ₹199 |
-| PMC above ₹199 | The low end of the range is above our price: check the value model against pilot data before testing higher prices |
-| ₹199 inside the range, no rule above applies | Keep ₹199 |
+| ₹199 inside the range and its expected revenue more than 10% above ₹149 | Bring the team the case for ₹199 for new firms (35 firms to break even instead of 49) |
+| PMC above ₹149 | The low end of the range is above our price: buyers may read ₹149 as too cheap to trust. Bring the team the case for ₹199 |
+| ₹249 inside the range | Record it. It becomes a candidate only once pilot data raise the low-case value above ₹249 |
+| ₹149 inside the range, no rule above applies | Keep ₹149 |
 
 ## 3. Pilot-to-paid conversion
 
@@ -103,7 +103,7 @@ Practitioner benchmarks put pilot-to-paid conversion at 30% to 45% for a median 
 
 - **Target: 50% or more.** Paid pilots with a written success test should beat the median. The break-even model in [cost and break-even](cost_and_breakeven.md) uses 50%.
 - **Check after the first 4 pilots.** If fewer than 2 convert, review the pilot design, the offer and the price before signing more. Record the stated reason for every firm that does not convert.
-- **If 3 or more of the first 4 convert and price is rarely raised**, re-run the value model with the pilot data. If the low-case value rises above ₹249, test ₹249 with new firms. Locked firms are not affected.
+- **If 3 or more of the first 4 convert and price is rarely raised**, re-run the value model with the pilot data. If ₹199 is also inside the Van Westendorp range, bring the team the case for ₹199 for new firms. Signed firms are not affected.
 
 The pilot shows whether the record is used. It cannot show the effect on exits in 12 weeks. That effect, `e` in the [value model](value_model.md), is checked after the first year: each paying firm's voluntary exits against its own previous year, with the firm's consent.
 
@@ -113,10 +113,10 @@ Reviewed every quarter, against the plan in [cost and break-even](cost_and_break
 
 | Check | Plan | Trigger | Action |
 |---|---|---|---|
-| Gross margin across all firms | 80% or more | Below 80% for two quarters running | Find the cost line first: support hours, onboarding hours or hosting. Fix it before touching price. Any price rise applies at renewal only, with 60 days' notice, and never to locked firms |
+| Gross margin across all firms | 80% or more | Below 80% for two quarters running | Find the cost line first: support hours, onboarding hours or hosting. Fix it before touching price. Any price rise applies at renewal only, with 60 days' notice |
 | Support | 0.05 tickets per seat per month | Above 0.10 | Improve the help pages and the first-use flow |
 | Onboarding hours per firm | 20 | Above 30 | Build templates for import and setup |
-| Variable cost per seat | ₹24.75 at 150 seats | Above ₹40 | Same as the gross margin action |
+| Variable cost per seat | ₹24.46 at 150 seats | Above ₹40 | Same as the gross margin action |
 | New firms a month | 2 | Below 1 for two quarters | The break-even date moves out past 30 months; revisit the fixed team and the segment |
 
 ## 5. Pilot scorecard targets
@@ -129,7 +129,7 @@ The pilot measures what [acquisition and engagement](../strategy/acquisition_eng
 4. At least half of the partners answer yes to "Did the record show you something you did not know?"
 5. At least half of the consultants answer yes to "Would you keep doing it?"
 
-Targets 1 and 4 also decide the conditional refund in [price and pilot](price_and_pilot.md): the fee is refunded if the firm met target 1 in at least 5 of the 6 cycles and missed target 4.
+The pilot fee is not refunded whatever the result (decided at gate 1b). The targets decide whether the firm and Sphyr go on to an annual plan.
 
 [^psm_cran]: pricesensitivitymeter reference
 [^quirks]: Quirk's on pricing methods

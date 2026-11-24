@@ -65,7 +65,8 @@ In this order:
 - **"Is it anonymous?"** Ratings are pooled and comments are anonymized to the person rated. Managers approve requests to edit submitted feedback and can see who asked. Engagement teams are small, so be careful with the word.
 - **"Does it work with our HR system?"** Members are imported from a file. There are no integrations. It runs alongside whatever the firm uses today.
 - **"Who else uses it?"** Nobody yet. Say so, then offer the pilot and the scorecard.
-- **"What does it cost?"** From the pricing work. Do not quote a number before it is approved.
+- **"What does it cost?"** ₹149 per employee per month, billed yearly, plus GST, the same for every firm size: about ₹2.68 L a year for 150 people. The pilot is 12 weeks for up to 40 people at ₹25,000 plus GST, credited against the first year if the firm signs. See the [pricing summary](../pricing/pricing_summary.md).
+- **"We already pay for reviews in our HR system."** Sphyr does not replace the HR system or its annual review module. It adds a record the HR system does not keep: feedback from everyone a consultant worked with, every two weeks, across engagements. Per person it costs about what a whole Indian HR system does (Keka's Growth plan is about ₹157 per person at 150 people, [competitor comparison](../pricing/competitor_comparison.md)), and far less than a dedicated review tool. Do not name Keka in public copy.
 
 ## What makes him say no
 

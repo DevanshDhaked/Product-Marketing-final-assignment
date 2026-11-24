@@ -1,9 +1,9 @@
 ---
 type: Research Note
 title: "Cost to serve, margin floor, fixed cost and break-even"
-description: "Every variable cost per seat by line, GST treatment, the margin floor that follows, the monthly fixed cost by named line, contribution and break-even in seats and firms for each candidate price, compared with the size of the segment, plus the model script."
+description: "Every variable cost per seat by line, GST treatment, the margin floor, the monthly fixed cost by named line, and contribution and break-even at the decided Rs 149 and the alternatives considered, compared with the size of the segment, plus the model script."
 tags: [pricing, costs, break-even, india]
-generated: { by: claude-code/opus-5-5, at: 2026-11-24T18:11:26Z }
+generated: { by: claude-code/opus-5-5, at: 2026-11-24T18:20:12Z }
 status: draft
 sources:
   - id: ses
@@ -60,7 +60,7 @@ It showed one lump, "₹30 to serve one employee a month: hosting, AI, support, 
 
 ## Variable cost per seat per month
 
-At the 150-person reference firm and a ₹199 price.
+At the 150-person reference firm and the decided ₹149 price (gate 1b). At the considered ₹199, payment fees are ₹1.17 and the total ₹24.75.
 
 | Line | ₹ per seat per month | Basis |
 |---|---|---|
@@ -68,8 +68,8 @@ At the 150-person reference firm and a ₹199 price.
 | Email (invites, reminders, digests) | 0.12 | ESTIMATE 8 emails per seat per month x Amazon SES $0.16 per 1,000.[^ses] |
 | Support | 13.48 | ESTIMATE 0.05 tickets per seat per month x 20 minutes, at ₹809 an hour (customer success manager, ₹14.7 L average CTC[^ab_csm] x 1.1 employer cost / 2,000 hours). |
 | Onboarding, paid back over 12 months | 8.98 | ESTIMATE 20 hours per firm (kickoff 1, import and setup 4, training 3, first-cycle support 6, handover 1, preparation 5) x ₹809 / 12 months / 150 seats. Setup, training and support are part of the offer, so their cost sits here. |
-| Payment fees | 1.17 | Razorpay 2% plus 18% GST on the fee.[^razorpay] ESTIMATE: a quarter of invoices paid by card or UPI, the rest by bank transfer at no fee. |
-| **Total** | **24.75** | |
+| Payment fees | 0.88 | Razorpay 2% plus 18% GST on the fee.[^razorpay] ESTIMATE: a quarter of invoices paid by card or UPI, the rest by bank transfer at no fee. |
+| **Total** | **24.46** | |
 
 GST is not a cost. Sphyr charges 18% GST on top of the price (SaaS falls under SAC 998313 and 998314 at 18%).[^gst] A GST-registered firm can usually claim it back as input tax credit.[^itc] GST Sphyr pays on its own inputs, such as AWS and tools, is credited the same way. Tax deducted at source by the buyer affects cash flow, not cost; its rate is not checked here and must be confirmed with a chartered accountant.
 
@@ -83,13 +83,13 @@ floor = per-seat costs that do not depend on price / (1 - target margin - paymen
 
 Target gross margin is 80%. The median for private SaaS was 77% in 2024, and 81% for subscription revenue only (Benchmarkit, via Array Capital).[^gm] Sphyr is subscription only, so 80% is the right floor.
 
-| Firm size | Floor at 80% margin | Gross margin at ₹199 |
-|---|---|---|
-| 40 | ₹249 | 75.1% |
-| 150 | ₹121 | 87.6% |
-| 400 | ₹93 | 90.4% |
+| Firm size | Floor at 80% margin | Gross margin at ₹149 (decided) | Gross margin at ₹199 (considered) |
+|---|---|---|---|
+| 40 | ₹249 | 67.0% | 75.1% |
+| 150 | ₹121 | 83.6% | 87.6% |
+| 400 | ₹93 | 87.4% | 90.4% |
 
-Onboarding is a cost per firm, so small firms cost more per seat. At 40 people, ₹199 gives 75%, below the target. This is accepted: 40 is the bottom of the segment, and a setup fee would break the flat price that is part of the offer. The 150-person floor of ₹121 is the one used for the price decision.
+Onboarding is a cost per firm, so small firms cost more per seat. At 40 people, ₹149 gives 67%, well below the target. This is accepted for now: 40 is the bottom of the segment, and a setup fee would break the flat price. It is one more reason to sell first to firms of 150 and more. The 150-person floor of ₹121 is the one used for the price decision, and ₹149 clears it by ₹28. The graded ₹149 sat below its own ₹150 floor; with costs now itemised and AI removed, the floor is ₹121.
 
 ## Fixed cost per month
 
@@ -106,18 +106,18 @@ Onboarding is a cost per firm, so small firms cost more per seat. At 40 people, 
 | Travel for sales and onboarding | 25,000 | ESTIMATE: visits to firms in Mumbai, Delhi NCR and Bengaluru |
 | Accounting, legal and compliance | 25,000 | ESTIMATE: chartered accountant for GST, TDS and company filings, contract templates. No security certification is claimed or budgeted. |
 | Office | 32,000 | ESTIMATE: 4 co-working seats |
-| Support | 0 here | Counted as a variable cost above, at the customer success hourly rate, because it grows with seats. At break-even it is about 1,735 hours a year, 0.87 of a full-time person. Until then the founders do it. |
+| Support | 0 here | Counted as a variable cost above, at the customer success hourly rate, because it grows with seats. At break-even at ₹149 it is about 2,427 hours a year, 1.21 full-time people. Until then the founders do it. |
 | **Total** | **9,06,928** | People are ₹7,23,250 of it. Salaries include 10% employer cost on top of CTC (ESTIMATE). |
 
 The old ₹8 L was close in size, but had no lines behind it.
 
 ## Contribution and break-even, by candidate price
 
-At the 150-person reference firm. Contribution = price minus every variable cost above.
+At the 150-person reference firm. Contribution = price minus every variable cost above. ₹149 is the decided price; the other rows are the alternatives considered.
 
 | Price per seat per month | Variable cost | Contribution | Gross margin | Break-even seats | Firms of 150 | Share of segment seats |
 |---|---|---|---|---|---|---|
-| ₹149 | ₹24.5 | ₹124.5 | 83.6% | 7,282 | 49 | 15% to 40% |
+| **₹149 (decided)** | ₹24.5 | ₹124.5 | 83.6% | 7,282 | 49 | 15% to 40% |
 | ₹199 | ₹24.8 | ₹174.2 | 87.6% | 5,205 | 35 | 11% to 29% |
 | ₹249 | ₹25.0 | ₹224.0 | 89.9% | 4,050 | 27 | 8% to 22% |
 | ₹299 | ₹25.3 | ₹273.7 | 91.5% | 3,314 | 22 | 7% to 18% |
@@ -137,31 +137,31 @@ Onboarding is a cost per firm, so contribution per seat is lower in small firms.
 | ₹199 | 150 | ₹174.2 | 5,205 | 35 |
 | ₹199 | 400 | ₹179.9 | 5,042 | 13 |
 
-At ₹199, a business of 40-person firms needs 152 of them, about the whole low end of the segment's guessed 150 to 400 firms. Small firms cannot carry Sphyr alone; it has to win firms of 150 people and more.
+At the decided ₹149, a business of 40-person firms would need 227 of them, more than the low end of the segment's guessed 150 to 400 firms (at ₹199 it would be 152). Small firms cannot carry Sphyr alone; it has to win firms of 150 people and more.
 
 ### The finding
 
-Break-even needs a large share of a small segment. At ₹199, Sphyr must sign about 35 firms of 150 people, which is 11% to 29% of every professional in the segment. At ₹149 it is 15% to 40%. For a new vendor with no customers, the top of either range is not realistic. Three things follow:
+Break-even needs a large share of a small segment. At the decided ₹149, Sphyr must sign about 49 firms of 150 people, which is 15% to 40% of every professional in the segment. At the considered ₹199 it would be 35 firms, 11% to 29%. For a new vendor with no customers, the top of either range is not realistic. Four things follow:
 
 1. The fixed team must stay this lean (two founders, two engineers, half a designer, one researcher) until revenue arrives.
-2. If Van Westendorp results allow a higher price, the break-even share falls fastest there (see [validation plan](validation_plan.md)).
+2. If Van Westendorp results show buyers accept ₹199, moving new firms to it cuts the firms needed from 49 to 35 (see [validation plan](validation_plan.md)).
 3. Selling effort should go first to firms of 150 people and more (see the table above).
 4. Long term, Sphyr likely needs adjacent professional-services segments as well. That is a strategy question for the team, not settled here.
 
 ## Months to break-even
 
-Run rate, not cash payback. It ignores churn and price changes. Start: 3 to 5 paid pilots before April (from the deliverable map), converting at the 50% threshold in the validation plan. Then a stated number of new 150-person firms a month (ESTIMATE).
+Run rate, not cash payback. It ignores churn and price changes. Start: 3 to 5 paid pilots (from the deliverable map), converting at the 50% threshold in the validation plan. Then a stated number of new 150-person firms a month (ESTIMATE).
 
 | Pilots before April | New firms a month after that | Months to run-rate break-even |
 |---|---|---|
-| 3 | 1 | about 33 |
-| 3 | 2 | about 17 |
-| 3 | 3 | about 11 |
-| 5 | 1 | about 32 |
-| 5 | 2 | about 16 |
-| 5 | 3 | about 11 |
+| 3 | 1 | about 47 |
+| 3 | 2 | about 24 |
+| 3 | 3 | about 16 |
+| 5 | 1 | about 46 |
+| 5 | 2 | about 23 |
+| 5 | 3 | about 15 |
 
-Two new firms a month is the planning case, so break-even comes about a year and a half after the first sale.
+At ₹149. Two new firms a month is the planning case, so break-even comes about two years after the first sale (about 16 to 17 months at ₹199).
 
 ## Appendix: the model script and its output
 
@@ -260,11 +260,17 @@ USD/INR 92.86, EUR/INR 102.75
   email per seat                           Rs   0.12
   support per seat                         Rs  13.48
   onboarding, paid back over 12 months     Rs   8.98
+  payment fees                             Rs   0.88
+  total at price Rs 149                    Rs  24.46
+  hosting per seat                         Rs   1.00
+  email per seat                           Rs   0.12
+  support per seat                         Rs  13.48
+  onboarding, paid back over 12 months     Rs   8.98
   payment fees                             Rs   1.17
   total at price Rs 199                    Rs  24.75
-  margin floor at 80% gross margin,  40-person firm: Rs 249; gross margin at Rs 199: 75.1%
-  margin floor at 80% gross margin, 150-person firm: Rs 121; gross margin at Rs 199: 87.6%
-  margin floor at 80% gross margin, 400-person firm: Rs 93; gross margin at Rs 199: 90.4%
+  margin floor at 80% gross margin,  40-person firm: Rs 249; gross margin at Rs 149: 67.0%, at Rs 199: 75.1%
+  margin floor at 80% gross margin, 150-person firm: Rs 121; gross margin at Rs 149: 83.6%, at Rs 199: 87.6%
+  margin floor at 80% gross margin, 400-person firm: Rs 93; gross margin at Rs 149: 87.4%, at Rs 199: 90.4%
 
 == 4. Fixed cost per month ==
   Founder, product and sales (1 FTE)            Rs   183,333
@@ -287,6 +293,7 @@ USD/INR 92.86, EUR/INR 102.75
   Rs 299: variable Rs  25.3, contribution Rs 273.7, GM 91.5%, share of mid value 23.9%, low-case value minus price Rs -90, break-even 3,314 seats = 22 firms of 150, 7% to 18% of segment seats
   Rs 149 at 150 seats: Rs 268,200 a year plus GST = 0.31 mid-case exits; pays for itself if it prevents one exit every 3.2 years
   Rs 199 at 150 seats: Rs 358,200 a year plus GST = 0.41 mid-case exits; pays for itself if it prevents one exit every 2.4 years
+  Rs 149 vs lowest dedicated-tool list price (PerformYard low end) Rs 464: 32%; vs Peoplebox and Confirm Rs 743: 20%; vs Leapsome promo Rs 719: 21%; vs Keka Growth at 150: 95%
   Rs 199 vs lowest dedicated-tool list price (PerformYard low end) Rs 464: 43%; vs Peoplebox and Confirm Rs 743: 27%; vs Leapsome promo Rs 719: 28%; vs Keka Growth at 150: 127%
   Price rule: floor Rs 121 <= price <= low-case value Rs 209; passes: 149, 199
 
@@ -299,29 +306,29 @@ USD/INR 92.86, EUR/INR 102.75
   Rs 199, all firms of 400: contribution Rs 179.9, 5,042 seats = 13 firms (segment guess: 150 to 400 firms)
 
 == 6. Pilot ==
-  25 seats, 12 weeks (2.76 months): cost to serve Rs 25,344, list price for same seats and time Rs 13,747
-  40 seats, 12 weeks (2.76 months): cost to serve Rs 25,998, list price for same seats and time Rs 21,995
-  Proposed fee Rs 25,000: per seat-month at 40 seats Rs 226, at 25 seats Rs 362
-  4 pilots, 50% convert, every non-converting pilot refunded (worst case): Rs 50,000 = 5.5% of one month's fixed cost
-  5 pilots, 50% convert, every non-converting pilot refunded (worst case): Rs 62,500 = 6.9% of one month's fixed cost
-  Firm's exposure in a pilot Rs 25,000 vs a first year at 150 seats Rs 358,200
-  Fee as credit against a first annual bill at 150 seats: 7.0% of Rs 358,200
+  25 seats, 12 weeks (2.76 months): cost to serve Rs 25,324, list price for same seats and time Rs 10,293
+  40 seats, 12 weeks (2.76 months): cost to serve Rs 25,965, list price for same seats and time Rs 16,468
+  Fee (decided) Rs 25,000: per seat-month at 40 seats Rs 226, at 25 seats Rs 362
+  [not adopted] 4 pilots, 50% convert, every non-converting pilot refunded: Rs 50,000 = 5.5% of one month's fixed cost
+  [not adopted] 5 pilots, 50% convert, every non-converting pilot refunded: Rs 62,500 = 6.9% of one month's fixed cost
+  Firm's exposure in a pilot Rs 25,000 vs a first year at 150 seats Rs 268,200
+  Fee as credit against a first annual bill at 150 seats: 9.3% of Rs 268,200
   Latest start for 6 cycles before 2027-04-01: 2027-01-07 (44 days after 2026-11-24)
 
-== 7. Price lock for early firms ==
-  10 firms of 150 locked at Rs 199, if list rises by Rs 50: Rs 900,000 a year of forgone revenue
-  25 firms of 150 locked at Rs 199, if list rises by Rs 50: Rs 2,250,000 a year of forgone revenue
-  10 firms of 150 locked at Rs 199, if list rises by Rs 100: Rs 1,800,000 a year of forgone revenue
-  Break-even needs 35 firms of 150; 10 locked firms = 29%, 25 = 72%
+== 7. Price lock for early firms (considered, not adopted) ==
+  10 firms of 150 locked at Rs 149, if list rises by Rs 50: Rs 900,000 a year of forgone revenue
+  25 firms of 150 locked at Rs 149, if list rises by Rs 50: Rs 2,250,000 a year of forgone revenue
+  10 firms of 150 locked at Rs 149, if list rises by Rs 100: Rs 1,800,000 a year of forgone revenue
+  Break-even needs 49 firms of 150; 10 locked firms = 21%, 25 = 51%
 
 == 8. Months to break-even (ESTIMATE ramp) ==
-  Customer success hours a year at break-even: 1,735 h = 0.87 FTE (paid as variable cost at Rs 809/h)
-  3 pilots x 50% = 1.5 firms, then 1 new firms a month: run-rate break-even after about 33 months
-  3 pilots x 50% = 1.5 firms, then 2 new firms a month: run-rate break-even after about 17 months
-  3 pilots x 50% = 1.5 firms, then 3 new firms a month: run-rate break-even after about 11 months
-  5 pilots x 50% = 2.5 firms, then 1 new firms a month: run-rate break-even after about 32 months
-  5 pilots x 50% = 2.5 firms, then 2 new firms a month: run-rate break-even after about 16 months
-  5 pilots x 50% = 2.5 firms, then 3 new firms a month: run-rate break-even after about 11 months
+  Customer success hours a year at break-even: 2,427 h = 1.21 FTE (paid as variable cost at Rs 809/h)
+  3 pilots x 50% = 1.5 firms, then 1 new firms a month: run-rate break-even after about 47 months
+  3 pilots x 50% = 1.5 firms, then 2 new firms a month: run-rate break-even after about 24 months
+  3 pilots x 50% = 1.5 firms, then 3 new firms a month: run-rate break-even after about 16 months
+  5 pilots x 50% = 2.5 firms, then 1 new firms a month: run-rate break-even after about 46 months
+  5 pilots x 50% = 2.5 firms, then 2 new firms a month: run-rate break-even after about 23 months
+  5 pilots x 50% = 2.5 firms, then 3 new firms a month: run-rate break-even after about 15 months
 ```
 
 ### Source
@@ -596,20 +603,25 @@ def fixed_monthly():
 
 SEGMENT_SEATS = (18_000, 48_000)  # segment.md guess: 150 to 400 firms x about 120 professionals
 CANDIDATES = (149, 199, 249, 299)
+PRICE = 149  # decided list price, gate 1b (docs/decisions/decision_log.md)
+ALT_PRICE = 199  # considered alternative, see price_and_pilot.md
 
 
 def print_costs_and_breakeven():
     print("\n== 3. Cost to serve per seat per month (at the 150-person reference firm) ==")
     print(f"  CS hourly cost Rs {CS_HOURLY:,.0f}")
-    for price in (199,):
+    for price in (PRICE, ALT_PRICE):
         parts = variable_cost_per_seat(price)
         for k, x in parts.items():
             print(f"  {k:40s} Rs {x:6.2f}")
         print(f"  {'total at price Rs ' + str(price):40s} Rs {sum(parts.values()):6.2f}")
     for n in (40, REF_FIRM, 400):
-        var = sum(variable_cost_per_seat(199, n).values())
+        gms = []
+        for p in (PRICE, ALT_PRICE):
+            var = sum(variable_cost_per_seat(p, n).values())
+            gms.append(f"at Rs {p}: {(p - var) / p:.1%}")
         print(f"  margin floor at {TARGET_GM:.0%} gross margin, {n:3d}-person firm: Rs {floor_price(n):,.0f};"
-              f" gross margin at Rs 199: {(199 - var) / 199:.1%}")
+              f" gross margin {', '.join(gms)}")
 
     print("\n== 4. Fixed cost per month ==")
     people, other = fixed_monthly()
@@ -637,10 +649,11 @@ def print_costs_and_breakeven():
         bill = p * REF_FIRM * 12
         print(f"  Rs {p} at {REF_FIRM} seats: Rs {bill:,} a year plus GST = {bill / mid_exit:.2f} mid-case exits;"
               f" pays for itself if it prevents one exit every {mid_exit / bill:.1f} years")
-    print(f"  Rs 199 vs lowest dedicated-tool list price (PerformYard low end) Rs {inr(5, 'USD'):,.0f}:"
-          f" {199 / inr(5, 'USD'):.0%}; vs Peoplebox and Confirm Rs {inr(8, 'USD'):,.0f}: {199 / inr(8, 'USD'):.0%};"
-          f" vs Leapsome promo Rs {inr(7, 'EUR'):,.0f}: {199 / inr(7, 'EUR'):.0%};"
-          f" vs Keka Growth at {REF_FIRM}: {199 / keka_growth_per_seat(REF_FIRM):.0%}")
+    for p in (PRICE, ALT_PRICE):
+        print(f"  Rs {p} vs lowest dedicated-tool list price (PerformYard low end) Rs {inr(5, 'USD'):,.0f}:"
+              f" {p / inr(5, 'USD'):.0%}; vs Peoplebox and Confirm Rs {inr(8, 'USD'):,.0f}: {p / inr(8, 'USD'):.0%};"
+              f" vs Leapsome promo Rs {inr(7, 'EUR'):,.0f}: {p / inr(7, 'EUR'):.0%};"
+              f" vs Keka Growth at {REF_FIRM}: {p / keka_growth_per_seat(REF_FIRM):.0%}")
     # rule in price_and_pilot.md: floor <= price <= low-case value, and inside the anchors
     print(f"  Price rule: floor Rs {floor_price():,.0f} <= price <= low-case value Rs {low:,.0f}; passes: "
           + ", ".join(str(p) for p in CANDIDATES if floor_price() <= p <= low))
@@ -656,7 +669,6 @@ def print_costs_and_breakeven():
 
 
 # == 6. pilot ==
-PRICE = 199  # recommended list price, see price_and_pilot.md
 PILOT_WEEKS = 12  # 6 fortnightly cycles
 PILOT_MAX_SEATS = 40
 # ESTIMATE: extra hours for a pilot beyond normal onboarding: success test agreed in writing (2),
@@ -675,12 +687,12 @@ def print_pilot(fixed):
         print(f"  {seats} seats, {PILOT_WEEKS} weeks ({months:.2f} months): cost to serve Rs {cost:,.0f}, "
               f"list price for same seats and time Rs {at_list:,.0f}")
     fee = 25_000
-    print(f"  Proposed fee Rs {fee:,}: per seat-month at 40 seats Rs {fee / (40 * months):,.0f}, "
+    print(f"  Fee (decided) Rs {fee:,}: per seat-month at 40 seats Rs {fee / (40 * months):,.0f}, "
           f"at 25 seats Rs {fee / (25 * months):,.0f}")
-    # refund exposure under the recommended conditional refund (price_and_pilot.md)
+    # CONSIDERED, NOT ADOPTED at gate 1b: refund exposure under a conditional refund
     for pilots in (4, 5):
         worst = pilots * 0.5 * fee
-        print(f"  {pilots} pilots, 50% convert, every non-converting pilot refunded (worst case): Rs {worst:,.0f}"
+        print(f"  [not adopted] {pilots} pilots, 50% convert, every non-converting pilot refunded: Rs {worst:,.0f}"
               f" = {worst / fixed:.1%} of one month's fixed cost")
     print(f"  Firm's exposure in a pilot Rs {fee:,} vs a first year at {REF_FIRM} seats Rs {PRICE * REF_FIRM * 12:,}")
     print(f"  Fee as credit against a first annual bill at 150 seats: "
@@ -693,7 +705,7 @@ def print_pilot(fixed):
     print(f"  Latest start for {PILOT_WEEKS // 2} cycles before {april}: {start} "
           f"({(start - today).days} days after {today})")
 
-    print("\n== 7. Price lock for early firms ==")
+    print("\n== 7. Price lock for early firms (considered, not adopted) ==")
     for n_firms, rise in ((10, 50), (25, 50), (10, 100)):
         cost = n_firms * REF_FIRM * rise * 12
         print(f"  {n_firms} firms of {REF_FIRM} locked at Rs {PRICE}, if list rises by Rs {rise}: "

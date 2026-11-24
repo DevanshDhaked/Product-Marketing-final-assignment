@@ -33,7 +33,7 @@ This file covers only what happens between a person first encountering Sphyr and
 
 Out of scope: price, the order, refunds, renewal, acquisition cost and any persuasion to buy.
 
-Time is counted in cycles because the pilot length is still open ([source conflicts, row 11](../prior_work/source_conflicts.md)). Cycle 0 is setup, before the first cards. Cycles are fortnightly, the default in the product.[^proto]
+Time is counted in cycles. The pilot is 12 weeks, six fortnightly cycles, decided at gate 1b ([price and pilot](../pricing/price_and_pilot.md)); this settles [source conflicts, row 11](../prior_work/source_conflicts.md). Cycle 0 is setup, before the first cards. Cycles are fortnightly, the default in the product.[^proto]
 
 ## How to read the tables
 
