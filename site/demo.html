@@ -102,17 +102,17 @@
 <section class="section wt-step wt-locked" id="step-2" aria-labelledby="h-step-2">
   <div class="wrap split wt-split wt-split-card">
     <div class="stack">
-      <h2 id="h-step-2">Now fill in one card the way Nikhil's colleagues do</h2>
-      <p>Every two weeks, each person in a consultant's circle fills in a short card about them. Imagine you were on Nikhil's engagement team this fortnight.</p>
+      <h2 id="h-step-2">Now fill in one card the way <span data-first>Nikhil</span>'s colleagues do</h2>
+      <p>Every two weeks, each person in a consultant's circle fills in a short card about them. Imagine you were on <span data-first>Nikhil</span>'s engagement team this fortnight.</p>
     </div>
     <div class="stack">
     <figure class="figure">
       <div class="stage fx-feedback wt-card" role="group" aria-label="Sample feedback card from the Sphyr prototype">
         <div class="fx-panel fx-hero-card">
-          <div class="fx-person"><span class="fx-avatar av-blue" aria-hidden="true">NR</span><div><div class="fx-name">Nikhil Rao</div><div class="fx-meta">Consultant · Peers</div></div></div>
+          <div class="fx-person"><span class="fx-avatar av-blue" data-av aria-hidden="true">NR</span><div><div class="fx-name" data-full>Nikhil Rao</div><div class="fx-meta">Consultant · Peers</div></div></div>
           <div class="fx-body" id="card-body">
             <fieldset class="fx-fieldset">
-              <legend class="fx-q">How was your experience with Nikhil Rao this fortnight?</legend>
+              <legend class="fx-q">How was your experience with <span data-full>Nikhil Rao</span> this fortnight?</legend>
               <div class="fx-tiles">
                 <label><input class="fx-opt" type="radio" name="wt-exp" value="good"><span class="fx-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-smile"/></svg><b>Was good</b><span>Great interaction</span></span></label>
                 <label><input class="fx-opt" type="radio" name="wt-exp" value="improve"><span class="fx-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-frown"/></svg><b>Could improve</b><span>Some friction</span></span></label>
@@ -139,7 +139,7 @@
             </fieldset>
             <details class="fx-step wt-comment">
               <summary class="fx-btn"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-message-square-text"/></svg>Add a comment</summary>
-              <label class="wt-comment-label" for="wt-text">Let Nikhil know what's on your mind?</label>
+              <label class="wt-comment-label" for="wt-text">Let <span data-first>Nikhil</span> know what's on your mind?</label>
               <p class="fx-meta" id="wt-text-help">Your comment is shown to the person without your name.</p>
               <textarea id="wt-text" maxlength="400" rows="3" placeholder="Share a helpful example or context…" aria-describedby="wt-text-help wt-count"></textarea>
               <p class="fx-meta wt-count" id="wt-count">0/400</p>
@@ -149,7 +149,7 @@
           <div class="fx-body wt-done" id="card-done" tabindex="-1" hidden>
             <div class="fx-vba-h">Submitted</div>
             <div class="fx-row-title">Completed Feedback This Fortnight</div>
-            <div class="wt-done-row"><span class="fx-avatar av-blue" aria-hidden="true">NR</span><div><div class="fx-name">Nikhil Rao</div><div class="fx-meta">Submitted · Read only</div></div><svg class="icon" aria-hidden="true"><use id="done-icon" href="assets/icons.svg#i-smile"/></svg></div>
+            <div class="wt-done-row"><span class="fx-avatar av-blue" data-av aria-hidden="true">NR</span><div><div class="fx-name" data-full>Nikhil Rao</div><div class="fx-meta">Submitted · Read only</div></div><svg class="icon" aria-hidden="true"><use id="done-icon" href="assets/icons.svg#i-smile"/></svg></div>
           </div>
         </div>
         <div class="fx-sat fx-private">
@@ -168,7 +168,7 @@
   <div class="wrap">
     <div class="doc stack">
       <h2 id="h-step-3">What partners see for both of them</h2>
-      <p>This is Sphyr's Member Insights view after six cycles of cards, about 12 weeks, from the 14 people in each consultant's circle. Nikhil's cards came from 13 of the 14 people in that circle, against 10 for Tara. The tags they picked most for Nikhil were Takes Initiative and Solution-oriented.</p>
+      <p>This is Sphyr's Member Insights view after six cycles of cards, about 12 weeks, from the 14 people in each consultant's circle. <span id="compare">Nikhil's cards came from 13 of the 14 people in that circle, against 10 for Tara. The tags they picked most for Nikhil were Takes Initiative and Solution-oriented.</span></p>
     </div>
     <figure class="figure wt-figure">
       <div class="stage wt-insights" role="group" aria-label="Sample Member Insights screen from the Sphyr prototype, showing Tara Menon and Nikhil Rao">
@@ -182,23 +182,23 @@
             <div class="wt-period"><span class="fx-meta">Review period</span><span class="wt-seg"><span>Last Cycle</span><span class="on">All Cycles</span></span><span class="fx-delta">6 cycles</span></div>
           </div>
           <div class="wt-cols">
-            <section class="wt-col" aria-label="Tara Menon">
+            <section class="wt-col" data-col="tara" aria-label="Tara Menon">
               <div class="wt-colhead"><span class="fx-avatar av-amber" aria-hidden="true">TM</span><div><div class="fx-name">Tara Menon</div><div class="fx-meta">Consultant</div></div></div>
               <div class="fx-kpi"><div class="k">Responses received</div><div class="v">65</div><div class="d">From 10 collaborators</div></div>
               <div class="fx-card">
                 <div class="fx-card-head"><div><b>Top feedback received</b><p>Most frequent positive anonymized signals</p></div></div>
                 <ul class="wt-tags">
-                  <li><span>Stakeholder-centric</span><b class="num">31</b><span class="fx-track"><i style="--w:.62"></i></span></li>
-                  <li><span>Customer First</span><b class="num">27</b><span class="fx-track"><i style="--w:.54"></i></span></li>
-                  <li><span>Respectful</span><b class="num">14</b><span class="fx-track"><i style="--w:.28"></i></span></li>
-                  <li><span>Solution-oriented</span><b class="num">9</b><span class="fx-track"><i style="--w:.18"></i></span></li>
+                  <li data-tag="Stakeholder-centric"><span>Stakeholder-centric</span><b class="num">31</b><span class="fx-track"><i style="--w:.62"></i></span></li>
+                  <li data-tag="Customer First"><span>Customer First</span><b class="num">27</b><span class="fx-track"><i style="--w:.54"></i></span></li>
+                  <li data-tag="Respectful"><span>Respectful</span><b class="num">14</b><span class="fx-track"><i style="--w:.28"></i></span></li>
+                  <li data-tag="Solution-oriented"><span>Solution-oriented</span><b class="num">9</b><span class="fx-track"><i style="--w:.18"></i></span></li>
                 </ul>
               </div>
               <div class="fx-card">
                 <div class="fx-card-head"><div><b>Improvement areas</b><p>Recurring constructive signals to coach</p></div></div>
                 <ul class="wt-areas">
-                  <li><div><b>Share context earlier</b><span class="fx-meta">Repeated across 4 cycles</span></div><span class="wt-count-badge num">9</span></li>
-                  <li><div><b>Resolve dependencies sooner</b><span class="fx-meta">Repeated across 3 cycles</span></div><span class="wt-count-badge num">6</span></li>
+                  <li data-tag="Share context earlier"><div><b>Share context earlier</b><span class="fx-meta">Repeated across 4 cycles</span></div><span class="wt-count-badge num">9</span></li>
+                  <li data-tag="Resolve dependencies sooner"><div><b>Resolve dependencies sooner</b><span class="fx-meta">Repeated across 3 cycles</span></div><span class="wt-count-badge num">6</span></li>
                 </ul>
               </div>
               <div class="fx-card wt-feed">
@@ -206,12 +206,12 @@
                 <div class="fx-fb-item"><div class="fx-fb-label"><span>Anonymized Feedback</span><span>Cycle 5</span></div><p class="fx-fb-text">The client meeting went well because you knew what their CFO would ask. Please bring us in earlier when the storyline changes.</p></div>
               </div>
             </section>
-            <section class="wt-col" aria-label="Nikhil Rao">
+            <section class="wt-col" data-col="nikhil" aria-label="Nikhil Rao">
               <div class="wt-colhead"><span class="fx-avatar av-blue" aria-hidden="true">NR</span><div><div class="fx-name">Nikhil Rao</div><div class="fx-meta">Consultant</div></div></div>
-              <div class="fx-kpi"><div class="k">Responses received</div><div class="v" id="n-responses">74</div><div class="d">From 13 collaborators</div></div>
+              <div class="fx-kpi"><div class="k">Responses received</div><div class="v">74</div><div class="d">From 13 collaborators</div></div>
               <div class="fx-card">
                 <div class="fx-card-head"><div><b>Top feedback received</b><p>Most frequent positive anonymized signals</p></div></div>
-                <ul class="wt-tags" id="n-tags">
+                <ul class="wt-tags">
                   <li data-tag="Takes Initiative"><span>Takes Initiative</span><b class="num">41</b><span class="fx-track"><i style="--w:.82"></i></span></li>
                   <li data-tag="Solution-oriented"><span>Solution-oriented</span><b class="num">38</b><span class="fx-track"><i style="--w:.76"></i></span></li>
                   <li data-tag="Respectful"><span>Respectful</span><b class="num">22</b><span class="fx-track"><i style="--w:.44"></i></span></li>
@@ -220,11 +220,11 @@
               </div>
               <div class="fx-card">
                 <div class="fx-card-head"><div><b>Improvement areas</b><p>Recurring constructive signals to coach</p></div></div>
-                <ul class="wt-areas" id="n-areas">
+                <ul class="wt-areas">
                   <li data-tag="Share context earlier"><div><b>Share context earlier</b><span class="fx-meta">Repeated across 2 cycles</span></div><span class="wt-count-badge num">4</span></li>
                 </ul>
               </div>
-              <div class="fx-card wt-feed" id="n-feed">
+              <div class="fx-card wt-feed">
                 <div class="fx-card-head"><div><b>Anonymized Feedback</b></div></div>
                 <div class="fx-fb-item"><div class="fx-fb-label"><span>Anonymized Feedback</span><span>Cycle 6</span></div><p class="fx-fb-text">You rebuilt the cost model after the scope change and walked two of us through it before the client call. It saved us the week.</p></div>
               </div>
@@ -232,7 +232,7 @@
           </div>
         </div>
       </div>
-      <figcaption><span class="sample-label"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-info"/></svg>Prototype screen. Sample data, fictional people.</span><span class="wt-yours" id="yours" hidden>Nikhil's column includes the card you just filled in.</span></figcaption>
+      <figcaption><span class="sample-label"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-info"/></svg>Prototype screen. Sample data, fictional people.</span><span class="wt-yours" id="yours" hidden><span data-first>Nikhil</span>'s column includes the card you just filled in.</span></figcaption>
     </figure>
   </div>
 </section>

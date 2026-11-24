@@ -1,15 +1,23 @@
-// The 2-minute walkthrough (demo.html). Reveals one step at a time and adds the visitor's card to
-// Nikhil's column. Nothing is stored or sent: no storage, no network.
+// The 2-minute walkthrough (demo.html). Reveals one step at a time. Everything after step 1
+// follows the pick. Nothing is stored or sent: no storage, no network.
 (function () {
   "use strict";
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
   var SCALE = 50; // bar length scale shared by both columns, so the bars compare fairly
 
-  var names = { tara: "Tara", nikhil: "Nikhil" };
-  var turns = {
-    tara: "You picked Tara, and you might still be right. Partners still decide, and you now decide with more in front of you: 13 colleagues saw Nikhil's work over six cycles, and very little of it reached you in a client meeting.",
-    nikhil: "You picked Nikhil on a hunch, and the hunch now has a record behind it: 13 colleagues over six cycles, in their own words. Partners still decide, with what the people who saw the work said in front of them."
+  // Counts match the Member Insights columns in demo.html (collaborators out of a circle of 14).
+  var people = {
+    tara: {
+      first: "Tara", full: "Tara Menon", initials: "TM", av: "av-amber", others: 10,
+      compare: "Tara's cards came from 10 of the 14 people in that circle, against 13 for Nikhil. The tags they picked most for Tara were Stakeholder-centric and Customer First.",
+      turn: "You picked Tara, and Tara's record backs what you saw in client meetings. It also shows 13 colleagues who saw Nikhil's work over six cycles, and very little of that work reached you. Partners still decide, now with both records open."
+    },
+    nikhil: {
+      first: "Nikhil", full: "Nikhil Rao", initials: "NR", av: "av-blue", others: 13,
+      compare: "Nikhil's cards came from 13 of the 14 people in that circle, against 10 for Tara. The tags they picked most for Nikhil were Takes Initiative and Solution-oriented.",
+      turn: "You picked Nikhil on a hunch, and the hunch now has a record behind it: 13 colleagues over six cycles, in their own words. Partners still decide, with what the people who saw the work said in front of them."
+    }
   };
   var marks = $$(".wt-progress li");
   var pick = null, started = 0;
@@ -29,8 +37,13 @@
   $$('input[name="wt-pick"]').forEach(function (r) {
     r.addEventListener("change", function () {
       pick = r.value;
-      $("#reply-1").textContent = "You picked " + names[pick] + ". We'll come back to that at the end.";
-      $("#turn").textContent = turns[pick];
+      var p = people[pick];
+      $("#reply-1").textContent = "You picked " + p.first + ". We'll come back to that at the end.";
+      $$("[data-first]").forEach(function (el) { el.textContent = p.first; });
+      $$("[data-full]").forEach(function (el) { el.textContent = p.full; });
+      $$("[data-av]").forEach(function (el) { el.textContent = p.initials; el.className = "fx-avatar " + p.av; });
+      $("#compare").textContent = p.compare;
+      $("#turn").textContent = p.turn;
       done(1);
       reveal("step-2");
     });
@@ -60,17 +73,17 @@
     answer = answer.value;
     var secs = Math.max(1, Math.round((Date.now() - (started || Date.now())) / 1000));
     var took = "That took you " + secs + (secs === 1 ? " second." : " seconds.");
-    var reply;
+    var reply, p = people[pick], col = $('[data-col="' + pick + '"]');
 
     if (answer === "none") {
-      reply = took + " This card tells Sphyr you didn't work with Nikhil this fortnight, so it adds nothing to Nikhil's record. The option is there so that people with nothing to rate don't have to make something up.";
+      reply = took + " This card tells Sphyr you didn't work with " + p.first + " this fortnight, so it adds nothing to " + p.first + "'s record. The option is there so that people with nothing to rate don't have to make something up.";
     } else {
-      reply = took + " Your card joins the other 13 from Nikhil's circle this cycle, and Nikhil sees what you said without your name on it.";
-      var resp = $("#n-responses");
+      reply = took + " Your card goes into " + p.first + "'s record with the cards from " + p.others + " other colleagues, and " + p.first + " sees what you said without your name on it.";
+      var resp = $(".fx-kpi .v", col);
       resp.textContent = Number(resp.textContent) + 1;
-      var list = answer === "good" ? "#n-tags" : "#n-areas";
+      var list = answer === "good" ? ".wt-tags" : ".wt-areas";
       $$(".fx-step-" + answer + " input:checked").forEach(function (c) {
-        $$(list + " li").forEach(function (li) { if (li.dataset.tag === c.value) bump(li); });
+        $$(list + " li", col).forEach(function (li) { if (li.dataset.tag === c.value) bump(li); });
       });
       var said = text.value.trim();
       if (said) {
@@ -78,7 +91,7 @@
         item.className = "fx-fb-item";
         item.innerHTML = '<div class="fx-fb-label"><span>Anonymized Feedback</span><span>Cycle 6</span></div><p class="fx-fb-text"></p>';
         $(".fx-fb-text", item).textContent = said; // the visitor's words, never parsed as HTML
-        var head = $("#n-feed .fx-card-head");
+        var head = $(".wt-feed .fx-card-head", col);
         head.parentNode.insertBefore(item, head.nextSibling);
       }
       $("#yours").hidden = false;
@@ -89,6 +102,8 @@
     body.hidden = true;
     $("#card-done").hidden = false;
     $("#reply-2").textContent = reply;
+    // The card now sits in the picked column, so the pick can no longer change under it.
+    $$('input[name="wt-pick"]').forEach(function (r) { r.disabled = true; });
     done(2); done(3); done(4);
     reveal("step-3");
     reveal("step-4");
