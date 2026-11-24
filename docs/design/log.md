@@ -6,6 +6,9 @@ tags: [log]
 timestamp: 2026-11-24T17:04:27Z
 ---
 
+## 2026-11-25
+* **Update**: [Homepage mockup](homepage.md): addendum for the site build of `site/index.html`: problem section, values passage, nav anchors, pricing cards, cycle dates in frames, and the measured checks.
+
 ## 2026-11-24
 * **Update**: [Slop rules](slop_rules.md) and [design system](design_system.md): phase 1b addenda for page and copy rules, the canonical nav, theme switch, footer and head snippets.
 * **Creation**: Added [homepage mockup](homepage.md): section map, copy sources, copy rules and measured checks for `design-lab/home.html`.
