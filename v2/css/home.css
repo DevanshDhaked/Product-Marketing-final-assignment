@@ -1,0 +1,139 @@
+/* Home page layout (site/index.html). Tokens, components, faux UI and shared parts come from base.css; the
+   ribbon motif from motif.css. Ported from design-lab/home.css; rules that moved to base.css are not repeated.
+   Sections are parted by air and one hairline, not boxes; only product frames and the plan and pilot cards are
+   boxed (docs/design/slop_rules.md). */
+
+.home main > section { padding-block: var(--section-y); }
+.home main > section + section { border-top: 1px solid var(--border); }
+.home h2 { max-width: 22ch; }
+.home .lede { color: var(--text-muted); }
+.home p + p { margin-top: var(--s-4); }
+
+/* Hero: headline left, the line and the button right, the core visual full width below. */
+.home main > .hero { padding-block: var(--s-7) var(--s-6); }
+.hero-copy { display: grid; grid-template-columns: 1.45fr 1fr; gap: var(--s-6) var(--s-8); align-items: start; container-type: inline-size; }
+/* One sentence per line: the size follows the headline column so "The engagement ends." never wraps beside the lede. */
+.hero h1 { font-size: clamp(2.5rem, 5.8cqi - 0.25rem, 4.25rem); line-height: 1.04; }
+.hero h1 em { display: block; }
+/* Both columns start at the top; trimming to cap height makes the first letters, not the line boxes, start level. */
+.hero h1, .hero-side .lede { text-box: trim-start cap alphabetic; }
+.hero-side .lede { font-size: var(--fs-lede); color: var(--text); max-width: 30ch; }
+.hero-side .btn { margin-top: var(--s-5); }
+.hero-visual { margin: var(--s-7) auto 0; }
+.hero-visual .cv { max-height: 420px; }
+/* The phone version is tall (viewBox 360 by 594); a height cap would shrink its labels below 11 px. */
+.hero-visual .cv-compact { max-height: none; }
+/* The payoff of the picture: at least as readable as the project names. Size, weight and colour only; the fade-in stays. */
+.hero-visual .cv .round-label { font-size: 15px; }
+.hero-visual .cv .round-sub { font-weight: 500; fill: var(--text); }
+.hero-visual .cv-wide .round-sub { font-size: 14px; }
+@media (max-width: 900px) {
+  .hero-copy { grid-template-columns: 1fr; gap: var(--s-4); }
+  .hero h1 { font-size: clamp(2.5rem, 1.4rem + 3.6vw, 4.25rem); }
+  .hero-visual { margin-top: var(--s-6); }
+}
+
+/* The problem: the trigger as a lead paragraph, four scenes as labelled rows, then the before and after. */
+.trigger { margin-top: var(--s-5); font-size: var(--fs-lede); max-width: 60ch; }
+.scenes { margin-top: var(--s-7); }
+.scenes dd { color: var(--text); }
+/* The four scenes share the tallest row's height on desktop; their answers differ by one line at most. */
+@media (min-width: 641px) { .scenes { display: grid; grid-auto-rows: 1fr; } }
+.before-after { display: grid; grid-template-columns: 5fr 7fr; gap: var(--s-5) var(--s-8); margin-top: var(--s-8); }
+.before-after > div + div { border-left: 1px solid var(--border); padding-left: var(--s-8); }
+.before-after p { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.375rem, 1.1rem + 0.9vw, 1.75rem); line-height: 1.25; max-width: 32ch; }
+.before-after > div:first-child p { color: var(--text-muted); }
+/* The one accent (brand green, text-safe token) marks the payoff lines and the proof numbers. */
+.hero h1 em, .before-after > div + div p, .proof .v { color: var(--link); }
+@media (max-width: 760px) {
+  .before-after { grid-template-columns: 1fr; }
+  .before-after > div + div { border-left: 0; padding-left: 0; border-top: 1px solid var(--border); padding-top: var(--s-5); }
+}
+
+/* Text beside a figure. */
+.duo { display: grid; grid-template-columns: 5fr 7fr; gap: var(--s-8); align-items: center; }
+.duo + .duo { margin-top: var(--s-9); }
+.duo.flip { grid-template-columns: 7fr 5fr; }
+.duo.flip > :first-child { order: 2; }
+@media (max-width: 900px) {
+  .duo, .duo.flip { grid-template-columns: 1fr; gap: var(--s-6); }
+  .duo.flip > :first-child { order: 0; }
+}
+/* Both tag steps share one cell, so picking an answer never changes the card's height or moves the text beside it. */
+.duo .fx-body { display: grid; }
+.duo .fx-body > .fx-step { display: block; grid-row: 2; grid-column: 1; visibility: hidden; }
+.duo .fx-feedback:has(.fx-opt[value="good"]:checked) .fx-step-good,
+.duo .fx-feedback:has(.fx-opt[value="improve"]:checked) .fx-step-improve,
+.duo .fx-feedback:has(.fx-opt[value="none"]:checked) .fx-step-none { visibility: visible; }
+.duo .fx-body > .fx-step-none { display: grid; place-items: center; color: var(--text-muted); }
+.text-col h2 { margin-bottom: var(--s-5); }
+.text-col h3 { margin-bottom: var(--s-3); }
+.text-col .values-h { margin-top: var(--s-6); }
+
+/* For partners: a short intro over each full-width frame. */
+.back-intro { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-3) var(--s-8); margin: var(--s-8) 0 var(--s-5); align-items: baseline; }
+.back-intro h3 { font-size: var(--fs-h3); }
+.back-intro p { margin: 0 !important; color: var(--text-muted); max-width: 46ch; }
+@media (max-width: 760px) { .back-intro { grid-template-columns: 1fr; } }
+/* Chart axis in the member frame: every other cycle label on phones. */
+@media (max-width: 640px) { .fx-chart .ax-even { display: none; } }
+
+/* Proof: three numbers, set large in the display face, unboxed. */
+/* The first column is a little wider so "62% and 53%" stays on one line. */
+.proof { display: grid; grid-template-columns: 1.15fr 1fr 1fr; gap: var(--s-7); margin-top: var(--s-7); }
+.proof .v { font-family: var(--font-display); font-weight: 500; font-size: clamp(2.5rem, 2rem + 1.8vw, 3.5rem); line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.proof .l { margin-top: var(--s-3); max-width: 38ch; }
+.proof .src { margin-top: var(--s-2); font-size: var(--fs-caption); color: var(--text-muted); max-width: 44ch; }
+@media (max-width: 1100px) { .proof { grid-template-columns: 1fr 1fr; } .proof > :nth-child(3) { grid-column: 1 / -1; } }
+@media (max-width: 760px) { .proof { grid-template-columns: 1fr; } }
+.notdo { margin-top: var(--s-8); }
+.notdo h3, .faq-head { margin-bottom: var(--s-4); }
+.faq-head { margin-top: var(--s-8); }
+
+/* Pricing: the plan is the hero (two of three columns, plain surface, strong border); the pilot supports it
+   on the sunk ground. Both cards share six subgrid rows (label, price, sub line, main, foot, action row), so
+   the numerals, sub lines and hairlines align and both end on one line without a stretched band. Stacked on
+   phones, plan first. */
+.price-pair { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: repeat(6, auto); column-gap: var(--s-5); margin-top: var(--s-6); }
+.price-pair .term { display: grid; grid-row: span 6; grid-template-rows: subgrid; row-gap: 0; padding: var(--s-6); }
+.price-pair .pilot { background: var(--surface-sunk); border-color: var(--border); }
+.price-pair .term p { margin-top: 0; }
+.term .price { margin-top: var(--s-3); }
+.term .amount { display: block; font-family: var(--font-display); font-weight: 500; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; font-size: clamp(2.5rem, 2rem + 1.8vw, 3.5rem); }
+/* The unit sits under the numeral; each phrase is unbreakable, so it never splits mid-phrase. */
+.term .per { display: block; margin-top: var(--s-2); font-size: var(--fs-small); font-weight: 600; color: var(--text); }
+.term .per > span { white-space: nowrap; }
+.price-pair p.sub { margin-top: var(--s-4); color: var(--text); font-weight: 600; }
+.price-pair .main, .price-pair p.main { margin-top: var(--s-4); }
+.price-pair .lower { margin-top: var(--s-4); padding-top: var(--s-3); border-top: 1px solid var(--border-strong); }
+.price-pair .plan .lower { border-top-color: var(--border); }
+/* The plan's four inclusions in two columns on wide screens, so its main row matches the pilot's terms. */
+@media (min-width: 1100px) { .plan .incl { columns: 2; column-gap: var(--s-6); font-size: var(--fs-small); } .plan .incl li { break-inside: avoid; } }
+.incl { margin: var(--s-3) 0 0; padding-left: 1.2em; }
+.incl li + li { margin-top: var(--s-1); }
+.price-pair p.free-line { color: var(--text); }
+.free-line b { color: var(--on-positive-soft); }
+.price-pair p.example { margin-top: var(--s-1); font-size: var(--fs-small); }
+.price-pair .act { margin-top: var(--s-5); padding-top: var(--s-5); border-top: 1px solid var(--border); }
+.price-pair .pilot .act { border-top-color: var(--border-strong); }
+@supports not (grid-template-rows: subgrid) {
+  .price-pair .term { display: flex; flex-direction: column; }
+  .price-pair .act { margin-top: auto; }
+}
+@media (max-width: 760px) {
+  .price-pair { grid-template-columns: 1fr; grid-template-rows: none; row-gap: var(--s-5); }
+  .price-pair .term { grid-row: auto; grid-template-rows: none; padding: var(--s-5); }
+}
+
+/* Same width and edges as the cards; the answer keeps a reading measure. */
+.more { margin-top: var(--s-5); max-width: none; }
+.more details > div > * { max-width: var(--measure); }
+.more .incl li + li { margin-top: var(--s-2); }
+
+/* Close: one large paragraph, a few words in the accent green. */
+.close p.manifesto { font-family: var(--font-display); font-weight: 500; font-size: clamp(2rem, 1.2rem + 3vw, 3.5rem); line-height: 1.12; letter-spacing: -0.015em; max-width: 20ch; }
+.close .accent { color: var(--link); font-style: italic; font-weight: 400; }
+.close .btn { margin-top: var(--s-6); }
+
+/* Nav anchors: land below the sticky nav. */
+#how, #partners, #pricing { scroll-margin-top: calc(var(--nav-h, 64px) + var(--s-5)); }

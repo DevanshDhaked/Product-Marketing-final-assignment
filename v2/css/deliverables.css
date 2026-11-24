@@ -1,0 +1,157 @@
+/* Deliverables pages: the hub (deliverables.html) and the propaganda strategy (propaganda.html).
+   Owned by the hub build. The posts teammate may link this file for linkedin.html and ad.html, read-only.
+   Uses tokens and components from base.css only (.wrap, .section, .doc, .card).
+   Classes added here:
+   .core-line   the central message, set once in the display serif
+   .hub-index   the hub's index entries (number, display-serif title, one line, one link); nothing boxed
+   .page-prop   propaganda page only: .prop-card summary card, .prop-layout body grid, .toc contents
+                (sticky column on wide screens, a sticky bar under the nav on phones once propaganda.js runs)
+   .viz         propaganda figures: .aud audience map, .shift belief shift, .chan channel table, .flow campaign flow */
+
+/* The hub title, and the core line set in the display serif where the strategy states it. */
+.doc h1 { margin: 0 0 var(--s-4); }
+.core-line { margin: 0 0 var(--s-5); font-family: var(--font-display); font-weight: 500; font-size: var(--fs-h2); line-height: var(--lh-head); color: var(--text); }
+
+/* Hub index (Stripe Press pattern: titles in the display serif, one line each, nothing boxed) */
+.hub-index { list-style: none; margin: var(--s-7) 0 0; padding: 0; border-top: 1px solid var(--border); }
+.hub-index > li { display: grid; grid-template-columns: 72px 1fr; gap: var(--s-5); padding-block: var(--s-6); border-bottom: 1px solid var(--border); }
+.hub-index .hub-n { font-size: var(--fs-small); font-weight: 600; color: var(--text-muted); font-variant-numeric: tabular-nums; padding-top: 10px; }
+.hub-index h2 { margin: 0 0 var(--s-3); }
+.hub-index h2 a { color: var(--text); text-decoration: none; }
+.hub-index h2 a:hover { color: var(--link); text-decoration: underline; text-decoration-thickness: 1px; }
+.hub-index p { margin: 0; max-width: 60ch; color: var(--text-muted); }
+.hub-index .go { margin-top: var(--s-4); }
+@media (max-width: 640px) { .hub-index > li { grid-template-columns: 1fr; gap: var(--s-2); } .hub-index .hub-n { padding-top: 0; } }
+/* Equal entry heights on desktop. .doc li + li adds a top margin that would sit inside the shared track, so zero it. */
+@media (min-width: 641px) { .hub-index { display: grid; grid-auto-rows: 1fr; } .doc .hub-index > li + li { margin-top: 0; } }
+
+/* Propaganda page: a summary card, then seven short sections beside a contents list. */
+.page-prop .prop-top { padding-block: var(--s-7); }
+.prop-card { margin-top: var(--s-6); padding: var(--s-6); }
+.prop-card .core-line { color: var(--text); }
+.prop-card dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-5) var(--s-7); margin: 0; }
+.prop-card dt { margin-bottom: var(--s-1); font-size: var(--fs-caption); font-weight: 600; color: var(--text-muted); }
+.prop-card dd { margin: 0; color: var(--text); }
+@media (max-width: 640px) { .prop-card { padding: var(--s-5); } .prop-card dl { grid-template-columns: 1fr; gap: var(--s-4); } }
+
+.prop-layout { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: var(--s-8); align-items: start; }
+.prop-body section { scroll-margin-top: calc(65px + var(--s-5)); }
+.prop-body section + section { margin-top: var(--s-7); }
+.prop-body h2 { margin-bottom: var(--s-3); }
+
+/* Contents: nav is 64px plus a 1px border, so sticky offsets start at 65px. */
+.toc { position: sticky; top: calc(65px + var(--s-6)); font-size: var(--fs-small); }
+.toc summary { display: none; }
+.toc ol { list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--border); }
+.toc li + li { margin-top: var(--s-1); }
+.toc a { display: block; margin-left: -1px; padding: var(--s-1) 0 var(--s-1) var(--s-4); border-left: 2px solid transparent; color: var(--text-muted); text-decoration: none; }
+.toc a:hover { color: var(--text); }
+.toc a[aria-current="true"] { border-left-color: var(--brand); color: var(--text); font-weight: 600; }
+
+@media (max-width: 900px) {
+  .prop-layout { grid-template-columns: 1fr; gap: var(--s-6); }
+  .toc { position: static; }
+  .toc summary { display: flex; align-items: center; gap: var(--s-2); min-height: 44px; cursor: pointer; list-style: none; }
+  .toc summary::-webkit-details-marker { display: none; }
+  .toc-label { flex-shrink: 0; font-weight: 600; color: var(--text); }
+  .toc-now { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text-muted); }
+  .toc-now:not(:empty)::before { content: "\00B7"; margin-right: var(--s-2); }
+  .toc summary .icon { flex-shrink: 0; margin-left: auto; transition: transform var(--dur) var(--ease); }
+  .toc[open] summary .icon { transform: rotate(180deg); }
+  .toc ol { margin-bottom: var(--s-3); }
+  /* With propaganda.js: a closed bar that sticks under the nav; without it, a normal list at the top. */
+  .toc.is-live { position: sticky; top: 65px; z-index: 5; margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); background: var(--bg); border-bottom: 1px solid var(--border); }
+  .prop-body section { scroll-margin-top: calc(65px + 45px + var(--s-4)); }
+}
+
+/* Propaganda visuals. Each is a <figure class="viz"> in semantic HTML, laid out by the width of the
+   figure itself (container queries), so the same rules serve the wide column and the phone. Figures
+   run wider than the text measure; paragraphs keep it. Brand green marks the one thing each visual
+   is about. */
+.prop-body { max-width: none; }
+.prop-body > section > :not(figure) { max-width: var(--measure); }
+.viz { container-type: inline-size; margin: var(--s-6) 0 0; }
+.viz figcaption { margin-top: var(--s-4); font-size: var(--fs-caption); color: var(--text-muted); }
+.viz + p { margin-top: var(--s-5); }
+
+/* 1. Audience map: three people side by side, the head of talent first with the brand rule. */
+.aud ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-5); margin: 0; padding: 0; list-style: none; }
+.aud li, .aud li + li { margin: 0; padding-top: var(--s-4); border-top: 2px solid var(--border-strong); }
+.aud li.aud-lead { border-top: 4px solid var(--brand); padding-top: calc(var(--s-4) - 2px); }
+.aud h3 { margin: 0; font-family: var(--font-display); font-weight: 500; }
+.aud p { margin: 0; }
+.aud .aud-job { margin-top: var(--s-1); font-size: var(--fs-small); color: var(--text-muted); }
+.aud .aud-belief { margin-top: var(--s-4); }
+.aud .aud-who { margin-top: var(--s-3); font-size: var(--fs-caption); color: var(--text-muted); }
+/* The three columns share four rows (title, job, belief, name) so names line up when one quote runs longer. */
+@container (min-width: 561px) { @supports (grid-template-rows: subgrid) { .aud ul { grid-template-rows: repeat(4, auto); row-gap: 0; } .aud li { display: grid; grid-row: span 4; grid-template-rows: subgrid; row-gap: 0; } } }
+@container (max-width: 560px) {
+  .aud ul { grid-template-columns: 1fr; gap: var(--s-5); }
+}
+
+/* 2. Belief shift: today's belief, the tactics as the bridge, the belief we want. Wide: one row read
+   left to right. Narrow: one column read top to bottom, arrows turned down. */
+.shift-grid { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.15fr) auto minmax(0, 1fr); gap: var(--s-4); align-items: center; }
+.shift-from, .shift-to { align-self: stretch; padding: var(--s-5); border-radius: var(--r-surface); }
+.shift-from { background: var(--surface-sunk); color: var(--text-muted); }
+.shift-to { background: var(--positive-soft); color: var(--on-positive-soft); }
+.shift p { margin: 0; }
+.shift-label { font-size: var(--fs-caption); font-weight: 600; }
+.shift-quote { margin-top: var(--s-3); font-family: var(--font-display); font-weight: 500; font-size: var(--fs-h3); line-height: var(--lh-head); }
+.shift-arrow { color: var(--brand); flex-shrink: 0; }
+.shift-bridge { margin: 0; padding: 0; list-style: none; counter-reset: tactic; font-size: var(--fs-small); }
+.shift-bridge li, .shift-bridge li + li { position: relative; margin: 0; padding-left: 32px; }
+.shift-bridge li + li { margin-top: var(--s-3); }
+.shift-bridge li::before { counter-increment: tactic; content: counter(tactic); position: absolute; left: 0; top: 1px; width: 22px; height: 22px; border: 1px solid var(--brand); border-radius: var(--r-pill); font-size: var(--fs-caption); font-weight: 600; line-height: 20px; text-align: center; color: var(--text); }
+@container (max-width: 640px) {
+  .shift-grid { grid-template-columns: 1fr; justify-items: start; }
+  .shift-from, .shift-to { justify-self: stretch; }
+  .shift-arrow { transform: rotate(90deg); margin-left: var(--s-5); }
+  .shift-bridge { padding-left: var(--s-5); }
+}
+
+/* 3. Channel table: a real table. The cost and tracking answers are tags so the column reads at a
+   glance. Narrow: each row becomes a block with its labels from data-label. */
+.chan table { font-size: var(--fs-small); }
+.chan thead th { white-space: nowrap; }
+.chan thead th:nth-child(2) { width: 1%; }
+.chan thead th:nth-child(3) { width: 150px; }
+.chan tbody th { font-weight: 600; color: var(--text); font-size: var(--fs-small); border: 0; }
+.chan tbody tr + tr > * { border-top: 1px solid var(--border); }
+.chan th:first-child, .chan td:first-child { padding-left: 0; }
+.chan td:last-child, .chan th:last-child { padding-right: 0; }
+.tag { display: inline-block; padding: 2px 10px; border-radius: var(--r-pill); font-size: var(--fs-caption); font-weight: 600; white-space: nowrap; }
+.tag-free { background: var(--positive-soft); color: var(--on-positive-soft); }
+.tag-paid { background: var(--constructive-soft); color: var(--on-constructive-soft); }
+.tag-note { display: block; margin-top: var(--s-1); font-size: var(--fs-caption); color: var(--text-muted); }
+@container (max-width: 640px) {
+  .chan thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .chan table, .chan tbody, .chan tr, .chan th, .chan td { display: block; }
+  .chan tbody tr { padding-block: var(--s-4); }
+  .chan tbody tr + tr { border-top: 1px solid var(--border); }
+  .chan tbody tr + tr > * { border-top: 0; }
+  .chan tbody th { padding: 0 0 var(--s-2); }
+  .chan td { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: var(--s-3); padding: var(--s-1) 0; }
+  .chan td::before { content: attr(data-label); font-size: var(--fs-caption); font-weight: 600; color: var(--text-muted); }
+  .chan td > * { justify-self: start; }
+  .chan td .tag-note { grid-column: 2; margin-top: 0; }
+}
+
+/* 4. Campaign flow: one strip of stops on a brand line. Wide: left to right. Narrow: top to bottom.
+   Each stop is a link to the piece it names; the last stop, the pilot, is a filled dot. */
+.flow ol { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(0, 1fr); gap: var(--s-4); margin: 0; padding: 0; list-style: none; }
+.flow li, .flow li + li { position: relative; margin: 0; padding-top: 52px; }
+.flow li::after { content: ""; position: absolute; top: 26px; left: 0; width: 14px; height: 14px; box-sizing: border-box; border: 2px solid var(--brand); border-radius: var(--r-pill); background: var(--bg); }
+.flow li:not(:last-child)::before { content: ""; position: absolute; top: 32px; left: 14px; right: calc(-1 * var(--s-4)); height: 2px; background: var(--brand); }
+.flow li.flow-end::after { background: var(--brand); }
+.flow-when { position: absolute; top: 0; left: 0; right: 0; font-size: var(--fs-caption); font-weight: 600; color: var(--text-muted); white-space: nowrap; }
+.flow-what { display: block; font-size: var(--fs-small); font-weight: 600; line-height: var(--lh-head); }
+.flow-what .linkbtn { min-height: 0; font: inherit; text-align: left; }
+.flow-job { display: block; margin-top: var(--s-2); font-size: var(--fs-caption); color: var(--text-muted); }
+@container (max-width: 720px) {
+  .flow ol { grid-auto-flow: row; gap: var(--s-5); }
+  .flow li, .flow li + li { padding: 0 0 0 32px; }
+  .flow li::after { top: 3px; }
+  .flow li:not(:last-child)::before { top: 17px; left: 6px; right: auto; bottom: calc(-1 * var(--s-5) - 3px); width: 2px; height: auto; }
+  .flow-when { position: static; display: block; margin-bottom: var(--s-1); white-space: normal; }
+}
