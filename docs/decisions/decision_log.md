@@ -10,6 +10,13 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-24: Site structure
+
+- **Pages:** home (`index.html`, folds the old how-it-works, trust and pricing), the 2-minute walkthrough (`demo.html`), a deliverables hub (`deliverables.html`) and three deliverable pages (`propaganda.html`, `linkedin.html`, `ad.html`). Six pages in all, minimal links on each.
+- **Second call to action:** "Book a 20-minute call" opens an honest note: "Course project: in a live launch this books a 20-minute call with our team." No email address is published.
+- **Old URLs:** `how-it-works.html`, `pricing.html` and `trust.html` are dropped without redirects. The README links are updated to the new pages.
+- **Open:** the headline typeface (shortlist in `design-lab/type.html`), and whether the pricing reasoning needs its own page.
+
 ## 2026-11-24: Ad placement chosen
 
 - **Decision:** the one advertisement is a paid sponsor standee (portrait roll-up) with matching A6 handout cards, placed at an HR community event of the kind run by NHRD Network chapters, in the December to January window before the April round. It tracks nobody: no pixel, no badge scan, no form; a QR code opens a plain URL for the 2-minute walkthrough.
