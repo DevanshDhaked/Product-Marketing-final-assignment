@@ -13,6 +13,7 @@ Append new decisions on top. Do not edit an old decision; add a new one that rep
 ## 2026-11-25: Hub numbering and a short propaganda page
 
 - **Hub:** the deliverables hub lists "01 The website" (linking to the home page) before 02 to 04, so all four graded deliverables read as one set.
+- **Sticky contents:** on the propaganda page, the "On this page" list stays visible while reading on desktop and highlights the section in view. On phones it becomes a small sticky bar under the nav showing the current section, which opens the full list.
 - **Propaganda page:** cut from about 3,400 words to about 600. A summary card on top (audience, belief from and to, central message, tactics, channels, expected response), then one short paragraph for each point the brief requires (audience; belief; central message and reasoning; tactics and channels; why they fit; link to positioning; expected response). Everything else (persona shaping, limits, long sources, the long sequence and objections) stays in the strategy docs and the hub handoff report.
 
 ## 2026-11-25: Pricing section trimmed
