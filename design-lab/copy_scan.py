@@ -37,6 +37,8 @@ ALLOWED = {
     # Denials and required statements: the term is used to say what Sphyr does not do or does not offer.
     "Sphyr hands partners a record and leaves the decision with them. The feedback in that record comes only from what colleagues chose to say on their cards, and Sphyr logs no hours or screen activity. No AI writes or scores anything. Your people come in from a spreadsheet, and Sphyr sits beside your HR system.",
     "If you sign afterwards, the ₹25,000 comes off your first annual bill. If you don't, you get your data as a spreadsheet (CSV) and we delete the rest. The fee isn't refunded.",
+    # Propaganda channel table column header; every answer in it is "No".
+    "Tracks anyone?",
     # Cited research fact (message guideline section 3).
     "of employees strongly agree that their performance reviews are fair, and 26% that they are accurate.",
     # "Review" names an engagement type, the competitor category, or our closing results review.
