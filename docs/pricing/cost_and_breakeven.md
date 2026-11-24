@@ -3,7 +3,7 @@ type: Research Note
 title: "Cost to serve, margin floor, fixed cost and break-even"
 description: "Every variable cost per seat by line, GST treatment, the margin floor that follows, the monthly fixed cost by named line, contribution and break-even in seats and firms for each candidate price, compared with the size of the segment, plus the model script."
 tags: [pricing, costs, break-even, india]
-generated: { by: claude-code/opus-5-5, at: 2026-11-24T18:05:15Z }
+generated: { by: claude-code/opus-5-5, at: 2026-11-24T18:11:26Z }
 status: draft
 sources:
   - id: ses
@@ -124,13 +124,29 @@ At the 150-person reference firm. Contribution = price minus every variable cost
 
 The share uses the segment's own guess of 18,000 to 48,000 seats in 150 to 400 firms.[^segment] That guess is unverified.
 
+### Break-even by firm size
+
+Onboarding is a cost per firm, so contribution per seat is lower in small firms. If every customer were the same size:
+
+| Price | Firm size | Contribution per seat | Break-even seats | Firms needed |
+|---|---|---|---|---|
+| ₹149 | 40 | ₹99.8 | 9,084 | 227 |
+| ₹149 | 150 | ₹124.5 | 7,282 | 49 |
+| ₹149 | 400 | ₹130.2 | 6,968 | 17 |
+| ₹199 | 40 | ₹149.5 | 6,065 | 152 |
+| ₹199 | 150 | ₹174.2 | 5,205 | 35 |
+| ₹199 | 400 | ₹179.9 | 5,042 | 13 |
+
+At ₹199, a business of 40-person firms needs 152 of them, about the whole low end of the segment's guessed 150 to 400 firms. Small firms cannot carry Sphyr alone; it has to win firms of 150 people and more.
+
 ### The finding
 
 Break-even needs a large share of a small segment. At ₹199, Sphyr must sign about 35 firms of 150 people, which is 11% to 29% of every professional in the segment. At ₹149 it is 15% to 40%. For a new vendor with no customers, the top of either range is not realistic. Three things follow:
 
 1. The fixed team must stay this lean (two founders, two engineers, half a designer, one researcher) until revenue arrives.
 2. If Van Westendorp results allow a higher price, the break-even share falls fastest there (see [validation plan](validation_plan.md)).
-3. Long term, Sphyr likely needs adjacent professional-services segments as well. That is a strategy question for the team, not settled here.
+3. Selling effort should go first to firms of 150 people and more (see the table above).
+4. Long term, Sphyr likely needs adjacent professional-services segments as well. That is a strategy question for the team, not settled here.
 
 ## Months to break-even
 
@@ -222,7 +238,9 @@ USD/INR 92.86, EUR/INR 102.75
   Lattice                      Performance                            USD    10 = Rs    929  (min $4,000/yr binds below 33 seats)
   Lattice                      Foundations bundle                     USD    13 = Rs  1,207  (min $4,000/yr binds below 26 seats)
   15Five                       Perform                                USD    11 = Rs  1,021
-  Leapsome                     Performance Reviews module             EUR     7 = Rs    719
+  Leapsome                     Performance Reviews module, promo to 31 Dec EUR     7 = Rs    719
+  Leapsome                     Reviews + foundation after promo, low  EUR    12 = Rs  1,233
+  Leapsome                     Reviews + foundation after promo, high EUR    14 = Rs  1,438
   Peoplebox                    Performance Management                 USD     8 = Rs    743
   Peoplebox                    Performance Management + 360 degree    USD    16 = Rs  1,486
   Confirm (WorkRamp Perform)   Perform, from                          USD     8 = Rs    743
@@ -269,12 +287,24 @@ USD/INR 92.86, EUR/INR 102.75
   Rs 299: variable Rs  25.3, contribution Rs 273.7, GM 91.5%, share of mid value 23.9%, low-case value minus price Rs -90, break-even 3,314 seats = 22 firms of 150, 7% to 18% of segment seats
   Rs 149 at 150 seats: Rs 268,200 a year plus GST = 0.31 mid-case exits; pays for itself if it prevents one exit every 3.2 years
   Rs 199 at 150 seats: Rs 358,200 a year plus GST = 0.41 mid-case exits; pays for itself if it prevents one exit every 2.4 years
-  Rs 199 vs cheapest global like-for-like module Rs 719: 28%; vs PerformYard low end Rs 464: 43%; vs Keka Growth at 150: 127%
+  Rs 199 vs lowest dedicated-tool list price (PerformYard low end) Rs 464: 43%; vs Peoplebox and Confirm Rs 743: 27%; vs Leapsome promo Rs 719: 28%; vs Keka Growth at 150: 127%
+  Price rule: floor Rs 121 <= price <= low-case value Rs 209; passes: 149, 199
+
+== 5b. Break-even by firm size at Rs 149 and Rs 199 ==
+  Rs 149, all firms of  40: contribution Rs  99.8, 9,084 seats = 227 firms (segment guess: 150 to 400 firms)
+  Rs 149, all firms of 150: contribution Rs 124.5, 7,282 seats = 49 firms (segment guess: 150 to 400 firms)
+  Rs 149, all firms of 400: contribution Rs 130.2, 6,968 seats = 17 firms (segment guess: 150 to 400 firms)
+  Rs 199, all firms of  40: contribution Rs 149.5, 6,065 seats = 152 firms (segment guess: 150 to 400 firms)
+  Rs 199, all firms of 150: contribution Rs 174.2, 5,205 seats = 35 firms (segment guess: 150 to 400 firms)
+  Rs 199, all firms of 400: contribution Rs 179.9, 5,042 seats = 13 firms (segment guess: 150 to 400 firms)
 
 == 6. Pilot ==
   25 seats, 12 weeks (2.76 months): cost to serve Rs 25,344, list price for same seats and time Rs 13,747
   40 seats, 12 weeks (2.76 months): cost to serve Rs 25,998, list price for same seats and time Rs 21,995
   Proposed fee Rs 25,000: per seat-month at 40 seats Rs 226, at 25 seats Rs 362
+  4 pilots, 50% convert, every non-converting pilot refunded (worst case): Rs 50,000 = 5.5% of one month's fixed cost
+  5 pilots, 50% convert, every non-converting pilot refunded (worst case): Rs 62,500 = 6.9% of one month's fixed cost
+  Firm's exposure in a pilot Rs 25,000 vs a first year at 150 seats Rs 358,200
   Fee as credit against a first annual bill at 150 seats: 7.0% of Rs 358,200
   Latest start for 6 cycles before 2027-04-01: 2027-01-07 (44 days after 2026-11-24)
 
@@ -450,7 +480,10 @@ COMPETITORS = [
     ("Lattice", "Performance", 10, "USD", 4000),
     ("Lattice", "Foundations bundle", 13, "USD", 4000),
     ("15Five", "Perform", 11, "USD", None),
-    ("Leapsome", "Performance Reviews module", 7, "EUR", None),
+    # needs the HRIS foundation, free only until 31 Dec 2026 (shown as EUR 5 to 7 otherwise)
+    ("Leapsome", "Performance Reviews module, promo to 31 Dec", 7, "EUR", None),
+    ("Leapsome", "Reviews + foundation after promo, low", 12, "EUR", None),
+    ("Leapsome", "Reviews + foundation after promo, high", 14, "EUR", None),
     ("Peoplebox", "Performance Management", 8, "USD", None),
     ("Peoplebox", "Performance Management + 360 degree", 16, "USD", None),
     ("Confirm (WorkRamp Perform)", "Perform, from", 8, "USD", None),
@@ -604,9 +637,21 @@ def print_costs_and_breakeven():
         bill = p * REF_FIRM * 12
         print(f"  Rs {p} at {REF_FIRM} seats: Rs {bill:,} a year plus GST = {bill / mid_exit:.2f} mid-case exits;"
               f" pays for itself if it prevents one exit every {mid_exit / bill:.1f} years")
-    print(f"  Rs 199 vs cheapest global like-for-like module Rs {inr(7, 'EUR'):,.0f}: {199 / inr(7, 'EUR'):.0%};"
-          f" vs PerformYard low end Rs {inr(5, 'USD'):,.0f}: {199 / inr(5, 'USD'):.0%};"
+    print(f"  Rs 199 vs lowest dedicated-tool list price (PerformYard low end) Rs {inr(5, 'USD'):,.0f}:"
+          f" {199 / inr(5, 'USD'):.0%}; vs Peoplebox and Confirm Rs {inr(8, 'USD'):,.0f}: {199 / inr(8, 'USD'):.0%};"
+          f" vs Leapsome promo Rs {inr(7, 'EUR'):,.0f}: {199 / inr(7, 'EUR'):.0%};"
           f" vs Keka Growth at {REF_FIRM}: {199 / keka_growth_per_seat(REF_FIRM):.0%}")
+    # rule in price_and_pilot.md: floor <= price <= low-case value, and inside the anchors
+    print(f"  Price rule: floor Rs {floor_price():,.0f} <= price <= low-case value Rs {low:,.0f}; passes: "
+          + ", ".join(str(p) for p in CANDIDATES if floor_price() <= p <= low))
+
+    print("\n== 5b. Break-even by firm size at Rs 149 and Rs 199 ==")
+    for p in (149, 199):
+        for n in (40, REF_FIRM, 400):
+            c = p - sum(variable_cost_per_seat(p, n).values())
+            seats = fixed / c
+            print(f"  Rs {p}, all firms of {n:3d}: contribution Rs {c:5.1f}, {seats:,.0f} seats = {seats / n:,.0f} firms"
+                  f" (segment guess: 150 to 400 firms)")
     return fixed
 
 
@@ -632,6 +677,12 @@ def print_pilot(fixed):
     fee = 25_000
     print(f"  Proposed fee Rs {fee:,}: per seat-month at 40 seats Rs {fee / (40 * months):,.0f}, "
           f"at 25 seats Rs {fee / (25 * months):,.0f}")
+    # refund exposure under the recommended conditional refund (price_and_pilot.md)
+    for pilots in (4, 5):
+        worst = pilots * 0.5 * fee
+        print(f"  {pilots} pilots, 50% convert, every non-converting pilot refunded (worst case): Rs {worst:,.0f}"
+              f" = {worst / fixed:.1%} of one month's fixed cost")
+    print(f"  Firm's exposure in a pilot Rs {fee:,} vs a first year at {REF_FIRM} seats Rs {PRICE * REF_FIRM * 12:,}")
     print(f"  Fee as credit against a first annual bill at 150 seats: "
           f"{fee / (PRICE * REF_FIRM * 12):.1%} of Rs {PRICE * REF_FIRM * 12:,}")
     # time check: 6 cycles before an April calibration round

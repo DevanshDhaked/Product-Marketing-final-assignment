@@ -151,7 +151,10 @@ COMPETITORS = [
     ("Lattice", "Performance", 10, "USD", 4000),
     ("Lattice", "Foundations bundle", 13, "USD", 4000),
     ("15Five", "Perform", 11, "USD", None),
-    ("Leapsome", "Performance Reviews module", 7, "EUR", None),
+    # needs the HRIS foundation, free only until 31 Dec 2026 (shown as EUR 5 to 7 otherwise)
+    ("Leapsome", "Performance Reviews module, promo to 31 Dec", 7, "EUR", None),
+    ("Leapsome", "Reviews + foundation after promo, low", 12, "EUR", None),
+    ("Leapsome", "Reviews + foundation after promo, high", 14, "EUR", None),
     ("Peoplebox", "Performance Management", 8, "USD", None),
     ("Peoplebox", "Performance Management + 360 degree", 16, "USD", None),
     ("Confirm (WorkRamp Perform)", "Perform, from", 8, "USD", None),
@@ -305,9 +308,21 @@ def print_costs_and_breakeven():
         bill = p * REF_FIRM * 12
         print(f"  Rs {p} at {REF_FIRM} seats: Rs {bill:,} a year plus GST = {bill / mid_exit:.2f} mid-case exits;"
               f" pays for itself if it prevents one exit every {mid_exit / bill:.1f} years")
-    print(f"  Rs 199 vs cheapest global like-for-like module Rs {inr(7, 'EUR'):,.0f}: {199 / inr(7, 'EUR'):.0%};"
-          f" vs PerformYard low end Rs {inr(5, 'USD'):,.0f}: {199 / inr(5, 'USD'):.0%};"
+    print(f"  Rs 199 vs lowest dedicated-tool list price (PerformYard low end) Rs {inr(5, 'USD'):,.0f}:"
+          f" {199 / inr(5, 'USD'):.0%}; vs Peoplebox and Confirm Rs {inr(8, 'USD'):,.0f}: {199 / inr(8, 'USD'):.0%};"
+          f" vs Leapsome promo Rs {inr(7, 'EUR'):,.0f}: {199 / inr(7, 'EUR'):.0%};"
           f" vs Keka Growth at {REF_FIRM}: {199 / keka_growth_per_seat(REF_FIRM):.0%}")
+    # rule in price_and_pilot.md: floor <= price <= low-case value, and inside the anchors
+    print(f"  Price rule: floor Rs {floor_price():,.0f} <= price <= low-case value Rs {low:,.0f}; passes: "
+          + ", ".join(str(p) for p in CANDIDATES if floor_price() <= p <= low))
+
+    print("\n== 5b. Break-even by firm size at Rs 149 and Rs 199 ==")
+    for p in (149, 199):
+        for n in (40, REF_FIRM, 400):
+            c = p - sum(variable_cost_per_seat(p, n).values())
+            seats = fixed / c
+            print(f"  Rs {p}, all firms of {n:3d}: contribution Rs {c:5.1f}, {seats:,.0f} seats = {seats / n:,.0f} firms"
+                  f" (segment guess: 150 to 400 firms)")
     return fixed
 
 
@@ -333,6 +348,12 @@ def print_pilot(fixed):
     fee = 25_000
     print(f"  Proposed fee Rs {fee:,}: per seat-month at 40 seats Rs {fee / (40 * months):,.0f}, "
           f"at 25 seats Rs {fee / (25 * months):,.0f}")
+    # refund exposure under the recommended conditional refund (price_and_pilot.md)
+    for pilots in (4, 5):
+        worst = pilots * 0.5 * fee
+        print(f"  {pilots} pilots, 50% convert, every non-converting pilot refunded (worst case): Rs {worst:,.0f}"
+              f" = {worst / fixed:.1%} of one month's fixed cost")
+    print(f"  Firm's exposure in a pilot Rs {fee:,} vs a first year at {REF_FIRM} seats Rs {PRICE * REF_FIRM * 12:,}")
     print(f"  Fee as credit against a first annual bill at 150 seats: "
           f"{fee / (PRICE * REF_FIRM * 12):.1%} of Rs {PRICE * REF_FIRM * 12:,}")
     # time check: 6 cycles before an April calibration round

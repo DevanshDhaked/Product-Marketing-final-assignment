@@ -3,7 +3,7 @@ type: Research Note
 title: "Validation plan: how survey and pilot results set the real price"
 description: "The Van Westendorp study for consulting buyers (who, how many, how recruited without scraped lists), the decision rule fixed before data that turns the curves into a list price, and the pilot-to-paid conversion and margin checks with thresholds and the action each one triggers."
 tags: [pricing, validation, van-westendorp, pilot]
-generated: { by: claude-code/opus-5-5, at: 2026-11-24T18:05:15Z }
+generated: { by: claude-code/opus-5-5, at: 2026-11-24T18:11:26Z }
 status: draft
 sources:
   - id: psm_cran
@@ -79,7 +79,7 @@ December 2026 to January 2027, alongside the first pilot conversations. The list
 
 ## 2. The decision rule (fixed before data)
 
-Candidate prices: **₹149, ₹199, ₹249**. ₹299 is excluded unless pilot data raise the mid value, because it is above 20% of mid value today.
+Candidate prices: **₹149 and ₹199**, the two that pass the price rule in [price and pilot](price_and_pilot.md): at or above the ₹121 floor and no higher than the low-case value of ₹209. ₹249 becomes a candidate only if pilot and first-year data raise the low-case value above ₹249.
 
 1. Drop any candidate below the ₹121 margin floor (none today) or outside the acceptable range [PMC, PME].
 2. Among the remaining candidates, pick the one with the highest expected revenue per respondent from the Newton-Miller-Smith curve (take-up x price).
@@ -93,8 +93,8 @@ Candidate prices: **₹149, ₹199, ₹249**. ₹299 is excluded unless pilot da
 |---|---|
 | PME below ₹199 | Move to ₹149 |
 | PME below ₹149 | Do not go below the floor. Stop and rework the value message and the offer, then re-test |
-| ₹249 inside the range and its expected revenue at least 10% above ₹199 | Move to ₹249 |
-| PMC above ₹249 | Run a second round with higher prices |
+| ₹249 inside the range | Record it. Move to ₹249 only once pilot data raise the low-case value above ₹249 and its expected revenue is at least 10% above ₹199 |
+| PMC above ₹199 | The low end of the range is above our price: check the value model against pilot data before testing higher prices |
 | ₹199 inside the range, no rule above applies | Keep ₹199 |
 
 ## 3. Pilot-to-paid conversion
@@ -103,7 +103,7 @@ Practitioner benchmarks put pilot-to-paid conversion at 30% to 45% for a median 
 
 - **Target: 50% or more.** Paid pilots with a written success test should beat the median. The break-even model in [cost and break-even](cost_and_breakeven.md) uses 50%.
 - **Check after the first 4 pilots.** If fewer than 2 convert, review the pilot design, the offer and the price before signing more. Record the stated reason for every firm that does not convert.
-- **If 3 or more of the first 4 convert and price is rarely raised**, test ₹249 with new firms. Locked firms are not affected.
+- **If 3 or more of the first 4 convert and price is rarely raised**, re-run the value model with the pilot data. If the low-case value rises above ₹249, test ₹249 with new firms. Locked firms are not affected.
 
 The pilot shows whether the record is used. It cannot show the effect on exits in 12 weeks. That effect, `e` in the [value model](value_model.md), is checked after the first year: each paying firm's voluntary exits against its own previous year, with the firm's consent.
 
@@ -128,6 +128,8 @@ The pilot measures what [acquisition and engagement](../strategy/acquisition_eng
 3. At least half of senior consultants with feedback from people on 3 or more engagements by calibration.
 4. At least half of the partners answer yes to "Did the record show you something you did not know?"
 5. At least half of the consultants answer yes to "Would you keep doing it?"
+
+Targets 1 and 4 also decide the conditional refund in [price and pilot](price_and_pilot.md): the fee is refunded if the firm met target 1 in at least 5 of the 6 cycles and missed target 4.
 
 [^psm_cran]: pricesensitivitymeter reference
 [^quirks]: Quirk's on pricing methods

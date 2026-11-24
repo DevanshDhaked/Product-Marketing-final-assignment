@@ -3,8 +3,9 @@ type: Research Note
 title: "Competitor comparison: named plans, read on 2026-11-24"
 description: "Named competitor plans with list price, billing basis, minimum and what each plan includes, converted to rupees per seat per month, compared like for like on features Sphyr really has, with the rows that are not comparable and why."
 tags: [pricing, competitors, india]
-generated: { by: claude-code/opus-5-5, at: 2026-11-24T17:51:30Z }
+generated: { by: claude-code/opus-5-5, at: 2026-11-24T18:11:26Z }
 status: draft
+stale_after: 2026-12-31T23:59:59Z
 sources:
   - id: lattice
     resource: https://lattice.com/pricing
@@ -58,7 +59,7 @@ sources:
 
 # Competitor comparison
 
-All plans were read on 2026-11-24. Rupee figures use $1 = ₹92.86 (23 Nov 2026)[^fx_usd] and €1 = ₹102.75 (18 Nov 2026)[^fx_eur] and come from [the pricing model](pricing_model.py), section 2. List prices only; volume discounts are not public.
+All plans were read on 2026-11-24. Prices change; this page is stale after 31 Dec 2026, when Leapsome's promotion ends. Rupee figures use $1 = ₹92.86 (23 Nov 2026)[^fx_usd] and €1 = ₹102.75 (18 Nov 2026)[^fx_eur] and come from [the pricing model](pricing_model.py), section 2. List prices only; volume discounts are not public.
 
 ## What the graded one-pager got wrong
 
@@ -75,7 +76,8 @@ Price per seat per month, billed annually, for the plan that delivers peer feedb
 | Lattice, Performance[^lattice] | $10 per seat per month | ₹929 | Billed annually, in USD only. Minimum annual agreement $4,000, which binds below 33 seats | Performance reviews, succession planning, promotions, PIPs, talent reviews, calibration; also meetings, weekly updates, feedback, Q&A boards |
 | Lattice, Foundations bundle[^lattice] | $13 per seat per month | ₹1,207 | Same | Performance plus goals and OKRs, analytics, an AI agent and integrations |
 | 15Five, Perform[^fifteen] | $11 per user per month | ₹1,021 | Billed annually | AI-assisted reviews, OKRs and goals, 360 feedback, talent matrix, career paths, AI insights |
-| Leapsome, Performance Reviews module[^leapsome] | €7 per employee per month | ₹719 | Per employee per month, no setup fee, 14-day trial. Needs the HRIS foundation, shown as free until 31 Dec (€5 to €7 otherwise) | Review templates and automations, cross-cycle analytics, calibration, external reviewers. Goals and OKRs is a separate €4 module |
+| Leapsome, Performance Reviews module, until 31 Dec 2026[^leapsome] | €7 per employee per month | ₹719 | Per employee per month, no setup fee, 14-day trial. Needs the HRIS foundation, shown as free until 31 Dec (€5 to €7 otherwise) | Review templates and automations, cross-cycle analytics, calibration, external reviewers. Goals and OKRs is a separate €4 module |
+| Leapsome, Performance Reviews plus HRIS foundation, after 31 Dec 2026[^leapsome] | €12 to €14 per employee per month | ₹1,233 to ₹1,438 | Same; the foundation is required | Same as above, plus core HR records |
 | Peoplebox, Performance Management[^peoplebox] | $8 per employee per month | ₹743 | Billed annually | OKRs and goals, business reviews, check-ins, anytime feedback |
 | Peoplebox, Performance Management + 360 degree[^peoplebox] | $8 + $8 | ₹1,486 | Billed annually | Adds 360 reviews, "anonymous or transparent", with AI-driven reports |
 | Confirm, now WorkRamp Perform[^confirm] | From $8 per user per month | ₹743 | Billed annually, quoted for a 200-person company | Performance visibility beyond self-reporting, AI review summaries, pulse surveys, manager coach |
@@ -117,7 +119,7 @@ Only features Sphyr has today are compared. "Shown" means the competitor's prici
 | Anchor | Value | Why |
 |---|---|---|
 | Low, Indian | ₹35 to ₹157 per seat | What a firm pays today for review features inside or on top of its HRMS |
-| High, global like-for-like | ₹719 to ₹1,021 per seat (Leapsome, Peoplebox, Confirm, Lattice, 15Five single modules) | What a dedicated review and feedback tool costs, with features Sphyr lacks |
+| High, global like-for-like | ₹464 to ₹1,486 per seat. The lowest list price is PerformYard's $5 (₹464), for firms of several hundred; Peoplebox and Confirm start at ₹743; Lattice and 15Five are ₹929 and ₹1,021. Leapsome's ₹719 is a promotion that ends on 31 Dec 2026, after which it is ₹1,233 to ₹1,438 | What a dedicated review and feedback tool costs, with features Sphyr lacks |
 
 The price decision is in [price and pilot](price_and_pilot.md).
 

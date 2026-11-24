@@ -3,7 +3,7 @@ type: Research Note
 title: "Price and pilot: the recommended terms and why"
 description: "The recommended list price against the margin floor, the value and the competitor anchors, why it captures only part of the value, what it includes, and the pilot's price, length, timing and what happens when a firm does not convert, with the runner-up for each choice."
 tags: [pricing, pilot, consulting, india]
-generated: { by: claude-code/opus-5-5, at: 2026-11-24T18:05:15Z }
+generated: { by: claude-code/opus-5-5, at: 2026-11-24T18:11:26Z }
 status: draft
 sources:
   - id: share_monetizely
@@ -17,7 +17,7 @@ sources:
     title: "Monolit, practitioner blog: price at 10 to 20% of value (accessed 2026-11-24)"
   - id: mckinsey
     resource: https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/the-net-revenue-retention-advantage-driving-success-in-b2b-tech
-    title: "McKinsey 2025, 8 in 10 B2B decision makers look for a new vendor if performance guarantees are not offered (as recorded in prior_work/research_backing.md)"
+    title: "McKinsey, The net revenue retention advantage, 19 Nov 2025, citing its B2B Pulse research: eight in ten B2B decision makers will look for a new vendor if performance guarantees are not offered; no sample size on the page (accessed 2026-11-24)"
   - id: prof
     resource: ../brief/professor_feedback.md
     title: "Professor feedback, pricing and packaging sections"
@@ -39,7 +39,7 @@ Inputs come from the [value model](value_model.md), the [competitor comparison](
 ## Recommendation
 
 - **Price: ₹199 per employee per month, billed yearly, plus GST.** The same price for every employee and every firm size.
-- **Pilot: 12 weeks (six fortnightly cycles), one or two practices of up to 40 people, ₹25,000 plus GST.** Credited in full to the first annual bill if the firm signs within 60 days of the last cycle. Not refunded if it does not.
+- **Pilot: 12 weeks (six fortnightly cycles), one or two practices of up to 40 people, ₹25,000 plus GST.** Credited in full to the first annual bill if the firm signs within 60 days of the last cycle. Refunded in full if the firm ran the pilot properly and the partners say the record showed them nothing new; otherwise kept.
 - **Early-firm price lock:** the first 10 paying firms keep ₹199 for 24 months, with no case study required.
 - **Runner-up price: ₹149.** Van Westendorp results choose between them (rule in the [validation plan](validation_plan.md)).
 
@@ -51,11 +51,11 @@ The order was fixed in advance, so no price was picked first: cost floor, then v
 |---|---|
 | 1. Margin floor at 80% gross margin, 150-person firm | ₹121 |
 | 2. Value per seat per month | Low ₹209, mid ₹1,249, high ₹6,409 |
-| 3. Competitor anchors | Indian: ₹35 to ₹45 (greytHR review add-on), about ₹157 (Keka's whole HRMS with reviews). Global like-for-like modules: ₹719 to ₹1,021 |
+| 3. Competitor anchors | Indian: ₹35 to ₹45 (greytHR review add-on), about ₹157 (Keka's whole HRMS with reviews). Global dedicated tools: ₹464 (PerformYard's lowest) to ₹1,486; Peoplebox and Confirm from ₹743 |
 | 4. Value share | 10% to 20% of mid value = ₹125 to ₹250 |
-| 5. Test | The price must clear the floor and sit inside the anchor band |
+| 5. Test | The price must clear the floor, sit inside the anchor band, and be no higher than the low-case value (₹209), so that a firm in the low case does not pay more than it gets |
 
-Both ₹149 and ₹199 pass the test. So the choice between them is a trade-off:
+Of ₹149, ₹199, ₹249 and ₹299, only ₹149 and ₹199 pass. ₹249 and ₹299 clear the floor and sit inside the anchors, but they are above the low-case value. The choice between ₹149 and ₹199 is a trade-off:
 
 | At a 150-person firm | ₹149 | ₹199 |
 |---|---|---|
@@ -72,8 +72,8 @@ Both ₹149 and ₹199 pass the test. So the choice between them is a trade-off:
 
 1. **₹149 does not build a business in this segment.** It needs 49 firms, up to 40% of every professional in the segment. ₹199 needs 35. Both are hard (see the finding in [cost and break-even](cost_and_breakeven.md)), but ₹149 is harder by 14 firms.
 2. **It stays inside the value-share norm.** ₹199 is 15.9% of mid value. The usual rule of thumb is 10% to 20%. That rule comes from three practitioner sources, not from a study.[^share_monetizely][^share_mistral][^share_monolit]
-3. **The firm still gains in the low case, but only just.** At ₹209 of low-case value, the gain is ₹10 a seat. That is close to zero. The pilot exists to find out which case a firm is in before it pays for a year.
-4. **It is far below dedicated tools.** ₹199 is 28% of Leapsome's review module (₹719) and 43% of PerformYard's lowest price (₹464).
+3. **It meets the low-case rule, but only just.** At ₹209 of low-case value, the gain is ₹10 a seat. That is close to zero. The pilot exists to find out which case a firm is in before it pays for a year.
+4. **It is far below dedicated tools.** ₹199 is 43% of the lowest list price we found for a dedicated tool (PerformYard's $5, ₹464, which applies to firms of several hundred) and 27% of Peoplebox's and Confirm's starting price (₹743).
 5. **It is easy to say to a managing partner.** At 150 people, ₹3.58 L a year pays for itself if Sphyr prevents one voluntary exit every 2.4 years, against about 18 such exits a year in a firm that size (mid case).
 
 ### The cost of ₹199, said plainly
@@ -88,7 +88,7 @@ The old ₹149 sat below its own ₹150 floor with no reason given. ₹199 sits 
 ## Why the price captures only part of the value
 
 - **The value is our estimate.** No study shows Sphyr reduces exits. The firm carries the risk that the estimate is wrong, so it keeps most of the gain.
-- **A new vendor with no customers.** Sphyr has no reviews or references. In a McKinsey study, 8 in 10 B2B decision makers said they would look for another vendor if performance guarantees are not offered.[^mckinsey] A low price and a paid pilot with a written success test lower that risk.
+- **A new vendor with no customers.** Sphyr has no reviews or references. McKinsey reports that eight in ten B2B decision makers will look for another vendor if performance guarantees, such as a refund when milestones are not met, are not offered.[^mckinsey] A low price, a short paid pilot with a written success test, and the conditional refund below lower that risk.
 - **Budget authority.** The head of talent gets one new budget ask a year (see the [head of talent persona](../strategy/persona_head_of_talent.md)), and the managing partner signs. A bill of about ₹3.6 L a year for 150 people is a size we expect a managing partner can approve without a long process. That is an ESTIMATE to test in the pilot calls.
 - **Competitor anchors.** The firm already pays for an HRMS. Pricing far above the Indian anchor would make the comparison about price, not about the record.
 
@@ -134,11 +134,16 @@ The full ₹25,000 is credited to the first annual bill if the firm signs within
 
 ### If the firm does not convert
 
-| Option | What happens | Verdict |
+Data terms are the same in every option. Within 7 days of a request we send all ratings and comments as CSV files; the prototype has no self-serve export screen, so we do it by hand. After the 60-day read-only window, we delete the firm's account and data within 30 days and confirm it in writing. Only invoices are kept, because tax law needs them.
+
+| Option | Fee if the firm does not convert | Verdict |
 |---|---|---|
-| **A. Fee kept, credit only if converting (recommended)** | No refund. Within 7 days of a request we send all ratings and comments as CSV files; the prototype has no self-serve export screen, so we do it by hand. After the 60-day read-only window, we delete the firm's account and data within 30 days and confirm it in writing. Only invoices are kept, because tax law needs them. | The fee only covers our cost, so a refund means Sphyr pays for every failed pilot. A paid commitment also selects firms that will run all six cycles. |
-| B. Full refund if the written success test is not met (runner-up) | Same data terms, plus a refund. | Strongest risk reversal, which buyers value.[^mckinsey] But it costs about ₹25,000 per failed pilot, and it turns the success test into a negotiation about whether it was met. |
-| C. Partial refund | Same data terms, part refund. | Rejected: adds an argument about the amount without solving either problem. |
+| **A. Conditional refund (recommended)** | Refunded in full if the firm did its part (participation of 80% or more in at least 5 of the 6 cycles) and fewer than half of the partners answer yes to "Did the record show you something you did not know?". Otherwise kept. | Buyers want a guarantee of this kind: McKinsey's example of a performance guarantee is "a refund if certain milestones can't be met".[^mckinsey] Both conditions are counted, not argued: participation comes from the product, the partner answer from a two-question survey agreed before the pilot. The firm cannot fail the test by not taking part. Worst case for Sphyr: if every non-converting pilot is refunded, 4 pilots at 50% conversion cost ₹50,000, 5.5% of one month's fixed cost. |
+| B. Fee kept, credit only if converting (runner-up) | Kept. | Covers our cost and selects committed firms. But it offers no guarantee, which most buyers look for, and the firm alone carries the risk. |
+| C. Full refund for any firm that does not convert | Refunded. | Rejected: pays for firms that change their mind for reasons unrelated to the result, and removes the commitment the fee is meant to create. |
+| D. Partial refund | Part refunded. | Rejected: adds an argument about the amount without solving either problem. |
+
+What the firm risks in any option: ₹25,000 and 12 weeks, against ₹3,58,200 for a first year at 150 seats. That cap, plus the conditional refund, is what stands in for the reviews and references Sphyr does not have yet.
 
 The professor wrote that "refund promises" belong to "sales and marketing strategy" and are "not central to the packaging experience".[^prof] So these terms live here and in the acquisition plan, not on the first-use or packaging pages. The deletion promise is an operational commitment; it is not a compliance claim.
 
