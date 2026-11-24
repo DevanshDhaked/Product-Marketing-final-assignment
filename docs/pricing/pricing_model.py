@@ -267,20 +267,25 @@ def fixed_monthly():
 
 SEGMENT_SEATS = (18_000, 48_000)  # segment.md guess: 150 to 400 firms x about 120 professionals
 CANDIDATES = (149, 199, 249, 299)
+PRICE = 149  # decided list price, gate 1b (docs/decisions/decision_log.md)
+ALT_PRICE = 199  # considered alternative, see price_and_pilot.md
 
 
 def print_costs_and_breakeven():
     print("\n== 3. Cost to serve per seat per month (at the 150-person reference firm) ==")
     print(f"  CS hourly cost Rs {CS_HOURLY:,.0f}")
-    for price in (199,):
+    for price in (PRICE, ALT_PRICE):
         parts = variable_cost_per_seat(price)
         for k, x in parts.items():
             print(f"  {k:40s} Rs {x:6.2f}")
         print(f"  {'total at price Rs ' + str(price):40s} Rs {sum(parts.values()):6.2f}")
     for n in (40, REF_FIRM, 400):
-        var = sum(variable_cost_per_seat(199, n).values())
+        gms = []
+        for p in (PRICE, ALT_PRICE):
+            var = sum(variable_cost_per_seat(p, n).values())
+            gms.append(f"at Rs {p}: {(p - var) / p:.1%}")
         print(f"  margin floor at {TARGET_GM:.0%} gross margin, {n:3d}-person firm: Rs {floor_price(n):,.0f};"
-              f" gross margin at Rs 199: {(199 - var) / 199:.1%}")
+              f" gross margin {', '.join(gms)}")
 
     print("\n== 4. Fixed cost per month ==")
     people, other = fixed_monthly()
@@ -308,10 +313,11 @@ def print_costs_and_breakeven():
         bill = p * REF_FIRM * 12
         print(f"  Rs {p} at {REF_FIRM} seats: Rs {bill:,} a year plus GST = {bill / mid_exit:.2f} mid-case exits;"
               f" pays for itself if it prevents one exit every {mid_exit / bill:.1f} years")
-    print(f"  Rs 199 vs lowest dedicated-tool list price (PerformYard low end) Rs {inr(5, 'USD'):,.0f}:"
-          f" {199 / inr(5, 'USD'):.0%}; vs Peoplebox and Confirm Rs {inr(8, 'USD'):,.0f}: {199 / inr(8, 'USD'):.0%};"
-          f" vs Leapsome promo Rs {inr(7, 'EUR'):,.0f}: {199 / inr(7, 'EUR'):.0%};"
-          f" vs Keka Growth at {REF_FIRM}: {199 / keka_growth_per_seat(REF_FIRM):.0%}")
+    for p in (PRICE, ALT_PRICE):
+        print(f"  Rs {p} vs lowest dedicated-tool list price (PerformYard low end) Rs {inr(5, 'USD'):,.0f}:"
+              f" {p / inr(5, 'USD'):.0%}; vs Peoplebox and Confirm Rs {inr(8, 'USD'):,.0f}: {p / inr(8, 'USD'):.0%};"
+              f" vs Leapsome promo Rs {inr(7, 'EUR'):,.0f}: {p / inr(7, 'EUR'):.0%};"
+              f" vs Keka Growth at {REF_FIRM}: {p / keka_growth_per_seat(REF_FIRM):.0%}")
     # rule in price_and_pilot.md: floor <= price <= low-case value, and inside the anchors
     print(f"  Price rule: floor Rs {floor_price():,.0f} <= price <= low-case value Rs {low:,.0f}; passes: "
           + ", ".join(str(p) for p in CANDIDATES if floor_price() <= p <= low))
@@ -327,7 +333,6 @@ def print_costs_and_breakeven():
 
 
 # == 6. pilot ==
-PRICE = 199  # recommended list price, see price_and_pilot.md
 PILOT_WEEKS = 12  # 6 fortnightly cycles
 PILOT_MAX_SEATS = 40
 # ESTIMATE: extra hours for a pilot beyond normal onboarding: success test agreed in writing (2),
@@ -346,12 +351,12 @@ def print_pilot(fixed):
         print(f"  {seats} seats, {PILOT_WEEKS} weeks ({months:.2f} months): cost to serve Rs {cost:,.0f}, "
               f"list price for same seats and time Rs {at_list:,.0f}")
     fee = 25_000
-    print(f"  Proposed fee Rs {fee:,}: per seat-month at 40 seats Rs {fee / (40 * months):,.0f}, "
+    print(f"  Fee (decided) Rs {fee:,}: per seat-month at 40 seats Rs {fee / (40 * months):,.0f}, "
           f"at 25 seats Rs {fee / (25 * months):,.0f}")
-    # refund exposure under the recommended conditional refund (price_and_pilot.md)
+    # CONSIDERED, NOT ADOPTED at gate 1b: refund exposure under a conditional refund
     for pilots in (4, 5):
         worst = pilots * 0.5 * fee
-        print(f"  {pilots} pilots, 50% convert, every non-converting pilot refunded (worst case): Rs {worst:,.0f}"
+        print(f"  [not adopted] {pilots} pilots, 50% convert, every non-converting pilot refunded: Rs {worst:,.0f}"
               f" = {worst / fixed:.1%} of one month's fixed cost")
     print(f"  Firm's exposure in a pilot Rs {fee:,} vs a first year at {REF_FIRM} seats Rs {PRICE * REF_FIRM * 12:,}")
     print(f"  Fee as credit against a first annual bill at 150 seats: "
@@ -364,7 +369,7 @@ def print_pilot(fixed):
     print(f"  Latest start for {PILOT_WEEKS // 2} cycles before {april}: {start} "
           f"({(start - today).days} days after {today})")
 
-    print("\n== 7. Price lock for early firms ==")
+    print("\n== 7. Price lock for early firms (considered, not adopted) ==")
     for n_firms, rise in ((10, 50), (25, 50), (10, 100)):
         cost = n_firms * REF_FIRM * rise * 12
         print(f"  {n_firms} firms of {REF_FIRM} locked at Rs {PRICE}, if list rises by Rs {rise}: "
