@@ -185,3 +185,7 @@ Replaces the nav and theme toggle descriptions above (the visible "Dark theme" l
 [^wcag]: WCAG 2.2: 1.4.3 contrast minimum 4.5:1, 1.4.11 non-text contrast 3:1
 [^toggle]: Chrome for Developers: Dark mode toggles (accessed 2026-11-24)
 [^lightdark]: MDN: light-dark(), Baseline widely available since May 2024 (accessed 2026-11-24)
+
+## 2026-11-25 addendum (site build)
+
+The 3-item nav in the phase 1b addendum is replaced by the four-link nav (How it works, For partners, Pricing, Deliverables, plus the walkthrough button and theme switch; Menu popover below 1000 px). See [site build](site_build.md) and the decision log entry "Top navigation and pricing section".
