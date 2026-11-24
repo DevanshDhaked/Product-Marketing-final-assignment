@@ -171,6 +171,16 @@ Inside `.stage` the prototype's cool palette applies through `--p-bg`, `--p-surf
 ### Logo variants
 Four variants from one recolourable symbol, `design-lab/assets/sphyr-mark.svg`: full colour (large uses only), mono that follows the theme (nav, footer, favicon, small uses), white on the fixed print green #007652 (ad standee, green fields, photographs), and strand colours (end of the core visual). Table, rules and the strand palettes: [ribbon motif](ribbon_motif.md).
 
+
+## Addendum 2026-11-24 (phase 1b, homepage): canonical nav and theme switch
+
+Replaces the nav and theme toggle descriptions above (the visible "Dark theme" label and the two-row phone nav).
+- **Nav:** the Sphyr mark in its mono variant with the word Sphyr (home), then on the right "Deliverables", the theme switch and the "See the 2-minute walkthrough" button. One line at every width; under 760px the button hides because the hero carries it. Markup: `design-lab/snippets/nav.html`.
+- **Theme switch:** a moon icon and a track with a knob, no box around it, a 44px target, accessible name "Dark theme" through `aria-label`, state in `aria-pressed`. Behaviour unchanged (`theme.js`). Markup: `design-lab/snippets/theme-toggle.html`.
+- **Footer:** the mono mark, the course credit, and three destinations: the walkthrough, Deliverables, and "Book a 20-minute call", which opens a note in place. Markup: `design-lab/snippets/footer.html`.
+- **Head:** colour-scheme meta, the inline theme script before any stylesheet, font preloads. Markup: `design-lab/snippets/head.html`.
+- Page structure and checks: [homepage mockup](homepage.md).
+
 [^proto]: Sphyr prototype, CSS custom properties read in a browser
 [^wcag]: WCAG 2.2: 1.4.3 contrast minimum 4.5:1, 1.4.11 non-text contrast 3:1
 [^toggle]: Chrome for Developers: Dark mode toggles (accessed 2026-11-24)

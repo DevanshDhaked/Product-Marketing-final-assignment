@@ -7,6 +7,7 @@ timestamp: 2026-11-24T17:04:27Z
 ---
 
 ## 2026-11-24
+* **Update**: [Slop rules](slop_rules.md) and [design system](design_system.md): phase 1b addenda for page and copy rules, the canonical nav, theme switch, footer and head snippets.
 * **Creation**: Added [homepage mockup](homepage.md): section map, copy sources, copy rules and measured checks for `design-lab/home.html`.
 * **Update**: [Ribbon motif](ribbon_motif.md): cool strands only, engagement types instead of months, the circle plays once instead of following the scroll.
 * **Update**: [Design references](references.md): addendum with 10 studio, agency and editorial product sites; Granola replaces Culture Amp, Two26 Studio replaces Make HR Work; three more picks.
