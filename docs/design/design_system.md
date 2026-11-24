@@ -132,6 +132,45 @@ Copy this into every page `<head>`:
 - The Manrope file is the latin subset. A canvas width test (2026-11-24) suggests it renders the rupee sign itself: "Manrope, serif" measured differently from plain serif. The font file was not inspected. If the glyph is missing, the browser falls back to the system font for that one character.
 - The ribbon logo's near-white highlight paths (#F8F9F9, #F0F6F6) were checked by eye on the dark nav at 28px only.
 
+
+## Addendum 2026-11-24 (phase 1b): warm neutrals, Newsreader, logo variants
+
+This addendum replaces the colour roles for page surfaces, text and lines, the "Manrope only" type rule, and the single logo above. Everything not named here stands. Contrast after the change: 116 checks, 0 failures (`node design-lab/contrast.mjs`); pairs are listed by hand, not swept from rendered pages.
+
+### Why
+- **Colour:** the user found the blue-tinted neutrals (#F6FAFD page, #040A16 navy) read as a generic AI palette. The site moves to warm paper in light and warm charcoal in dark. The product greens stay for actions and positive states; orange stays a surface or icon colour only.
+- **Type:** the user picked Newsreader for display headlines with Manrope for body and UI. An editorial serif reads as credible to partners and heads of talent at management consulting firms; the playful side of the brief is carried by the [ribbon motif](ribbon_motif.md), not by the type.
+
+### Warm neutrals (replace the matching rows above)
+
+| Role | Token | Light | Dark | Lowest text check (light / dark) |
+|---|---|---|---|---|
+| Page | `--bg` | #FAF8F4 | #171513 | |
+| Card, panel | `--surface` | #FFFEFB | #201D1A | |
+| Raised | `--surface-raised` | #FFFEFB | #29251F | |
+| Sunk | `--surface-sunk` | #F1EDE5 | #2C2823 | |
+| Frame well | `--stage-ground` | #ECE6DB | #110F0D | |
+| Body text | `--text` | #1F1C18 | #F2EEE7 | 14.53 / 12.66 on sunk |
+| Secondary text | `--text-muted` | #625C54 | #B3AB9F | 5.66 / 6.44 on sunk |
+| Hairline | `--border` | #E4DED3 | #3A352F | decorative |
+| Control outline | `--border-strong` | #8A8276 | #7A7266 | 3.58 / 3.54 (3:1 needed) |
+| Button text on green | `--on-action` | #FFFFFF | #171513 | 5.66 / 8.38 |
+
+Unchanged: `--action` #007652 / #34C696, `--link`, `--brand`, `--focus`, positive, constructive and destructive roles. Link text on the warm page: 5.33 light, 8.38 dark. Shadows are re-tinted warm.
+
+### Product frames keep the product's own palette
+Inside `.stage` the prototype's cool palette applies through `--p-bg`, `--p-surface`, `--p-text` and the rest (the 1a values, still checked by the script), so each frame reads as the real product screen. The well around a frame (`--stage-ground`) is warm, so the frame sits on the page. Manrope stays the only face inside frames.
+
+### Type (replaces "Manrope only")
+- `h1` and `h2`: Newsreader 500, with Newsreader italic 400 for emphasis (`<em>`) in display lines only. Token `--font-display`.
+- Everything else, including `h3`, buttons, nav and product frames: Manrope.
+- Files: static instances at optical size 72 from the Google Fonts API, latin subset: `newsreader-display-normal-500.woff2` (23 KB) and `newsreader-display-italic-400.woff2` (23 KB), against 279 KB for the variable roman and italic. Only the roman is preloaded; the browser fetches the italic only when a display line uses it (confirmed in Playwright: italic stayed "unloaded" on a page without `<em>`).
+- Licence: SIL OFL 1.1, no Reserved Font Name, file `design-lab/fonts/OFL-newsreader.txt`. Manrope's licence was renamed to `OFL-manrope.txt`.
+- The other two shortlisted faces (Bricolage Grotesque, Apfel Grotezk) stay in `design-lab/fonts/shortlist/` for the record and are not loaded by any page except `type.html`.
+
+### Logo variants
+Four variants from one recolourable symbol, `design-lab/assets/sphyr-mark.svg`: full colour (large uses only), mono that follows the theme (nav, footer, favicon, small uses), white on the fixed print green #007652 (ad standee, green fields, photographs), and strand colours (end of the core visual). Table, rules and the strand palettes: [ribbon motif](ribbon_motif.md).
+
 [^proto]: Sphyr prototype, CSS custom properties read in a browser
 [^wcag]: WCAG 2.2: 1.4.3 contrast minimum 4.5:1, 1.4.11 non-text contrast 3:1
 [^toggle]: Chrome for Developers: Dark mode toggles (accessed 2026-11-24)
