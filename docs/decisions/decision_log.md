@@ -10,6 +10,11 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-25: Full-colour favicon and row heights
+
+- **Favicon:** every page uses the full-colour logo as its favicon (svg, ico, apple-touch, root `favicon.ico`). Replaces the mono favicon in `docs/design/design_system.md` (line 172) and `docs/design/ribbon_motif.md` (line 39).
+- **Row heights:** rows in one list share a height on desktop only where answers differ by about one line (home "What goes wrong" scenes, hub index, LinkedIn notes, audience map). The ad "Why this ad" rows and the home "What happens after you sign" list keep natural height, because equal rows there left gaps of up to 100px.
+
 ## 2026-11-25: Final pass layout and copy
 
 - **Pricing:** "What a pilot measures" moves out of the pilot card into a full-width row under both cards, beside "How we set the price", so opening it never leaves a dead area under the plan card. The pilot card gets its own row, "Results stay with your firm unless you agree to share them." Replaces the toggle placement in "Pricing section trimmed".
