@@ -105,12 +105,6 @@
 .price-pair p.example { margin-top: var(--s-1); font-size: var(--fs-small); }
 .price-pair .act { margin-top: var(--s-5); padding-top: var(--s-5); border-top: 1px solid var(--border); }
 .price-pair .pilot .act { border-top-color: var(--border-strong); }
-/* While the pilot's scorecard is open, each card takes its own height, so the open list does not push a
-   void into the plan card. Closed, the shared rows return. */
-@media (min-width: 761px) {
-  .price-pair:has(.scorecard details[open]) { grid-template-rows: none; align-items: start; }
-  .price-pair:has(.scorecard details[open]) .term { grid-row: 1; grid-template-rows: none; }
-}
 @supports not (grid-template-rows: subgrid) {
   .price-pair .term { display: flex; flex-direction: column; }
   .price-pair .act { margin-top: auto; }
@@ -120,14 +114,6 @@
   .price-pair .term { grid-row: auto; grid-template-rows: none; padding: var(--s-5); }
 }
 
-/* The pilot card's foot row: the scorecard behind a small closed toggle (the hairline is on .lower). */
-.scorecard { font-size: var(--fs-small); }
-.scorecard details { border: 0; }
-.scorecard summary { padding: 0; }
-.scorecard details > div { padding: var(--s-1) 0 0; }
-.price-pair .scorecard details p { margin-top: var(--s-3); }
-/* Closed, the toggle sits centred between the pilot's two hairlines, so the slack is above and below it. */
-.price-pair .pilot .lower { display: flex; flex-direction: column; justify-content: center; padding-bottom: var(--s-3); }
 /* Same width and edges as the cards; the answer keeps a reading measure. */
 .more { margin-top: var(--s-5); max-width: none; }
 .more details > div > * { max-width: var(--measure); }
