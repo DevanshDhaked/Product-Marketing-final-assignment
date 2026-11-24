@@ -1,9 +1,9 @@
 ---
 type: Handoff
 title: "Pricing teammate report, phase 1b"
-description: "Plan, progress and final summary from the pricing work: recommended terms, six feedback points answered, insights, decisions, rejected approaches, required follow-up edits and unverified items."
+description: "Plan, progress and final summary from the pricing work: decided terms, six feedback points answered, insights, decisions, rejected approaches and unverified items."
 tags: [handoff, pricing]
-generated: { by: claude-code/opus-5-5, at: 2026-11-24T19:10:00Z }
+generated: { by: claude-code/opus-5-5, at: 2026-11-24T19:40:00Z }
 ---
 
 # Pricing teammate report, phase 1b
@@ -12,7 +12,7 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T19:10:00Z }
 
 Worktree: `Product-Marketing-final-assignment.d1-pricing`, branch `d1-pricing` from `iteration-a` (03aef9a).
 
-Status: done, waiting for team approval at gate 1b. Recommended: Rs 199 per employee per month billed yearly plus GST; pilot 12 weeks, up to 40 people, Rs 25,000 plus GST, credited on conversion, refunded only if the firm took part properly and the partners say the record showed nothing new. Details and alternatives in `## Final`.
+Status: done. Gate 1b terms applied: Rs 149 per employee per month billed yearly plus GST; pilot 12 weeks, up to 40 people, Rs 25,000 plus GST, credited if the firm signs, CSV and deletion if not, no refund. Details in `## Final`.
 
 ## Plan
 
@@ -111,79 +111,78 @@ Test for keeping ₹149: it stays only if it clears the new floor and sits insid
 - 2026-11-24: value_model.md and competitor_comparison.md written, commit 8e96aef. Value per seat per month: low Rs 198, mid Rs 1,379, high Rs 7,306. Global like-for-like modules Rs 719 to 1,021 (Leapsome, Peoplebox, Confirm, Lattice, 15Five); Indian anchors greytHR PMS Rs 35 to 45, Keka Growth whole HRMS about Rs 157 per seat at 150 staff. Next: cost_and_breakeven.md.
 - 2026-11-24: all six files written, validator 0 errors (1 expected warning: cost_and_breakeven.md is 691 lines because the lead asked for the script and its output as an appendix). Commits 37805cd, 407e32d, c92d972, efa0b04, 4a07d30.
 
+- 2026-11-24: Gate 1b decisions received. Merged iteration-a (fast-forward to 31677a0). Pricing docs moved to the decided terms (158b639); permitted outside edits made (6cfa6f5 strategy, 0234d25 packaging). Validator 0 errors.
+
 ## Final
 
-### Recommended terms for team approval (gate 1b)
+### Decided terms (gate 1b, now the stated terms in docs/pricing)
 
-- **Price: Rs 199 per employee per month, billed yearly, plus GST.** Same for every employee and firm size. Runner-up Rs 149. Price rule: floor (Rs 121) <= price <= low-case value (Rs 209), inside the anchors; only Rs 149 and Rs 199 pass. Van Westendorp picks between them by the rule in validation_plan.md; Rs 249 is tested only if pilot data raise the low-case value above Rs 249.
-- **Pilot: 12 weeks (6 fortnightly cycles), one or two practices up to 40 people, Rs 25,000 plus GST.** Must start by 7 Jan 2027 to finish before 1 Apr 2027. 60-day read-only access after the last cycle. Full fee credited to the first annual bill if the firm signs within 60 days of the last cycle.
-- **Non-conversion (recommended A, conditional refund):** fee refunded in full if the firm had 80%+ participation in at least 5 of 6 cycles AND fewer than half its partners say the record showed something new; otherwise kept. Worst-case refund exposure: Rs 50,000 for 4 pilots at 50% conversion (5.5% of one month's fixed cost). Fee equals cost to serve (Rs 25,344 to 25,998). Data terms in all options: CSV sent within 7 days of request (manual, the prototype has no export screen); account and data deleted within 30 days after the 60-day read-only window, confirmed in writing; invoices kept for tax. **Runner-up B:** fee kept, credit only on conversion. I first recommended B, then switched after reading the McKinsey source (19 Nov 2025): eight in ten B2B decision makers look for a new vendor without performance guarantees, its example being a refund when milestones are not met.
-- **Price lock (recommended):** first 10 paying firms keep Rs 199 for 24 months, no case study required. Publishing a scorecard is a separate, consent-only question with no price attached. **Runner-up:** lock for 10 firms in exchange for an opt-in case study. The old 25-firm, case-study lock is rejected.
+- **Price: Rs 149 per employee per month, billed yearly, plus GST**, flat for every employee and firm size. Gross margin 83.6% at 150 people (67.0% at 40, 87.4% at 400). Break-even 7,282 seats = 49 firms of 150 (15% to 40% of segment seats); 227 firms of 40 or 17 of 400. Run-rate break-even about 23 to 24 months at 2 new firms a month (estimate). Pays for itself if it prevents one exit every 3.2 years at 150 seats.
+- **Pilot: 12 weeks (6 cycles), up to 40 people, Rs 25,000 plus GST**, credited against the first annual bill if the firm signs. Cost to serve Rs 25,324 to 25,965 at Rs 149. If the firm does not sign: data as CSV, the rest deleted, no refund.
+- **Considered, not adopted** (kept in price_and_pilot.md as backing): Rs 199 (my recommendation: 35 firms to break even), conditional refund, full and partial refund, price lock (both forms), the 7 January start push.
 
 ### The six feedback points, answered (6 of 6)
 
 1. Value: formula per seat independent of firm size, low Rs 209 / mid Rs 1,249 / high Rs 6,409 per seat per month (value_model.md).
-2. Competitors: 9 global plans and 4 Indian HRMS rows named with price, billing, minimum, features, URL, date; comparable and non-comparable rows marked (competitor_comparison.md).
-3. Rationale: floor Rs 121 at 80% gross margin; Rs 199 is 15.9% of mid value; Rs 149 vs Rs 199 trade-off shown; ending-in-9 explained (price_and_pilot.md).
-4. Break-even: variable cost Rs 24.75 per seat by line, GST pass-through, fixed Rs 9,06,928 a month by line, break-even 5,205 seats = 35 firms of 150 at Rs 199; 152 firms of 40 or 13 firms of 400 (cost_and_breakeven.md).
-5. Pilot: price, length, timing, non-conversion terms with options (price_and_pilot.md).
-6. Validation: Van Westendorp plus Newton-Miller-Smith, who/how many/how recruited, decision rule fixed before data, conversion threshold 50% with a check after 4 pilots, quarterly margin triggers (validation_plan.md).
+2. Competitors: 10 global plan rows and 4 Indian HRMS rows named with price, billing, minimum, features, URL, date; comparable and non-comparable rows marked (competitor_comparison.md).
+3. Rationale: floor Rs 121 at 80% gross margin; Rs 149 clears it by Rs 28 and is 11.9% of mid value; stated price rule (floor <= price <= low-case value Rs 209, inside anchors); Rs 199 shown as the considered alternative; ending explained (price_and_pilot.md).
+4. Break-even: variable cost Rs 24.46 per seat by line at Rs 149, GST pass-through, fixed Rs 9,06,928 a month by line, break-even by price and by firm size (cost_and_breakeven.md).
+5. Pilot: fee derived from cost to serve, length from the 6-cycle need, non-conversion terms stated (price_and_pilot.md).
+6. Validation: Van Westendorp plus Newton-Miller-Smith, who/how many/how recruited, decision rule fixed before data (keep Rs 149 unless the stated results make the case for Rs 199 for new firms), conversion threshold 50% with a check after 4 pilots, quarterly margin triggers (validation_plan.md).
 
 ### Files written, with commit SHAs (branch d1-pricing)
 
 - 8e96aef: value_model.md, competitor_comparison.md, pricing_model.py (first version).
-- 37805cd: pricing_model.py, value_model.md, competitor_comparison.md (voluntary attrition, partner time, cost, price, pilot sections; AI and integrations sentence fixed).
+- 37805cd: pricing_model.py, value_model.md, competitor_comparison.md (voluntary attrition, partner time, cost, price, pilot sections).
 - 407e32d: cost_and_breakeven.md (with script and output appendix), price_and_pilot.md.
 - c92d972: validation_plan.md, pricing_summary.md.
 - efa0b04: index.md, log.md for docs/pricing.
-- 4a07d30: low-case price rule, conditional pilot refund, Leapsome post-promotion price and stale_after, break-even by firm size, summary claims fixed, appendix regenerated (cost_and_breakeven.md is now 742 lines; validator warning only).
+- 4a07d30: low-case price rule, refund analysis, Leapsome post-promotion price and stale_after, break-even by firm size.
+- 31677a0: fast-forward merge of iteration-a.
+- 158b639: docs/pricing moved to gate 1b terms (script PRICE = 149, ALT_PRICE = 199; cost, price and pilot, validation, summary, index, log; appendix regenerated, cost_and_breakeven.md 754 lines, validator warning only).
+- 6cfa6f5: docs/strategy/acquisition_engagement.md (pilot conflict line replaced by decided terms), docs/strategy/persona_managing_partner.md (cost answer plus HR-system / Keka objection), docs/strategy/log.md.
+- 0234d25: docs/packaging/first_use_experience.md (pilot length stated), docs/packaging/log.md.
 
 ### Key insights and findings (sources in each doc's frontmatter, accessed 2026-11-24)
 
-- Break-even needs a large share of a small segment: at Rs 199, 35 firms of 150 = 11% to 29% of the segment's guessed 18,000 to 48,000 seats; at Rs 149, 49 firms = 15% to 40%. Run-rate break-even about 16 to 17 months after the first sale at 2 new firms a month (estimate). The team should discuss the lean team and adjacent segments.
-- Firm size decides break-even: at Rs 199 it takes 152 firms of 40 (about the whole low-end firm count of the segment), 35 of 150 or 13 of 400. Selling should go first to firms of 150 and more.
-- Leapsome's EUR 7 review module needs an HRIS foundation that is free only until 31 Dec 2026; after that the like-for-like price is EUR 12 to 14 (Rs 1,233 to 1,438). The cheapest dedicated-tool list price is PerformYard's $5 (Rs 464); Rs 199 is 43% of it. competitor_comparison.md has stale_after 2026-12-31.
-- Rs 199 is above Keka Growth's whole-HRMS cost (about Rs 157 per seat at 150 staff; base price from a third-party review). Positioning answer: Sphyr sits next to the HRMS, it does not replace it.
+- Break-even needs a large share of a small segment: at the decided Rs 149, 49 firms of 150 = 15% to 40% of the segment's guessed 18,000 to 48,000 seats, about 23 to 24 months at 2 new firms a month (estimate); at Rs 199 it would be 35 firms, 11% to 29%. The team should discuss the lean team and adjacent segments.
+- Firm size decides break-even: at Rs 149 it takes 227 firms of 40 (more than the low-end firm count of the segment), 49 of 150 or 17 of 400. Selling should go first to firms of 150 and more.
+- Leapsome's EUR 7 review module needs an HRIS foundation that is free only until 31 Dec 2026; after that the like-for-like price is EUR 12 to 14 (Rs 1,233 to 1,438). The cheapest dedicated-tool list price is PerformYard's $5 (Rs 464); Rs 149 is 32% of it. competitor_comparison.md has stale_after 2026-12-31.
+- Rs 149 is just below Keka Growth's whole-HRMS cost (about Rs 157 per seat at 150 staff, 95%; base price from a third-party review). Positioning answer: Sphyr sits next to the HRMS, it does not replace it.
 - Leapsome now publishes prices (Performance Reviews EUR 7). The graded claim "Leapsome, Lattice and Peoplebox Rs 665 to 1,425" was really one Peoplebox G2 band.
 - Voluntary attrition: Aon India 2025 voluntary 12.0% of 16.2% total (Business Today, 2 Mar 2026); SPI 2025 voluntary 6.9% for 101 to 300 staff (403 firms, global).
 - Exit reasons Sphyr can touch: SPI 2025 Table 172 lack of career advancement 14.9% + management dissatisfaction 5.5%; Gallup 2008 31.5% + 16.5%.
 - Review time: Deloitte about 2 million hours for 65,000-plus people (HBR 2015); CEB 210 h per manager, 40 h per employee (SHRM 2015).
 - Exit cost build-up is 0.28x to 0.54x CTC, deliberately below Gallup's 0.5x to 2x and 80% for technical professionals.
-- Small firms cost more per seat: gross margin at Rs 199 is 75.1% at 40 people (below the 80% target), 87.6% at 150, 90.4% at 400.
+- Small firms cost more per seat: gross margin at Rs 149 is 67.0% at 40 people (below the 80% target), 83.6% at 150, 87.4% at 400.
 
 ### Decisions I made and why
 
 - Voluntary attrition only, because the exit-reason shares are shares of voluntary leavers.
 - Partner time costed separately at Rs 2,700 an hour, because the brief asked for it.
-- Support and onboarding counted as variable cost at the CSM hourly rate (0.87 FTE at break-even), not as a fixed CSM salary, so contribution includes them.
+- Support and onboarding counted as variable cost at the CSM hourly rate (1.21 FTE at break-even at Rs 149), so contribution includes them.
 - 80% gross margin target (Benchmarkit CY2024 median 77%, subscription-only 81%).
-- Pilot fee set at cost to serve, so Sphyr makes no profit on pilots and a refund would be a pure loss.
-- No setup fee for small firms: it would break the flat price that is part of the offer.
+- Pilot fee set at cost to serve, so Sphyr makes no profit on pilots.
+- No setup fee for small firms: it would break the flat price.
+- After gate 1b: kept the Rs 199 analysis and the refund and lock options in one "Considered, not adopted" table so the reasoning survives without stating them as terms.
+- The decision does not fix the credit window or the CSV and deletion timelines. price_and_pilot.md suggests 60, 7 and 30 days, marked for the team to confirm; pricing_summary.md states only the decided terms.
 
 ### Approaches I rejected and why
 
-- Keeping Rs 149: passes the floor and anchor test, but needs 49 firms to break even.
-- Rs 249 and Rs 299: above the low-case value (Rs 209), so a firm in the low case would pay more than it gets; excluded by the stated price rule.
+- Rs 249 and Rs 299: above the low-case value (Rs 209); excluded by the stated price rule.
 - Six-week pilot: only 3 cycles.
-- Partial refund: adds a dispute about the amount and solves nothing.
-- Fee kept with no refund (my first choice): rejected after the McKinsey source showed buyers look for exactly this guarantee.
-- Unconditional refund: pays for firms that change their mind for unrelated reasons.
-- 25-firm lock for a case study: locks 72% of the break-even base and pressures firms to publish only good results.
 - Using Gallup's 0.5x to 2x salary directly as exit cost: not India, not consulting, and higher than costs we can name.
+- (My Rs 199 and conditional-refund recommendations were not adopted by the team; see above.)
 
-### Required changes outside docs/pricing/ (lead to apply; I did not edit them)
+### Outside docs/pricing/
 
-1. `docs/index.md`: add the line `* [pricing](pricing/index.md) - Sphyr pricing for Indian consulting firms: value per seat, named competitor plans, cost to serve and break-even, the proposed price and pilot, the validation rule, and a one-page summary for writers.` (build_index.py would add it; I built on a temp copy to avoid touching the root).
-2. `docs/strategy/acquisition_engagement.md`: replace the open pilot-length conflict (line 64) with: pilot 12 weeks, 6 cycles, up to 40 people, Rs 25,000 plus GST, start by 7 Jan 2027 for the April round, 60-day read-only window, credit within 60 days; add the success-test targets from validation_plan.md section 5; non-conversion terms per the approved option.
-3. `docs/packaging/first_use_experience.md` line 36 on iteration-a says the pilot length is still open (source conflicts row 11): set it to 12 weeks, 6 cycles once approved. The packaging docs on iteration-a already keep price and refunds out of scope, which matches the professor's note. Source conflicts rows 11 and 12 are resolved by price_and_pilot.md once approved.
-4. `docs/strategy/persona_managing_partner.md` line 68 ("What does it cost?"): once approved, point to pricing_summary.md and add the Keka objection and answer.
-5. Site, LinkedIn post 3 and ad: wait for gate 1b; use pricing_summary.md wording; run through the humanizer.
+Done in this round (permitted by the lead): acquisition_engagement.md pilot line, first_use_experience.md pilot line, persona_managing_partner.md cost answer and Keka objection, with log entries. Root docs/index.md already lists pricing on iteration-a. Not done (not permitted): acquisition_engagement.md line 56 still says the measures are "to be confirmed with the pricing and first-use work"; the success-test targets in validation_plan.md section 5 could fill it.
 
 ### Open questions
 
-- Which price does the team approve, Rs 199 or Rs 149, and which non-conversion option, A (conditional refund) or B (fee kept)?
-- Is a 7 Jan 2027 latest start realistic for 3 to 5 pilots over the holidays, or should the pilot be sold against the firms' mid-year review instead?
-- Does the team accept the break-even finding, or should the fixed team or segment change?
+- The decision log entry (gate 1b) says "Only the length changed from the graded six weeks". The fee (Rs 15,000 to Rs 25,000) and group size (25 to 40) also changed. Lead may want to correct that line.
+- Credit window and CSV and deletion timelines are not decided (suggestions in price_and_pilot.md).
+- Does the team accept the break-even finding at Rs 149 (49 firms, about two years), or should the fixed team or segment change?
 - TDS treatment of SaaS invoices was not checked; needs a chartered accountant.
 
 ### What I did not verify
