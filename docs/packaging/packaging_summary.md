@@ -39,11 +39,11 @@ sources:
 
 **Step 1. Your firm's words go on the card.** (Before the first cycle)
 
-> In a short kickoff with our team, your head of talent adds the firm's own values. Those words become the tags on every card. Together you set the day your first cycle opens. That's the day your April starts.
+> In a short kickoff with our team, your head of talent adds the firm's own values. Those words become the tags on every card. Together you set the day your first cycle opens. That's the day the record for your next promotion round starts.
 
-**Step 2. Partners see what April will look like.** (Before the first cycle)
+**Step 2. Partners see what the promotion round will look like.** (Before the first cycle)
 
-> We show your partners a sample record built from people on four engagements, then the same screen for their own practice, still empty. It starts filling on the date you picked. Your partners still make the decisions. In April they'll have the whole year in front of them.
+> We show your partners a sample record built from people on four engagements, then the same screen for their own practice, still empty. It starts filling on the date you picked. Your partners still make the decisions. At promotion time they'll have the whole year in front of them.
 
 **Step 3. Everyone picks who gets a say.** (The week before)
 
@@ -57,7 +57,7 @@ sources:
 
 > Consultants start to see what the people they worked with noticed, and notes written to them. Engagement managers see how their current team is landing while the engagement is still running. Your head of talent sees who took part, team by team, without chasing anyone.
 
-> **After that:** a new deck every two weeks. After a few cycles, each person has a line showing how their work is landing. By April, partners have the whole year to look at.
+> **After that:** a new deck every two weeks. After a few cycles, each person has a line showing how their work is landing. By promotion time, partners have the whole year to look at.
 
 ## "What you see after your first card" block
 

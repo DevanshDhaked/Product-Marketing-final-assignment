@@ -10,6 +10,11 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-25: No month in public copy, no customer talk
+
+- **Timing:** public copy names no month. It says "promotion time", "the promotion round" or "when partners calibrate", at most once per piece. The assignment does not require a date, and a repeated month became a tic and an assumption about every firm.
+- **Customers:** public copy never claims customers and never announces that there are none. It shows proof built in the open: what every pilot measures, agreed before it starts, the 2018 pilot labelled exactly, and the pilot offer.
+
 ## 2026-11-25: Strand colours and look approved
 
 - **Decision:** the ribbon strands use the cool logo colours (blues, teals, greens, violets, olive), never orange or red, which mean "could improve" and "destructive" in the product. The tonal green option is dropped. The warm palette and Newsreader headlines are approved as built in `design-lab/`.

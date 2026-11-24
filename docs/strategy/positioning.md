@@ -93,7 +93,7 @@ PerformYard is the closest alternative. Its consulting page answers much of the 
 
 ## Value discipline
 
-**Customer intimacy, with the segment.** Sphyr wins by fitting how homegrown consulting firms work: engagements, rotation, partner calibration, client relationships owned by partners, and the April round. Simplicity (two minutes, five clicks) serves this; it is not the discipline itself. Decisions that do not fit consulting firms of 40 to 400 are out.
+**Customer intimacy, with the segment.** Sphyr wins by fitting how homegrown consulting firms work: engagements, rotation, partner calibration, client relationships owned by partners, and the yearly promotion round. Simplicity (two minutes, five clicks) serves this; it is not the discipline itself. Decisions that do not fit consulting firms of 40 to 400 are out.
 
 ## Reason to believe
 

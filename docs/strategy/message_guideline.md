@@ -45,9 +45,9 @@ The vision behind it ([positioning](positioning.md)): careers earned in front of
 
 | Step | Say | Example |
 |---|---|---|
-| 1. The moment | The engagement ended; the people who saw the work moved on | "By April, the people who saw your senior consultant's best work are on three other engagements." |
+| 1. The moment | The engagement ended; the people who saw the work moved on | "By promotion time, the people who saw your senior consultant's best work are on three other engagements." |
 | 2. The mechanism | Two minutes, every two weeks, from the people they work with | "Every two weeks, each person spends about two minutes on short cards for the people they worked with." |
-| 3. The result | At calibration partners see the whole year, and still decide | "In April, partners calibrate on the whole year, not the last engagement." |
+| 3. The result | At calibration partners see the whole year, and still decide | "At promotion time, partners calibrate on the whole year, not the last engagement." |
 | 4. The vision | Careers earned in front of the people who saw the work | "Because careers should be earned in front of the people who saw the work." |
 | 5. The next step | The 2-minute walkthrough | "See it in the 2-minute walkthrough." |
 
@@ -88,10 +88,12 @@ Short formats: never drop steps 1 and 5. An ad may use 1, 3 and 5 only. A Linked
 ## 5. Tone
 
 - **A peer partner talking**, not HR software selling. Calm, specific, a little dry.
-- **Concrete over clever.** Name the engagement, the April round, the client CFO. No abstract nouns like "talent excellence".
+- **Concrete over clever.** Name the engagement, the promotion round, the client CFO. No abstract nouns like "talent excellence".
 - **Honest about limits.** Saying what Sphyr does not do builds trust with this audience.
 - **No urgency tricks.** No countdowns, "limited spots", or fear about losing people.
 - Simple English. No em dashes, no double dashes, no emojis, no hype words (revolutionary, game-changing, seamless, unlock, supercharge).
+
+**Timing words.** Name no month in public copy. Say "promotion time", "the promotion round" or "when partners calibrate", and use the moment at most once per piece. Indian firms often run promotion rounds around April to June, but that is research context, not copy.
 
 ## 6. Vocabulary
 
@@ -99,7 +101,7 @@ Short formats: never drop steps 1 and 5. An ad may use 1, 3 and 5 only. A Linked
 |---|---|
 | engagement, engagement team, engagement manager | project resource, team member allocation |
 | partner, managing partner, practice | stakeholder, leadership team |
-| calibration, the April round, promotion round | performance cycle management |
+| calibration, promotion round | performance cycle management |
 | staffing, rotation, the bench | workforce deployment |
 | the people who saw the work | raters, reviewers, 360 respondents |
 | record, the whole year | data, analytics, insights platform |
@@ -113,7 +115,7 @@ Product terms you may use with the head of talent only, once explained: "sphere"
 | Listener | Lead with | Do not lead with |
 |---|---|---|
 | Kavya, head of talent | Less chasing, one record per consultant at calibration, fewer "nobody saw my work" exits | Features list, admin settings |
-| Vikram, managing partner | Partners still decide, on the whole year; a small paid pilot before April | HR process, dashboards |
+| Vikram, managing partner | Partners still decide, on the whole year; a small paid pilot before the next promotion round | HR process, dashboards |
 | Meera, consultant | The people who saw your work get a say; two minutes; you see your own record | Anything about ratings of you or monitoring |
 
 ### Lead with what they look forward to, not only what they fear
@@ -122,7 +124,7 @@ Reassurance (what Sphyr does not do) belongs lower on the page or in answers to 
 
 | Listener | What they can look forward to (true today) | Example line |
 |---|---|---|
-| Kavya | Walking into April with a record for every consultant, and not chasing a single form in March | "This April, open the file and find the whole year in it." |
+| Kavya | Walking into the promotion round with a record for every consultant, and not chasing a single form in March | "At the next promotion round, open the file and find the whole year in it." |
 | Vikram | A calibration where partners argue less about what happened and more about what to decide | "Calibrate on what happened, not on who remembers it." |
 | Meera | Seeing how her work is landing every few weeks, from people who saw it, while it still matters | "Find out how your work landed while you can still use it." |
 | Partners and engagement managers | Knowing how their team is landing during the engagement, not after it | "See how the engagement is going for your team, while it is still going." |
@@ -131,27 +133,27 @@ The trend line needs several cycles. In the first weeks, the honest promise is t
 
 ## 8. Headline formulas, with three worked examples each
 
-**Web hero.** Formula: *[the moment] + [what stays]*, or *[the April fact] + [the turn]*.
+**Web hero.** Formula: *[the moment] + [what stays]*, or *[the promotion-time fact] + [the turn]*.
 1. "The engagement ends. The evidence stays."
-2. "In April your partners will calibrate [number] people. Each partner saw only part of their year." (Use a placeholder or a general line; never Kavya's firm size.)
+2. "At the next promotion round your partners will calibrate [number] people. Each partner saw only part of their year." (Use a placeholder or a general line; never Kavya's firm size.)
 3. "Promotions decided on the whole year, not the last engagement."
 
 **LinkedIn post opener** (first two lines, before "see more"). Formula: *a scene the reader has lived*, *a sourced number*, or *a question in partner words*. Never a made-up first-hand story.
 1. "Your partner asks for 'the file' on a consultant he never staffed. What do you send him?"
 2. "In two large data sets, more than half of the variation in performance ratings came from who did the rating. In consulting, that person may have seen one engagement out of four."
-3. "Every April, someone in your firm is rated by the partner who remembers them, not the one who saw their best work."
+3. "Every promotion round, someone in your firm is rated by the partner who remembers them, not the one who saw their best work."
 
 **Ad.** Formula: *[benefit in partner words] + [mechanism in 8 words or fewer] + [call to action]*.
 1. "Calibrate on the whole year. Two minutes, every two weeks. See the 2-minute walkthrough."
 2. "The engagement ends. The evidence stays. Two-minute feedback from the people who saw the work. Take the 2-minute walkthrough."
-3. "Before April: who saw your senior consultant's best work? Sphyr keeps their view. The 2-minute walkthrough at [our site]."
+3. "Before promotion time: who saw your senior consultant's best work? Sphyr keeps their view. The 2-minute walkthrough at [our site]."
 
 **Persona names in public pieces.** Kavya, Vikram, Meera and Siddharth never appear in the ad or the LinkedIn posts, because those formats cannot carry the "illustrative example" label. Use "your senior consultant", "a partner", "the head of talent". On the website a named example is allowed only with a visible label such as "An example, not a real person".
 
 ## 9. Visual rules
 
 **Show:**
-- **The core visual:** a timeline of four or five engagements that fade out one by one, with one continuous line (the consultant's record) running through all of them and still clear at the April calibration.
+- **The core visual:** a timeline of four or five engagements that fade out one by one, with one continuous line (the consultant's record) running through all of them and still clear when partners calibrate.
 - Real prototype screens or faithful faux UI of them: the card with "Was good / Could improve / No interaction", "My Sphyr" circles, the member trend line. Use the prototype's real labels. Replace demo names (John Smith, Maya Chen, Northstar) with neutral placeholders; they are not real people or clients.
 - Consulting settings: a client workroom, a whiteboard after a workshop, a calibration table seen from the side, people working, not being judged.
 - The number "2 minutes" and the word "fortnightly" as visual anchors.

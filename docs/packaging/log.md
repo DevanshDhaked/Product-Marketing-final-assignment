@@ -6,6 +6,9 @@ tags: [log]
 timestamp: 2026-11-24T18:20:50Z
 ---
 
+## 2026-11-25
+* **Update**: Replaced "April" with promotion-round wording in [packaging summary](packaging_summary.md).
+
 ## 2026-11-24
 * **Update**: [First-use experience](first_use_experience.md) states the decided pilot length (12 weeks, six cycles) instead of calling it open.
 * **Update**: Review fixes: clients are invited by the consultant by email with the partner's agreement (not added by a partner); cycle dates come from the schedule preview, not a chosen Friday; timing caveat extended to Team Insights; April preview no longer implies a per-engagement split.
