@@ -60,3 +60,26 @@
   .toc.is-live { position: sticky; top: 65px; z-index: 5; margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); background: var(--bg); border-bottom: 1px solid var(--border); }
   .prop-body section { scroll-margin-top: calc(65px + 45px + var(--s-4)); }
 }
+
+/* Propaganda visuals. Each is a <figure class="viz"> in semantic HTML, laid out by the width of the
+   figure itself (container queries), so the same rules serve the wide column and the phone. Figures
+   run wider than the text measure; paragraphs keep it. Brand green marks the one thing each visual
+   is about. */
+.prop-body { max-width: none; }
+.prop-body > section > :not(figure) { max-width: var(--measure); }
+.viz { container-type: inline-size; margin: var(--s-6) 0 0; }
+.viz figcaption { margin-top: var(--s-4); font-size: var(--fs-caption); color: var(--text-muted); }
+.viz + p { margin-top: var(--s-5); }
+
+/* 1. Audience map: three people side by side, the head of talent first with the brand rule. */
+.aud ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-5); margin: 0; padding: 0; list-style: none; }
+.aud li, .aud li + li { margin: 0; padding-top: var(--s-4); border-top: 2px solid var(--border-strong); }
+.aud li.aud-lead { border-top: 4px solid var(--brand); padding-top: calc(var(--s-4) - 2px); }
+.aud h3 { margin: 0; font-family: var(--font-display); font-weight: 500; }
+.aud p { margin: 0; }
+.aud .aud-job { margin-top: var(--s-1); font-size: var(--fs-small); color: var(--text-muted); }
+.aud .aud-belief { margin-top: var(--s-4); }
+.aud .aud-who { margin-top: var(--s-3); font-size: var(--fs-caption); color: var(--text-muted); }
+@container (max-width: 560px) {
+  .aud ul { grid-template-columns: 1fr; gap: var(--s-5); }
+}
