@@ -10,6 +10,10 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-25: Visuals on the propaganda page
+
+- **Decision:** the propaganda page gets four visuals in the site's own style (inline SVG or HTML, no PlantUML, no external images): an audience map, a belief shift graphic with the tactics as the bridge, a channel table (cost, tracking, stage, deliverable) and a campaign flow linking post 1 and the standee, post 2, the walkthrough, post 3, the call and the pilot. Each visual replaces prose, so the page does not grow in words.
+
 ## 2026-11-25: Ribbon visual uses the original logo colours
 
 - **Decision:** the strands and the end sphere use the logo's own colours (teal, orange, blue, yellow, green, pink, purple, red), identical in both themes. The sphere renders as the exact original logo. Replaces "Strand colours and look approved" (cool subset, no orange or red). Strands sit outside product frames, so orange and red there do not carry their product meaning.
