@@ -5,7 +5,8 @@
    .core-line   the central message, set once in the display serif
    .hub-index   the hub's index entries (number, display-serif title, one line, one link); nothing boxed
    .page-prop   propaganda page only: .prop-card summary card, .prop-layout body grid, .toc contents
-                (sticky column on wide screens, a sticky bar under the nav on phones once propaganda.js runs) */
+                (sticky column on wide screens, a sticky bar under the nav on phones once propaganda.js runs)
+   .viz         propaganda figures: .aud audience map, .shift belief shift, .chan channel table, .flow campaign flow */
 
 /* The hub title, and the core line set in the display serif where the strategy states it. */
 .doc h1 { margin: 0 0 var(--s-4); }
