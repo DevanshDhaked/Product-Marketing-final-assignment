@@ -104,3 +104,29 @@
   .shift-arrow { transform: rotate(90deg); margin-left: var(--s-5); }
   .shift-bridge { padding-left: var(--s-5); }
 }
+
+/* 3. Channel table: a real table. The cost and tracking answers are tags so the column reads at a
+   glance. Narrow: each row becomes a block with its labels from data-label. */
+.chan table { font-size: var(--fs-small); }
+.chan thead th { white-space: nowrap; }
+.chan thead th:nth-child(2) { width: 1%; }
+.chan thead th:nth-child(3) { width: 150px; }
+.chan tbody th { font-weight: 600; color: var(--text); font-size: var(--fs-small); border: 0; }
+.chan tbody tr + tr > * { border-top: 1px solid var(--border); }
+.chan th:first-child, .chan td:first-child { padding-left: 0; }
+.chan td:last-child, .chan th:last-child { padding-right: 0; }
+.tag { display: inline-block; padding: 2px 10px; border-radius: var(--r-pill); font-size: var(--fs-caption); font-weight: 600; white-space: nowrap; }
+.tag-free { background: var(--positive-soft); color: var(--on-positive-soft); }
+.tag-paid { background: var(--constructive-soft); color: var(--on-constructive-soft); }
+.tag-note { display: block; margin-top: var(--s-1); font-size: var(--fs-caption); color: var(--text-muted); }
+@container (max-width: 640px) {
+  .chan thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .chan table, .chan tbody, .chan tr, .chan th, .chan td { display: block; }
+  .chan tbody tr { padding-block: var(--s-4); }
+  .chan tbody tr + tr { border-top: 1px solid var(--border); }
+  .chan tbody tr + tr > * { border-top: 0; }
+  .chan tbody th { padding: 0 0 var(--s-2); }
+  .chan td { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: var(--s-3); padding: var(--s-1) 0; }
+  .chan td::before { content: attr(data-label); font-size: var(--fs-caption); font-weight: 600; color: var(--text-muted); }
+  .chan td > * { justify-self: start; }
+}
