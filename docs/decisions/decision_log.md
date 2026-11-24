@@ -13,6 +13,7 @@ Append new decisions on top. Do not edit an old decision; add a new one that rep
 ## 2026-11-25: No month in public copy, no customer talk
 
 - **Timing:** public copy names no month. It says "promotion time", "the promotion round" or "when partners calibrate", at most once per piece. The assignment does not require a date, and a repeated month became a tic and an assumption about every firm.
+- **Humanized copy:** every visible word goes through the `humanizer:humanizer` skill, including approved strategy lines; only "The engagement ends. The evidence stays." stays verbatim. Per page: at most one "X, not Y" contrast, no triads as rhythm, no staged openers or one-line closers, no stacked fragments, no inflated words, no bold labels before sentences, no dashes. The phase 3 review counts these.
 - **Customers:** public copy never claims customers and never announces that there are none. It shows proof built in the open: what every pilot measures, agreed before it starts, the 2018 pilot labelled exactly, and the pilot offer.
 
 ## 2026-11-25: Strand colours and look approved
