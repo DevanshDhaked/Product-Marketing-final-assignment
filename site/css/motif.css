@@ -77,7 +77,8 @@
 .circle .grp-label { font: 700 17px var(--font); fill: var(--text); }
 /* Phone: the drawing shrinks to about 0.37, so labels grow to stay at 11px or more; the centre label goes
    (the caption says who is at the centre). */
-@media (max-width: 600px) { .circle .grp-label { font-size: 32px; } .circle .core-label { display: none; } }
+/* 33px keeps labels at 11px or more down to 360px; the circle viewBox is 924 wide so "Juniors" (to x 970) is not cut. */
+@media (max-width: 600px) { .circle .grp-label { font-size: 33px; } .circle .core-label { display: none; } }
 .circle .grp-n { font: 500 13px var(--font); fill: var(--text-muted); }
 .groups { display: grid; border-top: 1px solid var(--border); }
 /* Rows, not boxes: a hairline under each, the pressed one marked by a green rule at its left. */
