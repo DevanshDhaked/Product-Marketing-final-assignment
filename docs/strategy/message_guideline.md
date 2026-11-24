@@ -173,7 +173,7 @@ Colours, type and components come from the design work in `docs/design/` and mus
 | "Ratings are pooled and comments are anonymized to the person rated." | "100% anonymous." |
 | "Partners still decide. They see the whole year." | "Let the data decide promotions." |
 | "In a 2018 paper-and-pen pilot run by Sphyr's founder, cards took about two minutes." | "Sphyr users finish in two minutes." |
-| "Clients can add their view when the partner invites them." | "Get your clients to rate your consultants." |
+| "With the partner's agreement, a consultant can invite a client to add their view." | "Get your clients to rate your consultants." |
 | "We have no customers yet. Here is our pilot and what we will publish." | "Join leading consulting firms." |
 | "Two minutes, every two weeks." | "Real-time continuous performance intelligence." |
 | Label every persona and story as an example. | Present Kavya, Meera or Vikram as real. |
