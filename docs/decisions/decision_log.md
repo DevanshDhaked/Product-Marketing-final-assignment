@@ -10,6 +10,11 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-24: Limits on the untemplated skill
+
+- **Decision:** the `untemplated` skill is used only for its anti-template rules (no hero plus three equal cards, no glow, nothing invented, no busy motion, one local answer per interaction, two designed modes, a phone layout of its own) and its measured checks (first-screen words, idle frames, changed share, contrast, phone overflow, reduced motion).
+- **Not applied:** dithering of pictures (none anywhere), its type rule (Newsreader plus Manrope stays, no font change), its ban on boxes where product frames or the price block need them, and its named directions.
+
 ## 2026-11-24: Price and pilot (gate 1b)
 
 - **Price:** ₹149 per employee per month, billed yearly, plus GST, the same for every firm size. This is the graded submission's price. The pricing work showed ₹149 passes the stated rule (cost floor ₹121 at 80% gross margin, at or below the low-case value ₹209). It needs about 49 firms of 150 to break even, against 35 at ₹199.
