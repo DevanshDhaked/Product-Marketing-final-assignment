@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem("sphyr-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<title>Type shortlist | Sphyr design lab</title>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="components.css">
+<link rel="icon" href="assets/sphyr-logo.svg" type="image/svg+xml">
+<style>
+  /* Lab only: three candidate pairings. All files are SIL OFL 1.1; licences sit beside them in fonts/shortlist/. */
+  @font-face { font-family: "Newsreader"; src: url("fonts/shortlist/newsreader-latin-opsz.woff2") format("woff2"); font-weight: 200 800; font-style: normal; font-display: swap; }
+  @font-face { font-family: "Newsreader"; src: url("fonts/shortlist/newsreader-latin-opsz-italic.woff2") format("woff2"); font-weight: 200 800; font-style: italic; font-display: swap; }
+  @font-face { font-family: "Bricolage Grotesque"; src: url("fonts/shortlist/bricolage-latin-opsz.woff2") format("woff2"); font-weight: 200 800; font-display: swap; }
+  @font-face { font-family: "Apfel Grotezk"; src: url("fonts/shortlist/apfel-grotezk-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+  @font-face { font-family: "Apfel Grotezk"; src: url("fonts/shortlist/apfel-grotezk-Mittel.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+  @font-face { font-family: "Apfel Grotezk"; src: url("fonts/shortlist/apfel-grotezk-Fett.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+
+  .tp { padding-block: var(--s-8); border-top: 1px solid var(--border); }
+  .tp-meta { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-5); margin-bottom: var(--s-6); font-size: var(--fs-caption); color: var(--text-muted); }
+  .tp-meta b { color: var(--text); font-size: var(--fs-small); }
+  .spec-hero { font-size: clamp(2.75rem, 1.6rem + 4.6vw, 5.25rem); line-height: 1.02; margin: 0; max-width: 14ch; }
+  .spec-sub { margin-top: var(--s-5); font-size: var(--fs-lede); color: var(--text-muted); max-width: 44ch; }
+  .spec-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: var(--s-7); margin-top: var(--s-8); align-items: start; }
+  .spec-grid h2 { font-size: var(--fs-h2); margin-bottom: var(--s-3); }
+  .spec-num { font-size: 4rem; line-height: 1; font-variant-numeric: tabular-nums; }
+  .spec-cap { font-size: var(--fs-caption); color: var(--text-muted); margin-top: var(--s-2); max-width: 32ch; }
+  @media (max-width: 760px) { .spec-grid { grid-template-columns: 1fr; gap: var(--s-6); } }
+
+  .p1 .d { font-family: "Newsreader", Georgia, serif; font-weight: 500; font-variation-settings: "opsz" 72; letter-spacing: -0.02em; }
+  .p1 .d em { font-style: italic; font-weight: 400; }
+  .p1 .t { font-family: "Manrope", system-ui, sans-serif; }
+
+  .p2 .d { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-weight: 700; font-variation-settings: "opsz" 96; letter-spacing: -0.03em; }
+  .p2 .t { font-family: "Bricolage Grotesque", system-ui, sans-serif; font-variation-settings: "opsz" 14; }
+
+  .p3 .d { font-family: "Apfel Grotezk", system-ui, sans-serif; font-weight: 700; letter-spacing: -0.02em; }
+  .p3 .t { font-family: "Manrope", system-ui, sans-serif; }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="components.html"><img src="assets/sphyr-logo.svg" alt="" width="28" height="28">Sphyr</a>
+    <nav class="nav-links" aria-label="Design lab">
+      <a href="components.html">Components</a>
+      <a href="faux-ui.html">Faux UI</a>
+      <a href="type.html" aria-current="page">Type</a>
+    </nav>
+    <div class="nav-end">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <span class="track" aria-hidden="true"><span class="knob"></span></span>Dark theme
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div style="padding-block: var(--s-7) var(--s-5)">
+    <h1>Type shortlist</h1>
+    <p class="lede" style="margin-top:var(--s-4)">Three pairings set with approved lines from the message guideline. All three are SIL Open Font License 1.1: free for commercial use, self-hosting allowed, and the files may sit in a public repository. Product frames keep Manrope in every option.</p>
+  </div>
+
+  <section class="tp p1" aria-labelledby="p1h">
+    <div class="tp-meta t"><b id="p1h">1. Newsreader with Manrope</b><span>Editorial serif display, Production Type, Google Fonts, OFL</span><span>Text: Manrope (already in use)</span><span>Display file 132 KB (weight and optical size axes)</span></div>
+    <p class="spec-hero d">The engagement ends. <em>The evidence stays.</em></p>
+    <p class="spec-sub t">In April, partners calibrate on the whole year, not the last engagement.</p>
+    <div class="spec-grid">
+      <div class="t">
+        <h2 class="d">Two minutes, every two weeks</h2>
+        <p>Every two weeks, each person spends about two minutes on short cards for the people they worked with.</p>
+        <div class="btn-row" style="margin-top:var(--s-5)"><a class="btn btn-primary" href="#">See the 2-minute walkthrough</a></div>
+      </div>
+      <div>
+        <div class="spec-num d">02:09</div>
+        <p class="spec-cap t">Minutes per card for a circle of 14, in a 2018 paper-and-pen pilot run by Sphyr's founder.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp p2" aria-labelledby="p2h">
+    <div class="tp-meta t"><b id="p2h">2. Bricolage Grotesque, one family</b><span>Grotesque with ink traps and an optical size axis, Atelier Triay, Google Fonts, OFL</span><span>Text: the same family at text optical size</span><span>File 77 KB (weight and optical size axes)</span></div>
+    <p class="spec-hero d">The engagement ends. The evidence stays.</p>
+    <p class="spec-sub t">In April, partners calibrate on the whole year, not the last engagement.</p>
+    <div class="spec-grid">
+      <div class="t">
+        <h2 class="d">Two minutes, every two weeks</h2>
+        <p>Every two weeks, each person spends about two minutes on short cards for the people they worked with.</p>
+        <div class="btn-row" style="margin-top:var(--s-5)"><a class="btn btn-primary" href="#">See the 2-minute walkthrough</a></div>
+      </div>
+      <div>
+        <div class="spec-num d">02:09</div>
+        <p class="spec-cap t">Minutes per card for a circle of 14, in a 2018 paper-and-pen pilot run by Sphyr's founder.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tp p3" aria-labelledby="p3h">
+    <div class="tp-meta t"><b id="p3h">3. Apfel Grotezk with Manrope</b><span>Quirky grotesque, Collletttivo (independent Italian collective), OFL</span><span>Text: Manrope (already in use)</span><span>Three static weights, about 20 KB each</span></div>
+    <p class="spec-hero d">The engagement ends. The evidence stays.</p>
+    <p class="spec-sub t">In April, partners calibrate on the whole year, not the last engagement.</p>
+    <div class="spec-grid">
+      <div class="t">
+        <h2 class="d">Two minutes, every two weeks</h2>
+        <p>Every two weeks, each person spends about two minutes on short cards for the people they worked with.</p>
+        <div class="btn-row" style="margin-top:var(--s-5)"><a class="btn btn-primary" href="#">See the 2-minute walkthrough</a></div>
+      </div>
+      <div>
+        <div class="spec-num d">02:09</div>
+        <p class="spec-cap t">Minutes per card for a circle of 14, in a 2018 paper-and-pen pilot run by Sphyr's founder.</p>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="theme.js" defer></script>
+</body>
+</html>
