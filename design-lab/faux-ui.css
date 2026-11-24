@@ -6,6 +6,11 @@
 /* The figure around a stage is the size container, so the stage itself can switch design. */
 .figure:has(> .stage) { container-type: inline-size; }
 
+/* Inside a frame the product keeps its own cool palette (tokens --p-*), so it reads as the real screen.
+   The well around it (--stage-ground) stays warm, so the frame sits on the page. */
+.stage { --bg: var(--p-bg); --surface: var(--p-surface); --surface-raised: var(--p-surface-raised); --surface-sunk: var(--p-surface-sunk);
+  --text: var(--p-text); --text-muted: var(--p-text-muted); --border: var(--p-border); --border-strong: var(--p-border-strong); }
+
 /* The stage is the shot: a rounded well that masks everything. Size queries switch to the compact design. */
 .stage { position: relative; overflow: hidden; border-radius: var(--r-surface); background: var(--stage-ground); font-size: 14px; line-height: 1.45; color: var(--text); }
 .stage-card { padding: 24px; }

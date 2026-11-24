@@ -1,10 +1,16 @@
 /* Sphyr site tokens. Light and dark in one place via light-dark().
    Theme rule: with no stored choice the page follows the system (color-scheme: light dark).
    theme.js and the inline head script set data-theme on <html> to pin a choice.
-   Colour values come from the Sphyr prototype UI (sphyr-prototype.raviwarrier.com, read 2026-11-24),
-   except where a value failed WCAG AA as text; those changes are listed in docs/design/design_system.md.
+   Site neutrals are warm (2026-11-24 addendum in docs/design/design_system.md). Greens, orange and the
+   status colours come from the Sphyr prototype UI (sphyr-prototype.raviwarrier.com, read 2026-11-24).
+   The --p-* set is the prototype's own cool palette, used only inside faux UI frames (see faux-ui.css).
    Contrast is checked by design-lab/contrast.mjs, which parses this file. Keep every colour token
    on one line in the form: --name: light-dark(#RRGGBB, #RRGGBB); */
+
+/* Manrope licence: fonts/OFL-manrope.txt. Newsreader: static instances at optical size 72 from Google Fonts (SIL OFL 1.1, OFL-newsreader.txt).
+   Display headlines only. The italic file loads only where a display line uses <em>. */
+@font-face { font-family: "Newsreader"; src: url("fonts/newsreader-display-normal-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Newsreader"; src: url("fonts/newsreader-display-italic-400.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
 
 @font-face {
   font-family: "Manrope";
@@ -19,25 +25,25 @@
 :root[data-theme="dark"] { color-scheme: dark; }
 
 :root {
-  /* Surfaces */
-  --bg: light-dark(#F6FAFD, #040A16);
-  --surface: light-dark(#FFFFFF, #0D1826);
-  --surface-raised: light-dark(#FFFFFF, #121C2B);
-  --surface-sunk: light-dark(#EAF1F8, #182230);
-  --stage-ground: light-dark(#E4EDF6, #08111F); /* the well a faux UI frame sits in */
+  /* Surfaces: warm off-white paper in light, warm charcoal in dark. */
+  --bg: light-dark(#FAF8F4, #171513);
+  --surface: light-dark(#FFFEFB, #201D1A);
+  --surface-raised: light-dark(#FFFEFB, #29251F);
+  --surface-sunk: light-dark(#F1EDE5, #2C2823);
+  --stage-ground: light-dark(#ECE6DB, #110F0D); /* the well a faux UI frame sits in */
 
-  /* Text */
-  --text: light-dark(#0D1828, #F4F7FB);
-  --text-muted: light-dark(#5E6A7A, #A5B3C1);
+  /* Text: warm ink. */
+  --text: light-dark(#1F1C18, #F2EEE7);
+  --text-muted: light-dark(#625C54, #B3AB9F);
 
   /* Lines. --border is decorative (no contrast need). --border-strong outlines controls (3:1). */
-  --border: light-dark(#DAE2EA, #2C394A);
-  --border-strong: light-dark(#7B8799, #5B6B80);
+  --border: light-dark(#E4DED3, #3A352F);
+  --border-strong: light-dark(#8A8276, #7A7266);
 
   /* Action: filled buttons and links. Darker than the prototype's #009163 so white text passes AA. */
   --action: light-dark(#007652, #34C696);
   --action-hover: light-dark(#00664A, #5CD3AC);
-  --on-action: light-dark(#FFFFFF, #040A16);
+  --on-action: light-dark(#FFFFFF, #171513);
   --link: light-dark(#007652, #34C696);
 
   /* Brand green for non-text use: chart lines, focus ring, large shapes. */
@@ -53,6 +59,16 @@
   --destructive: light-dark(#C62B29, #FF655A);
   --neutral-state: light-dark(#7B8799, #94A7BA);
 
+  /* Prototype palette (cool), only inside faux UI frames, so the frames read as the real product screen. */
+  --p-bg: light-dark(#F6FAFD, #040A16);
+  --p-surface: light-dark(#FFFFFF, #0D1826);
+  --p-surface-raised: light-dark(#FFFFFF, #121C2B);
+  --p-surface-sunk: light-dark(#EAF1F8, #182230);
+  --p-text: light-dark(#0D1828, #F4F7FB);
+  --p-text-muted: light-dark(#5E6A7A, #A5B3C1);
+  --p-border: light-dark(#DAE2EA, #2C394A);
+  --p-border-strong: light-dark(#7B8799, #5B6B80);
+
   /* Charts and avatars (from the prototype). Non-text. */
   --chart-1: light-dark(#009163, #34C696);
   --chart-2: light-dark(#238DD4, #4EB0F9);
@@ -66,11 +82,12 @@
 
   /* Elevation. Site cards use a hairline only. Shadows are for faux UI frames.
      Values ported from the stageshow kit (kit/stage.css), tinted to the page. */
-  --shadow-frame: 0 0 0 1px light-dark(rgba(13, 24, 40, .06), rgba(255, 255, 255, .08)), 0 30px 60px -12px light-dark(rgba(13, 40, 70, .22), rgba(0, 0, 0, .6)), 0 18px 36px -18px light-dark(rgba(13, 24, 40, .22), rgba(0, 0, 0, .5));
-  --shadow-satellite: 0 0 0 1px light-dark(rgba(13, 24, 40, .05), rgba(255, 255, 255, .10)), 0 14px 32px -8px light-dark(rgba(13, 40, 70, .22), rgba(0, 0, 0, .7)), 0 4px 10px -4px light-dark(rgba(13, 24, 40, .10), rgba(0, 0, 0, .5));
+  --shadow-frame: 0 0 0 1px light-dark(rgba(40, 30, 20, .07), rgba(255, 255, 255, .08)), 0 30px 60px -12px light-dark(rgba(60, 40, 20, .20), rgba(0, 0, 0, .6)), 0 18px 36px -18px light-dark(rgba(40, 30, 20, .22), rgba(0, 0, 0, .5));
+  --shadow-satellite: 0 0 0 1px light-dark(rgba(40, 30, 20, .06), rgba(255, 255, 255, .10)), 0 14px 32px -8px light-dark(rgba(60, 40, 20, .20), rgba(0, 0, 0, .7)), 0 4px 10px -4px light-dark(rgba(40, 30, 20, .10), rgba(0, 0, 0, .5));
 
-  /* Type: Manrope only. One display size step, no giant numerals. */
+  /* Type: Newsreader for display headlines (h1, h2), Manrope for body and UI. */
   --font: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Newsreader", "Iowan Old Style", Georgia, serif;
   --fs-display: clamp(2.25rem, 1.6rem + 2.6vw, 3.5rem);  /* 36 to 56px */
   --fs-h2: clamp(1.625rem, 1.35rem + 1.1vw, 2.125rem);   /* 26 to 34px */
   --fs-h3: 1.25rem;     /* 20px */
@@ -119,8 +136,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 h1, h2, h3 { margin: 0; font-weight: 700; letter-spacing: -0.015em; text-wrap: balance; }
-h1 { font-size: var(--fs-display); line-height: var(--lh-tight); letter-spacing: -0.025em; }
-h2 { font-size: var(--fs-h2); line-height: var(--lh-head); }
+h1, h2 { font-family: var(--font-display); font-weight: 500; }
+h1 { font-size: var(--fs-display); line-height: var(--lh-tight); letter-spacing: -0.02em; }
+h2 { font-size: var(--fs-h2); line-height: var(--lh-head); letter-spacing: -0.01em; }
+h1 em, h2 em { font-style: italic; font-weight: 400; }
 h3 { font-size: var(--fs-h3); line-height: var(--lh-head); }
 p { margin: 0; text-wrap: pretty; }
 a { color: var(--link); text-underline-offset: 3px; text-decoration-thickness: 1px; }
