@@ -10,6 +10,10 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-25: Full-colour logo in nav and footer
+
+- **Decision:** the nav and footer use the full-colour ribbon logo (`class="mark"`) in both themes, replacing the one-colour `mark--mono` variant. Checked on the light and dark backgrounds. The mono and white variants stay available for print and small-icon uses.
+
 ## 2026-11-25: Top navigation and pricing section
 
 - **Nav:** a corporate SaaS style nav: logo, "How it works" (`index.html#how`), "For partners" (`#partners`), "Pricing" (`#pricing`), "Deliverables" (`deliverables.html`), the "See the 2-minute walkthrough" button and the theme toggle. On phones a menu button opens the links and "Deliverables" stays visible. Replaces the three-item nav.
