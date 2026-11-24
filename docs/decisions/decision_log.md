@@ -10,6 +10,10 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-25: Ribbon visual uses the original logo colours
+
+- **Decision:** the strands and the end sphere use the logo's own colours (teal, orange, blue, yellow, green, pink, purple, red), identical in both themes. The sphere renders as the exact original logo. Replaces "Strand colours and look approved" (cool subset, no orange or red). Strands sit outside product frames, so orange and red there do not carry their product meaning.
+
 ## 2026-11-25: No research stamps on public pages
 
 - **Decision:** no access dates ("accessed 2026-11-24"), ISO dates or "read on" notes on any public page. Sources are cited by name and year of publication only. Access dates stay in the docs.

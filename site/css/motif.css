@@ -2,28 +2,24 @@
    Rules: docs/design/ribbon_motif.md. The default (no animation) state is the finished picture, so reduced motion
    and no-JS readers get the whole story. Motion only animates opacity, transform and stroke-dashoffset. */
 
-/* Strand palette: cool colours from the logo (picked at gate 1b; the tonal green option is recorded in
-   docs/design/ribbon_motif.md and no longer built). No orange or red: those mean "could improve" and
-   "destructive" in the product. */
+/* Strand palette: the logo's own colours, the same in both themes (user decision 2026-11-25, replaces the
+   cool subset). Strands sit outside product frames, so orange and red here do not carry their product meaning. */
 :root {
-  --s1: light-dark(#02A49D, #2BC4BC);
-  --s2: light-dark(#1486AB, #3FB0D6);
-  --s3: light-dark(#3663C5, #7594E0);
-  --s4: light-dark(#23355B, #A9B8DD);
-  --s5: light-dark(#2FAE5C, #5ED68A);
-  --s6: light-dark(#7C8C02, #B5C928);
-  --s7: light-dark(#8B287B, #C664B5);
-  --s8: light-dark(#B04FAE, #DB8BD9);
+  --s1: #02A49D;
+  --s2: #F67504;
+  --s3: #3663C5;
+  --s4: #EDCE0F;
+  --s5: #43C76E;
+  --s6: #E71F71;
+  --s7: #8B287B;
+  --s8: #E00522;
 }
 
 /* ---------- The mark (logo): motion and strand variants ---------- */
 /* .mark, .mark--mono and .mark--white live in base.css, because the nav and footer logo use them on every page. */
 .mark .rib { transition: transform 360ms var(--ease); transform-box: view-box; transform-origin: 50% 50%; }
-/* Strand palettes applied to the mark: warm ribbons swap to the active strand colours. */
-.mark--strands { --rib-gap: var(--bg); --rib-gap-w: 8;
-  --rib-1: var(--s5); --rib-2: var(--s1); --rib-3: var(--s8); --rib-4: var(--s6); --rib-5: var(--s2);
-  --rib-6: var(--s3); --rib-7: var(--s7); --rib-8: var(--s4); --rib-9: var(--s3); --rib-10: var(--s4);
-  --rib-11: var(--s7); --rib-12: var(--s1); --rib-13: var(--s6); --rib-14: var(--s2); --rib-15: var(--s5); }
+/* The sphere at the end of the strands is the original logo: no ribbon remapping, only a thin gap. */
+.mark--strands { --rib-gap: var(--bg); --rib-gap-w: 8; }
 .mark-tile { display: grid; place-items: center; border-radius: var(--r-surface); border: 1px solid var(--border); background: var(--bg); padding: var(--s-4); }
 .mark-tile.on-green { background: #007652; border-color: transparent; }
 
