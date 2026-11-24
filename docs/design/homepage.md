@@ -93,7 +93,8 @@ Changes from the mockup:
 - `#back` became `#partners`, the nav target. Its headline is now "Partners decide with the whole year of work in front of them." (no contrast, no promotion word).
 - Product frames: chart axis "Cycle 1" to "Cycle 6" (every other label hidden below 640 px); comment dates "2 days ago" and "5 days ago". No month name remains in the page.
 - `#pricing` rebuilt as cards: the plan card first ("Sphyr, everything included", ₹149, the included items, outside raters free, example bills for 100, 150 and 300 people, month and year, plus GST), and beside it the smaller "Getting started" pilot card, the four-item scorecard with "Results stay with your firm unless you agree to share them.", and the 02:09 number. "How we set the price" now gives the pilot cost (about 30 hours plus running costs; the plan rate for the same seats would be about ₹16,500) and the value case; the competitor price comparison and its access date left the page and stay in `docs/pricing/`.
-- Promotion moment in visible copy: once (the ribbon label "Promotion round").
+- Promotion moment in visible copy: once (the ribbon label "Promotion round"). The page title and descriptions were rewritten without a promotion word.
+- People named by role: where a passage has more than one person (partner, consultant, engagement manager), each is named by role instead of switching pronouns, per the message guideline rule "roles over pronouns".
 
 Checks (2026-11-25), page served at `http://127.0.0.1:8822/site/index.html`, headless Chrome through playwright-core, 8 runs (reduced motion and motion on; 1440 by 900 and 390 by 844; dark and light):
 
