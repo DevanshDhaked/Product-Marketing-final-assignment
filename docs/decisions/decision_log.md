@@ -10,6 +10,12 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-25: Gate 1b, homepage approved
+
+- **Homepage:** `design-lab/home.html` is approved as the base for the site build, with these changes: the ribbon boxes say "Project 1 · 3 teammates" and so on; the first screen is trimmed to about 30 words (core line, one short sentence, the button; the rest moves below the fold); dates inside faux product frames become cycles ("Cycle 1" to "Cycle 6") and relative times, so no month name appears anywhere on the site.
+- **Pilot scorecard:** four plain items (participation per cycle, number of different people giving feedback to each consultant, whether partners found something new, whether consultants found their record useful). The engagement-count item is dropped. The publishing line becomes "Results stay with your firm unless you agree to share them."
+- **Build:** phase 2 starts with fresh agents: site-css first, then home, walkthrough, propaganda plus hub, posts plus ad in parallel, then a reviewer.
+
 ## 2026-11-25: Ribbon visual labels
 
 - **Decision:** the engagement boxes in the ribbon visual say "Project 1 · 3 teammates" to "Project 4 · 3 teammates" instead of consulting engagement types ("Pricing review", "Market entry" and so on), which read as jargon unrelated to feedback.

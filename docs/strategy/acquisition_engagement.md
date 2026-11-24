@@ -53,13 +53,13 @@ Kavya can stop at any step. If she does, she keeps what she already got and hear
 Sphyr is new, so there are no reviews to point to. The pilot scorecard is how proof gets built in public. Public copy never claims customers and never leads with their absence.
 
 - **Before the pilot starts**, we publish on our site what every pilot measures and how. The firm agrees the targets.
-- **What is measured** (to be confirmed with the pricing and first-use work):
-  1. Participation per cycle (the prototype's manager view shows it, for example "Participation 96%, 24 of 25 reviews given").[^proto]
-  2. Average number of different people giving feedback to each consultant (the member view shows "From 12 collaborators").[^proto]
-  3. Share of senior consultants with feedback from people on three or more engagements by calibration. If the product does not show this directly, the firm counts it from team rosters.
-  4. A two-question partner survey after calibration: "Did the record show you something you did not know?" and "Did it change any discussion?"
-  5. A two-question consultant survey: "Did you see something useful in your own record?" and "Would you keep doing it?"
-- **After the pilot**, results are published only with the firm's consent, unnamed unless the firm agrees. Bad results are published the same way as good ones, or not at all.
+- **What is measured** (final, gate 1b, 2026-11-25):
+  1. How many people take part in each cycle (the prototype's manager view shows participation, for example "Participation 96%, 24 of 25 reviews given").[^proto]
+  2. How many different people give feedback to each consultant (the member view shows "From 12 collaborators").[^proto]
+  3. Whether partners found something new in the records, and whether it changed any discussion (two-question partner survey after the promotion round).
+  4. Whether consultants found their own record useful, and whether they would keep going (two-question consultant survey).
+- **Dropped at gate 1b:** "share of senior consultants with feedback from three or more engagements". It used jargon and the product does not show it directly.
+- **After the pilot**, results stay with the firm unless it agrees to share them. Public copy says: "Results stay with your firm unless you agree to share them."
 
 Pilot terms, decided at gate 1b ([price and pilot](../pricing/price_and_pilot.md)): 12 weeks, six fortnightly cycles, up to 40 people, ₹25,000 plus GST, credited against the first annual bill if the firm signs. If it does not sign, the firm gets its data as a CSV file and the rest is deleted; there is no refund. This settles [source conflicts, row 11](../prior_work/source_conflicts.md): the graded six weeks gave only three cycles. The scorecard is measured over the six cycles.
 
