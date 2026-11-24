@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sphyr 2-minute walkthrough</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  .step { display: none; } .step.on { display: block; }
+  .progress { display: flex; gap: 6px; margin-bottom: 32px; } .progress i { flex: 1; height: 4px; background: var(--line); border-radius: 2px; } .progress i.on { background: var(--accent-hi); }
+  .cand { cursor: pointer; text-align: left; font: inherit; color: inherit; width: 100%; }
+  .cand:hover { border-color: var(--accent-hi); }
+  .bars td:nth-child(2), .bars td:nth-child(3) { width: 34%; }
+  .bar { height: 10px; border-radius: 5px; background: var(--accent-hi); } .bar.k { background: #6b7781; }
+  .bars .v { font: 600 13px var(--mono); color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap"><a class="logo" href="index.html"><i></i>Sphyr</a><nav><a href="how-it-works.html">How it works</a><a href="demo.html" aria-current="page">Walkthrough</a><a href="pricing.html">Pricing</a><a href="trust.html">Trust</a></nav><a class="nav-deliv" href="deliverables.html">Deliverables (4)</a></div></header>
+
+<main><section class="hero" style="border:0"><div class="wrap narrow">
+  <span class="label">Sample data · fictional people and company</span>
+  <div class="progress" style="margin-top:20px"><i class="on"></i><i></i><i></i><i></i></div>
+
+  <div class="step on" id="s1">
+    <span class="eyebrow">Step 1 of 4 · You're the founder</span>
+    <h2>Promotion round next week. One senior engineer slot.</h2>
+    <p class="lede">Your company has 180 people now. You signed off every promotion when it was 30. Two names are on your desk. Who gets it?</p>
+    <div class="grid g2" style="margin-top:28px">
+      <button class="card cand" data-pick="Karan"><div class="who" style="display:flex;gap:12px;align-items:center"><div class="av">KM</div><b>Karan M.</b></div><p class="small">Manager's note: "Runs every sprint demo. Very visible. Clients know him."</p></button>
+      <button class="card cand" data-pick="Priya"><div class="who" style="display:flex;gap:12px;align-items:center"><div class="av">PR</div><b>Priya R.</b></div><p class="small">Manager's note: "Solid. Quiet. Gets things done."</p></button>
+    </div>
+  </div>
+
+  <div class="step" id="s2">
+    <span class="eyebrow">Step 2 of 4 · Now be a reviewer</span>
+    <h2>This is what everyone around Priya does, every fortnight.</h2>
+    <p class="lede">Fill one card. It takes about five clicks.</p>
+    <div class="fcard" style="margin-top:24px">
+      <div class="body">
+        <div class="who"><div class="av">PR</div><div><b>Priya R.</b><div class="small">Backend engineer · in your Sphere</div></div></div>
+        <div class="q">1 · How was working with Priya this fortnight?</div>
+        <div class="stars"><button data-v="1">1</button><button data-v="2">2</button><button data-v="3">3</button><button data-v="4">4</button><button data-v="5">5</button></div>
+        <div class="q">2 · What stood out?</div>
+        <div class="tags"><button>Ownership</button><button>Quality of work</button><button>On-time delivery</button><button>Unblocks others</button><button>Teamwork</button></div>
+        <div class="q">3 · Anything to add? (optional)</div>
+        <textarea placeholder="Anonymous. Released later, in a batch."></textarea>
+        <div class="foot"><span class="clicks">0 clicks</span><button class="btn btn-p send">Send anonymously</button></div>
+      </div>
+      <div class="done"><p><b><span class="clicks-final"></span> clicks.</b> Pooled with everyone else's…</p></div>
+    </div>
+  </div>
+
+  <div class="step" id="s3">
+    <span class="eyebrow">Step 3 of 4 · The pooled view</span>
+    <h2>Six fortnights. Fourteen people each. One picture.</h2>
+    <p class="lede" id="pickline"></p>
+    <div class="card" style="margin-top:24px">
+      <div class="tbl"><table class="bars" id="bars"><tr><th>Parameter</th><th>Priya R.</th><th>Karan M.</th></tr></table></div>
+      <p class="small" style="margin-top:16px">Average pooled rating out of 5 · 14 reviewers each · 6 fortnightly cycles · individual ratings and reviewer names never shown.</p>
+    </div>
+    <div class="grid g2" style="margin-top:20px">
+      <div class="card"><span class="label">Most-used tag · Priya</span><h3 style="margin-top:10px">"Unblocks others": 31 times</h3><p class="small">From 9 different people across 3 teams.</p></div>
+      <div class="card"><span class="label">Most-used tag · Karan</span><h3 style="margin-top:10px">"Ownership": 18 times</h3><p class="small">Mostly from client-facing colleagues and a client.</p></div>
+    </div>
+    <div class="btns"><button class="btn btn-p" id="to4">Continue</button></div>
+  </div>
+
+  <div class="step" id="s4">
+    <span class="eyebrow">Step 4 of 4 · You still decide</span>
+    <h2>Same two people. Now you can see the work.</h2>
+    <p class="lede">Sphyr didn't pick anyone. It showed you what fourteen colleagues saw, so the decision rests on evidence instead of whoever was most visible. Maybe Karan still gets it. If so, it's because the evidence says so.</p>
+    <h3 style="margin-top:32px">Built from everyone who actually worked with them, not one manager's memory. <span class="hl">That's Sphyr.</span></h3>
+    <div class="btns"><a class="btn btn-p" href="pricing.html#order">Start a ₹15,000 six-week pilot</a><a class="btn btn-g" href="pricing.html">See pricing</a><a class="btn btn-g" href="trust.html">How anonymity works</a></div>
+    <p class="small" style="margin-top:20px">The pilot fee is credited against your first bill. <a href="demo.html">Restart the walkthrough</a></p>
+  </div>
+</div></section></main>
+
+<footer><div class="wrap cols"><div><b>Sphyr</b> · Promote on merit, not politics.<br>Team 03 final assignment, Product Marketing (PD2.501), IIIT Hyderabad · Aryan, Abhinav, Devansh, Bheema.<br>Course project based on the Sphyr Overview Whitepaper v0.3 (2018) and Sphyr.io documentation. Not a live commercial offer.</div><div><b>Deliverables</b><br><a href="propaganda.html">Propaganda strategy</a><br><a href="linkedin.html">Three LinkedIn posts</a><br><a href="ad.html">Advertisement</a><br><a href="deliverables.html">All deliverables</a></div></div></footer>
+<script src="main.js"></script>
+<script>
+const go = n => {
+  document.querySelectorAll('.step').forEach((s, i) => s.classList.toggle('on', i === n - 1));
+  document.querySelectorAll('.progress i').forEach((b, i) => b.classList.toggle('on', i < n));
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+let pick;
+document.querySelectorAll('.cand').forEach(b => b.addEventListener('click', () => { pick = b.dataset.pick; go(2); }));
+document.addEventListener('sent', () => setTimeout(() => {
+  document.getElementById('pickline').textContent = pick === 'Karan'
+    ? 'You picked Karan. Here is what the people around both of them saw.'
+    : 'You picked Priya. Here is what backs that up, or doesn\'t.';
+  go(3);
+}, 900));
+document.getElementById('to4').addEventListener('click', () => go(4));
+// Sample pooled scores out of 5: [parameter, Priya, Karan]
+const rows = [['Professional behaviour', 4.3, 4.4], ['Timeliness of delivery', 4.6, 3.7], ['Quality of work', 4.7, 3.9],
+  ['Adherence to policies', 4.4, 4.2], ['Resolving dependencies', 4.8, 3.4], ['Teamwork', 4.6, 3.8], ['Engagement', 4.0, 4.5]];
+const bar = (v, k) => `<div class="bar ${k}" style="width:${v / 5 * 100}%"></div><span class="v">${v.toFixed(1)}</span>`;
+document.getElementById('bars').insertAdjacentHTML('beforeend',
+  rows.map(([p, a, b]) => `<tr><td>${p}</td><td>${bar(a, '')}</td><td>${bar(b, 'k')}</td></tr>`).join(''));
+</script>
+</body>
+</html>
