@@ -107,7 +107,7 @@ Only features Sphyr has today are compared. "Shown" means the competitor's prici
 
 ## Which rows are comparable
 
-- **Comparable:** Lattice Performance, 15Five Perform, Leapsome Performance Reviews, Peoplebox (with 360), Confirm Perform and PerformYard. Each sells a per-seat review and feedback module on its own. At list price they sit between ₹719 and ₹1,486 per seat per month, and every one of them includes AI features, integrations, or both, that Sphyr does not have. So they are a ceiling, not a target.
+- **Comparable:** Lattice Performance, 15Five Perform, Leapsome Performance Reviews, Peoplebox (with 360), Confirm Perform and PerformYard. Each sells a per-seat review and feedback module on its own. At list price they sit between ₹464 (PerformYard's low end, for firms of several hundred) and ₹1,486 per seat per month. Five of the six pages show AI features, integrations or both, which Sphyr does not have (Lattice, 15Five, Leapsome, Peoplebox, Confirm). PerformYard's pages we read showed neither. So these prices are a ceiling, not a target.
 - **Partly comparable:** greytHR PMS at ₹35 to ₹45 is a real Indian review module, but it can only be bought on top of greytHR's Growth HRMS plan, and it runs reviews and appraisals, not frequent peer feedback.
 - **Not comparable on price, but the real alternative:** Keka Growth at about ₹157 per seat buys a whole HRMS with payroll, and reviews come inside it. A firm that already pays this will ask why it should pay for reviews again. This is the anchor the managing partner will use.
 - **Not comparable:** Darwinbox and Culture Amp (no list price), Zoho People (not read), Lattice Foundations (bundles AI and integrations).

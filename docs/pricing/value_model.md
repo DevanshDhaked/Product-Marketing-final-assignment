@@ -12,6 +12,9 @@ sources:
   - id: aon25
     resource: https://www.deccanchronicle.com/business/economics/india-salaries-to-rise-95-in-2025-1827815
     title: "Deccan Chronicle on Aon 2024-25 India survey, 3 Oct 2024 (accessed 2026-11-24)"
+  - id: bt
+    resource: https://www.businesstoday.in/latest/economy/story/lowest-in-five-years-what-162-attrition-really-signals-for-2026-518813-2026-03-02
+    title: "Business Today on the Aon 2025-26 survey: voluntary attrition 12% in 2025, 13.4% in 2024, 2 Mar 2026 (accessed 2026-11-24)"
   - id: spi
     resource: https://get.kantata.com/rs/677-LEJ-696/images/2025-ps-maturity-benchmark.pdf
     title: "SPI Research, 2025 Professional Services Maturity Benchmark, Tables 170 and 172 (accessed 2026-11-24)"
@@ -63,7 +66,7 @@ This model fixes that by expressing avoided exits as a change in the attrition r
 ## The formula (per seat, per month)
 
 ```
-value = [ a x s x e x X  +  (h x k - t) x w x r ] / 12
+value = [ a x s x e x X  +  ((h x k - t) x w + p x q x W) x r ] / 12
 ```
 
 | Symbol | Meaning |
@@ -76,6 +79,9 @@ value = [ a x s x e x X  +  (h x k - t) x w x r ] / 12
 | k | share of those hours Sphyr removes |
 | t | hours Sphyr adds (filling cards) |
 | w | loaded hourly cost of a professional |
+| p | partner hours per professional per year spent on the record before calibration |
+| q | share of partner hours Sphyr removes |
+| W | loaded hourly cost of partner time |
 | r | share of saved hours that turns into useful work |
 
 `a x s x e` is the number of exits avoided per seat per year. At a firm of N people, avoided exits per year = `N x a x s x e`, and the firm saving divided by N and by 12 gives the same per-seat figure at any size.
@@ -84,7 +90,7 @@ value = [ a x s x e x X  +  (h x k - t) x w x r ] / 12
 
 | Input | Low | Mid | High | Source or reason |
 |---|---|---|---|---|
-| a, attrition | 6.9% | 16.2% | 22.1% | Low: SPI voluntary attrition, firms of 101 to 300 (global, 403 firms).[^spi] Mid: Aon India, all industries, 2025 (more than 1,400 organisations).[^aon26] High: Aon India, professional services, 2024.[^aon25] Aon figures may include involuntary exits. |
+| a, voluntary attrition | 6.9% | 12.0% | 16.7% | Voluntary only, because `s` is a share of voluntary leavers. Low: SPI voluntary attrition, firms of 101 to 300 (global, 403 firms).[^spi] Mid: Aon India 2025, voluntary 12.0% of 16.2% total (more than 1,400 organisations).[^aon26][^bt] High: Aon India professional services 22.1% total in 2024[^aon25] x the all-industry voluntary share that year (13.4% of 17.7%);[^bt] applying that share to one sector is an ESTIMATE. |
 | Leaver CTC | ₹18 L | ₹24 L | ₹31 L | AmbitionBox: Praxis senior associate consultant ₹17.8 to 19.7 L (38 salaries), management consultant ₹22.7 to 27.2 L, senior consultant ₹29.8 to 32.9 L;[^praxis] Avalon management consultant ₹21.5 to 24.5 L, strategy consultant ₹22.3 to 27.9 L (14 salaries).[^avalon] Self-reported. |
 | s, addressable share of exits | 20.4% | 30% | 48% | Low: SPI Table 172, "lack of career advancement" 14.9% + "management dissatisfaction" 5.5%.[^spi] High: Gallup 2008, career advancement 31.5% + management and work environment 16.5%.[^gallup08] Mid: ESTIMATE between them. |
 | e, Sphyr effect on those exits | 10% | 20% | 30% | ESTIMATE. No study measures this for Sphyr. Ceiling check: Gallup finds 42% of voluntary leavers (n = 717, US) say the employer could have prevented the exit.[^gallup24] The pilot must measure this. |
@@ -92,6 +98,9 @@ value = [ a x s x e x X  +  (h x k - t) x w x r ] / 12
 | k, hours removed | 15% | 25% | 35% | ESTIMATE. Sphyr replaces project-end forms, chasing and building "the file" before calibration. The calibration meeting stays. |
 | t, hours added | 0.93 | 0.93 | 0.93 | 26 cycles x 2 min 09 s per deck, from the 2018 whitepaper pilot.[^wp] That pilot was on paper, so this is a planning figure, not a software result. |
 | w, hourly cost | ₹900 | ₹1,200 | ₹1,500 | ESTIMATE: blended firm CTC of ₹15, 20, 25 L (analysts to partners) x 1.2 loading / 2,000 hours. |
+| p, partner hours | 0.5 | 1 | 2 | ESTIMATE: hours a year per professional that partners spend asking for "the file", reading forms and discussing each consultant before calibration. |
+| q, partner hours removed | 20% | 30% | 40% | ESTIMATE: the record is already there when calibration starts. |
+| W, partner hourly cost | ₹2,700 | ₹2,700 | ₹2,700 | ESTIMATE: about ₹45 L CTC x 1.2 / 2,000 hours, the senior rate used for hiring time below. |
 | r, time realised | 50% | 75% | 100% | ESTIMATE. Saved time is worth money only if it is used. |
 
 ### Cost of one exit (X), built from parts
@@ -112,29 +121,30 @@ Cross-check: Gallup puts replacement at 0.5 to 2x salary,[^gallup19] and at abou
 
 | Per seat per month | Low | Mid | High |
 |---|---|---|---|
-| Relative reduction in exits (s x e) | 2.0% | 6.0% | 14.4% |
-| Exits avoided per seat per year | 0.0014 | 0.0097 | 0.0318 |
-| Attrition value | ₹59 | ₹699 | ₹4,433 |
-| Net review hours saved per year | 3.7 | 9.1 | 23.0 |
-| Review time value | ₹138 | ₹680 | ₹2,873 |
-| **Total value** | **₹198** | **₹1,379** | **₹7,306** |
+| Relative reduction in voluntary exits (s x e) | 2.0% | 6.0% | 14.4% |
+| Exits avoided per seat per year | 0.0014 | 0.0072 | 0.0241 |
+| Attrition value | ₹59 | ₹518 | ₹3,356 |
+| Net staff review hours saved per year | 3.7 | 9.1 | 23.0 |
+| Staff review time value | ₹138 | ₹680 | ₹2,873 |
+| Partner time value | ₹11 | ₹51 | ₹180 |
+| **Total value** | **₹209** | **₹1,249** | **₹6,409** |
 
 The high case multiplies every favourable input together. It shows the upside, not a planning number. Pricing decisions use the low and mid cases.
 
 ## How a firm saving becomes a per-seat figure
 
-| Firm size | Case | Exits a year | Avoided a year | One avoided exit every | Firm value a year | Divided by staff and 12 |
+| Firm size | Case | Voluntary exits a year | Avoided a year | One avoided exit every | Firm value a year | Divided by staff and 12 |
 |---|---|---|---|---|---|---|
-| 40 | low | 2.8 | 0.06 | 17.8 years | ₹94,822 | ₹198 |
-| 40 | mid | 6.5 | 0.39 | 2.6 years | ₹6,62,155 | ₹1,379 |
-| 150 | low | 10.4 | 0.21 | 4.7 years | ₹3,55,583 | ₹198 |
-| 150 | mid | 24.3 | 1.46 | 0.7 years | ₹24,83,080 | ₹1,379 |
-| 400 | low | 27.6 | 0.56 | 1.8 years | ₹9,48,221 | ₹198 |
-| 400 | mid | 64.8 | 3.89 | 0.3 years | ₹66,21,547 | ₹1,379 |
+| 40 | low | 2.8 | 0.06 | 17.8 years | ₹1,00,222 | ₹209 |
+| 40 | mid | 4.8 | 0.29 | 3.5 years | ₹5,99,423 | ₹1,249 |
+| 150 | low | 10.4 | 0.21 | 4.7 years | ₹3,75,833 | ₹209 |
+| 150 | mid | 18.0 | 1.08 | 0.9 years | ₹22,47,835 | ₹1,249 |
+| 400 | low | 27.6 | 0.56 | 1.8 years | ₹10,02,221 | ₹209 |
+| 400 | mid | 48.0 | 2.88 | 0.3 years | ₹59,94,228 | ₹1,249 |
 
-Reading the 150-person mid row: the firm loses about 24 people a year. Sphyr prevents 6% of them, about 1.5 exits a year, each worth about ₹8.6 L. Adding the review hours saved, the firm gains about ₹24.8 L a year. ₹24.8 L / 150 / 12 = ₹1,379 per seat per month.
+Reading the 150-person mid row: about 18 people leave the firm by choice each year. Sphyr prevents 6% of them, about one exit a year, worth about ₹8.6 L. Adding the staff and partner hours saved, the firm gains about ₹22.5 L a year. ₹22.5 L / 150 / 12 = ₹1,249 per seat per month.
 
-The old ₹500 sits inside this range. Our mid attrition value alone is ₹699, and it rests on a named exit cost and a named rate.
+The old ₹500 sits inside this range. Our mid attrition value alone is ₹518, and it rests on a named exit cost and a named rate.
 
 ## What this model does not claim
 
@@ -145,6 +155,7 @@ The old ₹500 sits inside this range. Our mid attrition value alone is ₹699, 
 
 [^aon26]: Aon, India survey 2025-26
 [^aon25]: Aon, India survey 2024-25, via Deccan Chronicle
+[^bt]: Business Today on Aon voluntary attrition
 [^spi]: SPI Research 2025 benchmark
 [^praxis]: AmbitionBox, Praxis Global Alliance
 [^avalon]: AmbitionBox, Avalon Consulting
