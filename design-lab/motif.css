@@ -2,9 +2,10 @@
    Rules: docs/design/ribbon_motif.md. The default (no animation) state is the finished picture, so reduced motion
    and no-JS readers get the whole story. Motion only animates opacity, transform and stroke-dashoffset. */
 
-/* Strand palettes. Two options for gate 1b, switched by data-strands on <body>. Neither uses orange or red,
-   which mean "could improve" and "destructive" in the product. */
-[data-strands="cool"] {
+/* Strand palette: cool colours from the logo (picked at gate 1b; the tonal green option is recorded in
+   docs/design/ribbon_motif.md and no longer built). No orange or red: those mean "could improve" and
+   "destructive" in the product. */
+:root {
   --s1: light-dark(#02A49D, #2BC4BC);
   --s2: light-dark(#1486AB, #3FB0D6);
   --s3: light-dark(#3663C5, #7594E0);
@@ -13,16 +14,6 @@
   --s6: light-dark(#7C8C02, #B5C928);
   --s7: light-dark(#8B287B, #C664B5);
   --s8: light-dark(#B04FAE, #DB8BD9);
-}
-[data-strands="tonal"] {
-  --s1: light-dark(#004D30, #BDF1DA);
-  --s2: light-dark(#006B4A, #8FE3C0);
-  --s3: light-dark(#008A5E, #5CD3AC);
-  --s4: light-dark(#1FAE7D, #34C696);
-  --s5: light-dark(#4CC79A, #1F9E73);
-  --s6: light-dark(#005B38, #A4E9CB);
-  --s7: light-dark(#007652, #6FD9B3);
-  --s8: light-dark(#2BB383, #48C99B);
 }
 
 /* ---------- The mark (logo) and its variants ---------- */
@@ -54,8 +45,9 @@
 .cv .eng-name { font-size: 15px; font-weight: 700; fill: var(--text-muted); }
 .cv .eng-when { font-size: 13px; fill: var(--text-muted); }
 .cv .strand { fill: none; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
-.cv .record-label, .cv .april-label { font-size: 14px; font-weight: 700; fill: var(--text); }
-.cv .april-sub { font-size: 13px; fill: var(--text-muted); }
+.cv .record-label, .cv .round-label { font-size: 14px; font-weight: 700; fill: var(--text); }
+.cv .round-sub { font-size: 13px; fill: var(--text-muted); }
+.cv-compact .round-sub { font-size: 15px; }
 
 /* Phone: a second, vertical composition (not a squeeze). Only one of the two is rendered. */
 .cv-compact { display: none; max-width: 420px; margin-inline: auto; }
@@ -71,7 +63,7 @@
   .cv.play .eng-name { animation: eng-name 1.5s var(--t) both; }
   .cv.play .eng-when { animation: fade-in .3s var(--t) both; }
   .cv.play .strand { stroke-dasharray: 1; animation: draw 1.6s calc(var(--i) * 1.5s + 0.55s + var(--j) * 0.12s) both cubic-bezier(.45, 0, .2, 1); }
-  .cv.play .april { animation: fade-in .6s 6.4s both; }
+  .cv.play .round { animation: fade-in .6s 6.4s both; }
   .cv.play .mark .rib { animation: rib-in .7s calc(6.2s + var(--k) * 45ms) backwards cubic-bezier(.2, .8, .2, 1); } /* backwards: release transform afterwards so hover can move ribbons */
 }
 @keyframes eng-live { 0% { opacity: 0; transform: translateY(8px); } 12%, 70% { opacity: 1; transform: none; } 100% { opacity: 0; } }
@@ -89,26 +81,22 @@
 .circle .core { fill: var(--surface); stroke: var(--border-strong); stroke-width: 1.5; }
 .circle .core-label { font: 700 13px var(--font); fill: var(--text); }
 .circle .grp-label { font: 700 17px var(--font); fill: var(--text); }
+/* Phone: the drawing shrinks to about 0.37, so labels grow to stay at 11px or more; the centre label goes
+   (the caption says who is at the centre). */
+@media (max-width: 600px) { .circle .grp-label { font-size: 32px; } .circle .core-label { display: none; } }
 .circle .grp-n { font: 500 13px var(--font); fill: var(--text-muted); }
-.groups { display: grid; gap: var(--s-2); }
-.groups button { display: flex; justify-content: space-between; align-items: center; gap: var(--s-3); min-height: 44px; padding: 0 14px; border: 1px solid var(--border); border-radius: var(--r-control); background: var(--surface); color: var(--text); font: 600 var(--fs-small) var(--font); cursor: pointer; text-align: left; }
+.groups { display: grid; border-top: 1px solid var(--border); }
+/* Rows, not boxes: a hairline under each, the pressed one marked by a green rule at its left. */
+.groups button { display: flex; justify-content: space-between; align-items: center; gap: var(--s-3); min-height: 44px; padding: 0 4px 0 12px; border: 0; border-bottom: 1px solid var(--border); background: none; color: var(--text); font: 600 var(--fs-small) var(--font); cursor: pointer; text-align: left; }
 .groups button span { color: var(--text-muted); font-weight: 500; }
-.groups button[aria-pressed="true"] { border-color: var(--text); }
+.groups button[aria-pressed="true"] { box-shadow: inset 3px 0 0 0 var(--brand); }
 .circle[data-focus] .rbn { opacity: .18; }
 .circle[data-focus="peers"] .g-peers, .circle[data-focus="seniors"] .g-seniors,
 .circle[data-focus="juniors"] .g-juniors, .circle[data-focus="clients"] .g-clients { opacity: 1; }
 
-/* Scroll-driven draw where supported (Baseline 2026, newly available); elsewhere motif.js plays it once in view. */
+/* The circle draws once when it enters the view (motif.js adds .play), then rests. No scroll-linked motion. */
 @media (prefers-reduced-motion: no-preference) {
-  @supports (animation-timeline: view()) {
-    .circle .rbn { stroke-dasharray: 1; animation: draw linear both; animation-timeline: view(); animation-range: entry 20% cover 45%; }
-  }
-  @supports not (animation-timeline: view()) {
-    .circle.play .rbn { stroke-dasharray: 1; animation: draw 1.1s calc(var(--j) * 60ms) both cubic-bezier(.45, 0, .2, 1); }
-  }
+  .circle.armed:not(.play) .rbn { opacity: 0; } /* set by motif.js before the circle is in view; without JS the finished picture shows */
+  .circle.play .rbn { stroke-dasharray: 1; animation: draw 1.1s calc(var(--j) * 60ms) backwards cubic-bezier(.45, 0, .2, 1); } /* backwards: after drawing, opacity is free again for the group buttons */
 }
 
-/* Palette switch (lab only) */
-.seg { display: inline-flex; border: 1px solid var(--border-strong); border-radius: var(--r-control); overflow: hidden; }
-.seg button { min-height: 36px; padding: 0 14px; border: 0; background: var(--surface); color: var(--text); font: 600 var(--fs-caption) var(--font); cursor: pointer; }
-.seg button[aria-pressed="true"] { background: var(--text); color: var(--bg); }

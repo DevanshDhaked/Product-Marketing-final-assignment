@@ -22,7 +22,8 @@ sources:
 
 ## Uses
 
-1. **The core visual (home hero).** The message guideline's core visual (section 9)[^msg]: four engagements across the year, April to March. Each one sends three coloured strands (its people) into one record line. Each engagement ends and fades to a dashed outline; its strands stay. At April the record runs into the sphere. Below 600px a second, vertical composition replaces the wide one; it is not scaled down.
+1. **The core visual (home hero).** The message guideline's core visual (section 9)[^msg]: four engagements across a year, named as examples of engagement types (pricing review, market entry, cost programme, due diligence), never as months. Each one sends three coloured strands (its people) into one record line. Each engagement ends and fades to a dashed outline; its strands stay. At the end the record runs into the sphere, labelled "Promotion round" and "The whole year is in the file". Public copy names no month (message guideline section 5, timing words). Below 600px a second, vertical composition replaces the wide one; it is not scaled down.
+
 2. **The circle (How it works).** Fourteen strands for the average circle of 14 in the 2018 paper-and-pen pilot run by Sphyr's founder, in four groups: peers, seniors, juniors, clients. Every strand turns the same way, like the ribbons in the logo. Buttons show one group at a time. Clients join when the consultant invites them by email from My Sphyr, with the partner's agreement; captions must say that, never "when the partner adds them".
 3. **The mark.** The logo in the nav and footer, and once large at the end of the core visual. On hover or keyboard focus its ribbons part slightly and come back.
 
@@ -39,19 +40,19 @@ All variants keep the sphere and its 15 separate ribbons. `sphyr-mark.svg` is th
 | White on green | `.mark--white` on the fixed print green #007652 | The ad standee, any green field, photographs | One colour for print; the green does not change with the theme |
 | Strand colours | `.mark--strands`: ribbons take the active strand palette | The end of the core visual, where strands become the sphere | The strands visibly become the ribbons |
 
-## Strand palettes (decision at gate 1b)
+## Strand palettes (decided at gate 1b)
 
 Neither palette uses orange or red, which mean "could improve" and "destructive" in the product.
 
-- **Cool logo colours:** teal, cerulean, royal blue, navy, green, olive, plum and orchid from the logo, each with a lighter step for dark theme. Livelier, closest to the brand.
-- **Tonal green:** eight steps of the product green. Calmer and more corporate; reads as one brand colour.
+- **Cool logo colours (picked at gate 1b, built):** teal, cerulean, royal blue, navy, green, olive, plum and orchid from the logo, each with a lighter step for dark theme. Livelier, closest to the brand.
+- **Tonal green (considered, not built):** eight steps of the product green. Calmer and more corporate; reads as one brand colour. Removed from the code after the user picked the cool option.
 
 ## Motion
 
 - The default, non-animated state is the finished picture, so reduced-motion readers, no-JS readers and screenshots get the whole story.
 - Only opacity, transform and stroke-dashoffset animate. No scroll listeners, no WebGL, no animation library.
 - Core visual: plays once on load (about 7 seconds), with a "Play again" button. Each engagement takes 1.5 seconds.
-- Circle: draws in as it scrolls into view with `animation-timeline: view()` where supported (Baseline 2026, newly available since October 2026)[^mdn]; elsewhere an IntersectionObserver plays it once.
+- Circle: draws once when it enters the view (IntersectionObserver), then rests. Scroll-linked drawing with `animation-timeline: view()` (Baseline 2026, newly available since October 2026)[^mdn] was built first and removed: the page must not move with the scroll.
 - Under `prefers-reduced-motion: reduce` nothing animates and the hover parting is off.
 - Size: `motif.css` 7.9 KB, `motif.js` 3.3 KB, `sphyr-mark.svg` 13.7 KB uncompressed (9.4 KB gzipped for all three), plus about 9 KB of inline SVG per page for the two compositions. Measured 2026-11-24.
 

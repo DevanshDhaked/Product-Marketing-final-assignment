@@ -103,3 +103,24 @@ Run on every page before it ships:
 7. Toggle both themes and look at the whole page in each.
 8. Load at 375px: no sideways scroll, no button label wraps, nav on one line at desktop.
 9. `node design-lab/contrast.mjs` still reports 0 failures if any token changed.
+
+## Addendum 2026-11-24 (phase 1b): page and copy rules
+
+Adds to the rules above; nothing above is withdrawn.
+
+### Page rules (from the untemplated skill, as adopted for Sphyr)
+- The page is still at rest: no loops, no tickers, no scroll-linked motion, no loader. The ribbon motif plays once when it enters the view, then rests.
+- One local answer per interaction: a hover, click or disclosure changes one component, about 5 percent of the viewport at most, and the page is back at rest within 2 seconds of the pointer leaving.
+- Nothing boxed at rest except product frames and the pilot and price blocks. Buttons, rows and toggles carry no border on three sides and no shadow.
+- Nothing invented. A missing fact becomes a visible `TODO(owner): ...` in a mockup, never a made-up line.
+- A phone layout designed on its own (the core visual has a vertical version), and two designed themes.
+- About 25 words in the first screen is a target, not a hard limit, when the core line and the call to action need more.
+- Not adopted: dithered pictures (product frames must show the real product clearly), the mono font requirement, the skill's named directions.
+
+### Copy rules (user corrections, 2026-11-24)
+- Name no month in public copy. Say "promotion time", "the promotion round" or "when partners calibrate", and use the moment sparingly (message guideline section 5).
+- Never claim customers and never announce their absence. Show proof built in the open instead: the scorecard agreed before a pilot, the 2018 paper-and-pen pilot labelled exactly.
+- At most one "X, not Y" contrast on a page.
+- No triads used for rhythm, no staged openers, no one-line closers, no stacked short fragments, no bold labels before sentences.
+- Run every visible string through the humanizer rules; only the core line "The engagement ends. The evidence stays." stays verbatim. Read each section aloud as a head of talent explaining it to a colleague.
+- Checks: `python3 design-lab/copy_scan.py <page>` (never-say lists, months, dashes, emoji) and `python3 design-lab/copy_tells.py <page>` (contrasts and possible triads, to confirm by eye).

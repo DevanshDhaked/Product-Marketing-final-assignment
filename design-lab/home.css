@@ -1,0 +1,103 @@
+/* Home page layout. Tokens and components come from tokens.css, components.css, faux-ui.css and motif.css.
+   Rules: sections are parted by air and one hairline, not boxes; only product frames and the pilot and price
+   blocks are boxed (docs/design/slop_rules.md, references.md). */
+
+.home section { padding-block: var(--section-y); }
+.home section + section { border-top: 1px solid var(--border); }
+.home h2 { max-width: 22ch; }
+.home .lede { color: var(--text-muted); }
+.home p + p { margin-top: var(--s-4); }
+
+/* Hero: headline left, the line and the button right, the core visual full width below. */
+.hero { padding-block: var(--s-7) var(--s-6) !important; }
+.hero-copy { display: grid; grid-template-columns: 1.45fr 1fr; gap: var(--s-6) var(--s-8); align-items: end; }
+.hero h1 { font-size: clamp(2.5rem, 1.4rem + 3.6vw, 4.25rem); line-height: 1.04; max-width: 13ch; }
+.hero-side .lede { font-size: var(--fs-lede); color: var(--text); max-width: 30ch; }
+.hero-side .btn { margin-top: var(--s-5); }
+.hero-visual { margin: var(--s-7) auto 0; }
+.hero-visual .cv { max-height: 420px; }
+@media (max-width: 900px) {
+  .hero-copy { grid-template-columns: 1fr; gap: var(--s-4); }
+  .hero-visual { margin-top: var(--s-6); }
+}
+.cv .eng-name { fill: var(--text-muted); }
+
+/* Text beside a figure. */
+.duo { display: grid; grid-template-columns: 5fr 7fr; gap: var(--s-8); align-items: center; }
+.duo + .duo { margin-top: var(--s-9); }
+.duo.flip { grid-template-columns: 7fr 5fr; }
+.duo.flip > :first-child { order: 2; }
+@media (max-width: 900px) {
+  .duo, .duo.flip { grid-template-columns: 1fr; gap: var(--s-6); }
+  .duo.flip > :first-child { order: 0; }
+}
+.text-col h2 { margin-bottom: var(--s-5); }
+.text-col h3 { margin-bottom: var(--s-3); }
+.go { display: inline-flex; align-items: center; gap: 6px; margin-top: var(--s-5); font-weight: 600; }
+.go .icon { width: 16px; height: 16px; }
+
+/* What comes back: a short intro over each full-width frame. */
+.back-intro { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-3) var(--s-8); margin: var(--s-8) 0 var(--s-5); align-items: baseline; }
+.back-intro h3 { font-size: var(--fs-h3); }
+.back-intro p { margin: 0 !important; color: var(--text-muted); max-width: 46ch; }
+@media (max-width: 760px) { .back-intro { grid-template-columns: 1fr; } }
+
+/* Proof: two numbers, set large in the display face, unboxed. */
+.proof { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-8); margin-top: var(--s-7); }
+.proof .v { font-family: var(--font-display); font-weight: 500; font-size: clamp(2.75rem, 2rem + 2.4vw, 4rem); line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.proof .l { margin-top: var(--s-3); max-width: 38ch; }
+.proof .src { margin-top: var(--s-2); font-size: var(--fs-caption); color: var(--text-muted); max-width: 44ch; }
+@media (max-width: 760px) { .proof { grid-template-columns: 1fr; gap: var(--s-7); } }
+.notdo { margin-top: var(--s-8); }
+.notdo h3, .faq-head { margin-bottom: var(--s-4); }
+.faq-head { margin-top: var(--s-8); }
+
+/* Pilot: the scorecard beside the one number from the 2018 paper pilot. */
+.scorecard { display: grid; grid-template-columns: 7fr 5fr; gap: var(--s-8); margin-top: var(--s-7); align-items: start; }
+.scorecard h3 { margin-bottom: var(--s-2); }
+.src-note { margin-top: var(--s-4); font-size: var(--fs-small); color: var(--text-muted); max-width: 60ch; }
+.proof-one .v { font-family: var(--font-display); font-weight: 500; font-size: clamp(2.75rem, 2rem + 2.4vw, 4rem); line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.proof-one .l { margin-top: var(--s-3); max-width: 32ch; }
+.proof-one .src { margin-top: var(--s-2); font-size: var(--fs-caption); color: var(--text-muted); max-width: 40ch; }
+@media (max-width: 760px) { .scorecard { grid-template-columns: 1fr; gap: var(--s-6); } }
+
+/* Pilot and price: the two boxed blocks on the page. */
+.terms { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-5); margin-top: var(--s-7); }
+.term { border: 1px solid var(--border-strong); border-radius: var(--r-surface); padding: var(--s-6); background: var(--surface); }
+.term .what { font-size: var(--fs-small); font-weight: 600; color: var(--text-muted); }
+.term .big { margin-top: var(--s-3); font-family: var(--font-display); font-weight: 500; font-size: clamp(1.75rem, 1.3rem + 1.4vw, 2.4rem); line-height: 1.1; letter-spacing: -0.01em; }
+.term .sub { margin-top: var(--s-2); font-weight: 600; }
+.term p { margin-top: var(--s-4); color: var(--text-muted); }
+@media (max-width: 760px) { .terms { grid-template-columns: 1fr; } }
+.includes { columns: 2; column-gap: var(--s-8); margin: var(--s-4) 0 0; padding-left: 1.2em; max-width: 920px; }
+.includes li { break-inside: avoid; margin-bottom: var(--s-2); }
+@media (max-width: 760px) { .includes { columns: 1; } }
+.more { margin-top: var(--s-6); max-width: var(--measure); }
+.after { margin-top: var(--s-8); }
+.after h3 { margin-bottom: var(--s-2); }
+.after .rows dt span { display: block; font-weight: 500; font-size: var(--fs-caption); color: var(--text-muted); margin-top: 2px; }
+.call { margin-top: var(--s-7); display: flex; flex-wrap: wrap; gap: var(--s-3) var(--s-5); align-items: center; }
+
+/* "Book a 20-minute call" opens an honest note in place. */
+.note-pop { margin: auto; max-width: 420px; padding: var(--s-5) var(--s-6); border: 1px solid var(--border-strong); border-radius: var(--r-surface); background: var(--surface-raised); color: var(--text); font: 400 var(--fs-body)/1.5 var(--font); box-shadow: var(--shadow-satellite); }
+.note-pop::backdrop { background: transparent; } /* one local answer: the note opens, the page stays as it was */
+.note-pop button { margin-top: var(--s-4); }
+.linkbtn { border: 0; background: none; padding: 0; min-height: 44px; color: var(--link); font: 600 var(--fs-body) var(--font); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+
+/* Close: one large paragraph, a few words in the accent green. */
+.close p.manifesto { font-family: var(--font-display); font-weight: 500; font-size: clamp(2rem, 1.2rem + 3vw, 3.5rem); line-height: 1.12; letter-spacing: -0.015em; max-width: 20ch; }
+.close .accent { color: var(--link); font-style: italic; font-weight: 400; }
+.close .btn { margin-top: var(--s-6); }
+
+/* Footer (canonical) */
+.foot { border-top: 1px solid var(--border); padding-block: var(--s-7); font-size: var(--fs-small); color: var(--text-muted); }
+.foot-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: var(--s-6); align-items: start; }
+.foot .brand { font-size: 1rem; }
+.foot p { margin-top: var(--s-3); max-width: 60ch; }
+.foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s-1); justify-items: start; }
+.foot a, .foot .linkbtn { color: var(--text); font-size: var(--fs-small); }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: 1fr; } }
+
+/* "What happens after you sign": the left column is a time, set quiet, not a bold label. */
+.rows.when dt { font-weight: 500; color: var(--text-muted); font-size: var(--fs-small); }
+.rows.when dd { color: var(--text); }
