@@ -21,6 +21,10 @@
 .hero-visual .cv { max-height: 420px; }
 /* The phone version is tall (viewBox 360 by 594); a height cap would shrink its labels below 11 px. */
 .hero-visual .cv-compact { max-height: none; }
+/* The payoff of the picture: at least as readable as the project names. Colour and weight only; the fade-in stays. */
+.hero-visual .cv .round-label { font-size: 15px; }
+.hero-visual .cv .round-sub { font-weight: 500; fill: var(--text); }
+.hero-visual .cv-wide .round-sub { font-size: 14px; }
 @media (max-width: 900px) {
   .hero-copy { grid-template-columns: 1fr; gap: var(--s-4); }
   .hero h1 { font-size: clamp(2.5rem, 1.4rem + 3.6vw, 4.25rem); }
