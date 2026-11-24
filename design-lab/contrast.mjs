@@ -1,10 +1,10 @@
 // WCAG 2.x contrast check for design-lab/tokens.css, both themes.
-// Run: node design-lab/contrast.mjs   (prints a markdown table, exits 1 on any failure)
+// Run: node design-lab/contrast.mjs [path/to/file.css]   (default design-lab/tokens.css; prints a markdown table, exits 1 on any failure)
 // Text pairs need 4.5:1 (AA, normal text). Non-text pairs (control outlines, focus ring,
 // chart marks, icons) need 3:1 (WCAG 1.4.11).
 import { readFileSync } from "node:fs";
 
-const css = readFileSync(new URL("./tokens.css", import.meta.url), "utf8");
+const css = readFileSync(process.argv[2] ?? new URL("./tokens.css", import.meta.url), "utf8");
 const tokens = {};
 for (const m of css.matchAll(/--([\w-]+):\s*light-dark\((#[0-9a-fA-F]{6}),\s*(#[0-9a-fA-F]{6})\)/g)) {
   tokens[m[1]] = { light: m[2], dark: m[3] };
