@@ -35,7 +35,7 @@ EMOJI = r"[\U0001F300-\U0001FAFF☀-➿]"
 # Strings reviewed by a person: the term is used in a denial or a required qualifier, not as a claim.
 ALLOWED = {
     # Denials and required statements: the term is used to say what Sphyr does not do or does not offer.
-    "Sphyr hands partners a record and leaves the decision with them. It holds only what colleagues chose to say on their cards, so nobody's hours or output are watched. No AI writes or scores anything. Your people come in from a spreadsheet, and Sphyr sits beside your HR system.",
+    "Sphyr hands partners a record and leaves the decision with them. The feedback in that record comes only from what colleagues chose to say on their cards, and Sphyr logs no hours or screen activity. No AI writes or scores anything. Your people come in from a spreadsheet, and Sphyr sits beside your HR system.",
     "If you sign afterwards, the ₹25,000 comes off your first annual bill. If you don't, you get your data as a spreadsheet (CSV) and we delete the rest. The fee isn't refunded.",
     # Cited research fact (message guideline section 3).
     "of employees strongly agree that their performance reviews are fair, and 26% that they are accurate.",
