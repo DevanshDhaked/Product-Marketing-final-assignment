@@ -7,6 +7,9 @@ timestamp: 2026-11-24T17:11:40Z
 ---
 
 ## 2026-11-25
+* **Creation**: Added [Home page teammate report, phase 2](home_report.md).
+* **Creation**: Added [Hub and propaganda teammate report, phase 2](hub_report.md).
+* **Creation**: Added [Walkthrough teammate report, phase 2](walkthrough_report.md).
 * **Creation**: Added [LinkedIn posts and ad teammate report, phase 2](posts_report.md).
 * **Creation**: Added [Site CSS teammate report, phase 2](sitecss_report.md).
 * **Creation**: Added [Design teammate report, phases 1a and 1b](design_report.md).
