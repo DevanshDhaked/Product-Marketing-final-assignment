@@ -4,12 +4,11 @@
   "use strict";
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
-  var calm = window.matchMedia("(prefers-reduced-motion: reduce)");
   var SCALE = 50; // bar length scale shared by both columns, so the bars compare fairly
 
   var names = { tara: "Tara", nikhil: "Nikhil" };
   var turns = {
-    tara: "You picked Tara, and you might still be right, because partners still decide. You now decide with more in front of you: 13 colleagues saw Nikhil's work over six cycles, and very little of it reached you in a client meeting.",
+    tara: "You picked Tara, and you might still be right. Partners still decide, and you now decide with more in front of you: 13 colleagues saw Nikhil's work over six cycles, and very little of it reached you in a client meeting.",
     nikhil: "You picked Nikhil on a hunch, and the hunch now has a record behind it: 13 colleagues over six cycles, in their own words. Partners still decide, with what the people who saw the work said in front of them."
   };
   var marks = $$(".wt-progress li");
@@ -17,15 +16,13 @@
 
   function done(n) { if (marks[n - 1]) marks[n - 1].classList.add("is-done"); }
 
-  function reveal(id, focus) {
+  // The next step appears below with no scroll and no focus move, so the local answer stays in view
+  // and arrow keys keep moving between radios (WCAG 3.2.2).
+  function reveal(id) {
     var s = document.getElementById(id);
     if (!s.classList.contains("wt-locked")) return;
     s.classList.remove("wt-locked");
     s.classList.add("is-new");
-    if (!focus) return;
-    var h = $("h2", s);
-    s.scrollIntoView({ behavior: calm.matches ? "auto" : "smooth", block: "start" });
-    h.focus({ preventScroll: true });
   }
 
   // Step 1: the pick
@@ -35,7 +32,7 @@
       $("#reply-1").textContent = "You picked " + names[pick] + ". We'll come back to that at the end.";
       $("#turn").textContent = turns[pick];
       done(1);
-      reveal("step-2", true);
+      reveal("step-2");
     });
   });
 
@@ -66,7 +63,7 @@
     var reply;
 
     if (answer === "none") {
-      reply = took + " This card tells Sphyr you didn't work with Nikhil this fortnight, so it adds nothing to his record. The option is there so that people with nothing to rate don't have to make something up.";
+      reply = took + " This card tells Sphyr you didn't work with Nikhil this fortnight, so it adds nothing to Nikhil's record. The option is there so that people with nothing to rate don't have to make something up.";
     } else {
       reply = took + " Your card joins the other 13 from Nikhil's circle this cycle, and Nikhil sees what you said without your name on it.";
       var resp = $("#n-responses");
@@ -93,7 +90,11 @@
     $("#card-done").hidden = false;
     $("#reply-2").textContent = reply;
     done(2); done(3); done(4);
-    reveal("step-4", false);
-    reveal("step-3", true);
+    reveal("step-3");
+    reveal("step-4");
+    $("#card-done").focus({ preventScroll: true }); // Submit is gone; keep focus on its answer, in place
+    // The card got shorter, which can leave the answer above the screen on phones. Bring it back, instantly.
+    var r = $("#reply-2").getBoundingClientRect();
+    if (r.top < 64 || r.bottom > window.innerHeight) $("#card-done").scrollIntoView({ block: "start" });
   });
 })();

@@ -6,8 +6,6 @@
 .wt-step { scroll-margin-top: 64px; } /* the sticky nav is 64px tall; revealed steps scroll in below it */
 .wt-step.is-new { animation: wt-in 200ms var(--ease); } /* plays once on reveal; base.css turns it off under reduced motion */
 @keyframes wt-in { from { opacity: 0; transform: translateY(8px); } }
-.wt-step h2:focus { outline: none; }
-.wt-step h2:focus-visible { outline: 2px solid var(--focus); outline-offset: 4px; }
 
 /* Intro and progress */
 .wt-intro .sample-label { margin-top: var(--s-5); }
@@ -57,6 +55,7 @@
 .wt-actions .fx-btn { min-height: 44px; height: auto; padding: 0 20px; cursor: pointer; }
 .wt-actions .fx-btn:disabled { opacity: .45; cursor: not-allowed; }
 .wt-done .fx-row-title { margin-top: 4px; }
+.wt-done { scroll-margin-top: 80px; } /* clears the 64px sticky nav */
 .wt-done-row { display: grid; grid-template-columns: 36px 1fr 20px; align-items: center; gap: 12px; margin-top: 12px; padding: 12px; border: 1px solid var(--border); border-radius: var(--r-control); }
 .wt-done-row .icon { width: 20px; height: 20px; color: var(--text-muted); }
 

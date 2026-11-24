@@ -9,7 +9,9 @@
 <link rel="preload" href="fonts/newsreader-display-normal-500.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/demo.css">
-<link rel="icon" href="assets/sphyr-logo.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon.ico" sizes="48x48">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
 <title>The 2-minute walkthrough | Sphyr</title>
 <meta name="description" content="Pick a consultant to promote, fill one Sphyr card and see what partners would see. Sample data, fictional people, no sign-up.">
@@ -72,7 +74,7 @@
 <section class="section wt-step" id="step-1" aria-labelledby="h-step-1">
   <div class="wrap split wt-split">
     <div class="stack">
-      <h2 id="h-step-1" tabindex="-1">A promotion round is coming, with one senior consultant slot</h2>
+      <h2 id="h-step-1">A promotion round is coming, with one senior consultant slot</h2>
       <p>You're one of the partners deciding. Two consultants from the practice are up, and this is what you remember of each.</p>
       <p class="wt-reply" id="reply-1" aria-live="polite"></p>
     </div>
@@ -83,14 +85,14 @@
         <input type="radio" name="wt-pick" value="tara">
         <span class="wt-pick-body">
           <span class="wt-person"><span class="fx-avatar av-amber" aria-hidden="true">TM</span><span><b>Tara Menon</b><span class="muted">Consultant</span></span></span>
-          <span class="wt-memory">She presented the findings to the client's leadership on your last two engagements, so you've seen her work up close.</span>
+          <span class="wt-memory">On your last two engagements, Tara presented the findings to the client's leadership, so you've seen the work up close.</span>
         </span>
       </label>
       <label class="wt-pick">
         <input type="radio" name="wt-pick" value="nikhil">
         <span class="wt-pick-body">
           <span class="wt-person"><span class="fx-avatar av-blue" aria-hidden="true">NR</span><span><b>Nikhil Rao</b><span class="muted">Consultant</span></span></span>
-          <span class="wt-memory">He was on the same two engagements. You rarely saw him in client meetings and couldn't say much about what he did.</span>
+          <span class="wt-memory">Nikhil was on the same two engagements. You rarely saw Nikhil in client meetings and couldn't say much about Nikhil's part in them.</span>
         </span>
       </label>
     </fieldset>
@@ -100,10 +102,10 @@
 <section class="section wt-step wt-locked" id="step-2" aria-labelledby="h-step-2">
   <div class="wrap split wt-split wt-split-card">
     <div class="stack">
-      <h2 id="h-step-2" tabindex="-1">Now fill in one card the way Nikhil's colleagues do</h2>
+      <h2 id="h-step-2">Now fill in one card the way Nikhil's colleagues do</h2>
       <p>Every two weeks, each person in a consultant's circle fills in a short card about them. Imagine you were on Nikhil's engagement team this fortnight.</p>
-      <p class="wt-reply" id="reply-2" aria-live="polite"></p>
     </div>
+    <div class="stack">
     <figure class="figure">
       <div class="stage fx-feedback wt-card" role="group" aria-label="Sample feedback card from the Sphyr prototype">
         <div class="fx-panel fx-hero-card">
@@ -144,7 +146,7 @@
             </details>
             <div class="wt-actions"><button class="fx-btn primary" type="button" id="wt-submit" disabled>Submit</button></div>
           </div>
-          <div class="fx-body wt-done" id="card-done" hidden>
+          <div class="fx-body wt-done" id="card-done" tabindex="-1" hidden>
             <div class="fx-vba-h">Submitted</div>
             <div class="fx-row-title">Completed Feedback This Fortnight</div>
             <div class="wt-done-row"><span class="fx-avatar av-blue" aria-hidden="true">NR</span><div><div class="fx-name">Nikhil Rao</div><div class="fx-meta">Submitted · Read only</div></div><svg class="icon" aria-hidden="true"><use id="done-icon" href="assets/icons.svg#i-smile"/></svg></div>
@@ -157,14 +159,16 @@
       </div>
       <figcaption><span class="sample-label"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-info"/></svg>Prototype screen. Sample data, fictional people.</span></figcaption>
     </figure>
+    <p class="wt-reply" id="reply-2" aria-live="polite"></p>
+    </div>
   </div>
 </section>
 
 <section class="section wt-step wt-locked" id="step-3" aria-labelledby="h-step-3">
   <div class="wrap">
     <div class="doc stack">
-      <h2 id="h-step-3" tabindex="-1">What partners see for both of them</h2>
-      <p>This is Sphyr's Member Insights view after six cycles of cards, about 12 weeks, from the 14 people in each consultant's circle. Nikhil's cards came from 13 of the 14 people in his circle, against 10 for Tara. The tags they picked most for him were Takes Initiative and Solution-oriented.</p>
+      <h2 id="h-step-3">What partners see for both of them</h2>
+      <p>This is Sphyr's Member Insights view after six cycles of cards, about 12 weeks, from the 14 people in each consultant's circle. Nikhil's cards came from 13 of the 14 people in that circle, against 10 for Tara. The tags they picked most for Nikhil were Takes Initiative and Solution-oriented.</p>
     </div>
     <figure class="figure wt-figure">
       <div class="stage wt-insights" role="group" aria-label="Sample Member Insights screen from the Sphyr prototype, showing Tara Menon and Nikhil Rao">
@@ -236,7 +240,7 @@
 <section class="section wt-step wt-locked" id="step-4" aria-labelledby="h-step-4">
   <div class="wrap pair wt-end">
     <div class="stack">
-      <h2 id="h-step-4" tabindex="-1">The engagement ends. The evidence stays.</h2>
+      <h2 id="h-step-4">The engagement ends. The evidence stays.</h2>
       <p id="turn" class="lede">Partners still decide. Sphyr gives them the view of the people who saw the work, cycle by cycle, while the engagement team is still together.</p>
       <p>In a firm that uses Sphyr, a record like this builds up for every consultant, two minutes at a time.</p>
     </div>
