@@ -10,6 +10,10 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-25: Ribbon visual labels
+
+- **Decision:** the engagement boxes in the ribbon visual say "Project 1 · 3 teammates" to "Project 4 · 3 teammates" instead of consulting engagement types ("Pricing review", "Market entry" and so on), which read as jargon unrelated to feedback.
+
 ## 2026-11-25: No month in public copy, no customer talk
 
 - **Timing:** public copy names no month. It says "promotion time", "the promotion round" or "when partners calibrate", at most once per piece. The assignment does not require a date, and a repeated month became a tic and an assumption about every firm.
