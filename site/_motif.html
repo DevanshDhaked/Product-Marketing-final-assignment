@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Sphyr page template. Copy this file to site/<page>.html and fill the marked places. Do not edit the
+     shared files it links (css/base.css, css/motif.css, js/theme.js, js/nav.js, js/motif.js, fonts/, assets/).
+     Order matters: the colour-scheme meta and the inline theme script come before any stylesheet, so a
+     stored theme applies on the first frame (no flash). Every page sits at the site/ root, so paths are relative to it. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem("sphyr-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preload" href="fonts/manrope-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/newsreader-display-normal-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/motif.css">
+<link rel="icon" href="assets/sphyr-logo.svg" type="image/svg+xml">
+
+<!-- PAGE TITLE AND DESCRIPTION: replace both, and the og:title, og:description and og:url to match. -->
+<title>Sphyr | Ribbon motif specimen</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Every two weeks, Sphyr asks the people on each engagement how working with a consultant went, so partners can look at the whole year when they decide promotions.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sphyr">
+<meta property="og:title" content="Sphyr">
+<meta property="og:description" content="Every two weeks, Sphyr asks the people on each engagement how working with a consultant went, so partners can look at the whole year when they decide promotions.">
+<meta property="og:url" content="https://devanshdhaked.github.io/Product-Marketing-final-assignment/">
+<meta property="og:image" content="https://devanshdhaked.github.io/Product-Marketing-final-assignment/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- Canonical nav (2026-11-25, replaces the 3-item nav): logo (home), How it works, For partners, Pricing,
+     Deliverables, the walkthrough button, the theme switch. The first three links point at anchors the home
+     page provides (#how, #partners, #pricing). Below 1000px they move into the Menu popover and Deliverables
+     stays in the bar; below 760px the button hides, so the page itself must carry a link to demo.html.
+     Current page: add aria-current="page" to its link in BOTH lists (the brand link on index.html, Deliverables
+     on deliverables.html and the three deliverable pages, the button on demo.html). -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html"><svg class="mark mark--mono" viewBox="0 0 1254 1254" aria-hidden="true"><use href="assets/sphyr-mark.svg#mark"/></svg>Sphyr</a>
+    <nav class="nav-links" aria-label="Main">
+      <a class="nav-wide" href="index.html#how">How it works</a>
+      <a class="nav-wide" href="index.html#partners">For partners</a>
+      <a class="nav-wide" href="index.html#pricing">Pricing</a>
+      <a href="deliverables.html">Deliverables</a>
+    </nav>
+    <div class="nav-end">
+      <a class="btn btn-primary" href="demo.html">See the 2-minute walkthrough</a>
+      <button class="nav-menu-btn" type="button" popovertarget="nav-menu" aria-controls="nav-menu" aria-expanded="false">Menu<svg class="icon icon-sm" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"/></svg></button>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Dark theme">
+        <svg class="icon icon-sm" aria-hidden="true"><use href="assets/icons.svg#i-moon"/></svg><span class="track" aria-hidden="true"><span class="knob"></span></span>
+      </button>
+    </div>
+  </div>
+  <nav id="nav-menu" class="nav-menu" popover aria-label="Menu">
+    <ul>
+      <li><a href="index.html#how">How it works</a></li>
+      <li><a href="index.html#partners">For partners</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="deliverables.html">Deliverables</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="main">
+<!-- Specimen of the ribbon motif for page builders (gate 1b labels). Not linked from any page.
+     Copy the <figure> blocks into your page as they are; keep the ids unique per page. -->
+<section class="section"><div class="wrap">
+  <h1>Ribbon motif</h1>
+  <figure class="figure">
+      <svg id="cv1" class="cv cv-wide play" viewBox="0 0 1000 370" role="img" aria-label="Four projects across a year, three teammates on each. Each teammate adds a coloured strand. Each project ends and fades to an outline, but its strands stay in one record line, which reaches the promotion round and becomes the Sphyr sphere.">
+<g class="eng" style="--i:0"><rect class="eng-ghost" x="20" y="6" width="148" height="60" rx="12"/><rect class="eng-solid" x="20" y="6" width="148" height="60" rx="12"/><text class="eng-name" x="94.0" y="31" text-anchor="middle">Project 1</text><text class="eng-sub" x="94.0" y="51" text-anchor="middle">3 teammates</text><path class="strand" pathLength="1" d="M68.0 66 C68.0 156 108.0 256.0 163.0 256.0 L750 256.0 C805 256.0 775 153.5 870.0 153.5" style="stroke:var(--s1);--j:0"/><path class="strand" pathLength="1" d="M94.0 66 C94.0 156 134.0 262.5 189.0 262.5 L750 262.5 C805 262.5 775 164.5 870.0 164.5" style="stroke:var(--s3);--j:1"/><path class="strand" pathLength="1" d="M120.0 66 C120.0 156 160.0 269.0 215.0 269.0 L750 269.0 C805 269.0 775 175.5 870.0 175.5" style="stroke:var(--s5);--j:2"/></g>
+<g class="eng" style="--i:1"><rect class="eng-ghost" x="182" y="6" width="148" height="60" rx="12"/><rect class="eng-solid" x="182" y="6" width="148" height="60" rx="12"/><text class="eng-name" x="256.0" y="31" text-anchor="middle">Project 2</text><text class="eng-sub" x="256.0" y="51" text-anchor="middle">3 teammates</text><path class="strand" pathLength="1" d="M230.0 66 C230.0 156 270.0 275.5 325.0 275.5 L750 275.5 C805 275.5 775 186.5 870.0 186.5" style="stroke:var(--s2);--j:0"/><path class="strand" pathLength="1" d="M256.0 66 C256.0 156 296.0 282.0 351.0 282.0 L750 282.0 C805 282.0 775 197.5 870.0 197.5" style="stroke:var(--s7);--j:1"/><path class="strand" pathLength="1" d="M282.0 66 C282.0 156 322.0 288.5 377.0 288.5 L750 288.5 C805 288.5 775 208.5 870.0 208.5" style="stroke:var(--s6);--j:2"/></g>
+<g class="eng" style="--i:2"><rect class="eng-ghost" x="344" y="6" width="148" height="60" rx="12"/><rect class="eng-solid" x="344" y="6" width="148" height="60" rx="12"/><text class="eng-name" x="418.0" y="31" text-anchor="middle">Project 3</text><text class="eng-sub" x="418.0" y="51" text-anchor="middle">3 teammates</text><path class="strand" pathLength="1" d="M392.0 66 C392.0 156 432.0 295.0 487.0 295.0 L750 295.0 C805 295.0 775 219.5 870.0 219.5" style="stroke:var(--s3);--j:0"/><path class="strand" pathLength="1" d="M418.0 66 C418.0 156 458.0 301.5 513.0 301.5 L750 301.5 C805 301.5 775 230.5 870.0 230.5" style="stroke:var(--s8);--j:1"/><path class="strand" pathLength="1" d="M444.0 66 C444.0 156 484.0 308.0 539.0 308.0 L750 308.0 C805 308.0 775 241.5 870.0 241.5" style="stroke:var(--s1);--j:2"/></g>
+<g class="eng" style="--i:3"><rect class="eng-ghost" x="506" y="6" width="148" height="60" rx="12"/><rect class="eng-solid" x="506" y="6" width="148" height="60" rx="12"/><text class="eng-name" x="580.0" y="31" text-anchor="middle">Project 4</text><text class="eng-sub" x="580.0" y="51" text-anchor="middle">3 teammates</text><path class="strand" pathLength="1" d="M554.0 66 C554.0 156 594.0 314.5 649.0 314.5 L750 314.5 C805 314.5 775 252.5 870.0 252.5" style="stroke:var(--s4);--j:0"/><path class="strand" pathLength="1" d="M580.0 66 C580.0 156 620.0 321.0 675.0 321.0 L750 321.0 C805 321.0 775 263.5 870.0 263.5" style="stroke:var(--s5);--j:1"/><path class="strand" pathLength="1" d="M606.0 66 C606.0 156 646.0 327.5 701.0 327.5 L750 327.5 C805 327.5 775 274.5 870.0 274.5" style="stroke:var(--s2);--j:2"/></g>
+<svg class="mark mark--strands mark-play" data-mark x="800" y="122" width="184" height="184" viewBox="0 0 1254 1254" aria-hidden="true"><use href="assets/sphyr-mark.svg#mark"/></svg>
+<g class="round"><text class="round-label" x="892" y="336" text-anchor="middle">Promotion round</text><text class="round-sub" x="892" y="356" text-anchor="middle">The whole year is in the file</text></g>
+      </svg>
+      <svg id="cv1c" class="cv cv-compact play" viewBox="0 -4 360 594" role="img" aria-label="Four projects across a year, three teammates on each. Each teammate adds a coloured strand. Each project ends and fades to an outline, but its strands stay in one record line, which reaches the promotion round and becomes the Sphyr sphere.">
+<g class="eng" style="--i:0"><rect class="eng-ghost" x="12" y="-2" width="160" height="60" rx="12"/><rect class="eng-solid" x="12" y="-2" width="160" height="60" rx="12"/><text class="eng-name" x="92.0" y="23" text-anchor="middle">Project 1</text><text class="eng-sub" x="92.0" y="43" text-anchor="middle">3 teammates</text><path class="strand" pathLength="1" d="M172 24 C202 24 232 24 232 64 L232 350 C232 400 146 385 146 452" style="stroke:var(--s1);--j:0"/><path class="strand" pathLength="1" d="M172 35 C202 35 240 35 240 75 L240 350 C240 400 156 385 156 452" style="stroke:var(--s3);--j:1"/><path class="strand" pathLength="1" d="M172 46 C202 46 248 46 248 86 L248 350 C248 400 164 385 164 452" style="stroke:var(--s5);--j:2"/></g>
+<g class="eng" style="--i:1"><rect class="eng-ghost" x="12" y="70" width="160" height="60" rx="12"/><rect class="eng-solid" x="12" y="70" width="160" height="60" rx="12"/><text class="eng-name" x="92.0" y="95" text-anchor="middle">Project 2</text><text class="eng-sub" x="92.0" y="115" text-anchor="middle">3 teammates</text><path class="strand" pathLength="1" d="M172 96 C202 96 256 96 256 136 L256 350 C256 400 174 385 174 452" style="stroke:var(--s2);--j:0"/><path class="strand" pathLength="1" d="M172 107 C202 107 264 107 264 147 L264 350 C264 400 182 385 182 452" style="stroke:var(--s7);--j:1"/><path class="strand" pathLength="1" d="M172 118 C202 118 272 118 272 158 L272 350 C272 400 192 385 192 452" style="stroke:var(--s6);--j:2"/></g>
+<g class="eng" style="--i:2"><rect class="eng-ghost" x="12" y="142" width="160" height="60" rx="12"/><rect class="eng-solid" x="12" y="142" width="160" height="60" rx="12"/><text class="eng-name" x="92.0" y="167" text-anchor="middle">Project 3</text><text class="eng-sub" x="92.0" y="187" text-anchor="middle">3 teammates</text><path class="strand" pathLength="1" d="M172 168 C202 168 280 168 280 208 L280 350 C280 400 200 385 200 452" style="stroke:var(--s3);--j:0"/><path class="strand" pathLength="1" d="M172 179 C202 179 288 179 288 219 L288 350 C288 400 210 385 210 452" style="stroke:var(--s8);--j:1"/><path class="strand" pathLength="1" d="M172 190 C202 190 296 190 296 230 L296 350 C296 400 218 385 218 452" style="stroke:var(--s1);--j:2"/></g>
+<g class="eng" style="--i:3"><rect class="eng-ghost" x="12" y="214" width="160" height="60" rx="12"/><rect class="eng-solid" x="12" y="214" width="160" height="60" rx="12"/><text class="eng-name" x="92.0" y="239" text-anchor="middle">Project 4</text><text class="eng-sub" x="92.0" y="259" text-anchor="middle">3 teammates</text><path class="strand" pathLength="1" d="M172 240 C202 240 304 240 304 280 L304 350 C304 400 228 385 228 452" style="stroke:var(--s4);--j:0"/><path class="strand" pathLength="1" d="M172 251 C202 251 312 251 312 291 L312 350 C312 400 236 385 236 452" style="stroke:var(--s5);--j:1"/><path class="strand" pathLength="1" d="M172 262 C202 262 320 262 320 302 L320 350 C320 400 246 385 246 452" style="stroke:var(--s2);--j:2"/></g>
+<svg class="mark mark--strands mark-play" data-mark x="124" y="390" width="144" height="144" viewBox="0 0 1254 1254" aria-hidden="true"><use href="assets/sphyr-mark.svg#mark"/></svg>
+<g class="round"><text class="round-label" x="196" y="562" text-anchor="middle">Promotion round</text><text class="round-sub" x="196" y="581" text-anchor="middle">The whole year is in the file</text></g>
+      </svg>
+    <figcaption class="btn-row" style="margin-top:var(--s-4)"><button class="btn btn-secondary" type="button" data-replay="cv1">Play again</button><span class="sample-label">Illustration. The projects are examples.</span></figcaption>
+  </figure>
+</div></section>
+<section class="section"><div class="wrap">
+  <div class="groups" data-circle="circle1" role="group" aria-label="Show one group" style="max-width:320px">
+    <button type="button" data-group="peers" aria-pressed="false">Peers <span>4</span></button>
+    <button type="button" data-group="seniors" aria-pressed="false">Seniors <span>3</span></button>
+    <button type="button" data-group="juniors" aria-pressed="false">Juniors <span>4</span></button>
+    <button type="button" data-group="clients" aria-pressed="false">Clients <span>3</span></button>
+  </div>
+        <figure class="figure circle-fig">
+          <svg id="circle1" class="circle" viewBox="50 6 900 488" role="img" aria-label="A consultant at the centre with 14 strands coming in from four groups: four peers, three seniors, four juniors and three clients.">
+<path class="rbn g-peers" pathLength="1" d="M198.5 331.3 Q305.4 211.7 472.3 215.8" style="stroke:var(--s1);--j:0"/>
+<path class="rbn g-peers" pathLength="1" d="M173.2 277.8 Q330.4 180.7 482.8 209.5" style="stroke:var(--s2);--j:1"/>
+<path class="rbn g-peers" pathLength="1" d="M173.2 222.2 Q368.5 155.0 494.6 206.3" style="stroke:var(--s5);--j:2"/>
+<path class="rbn g-peers" pathLength="1" d="M198.5 168.7 Q416.8 136.7 506.9 206.5" style="stroke:var(--s3);--j:3"/>
+<path class="rbn g-seniors" pathLength="1" d="M409.0 57.7 Q589.7 138.5 537.7 227.3" style="stroke:var(--s3);--j:4"/>
+<path class="rbn g-seniors" pathLength="1" d="M500.0 50.0 Q636.9 157.9 542.5 238.6" style="stroke:var(--s4);--j:5"/>
+<path class="rbn g-seniors" pathLength="1" d="M591.0 57.7 Q673.5 184.3 544.0 250.8" style="stroke:var(--s7);--j:6"/>
+<path class="rbn g-juniors" pathLength="1" d="M801.5 168.7 Q694.6 288.3 527.7 284.2" style="stroke:var(--s6);--j:7"/>
+<path class="rbn g-juniors" pathLength="1" d="M826.8 222.2 Q669.6 319.3 517.2 290.5" style="stroke:var(--s5);--j:8"/>
+<path class="rbn g-juniors" pathLength="1" d="M826.8 277.8 Q631.5 345.0 505.4 293.7" style="stroke:var(--s1);--j:9"/>
+<path class="rbn g-juniors" pathLength="1" d="M801.5 331.3 Q583.2 363.3 493.1 293.5" style="stroke:var(--s8);--j:10"/>
+<path class="rbn g-clients" pathLength="1" d="M591.0 442.3 Q410.3 361.5 462.3 272.7" style="stroke:var(--s7);--j:11"/>
+<path class="rbn g-clients" pathLength="1" d="M500.0 450.0 Q363.1 342.1 457.5 261.4" style="stroke:var(--s8);--j:12"/>
+<path class="rbn g-clients" pathLength="1" d="M409.0 442.3 Q326.5 315.7 456.0 249.2" style="stroke:var(--s2);--j:13"/>
+<circle class="core" cx="500" cy="250" r="40"/><text class="core-label" x="500" y="255" text-anchor="middle">Consultant</text>
+<text class="grp-label" x="148" y="255" text-anchor="end">Peers</text>
+<text class="grp-label" x="500" y="31" text-anchor="middle">Seniors</text>
+<text class="grp-label" x="852" y="255" text-anchor="start">Juniors</text>
+<text class="grp-label" x="500" y="479" text-anchor="middle">Clients</text>
+          </svg>
+          <figcaption><span class="sample-label">Illustration: a consultant and 14 people, the average circle in the 2018 paper-and-pen pilot run by Sphyr's founder.</span></figcaption>
+</div></section>
+</main>
+
+<!-- Canonical footer. "Book a 20-minute call" opens the #call-note popover below. -->
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="index.html"><svg class="mark mark--mono" viewBox="0 0 1254 1254" aria-hidden="true"><use href="assets/sphyr-mark.svg#mark"/></svg>Sphyr</a>
+      <p>Made by Team 03 (Aryan, Abhinav, Devansh and Bheema) for the Product Marketing course (PD2.501) at IIIT Hyderabad, from the Sphyr Overview Whitepaper v0.3 (2018) and the Sphyr.io product documentation. It is a course project, and Sphyr is not on sale here.</p>
+    </div>
+    <ul>
+      <li><a href="demo.html">See the 2-minute walkthrough</a></li>
+      <li><a href="deliverables.html">Deliverables</a></li>
+      <li><button class="linkbtn" type="button" popovertarget="call-note">Book a 20-minute call</button></li>
+    </ul>
+  </div>
+</footer>
+
+<div id="call-note" class="note-pop" popover>
+  <p>Course project: in a live launch this books a 20-minute call with our team.</p>
+  <button class="linkbtn" type="button" popovertarget="call-note" popovertargetaction="hide">Close</button>
+</div>
+
+<script src="js/theme.js" defer></script>
+<script src="js/nav.js" defer></script>
+<script src="js/motif.js" defer></script>
+</body>
+</html>
