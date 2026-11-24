@@ -9,7 +9,9 @@
    .hub-index   the hub's index entries (number, display-serif title, one line, one link); nothing boxed
    .seq         the campaign sequence figure: one row per stage, a bar across a week ruler; a plain list on phones
    .table-stack a table that stacks into labelled blocks under 640px (cells need data-label)
-   .sources     numbered source list in small type */
+   .sources     numbered source list in small type
+   .page-prop   propaganda page only: .prop-card summary card, .prop-layout body grid, .toc contents
+                (sticky column on wide screens, a sticky bar under the nav on phones once propaganda.js runs) */
 
 /* Page head */
 .doc-head { display: grid; grid-template-columns: 7fr 4fr; gap: var(--s-8); align-items: start; }
@@ -96,3 +98,42 @@
 .sources { margin: 0; padding-left: var(--s-5); font-size: var(--fs-small); color: var(--text-muted); max-width: 80ch; }
 .sources li + li { margin-top: var(--s-2); }
 .sources a { overflow-wrap: anywhere; }
+
+/* Propaganda page: a summary card, then seven short sections beside a contents list. */
+.page-prop .prop-top { padding-block: var(--s-7); }
+.prop-card { margin-top: var(--s-6); padding: var(--s-6); }
+.prop-card .core-line { color: var(--text); }
+.prop-card dl { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s-5) var(--s-7); margin: 0; }
+.prop-card dt { margin-bottom: var(--s-1); font-size: var(--fs-caption); font-weight: 600; color: var(--text-muted); }
+.prop-card dd { margin: 0; color: var(--text); }
+@media (max-width: 640px) { .prop-card { padding: var(--s-5); } .prop-card dl { grid-template-columns: 1fr; gap: var(--s-4); } }
+
+.prop-layout { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: var(--s-8); align-items: start; }
+.prop-body section { scroll-margin-top: calc(65px + var(--s-5)); }
+.prop-body section + section { margin-top: var(--s-7); }
+.prop-body h2 { margin-bottom: var(--s-3); }
+
+/* Contents: nav is 64px plus a 1px border, so sticky offsets start at 65px. */
+.toc { position: sticky; top: calc(65px + var(--s-6)); font-size: var(--fs-small); }
+.toc summary { display: none; }
+.toc ol { list-style: none; margin: 0; padding: 0; border-left: 1px solid var(--border); }
+.toc li + li { margin-top: var(--s-1); }
+.toc a { display: block; margin-left: -1px; padding: var(--s-1) 0 var(--s-1) var(--s-4); border-left: 2px solid transparent; color: var(--text-muted); text-decoration: none; }
+.toc a:hover { color: var(--text); }
+.toc a[aria-current="true"] { border-left-color: var(--brand); color: var(--text); font-weight: 600; }
+
+@media (max-width: 900px) {
+  .prop-layout { grid-template-columns: 1fr; gap: var(--s-6); }
+  .toc { position: static; }
+  .toc summary { display: flex; align-items: center; gap: var(--s-2); min-height: 44px; cursor: pointer; list-style: none; }
+  .toc summary::-webkit-details-marker { display: none; }
+  .toc-label { flex-shrink: 0; font-weight: 600; color: var(--text); }
+  .toc-now { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text-muted); }
+  .toc-now:not(:empty)::before { content: "\00B7"; margin-right: var(--s-2); }
+  .toc summary .icon { flex-shrink: 0; margin-left: auto; transition: transform var(--dur) var(--ease); }
+  .toc[open] summary .icon { transform: rotate(180deg); }
+  .toc ol { margin-bottom: var(--s-3); }
+  /* With propaganda.js: a closed bar that sticks under the nav; without it, a normal list at the top. */
+  .toc.is-live { position: sticky; top: 65px; z-index: 5; margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); background: var(--bg); border-bottom: 1px solid var(--border); }
+  .prop-body section { scroll-margin-top: calc(65px + 45px + var(--s-4)); }
+}
