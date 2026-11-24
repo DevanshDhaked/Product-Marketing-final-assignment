@@ -1,138 +1,415 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Sphyr: Promote on merit, not politics</title>
-<meta name="description" content="Sphyr pools two-minute anonymous ratings every fortnight from everyone around each employee, so promotions in growing companies run on merit, not politics.">
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/svg+xml" href="sphere.svg">
+<!-- Sphyr page template. Copy this file to site/<page>.html and fill the marked places. Do not edit the
+     shared files it links (css/base.css, css/motif.css, js/theme.js, js/nav.js, js/motif.js, fonts/, assets/).
+     Order matters: the colour-scheme meta and the inline theme script come before any stylesheet, so a
+     stored theme applies on the first frame (no flash). Every page sits at the site/ root, so paths are relative to it. -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem("sphyr-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preload" href="fonts/manrope-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/newsreader-display-normal-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/motif.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="icon" href="assets/sphyr-logo.svg" type="image/svg+xml">
+
+<title>Sphyr</title>
+<meta name="description" content="Every two weeks, Sphyr asks the people on each engagement how working with a consultant went, so partners can look at the whole year when they decide promotions.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Sphyr">
-<meta property="og:title" content="Sphyr: Promote on merit, not politics">
-<meta property="og:description" content="Sphyr pools two-minute anonymous ratings every fortnight from everyone around each employee, so promotions in growing companies run on merit, not politics.">
+<meta property="og:title" content="Sphyr">
+<meta property="og:description" content="Every two weeks, Sphyr asks the people on each engagement how working with a consultant went, so partners can look at the whole year when they decide promotions.">
 <meta property="og:url" content="https://devanshdhaked.github.io/Product-Marketing-final-assignment/">
-<meta property="og:image" content="https://devanshdhaked.github.io/Product-Marketing-final-assignment/og.png">
+<meta property="og:image" content="https://devanshdhaked.github.io/Product-Marketing-final-assignment/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-
 </head>
-<body>
-<header class="nav"><div class="wrap"><a class="logo" href="index.html"><i></i>Sphyr</a><nav><a href="how-it-works.html">How it works</a><a href="demo.html">Walkthrough</a><a href="pricing.html">Pricing</a><a href="trust.html">Trust</a></nav><a class="nav-deliv" href="deliverables.html">Deliverables (4)</a></div></header>
+<body class="home">
+<a class="skip" href="#main">Skip to content</a>
 
-<main>
-<section class="hero"><div class="wrap split">
-  <div>
-    <span class="eyebrow">For growing companies</span>
-    <h1>Promote on merit,<br><span class="hl">not politics.</span></h1>
-    <p class="lede">Your company grew faster than anyone's line of sight. Sphyr asks everyone who works with each person for two minutes of anonymous ratings, every fortnight, and pools them. Then the next promotion runs on months of evidence, not one manager's memory.</p>
-    <div class="btns"><a class="btn btn-p" href="demo.html">Try the 2-minute walkthrough</a><a class="btn btn-g" href="pricing.html">One price: ₹149</a></div>
-    <p class="small" style="margin-top:18px">No sign-up. Sample data. You play a founder before a promotion round.</p>
-  </div>
-  <div class="fcard" aria-label="Interactive sample feedback card">
-    <div class="body">
-      <div class="who"><div class="av">PR</div><div><b>Priya R.</b><div class="small">Backend engineer · you worked with her this fortnight</div></div></div>
-      <div class="q">1 · How was working with Priya?</div>
-      <div class="stars"><button data-v="1">1</button><button data-v="2">2</button><button data-v="3">3</button><button data-v="4">4</button><button data-v="5">5</button></div>
-      <div class="q">2 · What stood out? (your company's values)</div>
-      <div class="tags"><button>Ownership</button><button>Quality of work</button><button>On-time delivery</button><button>Unblocks others</button><button>Teamwork</button></div>
-      <div class="q">3 · Anything to add? (optional, anonymous)</div>
-      <textarea placeholder="Released later, in a batch, so timing can't identify you."></textarea>
-      <div class="foot"><span class="clicks">0 clicks</span><button class="btn btn-p send">Send anonymously</button></div>
-    </div>
-    <div class="done">
-      <div class="stat"><div class="n"><span class="clicks-final">5</span> clicks</div></div>
-      <p>That was one card. Your rating now joins everyone else's in Priya's Sphere. Nobody, not her manager and not HR, will ever see that it came from you.</p>
-      <a class="btn btn-g" href="demo.html">See what the founder sees →</a>
+<!-- Canonical nav (2026-11-25, replaces the 3-item nav): logo (home), How it works, For partners, Pricing,
+     Deliverables, the walkthrough button, the theme switch. The first three links point at anchors the home
+     page provides (#how, #partners, #pricing). Below 1000px they move into the Menu popover and Deliverables
+     stays in the bar; below 760px the button hides, so the page itself must carry a link to demo.html.
+     Current page: add aria-current="page" to its link in BOTH lists (the brand link on index.html, Deliverables
+     on deliverables.html and the three deliverable pages, the button on demo.html). -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html" aria-current="page"><svg class="mark mark--mono" viewBox="0 0 1254 1254" aria-hidden="true"><use href="assets/sphyr-mark.svg#mark"/></svg>Sphyr</a>
+    <nav class="nav-links" aria-label="Main">
+      <a class="nav-wide" href="index.html#how">How it works</a>
+      <a class="nav-wide" href="index.html#partners">For partners</a>
+      <a class="nav-wide" href="index.html#pricing">Pricing</a>
+      <a href="deliverables.html">Deliverables</a>
+    </nav>
+    <div class="nav-end">
+      <a class="btn btn-primary" href="demo.html">See the 2-minute walkthrough</a>
+      <button class="nav-menu-btn" type="button" popovertarget="nav-menu" aria-controls="nav-menu" aria-expanded="false">Menu<svg class="icon icon-sm" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"/></svg></button>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Dark theme">
+        <svg class="icon icon-sm" aria-hidden="true"><use href="assets/icons.svg#i-moon"/></svg><span class="track" aria-hidden="true"><span class="knob"></span></span>
+      </button>
     </div>
   </div>
-</div></section>
+  <nav id="nav-menu" class="nav-menu" popover aria-label="Menu">
+    <ul>
+      <li><a href="index.html#how">How it works</a></li>
+      <li><a href="index.html#partners">For partners</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="deliverables.html">Deliverables</a></li>
+    </ul>
+  </nav>
+</header>
 
-<section class="tight" style="background:var(--bg2)"><div class="wrap">
-  <span class="eyebrow">Course submission · Team 03 · all four deliverables</span>
-  <div class="deliv">
-    <a href="index.html"><span class="num">01</span><h3>Website</h3><p>You're on it. Home, how it works, walkthrough, pricing, trust.</p><span class="go">This site</span></a>
-    <a href="propaganda.html"><span class="num">02</span><h3>Propaganda strategy</h3><p>How we move founders from "my managers know" to "the crowd knows better".</p><span class="go">Read the strategy →</span></a>
-    <a href="linkedin.html"><span class="num">03</span><h3>Three LinkedIn posts</h3><p>Problem, belief shift, offer. Three jobs, one message.</p><span class="go">See the posts →</span></a>
-    <a href="ad.html"><span class="num">04</span><h3>Advertisement</h3><p>LinkedIn single-image ad for founders, with rationale.</p><span class="go">See the ad →</span></a>
-  </div>
-</div></section>
+<main id="main">
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="wrap hero-copy">
+      <h1 id="hero-h">The engagement ends. <em>The evidence stays.</em></h1>
+      <div class="hero-side">
+        <p class="lede">Sphyr asks each engagement team about your consultants and keeps every answer.</p>
+        <a class="btn btn-primary" href="demo.html">See the 2-minute walkthrough</a>
+      </div>
+    </div>
+    <figure class="figure wrap hero-visual">
+      <svg id="cv1" class="cv cv-wide play" viewBox="0 0 1000 370" role="img" aria-label="Four projects across a year, three teammates on each. Each teammate adds a coloured strand. Each project ends and fades to an outline, but its strands stay in one record line, which reaches the promotion round and becomes the Sphyr sphere.">
+<g class="eng" style="--i:0"><rect class="eng-ghost" x="20" y="6" width="148" height="60" rx="12"/><rect class="eng-solid" x="20" y="6" width="148" height="60" rx="12"/><text class="eng-name" x="94.0" y="31" text-anchor="middle">Project 1</text><text class="eng-sub" x="94.0" y="51" text-anchor="middle">3 teammates</text><path class="strand" pathLength="1" d="M68.0 66 C68.0 156 108.0 256.0 163.0 256.0 L750 256.0 C805 256.0 775 153.5 870.0 153.5" style="stroke:var(--s1);--j:0"/><path class="strand" pathLength="1" d="M94.0 66 C94.0 156 134.0 262.5 189.0 262.5 L750 262.5 C805 262.5 775 164.5 870.0 164.5" style="stroke:var(--s3);--j:1"/><path class="strand" pathLength="1" d="M120.0 66 C120.0 156 160.0 269.0 215.0 269.0 L750 269.0 C805 269.0 775 175.5 870.0 175.5" style="stroke:var(--s5);--j:2"/></g>
+<g class="eng" style="--i:1"><rect class="eng-ghost" x="182" y="6" width="148" height="60" rx="12"/><rect class="eng-solid" x="182" y="6" width="148" height="60" rx="12"/><text class="eng-name" x="256.0" y="31" text-anchor="middle">Project 2</text><text class="eng-sub" x="256.0" y="51" text-anchor="middle">3 teammates</text><path class="strand" pathLength="1" d="M230.0 66 C230.0 156 270.0 275.5 325.0 275.5 L750 275.5 C805 275.5 775 186.5 870.0 186.5" style="stroke:var(--s2);--j:0"/><path class="strand" pathLength="1" d="M256.0 66 C256.0 156 296.0 282.0 351.0 282.0 L750 282.0 C805 282.0 775 197.5 870.0 197.5" style="stroke:var(--s7);--j:1"/><path class="strand" pathLength="1" d="M282.0 66 C282.0 156 322.0 288.5 377.0 288.5 L750 288.5 C805 288.5 775 208.5 870.0 208.5" style="stroke:var(--s6);--j:2"/></g>
+<g class="eng" style="--i:2"><rect class="eng-ghost" x="344" y="6" width="148" height="60" rx="12"/><rect class="eng-solid" x="344" y="6" width="148" height="60" rx="12"/><text class="eng-name" x="418.0" y="31" text-anchor="middle">Project 3</text><text class="eng-sub" x="418.0" y="51" text-anchor="middle">3 teammates</text><path class="strand" pathLength="1" d="M392.0 66 C392.0 156 432.0 295.0 487.0 295.0 L750 295.0 C805 295.0 775 219.5 870.0 219.5" style="stroke:var(--s3);--j:0"/><path class="strand" pathLength="1" d="M418.0 66 C418.0 156 458.0 301.5 513.0 301.5 L750 301.5 C805 301.5 775 230.5 870.0 230.5" style="stroke:var(--s8);--j:1"/><path class="strand" pathLength="1" d="M444.0 66 C444.0 156 484.0 308.0 539.0 308.0 L750 308.0 C805 308.0 775 241.5 870.0 241.5" style="stroke:var(--s1);--j:2"/></g>
+<g class="eng" style="--i:3"><rect class="eng-ghost" x="506" y="6" width="148" height="60" rx="12"/><rect class="eng-solid" x="506" y="6" width="148" height="60" rx="12"/><text class="eng-name" x="580.0" y="31" text-anchor="middle">Project 4</text><text class="eng-sub" x="580.0" y="51" text-anchor="middle">3 teammates</text><path class="strand" pathLength="1" d="M554.0 66 C554.0 156 594.0 314.5 649.0 314.5 L750 314.5 C805 314.5 775 252.5 870.0 252.5" style="stroke:var(--s4);--j:0"/><path class="strand" pathLength="1" d="M580.0 66 C580.0 156 620.0 321.0 675.0 321.0 L750 321.0 C805 321.0 775 263.5 870.0 263.5" style="stroke:var(--s5);--j:1"/><path class="strand" pathLength="1" d="M606.0 66 C606.0 156 646.0 327.5 701.0 327.5 L750 327.5 C805 327.5 775 274.5 870.0 274.5" style="stroke:var(--s2);--j:2"/></g>
+<svg class="mark mark--strands mark-play" data-mark x="800" y="122" width="184" height="184" viewBox="0 0 1254 1254" aria-hidden="true"><use href="assets/sphyr-mark.svg#mark"/></svg>
+<g class="round"><text class="round-label" x="892" y="336" text-anchor="middle">Promotion round</text><text class="round-sub" x="892" y="356" text-anchor="middle">The whole year is in the file</text></g>
+      </svg>
+      <svg id="cv1c" class="cv cv-compact play" viewBox="0 -4 360 594" role="img" aria-label="Four projects across a year, three teammates on each. Each teammate adds a coloured strand. Each project ends and fades to an outline, but its strands stay in one record line, which reaches the promotion round and becomes the Sphyr sphere.">
+<g class="eng" style="--i:0"><rect class="eng-ghost" x="12" y="-2" width="160" height="60" rx="12"/><rect class="eng-solid" x="12" y="-2" width="160" height="60" rx="12"/><text class="eng-name" x="92.0" y="23" text-anchor="middle">Project 1</text><text class="eng-sub" x="92.0" y="43" text-anchor="middle">3 teammates</text><path class="strand" pathLength="1" d="M172 24 C202 24 232 24 232 64 L232 350 C232 400 146 385 146 452" style="stroke:var(--s1);--j:0"/><path class="strand" pathLength="1" d="M172 35 C202 35 240 35 240 75 L240 350 C240 400 156 385 156 452" style="stroke:var(--s3);--j:1"/><path class="strand" pathLength="1" d="M172 46 C202 46 248 46 248 86 L248 350 C248 400 164 385 164 452" style="stroke:var(--s5);--j:2"/></g>
+<g class="eng" style="--i:1"><rect class="eng-ghost" x="12" y="70" width="160" height="60" rx="12"/><rect class="eng-solid" x="12" y="70" width="160" height="60" rx="12"/><text class="eng-name" x="92.0" y="95" text-anchor="middle">Project 2</text><text class="eng-sub" x="92.0" y="115" text-anchor="middle">3 teammates</text><path class="strand" pathLength="1" d="M172 96 C202 96 256 96 256 136 L256 350 C256 400 174 385 174 452" style="stroke:var(--s2);--j:0"/><path class="strand" pathLength="1" d="M172 107 C202 107 264 107 264 147 L264 350 C264 400 182 385 182 452" style="stroke:var(--s7);--j:1"/><path class="strand" pathLength="1" d="M172 118 C202 118 272 118 272 158 L272 350 C272 400 192 385 192 452" style="stroke:var(--s6);--j:2"/></g>
+<g class="eng" style="--i:2"><rect class="eng-ghost" x="12" y="142" width="160" height="60" rx="12"/><rect class="eng-solid" x="12" y="142" width="160" height="60" rx="12"/><text class="eng-name" x="92.0" y="167" text-anchor="middle">Project 3</text><text class="eng-sub" x="92.0" y="187" text-anchor="middle">3 teammates</text><path class="strand" pathLength="1" d="M172 168 C202 168 280 168 280 208 L280 350 C280 400 200 385 200 452" style="stroke:var(--s3);--j:0"/><path class="strand" pathLength="1" d="M172 179 C202 179 288 179 288 219 L288 350 C288 400 210 385 210 452" style="stroke:var(--s8);--j:1"/><path class="strand" pathLength="1" d="M172 190 C202 190 296 190 296 230 L296 350 C296 400 218 385 218 452" style="stroke:var(--s1);--j:2"/></g>
+<g class="eng" style="--i:3"><rect class="eng-ghost" x="12" y="214" width="160" height="60" rx="12"/><rect class="eng-solid" x="12" y="214" width="160" height="60" rx="12"/><text class="eng-name" x="92.0" y="239" text-anchor="middle">Project 4</text><text class="eng-sub" x="92.0" y="259" text-anchor="middle">3 teammates</text><path class="strand" pathLength="1" d="M172 240 C202 240 304 240 304 280 L304 350 C304 400 228 385 228 452" style="stroke:var(--s4);--j:0"/><path class="strand" pathLength="1" d="M172 251 C202 251 312 251 312 291 L312 350 C312 400 236 385 236 452" style="stroke:var(--s5);--j:1"/><path class="strand" pathLength="1" d="M172 262 C202 262 320 262 320 302 L320 350 C320 400 246 385 246 452" style="stroke:var(--s2);--j:2"/></g>
+<svg class="mark mark--strands mark-play" data-mark x="124" y="390" width="144" height="144" viewBox="0 0 1254 1254" aria-hidden="true"><use href="assets/sphyr-mark.svg#mark"/></svg>
+<g class="round"><text class="round-label" x="196" y="562" text-anchor="middle">Promotion round</text><text class="round-sub" x="196" y="581" text-anchor="middle">The whole year is in the file</text></g>
+      </svg>
+    <figcaption class="btn-row" style="margin-top:var(--s-4)"><button class="btn btn-secondary" type="button" data-replay="cv1">Play again</button><span class="sample-label">Illustration. The projects are examples.</span></figcaption>
+  </figure>
+  </section>
 
-<section><div class="wrap">
-  <span class="eyebrow">The problem</span>
-  <h2>At 40 people you saw everyone's work.<br>At 200, you see whoever reaches you.</h2>
-  <p class="lede">Nobody did anything wrong. The company just grew. Now each promotion leans on one manager's view of one person, and that view goes to whoever is most visible.</p>
-  <div class="grid g3" style="margin-top:36px">
-    <div class="card"><h3>The loudest voice gets the raise</h3><p class="small">The person who presents the work gets the credit. The person who did the work gets thanked.</p></div>
-    <div class="card"><h3>Last month counts more than the whole year</h3><p class="small">Annual reviews depend on what one person remembers. That's usually the last few weeks.</p></div>
-    <div class="card"><h3>The quiet contributor quietly leaves</h3><p class="small">The engineer who unblocked three teams never shows up in a review. One day she gets a better offer.</p></div>
-  </div>
-</div></section>
+  <section id="problem" aria-labelledby="problem-h">
+    <div class="wrap">
+      <h2 id="problem-h">What goes wrong when the team has moved on</h2>
+      <p class="trigger">A partner asks you for the file on a senior consultant they have worked with for three weeks this year. You open it and find two short project-end forms and a client email someone forwarded. The managing partner has asked you to make this year go better than the last, and this is all you have to send.</p>
+      <dl class="rows scenes">
+        <div><dt>The one who presented gets the credit</dt><dd>The consultant who walked the client through the findings gets the credit, including for the model a colleague built the night before.</dd></div>
+        <div><dt>The last engagement counts for the most</dt><dd>Whoever rates a consultant mostly remembers the latest engagement. The three before it had other managers, and those managers are busy on new clients.</dd></div>
+        <div><dt>The forms never come back</dt><dd>Engagement managers move straight to the next client, and some never fill in the project-end form. One has left the firm, so their forms will never arrive.</dd></div>
+        <div><dt>A quiet consultant leaves</dt><dd>A strong consultant who rarely presents is passed over and resigns. In the exit interview they say the partner who rated them saw one engagement out of four.</dd></div>
+      </dl>
+      <div class="before-after">
+        <div><span class="kicker">Today</span><p>The file is one partner's memory of the last engagement.</p></div>
+        <div><span class="kicker">With Sphyr</span><p>The file holds the view of the people who worked with the consultant across the year, collected every two weeks while each team was still together.</p></div>
+      </div>
+    </div>
+  </section>
 
-<section><div class="wrap">
-  <span class="eyebrow">One view vs. everyone's view</span>
-  <h2>One rater is a guess. Fourteen, every fortnight, is evidence.</h2>
-  <div class="vs" style="margin-top:32px">
-    <div class="card"><img src="one.svg" width="200" height="200" alt="One person rated by a single manager"><h3>Today: one manager's memory</h3><p class="small">One view, once a year. In a study of two large datasets of multi-rater ratings, <b>more than half</b> of the variance in a rating came from the person giving it, not the person being rated (62% and 53%; Scullen, Mount &amp; Goff, <i>Journal of Applied Psychology</i>, 2000).</p></div>
-    <div class="card" style="border-color:var(--accent)"><img src="sphere.svg" width="200" height="200" alt="One person rated by fourteen people in their Sphere"><h3>Sphyr: everyone who worked with them</h3><p class="small">Manager, peers, juniors, other leads, even clients and vendors: their <b>Sphere</b>. Each gives two minutes a fortnight. Pooled and anonymized, one person's quirks get averaged out.</p></div>
-  </div>
-</div></section>
+  <section id="how" aria-labelledby="how-h">
+    <div class="wrap">
+      <div class="duo">
+        <div class="text-col">
+          <h2 id="how-h">Two minutes every two weeks</h2>
+          <p>Sphyr asks while the team is still together. Every two weeks, each person gets a short card for everyone they worked with, and the whole set takes about two minutes. They choose how working with that person went and what stood out. A note is optional.</p>
+          <h3 class="values-h">Your firm's values on every card</h3>
+          <p>The tags come from a list your head of talent sets up for the whole firm. Every team starts from that list and can add a few tags of its own.</p>
+          <a class="go" href="demo.html">See the 2-minute walkthrough <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-arrow-right"/></svg></a>
+        </div>
+        <figure class="figure">
+        <div class="stage fx-feedback" role="group" aria-label="Sample feedback card from the Sphyr prototype">
+          <div class="fx-panel fx-hero-card">
+            <div class="fx-person"><span class="fx-avatar av-blue" aria-hidden="true">MB</span><div><div class="fx-name">Member B</div><div class="fx-meta">Senior consultant · Peers</div></div></div>
+            <div class="fx-body">
+              <fieldset class="fx-fieldset">
+                <legend class="fx-q">How was your experience with Member B this fortnight?</legend>
+                <div class="fx-tiles">
+                  <label><input class="fx-opt" type="radio" name="fx-exp" id="fx-good" value="good" checked><span class="fx-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-smile"/></svg><b>Was good</b><span>Great interaction</span></span></label>
+                  <label><input class="fx-opt" type="radio" name="fx-exp" id="fx-improve" value="improve"><span class="fx-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-frown"/></svg><b>Could improve</b><span>Some friction</span></span></label>
+                  <label><input class="fx-opt" type="radio" name="fx-exp" id="fx-none" value="none"><span class="fx-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-minus"/></svg><b>No interaction</b><span>Nothing to review</span></span></label>
+                </div>
+              </fieldset>
+              <div class="fx-step fx-step-good">
+                <div class="fx-step-head"><b>What stood out?</b><span>Select all that apply.</span></div>
+                <span class="fx-team-tag">Engagement team VBAs</span>
+                <div class="fx-vba">
+                  <div><div class="fx-vba-h">Values</div><div class="chips"><span class="chip">Transparency</span><span class="chip on">Customer First</span><span class="chip">Innovation</span></div></div>
+                  <div><div class="fx-vba-h">Behaviors</div><div class="chips"><span class="chip">Punctual</span><span class="chip">Respectful</span><span class="chip on">Stakeholder-centric</span></div></div>
+                  <div><div class="fx-vba-h">Attitudes</div><div class="chips"><span class="chip on">Takes Initiative</span><span class="chip">Solution-oriented</span><span class="chip">Resilient</span></div></div>
+                </div>
+              </div>
+              <div class="fx-step fx-step-improve">
+                <div class="fx-step-head"><b>Where did you experience friction?</b><span>Choose the clearest signals. Your response is anonymized.</span></div>
+                <span class="fx-team-tag">Engagement team VBAs</span>
+                <div class="fx-vba">
+                  <div><div class="fx-vba-h">Values</div><div class="chips"><span class="chip on">Share context earlier</span><span class="chip">Consider customer impact</span></div></div>
+                  <div><div class="fx-vba-h">Behaviors</div><div class="chips"><span class="chip">Improve punctuality</span><span class="chip">Respond more consistently</span><span class="chip on">Resolve dependencies sooner</span></div></div>
+                  <div><div class="fx-vba-h">Attitudes</div><div class="chips"><span class="chip">Take greater ownership</span><span class="chip">Stay open to feedback</span></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fx-sat fx-private">
+            <div class="fx-row-title"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-lock"/></svg>Private by design</div>
+            <p>Individual responses are normalized and grouped before anyone sees them.</p>
+          </div>
+        </div>
+        <figcaption><span class="sample-label"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-info"/></svg>Prototype screen. Sample data, fictional people.</span></figcaption>
+      </figure>
+      </div>
+      <div class="duo flip">
+        <div class="text-col">
+          <h3>Who gets a say</h3>
+          <p>Each consultant picks the people they work with closely: the engagement manager and the rest of the team.</p>
+          <p>From the second cycle, a consultant can also invite a client lead by email, with the partner's agreement.</p>
+          <div class="groups" data-circle="circle1" role="group" aria-label="Show one group" style="margin-top:var(--s-5);max-width:320px">
+            <button type="button" data-group="peers" aria-pressed="false">Peers <span>4</span></button>
+            <button type="button" data-group="seniors" aria-pressed="false">Seniors <span>3</span></button>
+            <button type="button" data-group="juniors" aria-pressed="false">Juniors <span>4</span></button>
+            <button type="button" data-group="clients" aria-pressed="false">Clients <span>3</span></button>
+          </div>
+        </div>
+        <figure class="figure circle-fig" style="margin:0">
+          <svg id="circle1" class="circle" viewBox="50 6 900 488" role="img" aria-label="A consultant at the centre with 14 strands coming in from four groups: four peers, three seniors, four juniors and three clients.">
+<path class="rbn g-peers" pathLength="1" d="M198.5 331.3 Q305.4 211.7 472.3 215.8" style="stroke:var(--s1);--j:0"/>
+<path class="rbn g-peers" pathLength="1" d="M173.2 277.8 Q330.4 180.7 482.8 209.5" style="stroke:var(--s2);--j:1"/>
+<path class="rbn g-peers" pathLength="1" d="M173.2 222.2 Q368.5 155.0 494.6 206.3" style="stroke:var(--s5);--j:2"/>
+<path class="rbn g-peers" pathLength="1" d="M198.5 168.7 Q416.8 136.7 506.9 206.5" style="stroke:var(--s3);--j:3"/>
+<path class="rbn g-seniors" pathLength="1" d="M409.0 57.7 Q589.7 138.5 537.7 227.3" style="stroke:var(--s3);--j:4"/>
+<path class="rbn g-seniors" pathLength="1" d="M500.0 50.0 Q636.9 157.9 542.5 238.6" style="stroke:var(--s4);--j:5"/>
+<path class="rbn g-seniors" pathLength="1" d="M591.0 57.7 Q673.5 184.3 544.0 250.8" style="stroke:var(--s7);--j:6"/>
+<path class="rbn g-juniors" pathLength="1" d="M801.5 168.7 Q694.6 288.3 527.7 284.2" style="stroke:var(--s6);--j:7"/>
+<path class="rbn g-juniors" pathLength="1" d="M826.8 222.2 Q669.6 319.3 517.2 290.5" style="stroke:var(--s5);--j:8"/>
+<path class="rbn g-juniors" pathLength="1" d="M826.8 277.8 Q631.5 345.0 505.4 293.7" style="stroke:var(--s1);--j:9"/>
+<path class="rbn g-juniors" pathLength="1" d="M801.5 331.3 Q583.2 363.3 493.1 293.5" style="stroke:var(--s8);--j:10"/>
+<path class="rbn g-clients" pathLength="1" d="M591.0 442.3 Q410.3 361.5 462.3 272.7" style="stroke:var(--s7);--j:11"/>
+<path class="rbn g-clients" pathLength="1" d="M500.0 450.0 Q363.1 342.1 457.5 261.4" style="stroke:var(--s8);--j:12"/>
+<path class="rbn g-clients" pathLength="1" d="M409.0 442.3 Q326.5 315.7 456.0 249.2" style="stroke:var(--s2);--j:13"/>
+<circle class="core" cx="500" cy="250" r="40"/><text class="core-label" x="500" y="255" text-anchor="middle">Consultant</text>
+<text class="grp-label" x="148" y="255" text-anchor="end">Peers</text>
+<text class="grp-label" x="500" y="31" text-anchor="middle">Seniors</text>
+<text class="grp-label" x="852" y="255" text-anchor="start">Juniors</text>
+<text class="grp-label" x="500" y="479" text-anchor="middle">Clients</text>
+          </svg>
+          <figcaption><span class="sample-label">Illustration: a consultant and 14 people, the average circle in the 2018 paper-and-pen pilot run by Sphyr's founder.</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
 
-<section><div class="wrap">
-  <span class="eyebrow">Meera's story · illustrative, not a customer case</span>
-  <h2>Why a Head of People goes looking</h2>
-  <div class="grid g4" style="margin-top:32px">
-    <div class="card"><span class="label">Trigger</span><p>Meera runs People at a growing IT services company. A strong engineer resigns weeks after being passed over. In the exit interview she says: "Nobody saw what I did."</p></div>
-    <div class="card"><span class="label">Search</span><p>The founder still signs off every promotion but no longer works next to most people. Meera needs evidence she can bring him, not another opinion.</p></div>
-    <div class="card"><span class="label">Evaluate</span><p>She finds the price published, the anonymity rules spelled out, and a walkthrough she can try without talking to sales. She sends it to the founder.</p></div>
-    <div class="card"><span class="label">Act</span><p>They run a six-week paid pilot on one team. By the third cycle the founder can see work he couldn't see before.</p></div>
-  </div>
-</div></section>
+  <section id="partners" aria-labelledby="partners-h">
+    <div class="wrap">
+      <h2 id="partners-h">Partners decide with the whole year of work in front of them.</h2>
+      <div class="back-intro"><h3>For consultants</h3><p>You see how your work is landing while you can still do something about it.</p></div>
+      <figure class="figure">
+        <div class="stage fx-flow fx-insights" role="img" aria-label="Sample member insights screen from the Sphyr prototype: overall score 78, up 3; 46 responses from 12 collaborators; strongest signal Quality of Work; overall trajectory improving; one anonymized comment.">
+          <div class="fx-window fx-fade" aria-hidden="true">
+            <div class="fx-eyebrow">Personal insights</div>
+            <div class="fx-title">How your work is landing</div>
+            <div class="fx-sub">A normalized, anonymized view built from your last six feedback cycles.</div>
+            <div class="fx-kpis">
+              <div class="fx-kpi"><div class="k">Overall score</div><div class="v">78 <span class="fx-delta">+3</span></div><div class="d">Mixed signals this cycle</div></div>
+              <div class="fx-kpi"><div class="k">Responses received</div><div class="v">46 <span class="fx-delta">+8</span></div><div class="d">From 12 collaborators</div></div>
+              <div class="fx-kpi"><div class="k">Strongest signal</div><div class="v word">Quality of Work <span class="fx-delta">+4</span></div><div class="d">93 out of 100</div></div>
+            </div>
+            <div class="fx-card">
+              <div class="fx-card-head"><div><b>Overall trajectory</b><p>Composite score across all seven dimensions</p></div><span class="fx-delta"><svg class="icon" style="width:13px;height:13px;margin-right:4px"><use href="assets/icons.svg#i-trending-up"/></svg>Improving</span></div>
+              <svg class="fx-chart" viewBox="0 0 600 160">
+                <line class="grid" x1="40" x2="590" y1="10" y2="10"/><line class="grid" x1="40" x2="590" y1="62" y2="62"/><line class="grid" x1="40" x2="590" y1="101" y2="101"/><line class="grid" x1="40" x2="590" y1="140" y2="140"/>
+                <text class="axis" x="30" y="14" text-anchor="end">100</text><text class="axis" x="30" y="66" text-anchor="end">80</text><text class="axis" x="30" y="105" text-anchor="end">65</text><text class="axis" x="30" y="144" text-anchor="end">50</text>
+                <path class="area" d="M40 75.0 C58.3 74.1 113.3 68.9 150 69.8 C186.7 70.7 223.3 80.6 260 80.2 C296.7 79.8 333.3 68.1 370 67.2 C406.7 66.3 443.3 75.0 480 75.0 C516.7 75.0 571.7 68.5 590 67.2 L590 140 L40 140 Z"/>
+                <path class="line" d="M40 75.0 C58.3 74.1 113.3 68.9 150 69.8 C186.7 70.7 223.3 80.6 260 80.2 C296.7 79.8 333.3 68.1 370 67.2 C406.7 66.3 443.3 75.0 480 75.0 C516.7 75.0 571.7 68.5 590 67.2"/>
+                <text class="axis" x="40" y="158">Cycle 1</text><text class="axis ax-even" x="150" y="158">Cycle 2</text><text class="axis" x="260" y="158">Cycle 3</text><text class="axis ax-even" x="370" y="158">Cycle 4</text><text class="axis" x="480" y="158">Cycle 5</text><text class="axis ax-even" x="590" y="158" text-anchor="end">Cycle 6</text>
+              </svg>
+            </div>
+          </div>
+          <div class="fx-sat" aria-hidden="true">
+            <div class="fx-fb-label"><span>Anonymized Feedback</span><span>5 days ago</span></div>
+            <p class="fx-fb-text">"Your handoff was clear and thoughtful. An earlier signal on the research dependency would have helped us plan around it."</p>
+          </div>
+        </div>
+        <figcaption><span class="sample-label"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-info"/></svg>Prototype screen. Sample data, fictional people.</span></figcaption>
+      </figure>
+      <div class="back-intro"><h3>For partners and engagement managers</h3><p>You see how the team is doing while the engagement is still running. The decisions stay with the partners.</p></div>
+      <figure class="figure">
+        <div class="stage fx-flow fx-team" role="img" aria-label="Sample manager team insights screen from the Sphyr prototype: team score 82, participation 96 percent, 3 edit requests; last-cycle ratings 68 percent positive, 21 percent no interaction, 11 percent could improve; two anonymized comments about the team.">
+          <div class="fx-window fx-fade" aria-hidden="true">
+            <div class="fx-eyebrow">Manager view</div>
+            <div class="fx-title">Team Insights</div>
+            <div class="fx-sub">Compare team health, spot coaching priorities, and decide feedback edit requests.</div>
+            <div class="fx-kpis">
+              <div class="fx-kpi"><div class="k">Team score</div><div class="v">82</div><div class="d">Up 2 points this cycle</div></div>
+              <div class="fx-kpi"><div class="k">Participation</div><div class="v">96%</div><div class="d">24 of 25 reviews given</div></div>
+              <div class="fx-kpi"><div class="k">Edit requests</div><div class="v">3</div><div class="d">Awaiting your decision</div></div>
+            </div>
+            <div class="fx-standouts">
+              <div class="fx-list">
+                <div class="fx-list-head">Rating distribution</div>
+                <div class="fx-dist">
+                  <p class="fx-meta">Aggregated last-cycle responses</p>
+                  <div class="fx-dist-row"><svg class="icon"><use href="assets/icons.svg#i-thumbs-up"/></svg><span>Positive</span><b>68%</b><i class="fx-track"><i style="width:68%;background:var(--chart-1)"></i></i></div>
+                  <div class="fx-dist-row"><svg class="icon"><use href="assets/icons.svg#i-circle-minus"/></svg><span>No interaction</span><b>21%</b><i class="fx-track"><i style="width:21%;background:var(--neutral-state)"></i></i></div>
+                  <div class="fx-dist-row"><svg class="icon"><use href="assets/icons.svg#i-thumbs-down"/></svg><span>Could improve</span><b>11%</b><i class="fx-track"><i style="width:11%;background:var(--constructive)"></i></i></div>
+                </div>
+              </div>
+              <div class="fx-list fx-team-fb">
+                <div class="fx-list-head"><svg class="icon"><use href="assets/icons.svg#i-message-square-text"/></svg>Anonymized team feedback</div>
+                <div class="fx-dist"><p class="fx-meta">Last cycle · Latest first</p></div>
+                <div class="fx-fb-item"><div class="fx-fb-label"><span>Anonymized Feedback</span><span>2 days ago</span></div><p class="fx-fb-text">"The team stayed calm under pressure and protected quality through a difficult release."</p></div>
+                <div class="fx-fb-item"><div class="fx-fb-label"><span>Anonymized Feedback</span><span>5 days ago</span></div><p class="fx-fb-text">"Dependency risks need to be surfaced earlier, especially when another team owns the handoff."</p></div>
+              </div>
+            </div>
+            <div class="fx-filler"><span class="fx-bar" style="width:38%"></span><span class="fx-bar" style="width:72%"></span><span class="fx-bar" style="width:55%"></span></div>
+          </div>
+        </div>
+        <figcaption><span class="sample-label"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-info"/></svg>Prototype screen. Sample data, fictional people.</span></figcaption>
+      </figure>
+    </div>
+  </section>
 
-<section><div class="wrap">
-  <span class="eyebrow">The fortnight loop</span>
-  <h2>Two minutes, every two weeks</h2>
-  <div class="loop" style="margin-top:32px">
-    <div><h3>Cards arrive</h3><p class="small">Each person gets a card for everyone in their Sphere. Rating, tags, optional note. About five clicks each.</p></div>
-    <div><h3>Ratings pool</h3><p class="small">Responses are anonymized and pooled. Nothing shows until enough reviewers have answered.</p></div>
-    <div><h3>Notes release in batches</h3><p class="small">Written notes are delayed and released together, so timing can't reveal who wrote them.</p></div>
-    <div><h3>Evidence builds</h3><p class="small">By appraisal time, managers have months of pooled ratings across seven parameters. They still make the call.</p></div>
-  </div>
-  <div class="btns"><a class="btn btn-g" href="how-it-works.html">How it works in detail →</a></div>
-</div></section>
+  <section id="check" aria-labelledby="check-h">
+    <div class="wrap">
+      <h2 id="check-h">Most of a rating comes from the person giving it</h2>
+      <div class="proof">
+        <div>
+          <div class="v">62% and 53%</div>
+          <p class="l">of the differences in performance ratings came from who was doing the rating, in two large data sets. Actual performance accounted for 21% and 25%.</p>
+          <p class="src">Scullen, Mount and Goff, 2000.</p>
+        </div>
+        <div>
+          <div class="v">29%</div>
+          <p class="l">of employees strongly agree that their performance reviews are fair, and 26% that they are accurate.</p>
+          <p class="src">Gallup, across industries worldwide.</p>
+        </div>
+      </div>
+      <div class="notdo">
+        <h3>What Sphyr does not do</h3>
+        <p class="measure">Sphyr hands partners a record and leaves the decision with them. The feedback in that record comes only from what colleagues chose to say on their cards, and Sphyr logs no hours or screen activity. No AI writes or scores anything. Your people come in from a spreadsheet, and Sphyr sits beside your HR system.</p>
+      </div>
+      <h3 class="faq-head">What stays private</h3>
+      <p class="measure">Ratings are pooled, and the person rated sees comments without names.</p>
+      <div class="faq" style="margin-top:var(--s-5)">
+        <details><summary>Who sees what I write?<svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"/></svg></summary><div>The person you wrote about sees your note without your name, and ratings are pooled before anyone looks at them. Managers approve requests to edit feedback that has already been sent, so they can see who asked to edit feedback about whom.</div></details>
+        <details><summary>What if I didn't work with someone this fortnight?<svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"/></svg></summary><div>Choose &quot;No interaction&quot; and move on.</div></details>
+        <details><summary>Can clients rate me?<svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"/></svg></summary><div>Only if you invite them, with your partner's agreement. Clients can join from the second cycle.</div></details>
+        <details><summary>What if I miss a cycle?<svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"/></svg></summary><div>The next one opens two weeks later. Your Insights page notes the missed cycle, and that's all.</div></details>
+      </div>
+    </div>
+  </section>
 
-<section><div class="wrap">
-  <span class="eyebrow">Evidence · 2018 pen-and-paper pilot of the method, not today's software</span>
-  <h2>The method has been tested</h2>
-  <p class="lede">Four companies, from 24 to over 5,000 people, ran Sphyr's method on paper for about 14 weeks.</p>
-  <div class="grid g3" style="margin-top:32px">
-    <div class="stat card"><div class="n">2m 9s</div><div class="d">to complete a fortnight's cards for a Sphere of about 14 people</div></div>
-    <div class="stat card"><div class="n">0%</div><div class="d">tendency to collude for better ratings after three weeks</div></div>
-    <div class="stat card"><div class="n">787</div><div class="d">guesses at an ox's weight. Their median was within 1% of the truth (Galton, <i>Nature</i>, 1906). Many honest, partial views beat one expert.</div></div>
-  </div>
-</div></section>
+  <section id="pricing" aria-labelledby="pricing-h">
+    <div class="wrap">
+      <h2 id="pricing-h">What Sphyr costs</h2>
+      <div class="price-pair">
+        <div class="term plan">
+          <div class="what">Sphyr, everything included</div>
+          <div class="price"><span class="amount">₹149</span><span class="per">per employee per month, billed yearly, plus GST</span></div>
+          <p>The rate is the same for every employee and every firm size.</p>
+          <h3>What you get</h3>
+          <ul class="incl">
+            <li>A card every two weeks, about two minutes in all, for the colleagues each person worked with.</li>
+            <li>A record for each person built from those cards, with ratings pooled and comments shown without names.</li>
+            <li>Your firm's own values on the cards, plus team and company OKRs.</li>
+            <li>Each person's view of their own record, and manager views of team and member trends.</li>
+            <li>People imported from a spreadsheet.</li>
+            <li>Setup and training by our team, with support included.</li>
+            <li>New joiners billed from the month they join.</li>
+          </ul>
+          <p class="free-line"><span>Clients and other outside raters you invite</span><b>Free</b></p>
+          <table class="bills">
+            <caption>What a firm pays, plus GST</caption>
+            <thead><tr><th scope="col">People</th><th scope="col">A month</th><th scope="col">A year</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">100</th><td>₹14,900</td><td>₹1,78,800</td></tr>
+              <tr><th scope="row">150</th><td>₹22,350</td><td>₹2,68,200</td></tr>
+              <tr><th scope="row">300</th><td>₹44,700</td><td>₹5,36,400</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="side">
+          <div class="term pilot">
+            <div class="what">Getting started</div>
+            <div class="price"><span class="amount">₹25,000</span><span class="per">one time, plus GST</span></div>
+            <p class="pilot-facts">12 weeks, six cycles, up to 40 people</p>
+            <p>If you sign afterwards, the ₹25,000 comes off your first annual bill. If you don't, you get your data as a spreadsheet (CSV) and we delete the rest. The fee isn't refunded.</p>
+          </div>
+          <div class="scorecard">
+            <h3>What every pilot measures</h3>
+            <p class="src-note sc-intro">Your firm agrees the targets before the pilot starts.</p>
+            <ul class="includes" style="columns:1">
+              <li>How many people take part in each cycle.</li>
+              <li>How many different people give feedback to each consultant.</li>
+              <li>Whether partners found something new in the records, and whether it changed any discussion.</li>
+              <li>Whether consultants found their own record useful, and whether they would keep going.</li>
+            </ul>
+            <p class="src-note">Results stay with your firm unless you agree to share them.</p>
+          </div>
+          <div class="proof-one">
+            <div class="v">02:09</div>
+            <p class="l">minutes, on average, to fill in the feedback cards for a circle of 14 people.</p>
+            <p class="src">From a 2018 paper-and-pen pilot run by Sphyr's founder in four companies, self-reported (Sphyr whitepaper v0.3).</p>
+          </div>
+        </div>
+      </div>
+      <div class="faq more">
+        <details><summary>How we set the price<svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-chevron-down"/></svg></summary><div>
+          <p>The pilot fee is about what a pilot costs us to run. That covers roughly 30 hours of our team's time, from setup to the scorecard report at the end, plus the running costs for 12 weeks. The plan rate for 40 people over those 12 weeks would come to about ₹16,500, about ₹9,500 less than it costs us. A fee above our cost would mean making money on a trial.</p>
+          <p>The ₹149 rate sits above what it costs us to serve each person, and below the value we estimate for a firm even in our most cautious case. By our middle estimate, losing a consultant costs a firm about ₹8.6 lakh in recruiter fees and the months before a replacement is up to speed. Sphyr for 150 people costs ₹2.68 lakh a year, so keeping one consultant pays for about three years of it. The ₹8.6 lakh is our estimate of what an exit costs. Nobody has measured whether Sphyr prevents exits.</p>
+        </div></details>
+      </div>
+      <div class="after">
+        <h3>What happens after you sign</h3>
+        <p class="measure">Your first cards go out on a date you agree with us. Here is what each person gets, and when.</p>
+        <dl class="rows when" style="margin-top:var(--s-5)">
+          <div><dt>Before the first cycle</dt><dd>In a short kickoff with our team, your head of talent adds the firm's own values, and those words become the tags on every card. Together you pick the day the first cycle opens.</dd></div>
+          <div><dt>Also before it opens</dt><dd>We show your partners a sample record built from people on four engagements, then the same screen for their own practice, still empty. It starts filling from the date you picked, and the decisions stay with them.</dd></div>
+          <div><dt>The week before</dt><dd>Each consultant gets a note from the managing partner and adds the people they work with to their circle.</dd></div>
+          <div><dt>The first cycle</dt><dd>One card per person in your circle, about two minutes in all. While you fill in theirs, they are filling in yours.</dd></div>
+          <div><dt>After a few cycles</dt><dd>Consultants start to see what their colleagues noticed, along with the notes written to them. Engagement managers see how the current team is landing while the work is still going on, and your head of talent sees who took part, team by team, without chasing anyone.</dd></div>
+          <div><dt>Every two weeks after that</dt><dd>A new set of cards. Over time each person builds up a line showing how their work is landing.</dd></div>
+        </dl>
+      </div>
+      <div class="call">
+        <button class="linkbtn" type="button" popovertarget="call-note">Book a 20-minute call</button>
+      </div>
+    </div>
+  </section>
 
-<section><div class="wrap split">
-  <div>
-    <span class="eyebrow">Pricing</span>
-    <h2>One price. No tiers.<br>No surprise when you hire.</h2>
-    <p class="lede">₹149 per employee per month, billed annually, plus GST. The rate doesn't change as you grow. Clients and vendors who give feedback are always free.</p>
-    <div class="btns"><a class="btn btn-p" href="pricing.html">See pricing and the pilot</a></div>
-  </div>
-  <div class="card">
-    <p><b>Start small:</b> a ₹15,000 six-week paid pilot, credited against your first bill.</p>
-    <p><b>Low risk:</b> full refund if your first six fortnightly cycles show you nothing new.</p>
-    <p><b>Works with what you have:</b> runs alongside your current HR system. Import employees from CSV or XLSX.</p>
-  </div>
-</div></section>
-
-<section style="border:0"><div class="wrap" style="text-align:center">
-  <h2>Built from everyone who actually worked with them,<br>not one manager's memory. <span class="hl">That's Sphyr.</span></h2>
-  <div class="btns" style="justify-content:center"><a class="btn btn-p" href="demo.html">Try the 2-minute walkthrough</a><a class="btn btn-g" href="trust.html">How anonymity works</a></div>
-</div></section>
+  <section class="close" aria-label="Why Sphyr exists">
+    <div class="wrap">
+      <p class="manifesto">Careers should be earned in front of <span class="accent">the people who saw the work.</span></p>
+      <a class="btn btn-primary" href="demo.html">See the 2-minute walkthrough</a>
+    </div>
+  </section>
 </main>
 
-<footer><div class="wrap cols"><div><b>Sphyr</b> · Promote on merit, not politics.<br>Team 03 final assignment, Product Marketing (PD2.501), IIIT Hyderabad · Aryan, Abhinav, Devansh, Bheema.<br>Course project based on the Sphyr Overview Whitepaper v0.3 (2018) and Sphyr.io documentation. Not a live commercial offer.</div><div><b>Deliverables</b><br><a href="propaganda.html">Propaganda strategy</a><br><a href="linkedin.html">Three LinkedIn posts</a><br><a href="ad.html">Advertisement</a><br><a href="deliverables.html">All deliverables</a></div></div></footer>
-<script src="main.js"></script>
+<!-- Canonical footer. "Book a 20-minute call" opens the #call-note popover below. -->
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <a class="brand" href="index.html"><svg class="mark mark--mono" viewBox="0 0 1254 1254" aria-hidden="true"><use href="assets/sphyr-mark.svg#mark"/></svg>Sphyr</a>
+      <p>Made by Team 03 (Aryan, Abhinav, Devansh and Bheema) for the Product Marketing course (PD2.501) at IIIT Hyderabad, from the Sphyr Overview Whitepaper v0.3 (2018) and the Sphyr.io product documentation. It is a course project, and Sphyr is not on sale here.</p>
+    </div>
+    <ul>
+      <li><a href="demo.html">See the 2-minute walkthrough</a></li>
+      <li><a href="deliverables.html">Deliverables</a></li>
+      <li><button class="linkbtn" type="button" popovertarget="call-note">Book a 20-minute call</button></li>
+    </ul>
+  </div>
+</footer>
+
+<div id="call-note" class="note-pop" popover>
+  <p>Course project: in a live launch this books a 20-minute call with our team.</p>
+  <button class="linkbtn" type="button" popovertarget="call-note" popovertargetaction="hide">Close</button>
+</div>
+
+<script src="js/theme.js" defer></script>
+<script src="js/nav.js" defer></script>
+<script src="js/motif.js" defer></script>
 </body>
 </html>
