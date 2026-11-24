@@ -200,6 +200,14 @@ a:hover { text-decoration-thickness: 2px; }
 }
 @media (min-width: 1000px) { .nav-menu { display: none; } }
 @media (max-width: 760px) { .nav-end .btn { display: none; } }
+/* Narrow phones (360px Android, 320px): the bar has no slack, so the switch drops its moon icon (the
+   accessible name stays) and the gaps tighten; under 340px the Menu chevron goes too. */
+@media (max-width: 400px) {
+  .nav-inner { gap: var(--s-2); }
+  .nav-end { margin-left: 0; gap: 0; }
+  .theme-toggle .icon { display: none; }
+}
+@media (max-width: 340px) { .nav-menu-btn .icon { display: none; } }
 /* Theme toggle: a switch with no box around it. Its accessible name is "Dark theme" (aria-label or a visible
    label); aria-pressed carries the state. 44px target. */
 .theme-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-width: 44px; min-height: 44px; padding: 0; border: 0; background: none; color: var(--text); font: 500 var(--fs-caption)/1 var(--font); cursor: pointer; }
