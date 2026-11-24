@@ -58,5 +58,6 @@
 .post-note dt { font-size: var(--fs-small); font-weight: 600; color: var(--text-muted); }
 .post-note dd { margin: 0; }
 @media (max-width: 520px) { .post-note dl > div { grid-template-columns: 1fr; gap: 2px; } }
+@media (min-width: 521px) { .post-note dl { display: grid; grid-auto-rows: 1fr; } } /* equal note rows on desktop */
 
 .li-next { margin-top: var(--s-6); }
