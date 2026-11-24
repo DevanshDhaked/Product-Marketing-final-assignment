@@ -10,6 +10,14 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-24: Ad placement chosen
+
+- **Decision:** the one advertisement is a paid sponsor standee (portrait roll-up) with matching A6 handout cards, placed at an HR community event of the kind run by NHRD Network chapters, in the December to January window before the April round. It tracks nobody: no pixel, no badge scan, no form; a QR code opens a plain URL for the 2-minute walkthrough.
+- **Naming:** the ad page does not name the specific real event (research found HR Showcase 2026, NHRD Bangalore, 4 to 5 Dec 2026). It describes the placement generically and says "planned", not "booked". No endorsement by any body is implied.
+- **Why:** advertising means money is involved ([class notes](../brief/communication_objectives_notes.md)); the event standee was the best verified paid option that reaches heads of talent among peers without tracking. Both newsletters measure clicks per subscriber ([research](../handoffs/admedium_report.md)).
+- **Replaces:** the LinkedIn Sponsored Content ad with retargeting on `main` (`site/ad.html`). Its reasoning layout (medium, audience, message, benefit, visual, call to action, journey stage) is kept as a content pattern only.
+- **Fix needed:** the channel plan lists SHRM India's 2026 conference (26 to 27 Nov 2026), which falls before the selling window; drop or move that row.
+
 ## 2026-11-24: Simple site, new information architecture
 
 - **Decision:** the current site on `main` is a content reference only, not a design or navigation reference. The team finds it confusing and hard to navigate, with too many links.
