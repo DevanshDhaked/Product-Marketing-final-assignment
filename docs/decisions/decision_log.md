@@ -10,6 +10,14 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-24: Design direction for phase 1b
+
+- **References:** study Awwwards and similar galleries for comparable products (HR tech, people analytics, feedback tools, editorial B2B SaaS) and borrow named patterns.
+- **Logo:** use the ribbon-sphere logo in a playful way (motif, assembly, ribbons as the people around a consultant). It may be recoloured (all white, dark, mono) if the sphere stays recognisable and its ribbon sections stay distinct.
+- **Type:** not limited to Google Fonts, not excluding them. The font must be free to self-host on a public site, with its licence recorded.
+- **Skills:** use `design-taste-frontend` and `stageshow`. The prototype's UI language stays inside faux UI frames. Light and dark themes with the toggle stay.
+- **Replaces:** the phase 1a choice of Manrope as the only font is open again.
+
 ## 2026-11-24: Gate 1a results
 
 - **Central message and positioning approved:** "The engagement ends. The evidence stays." with the vision and product lines in [positioning](../strategy/positioning.md). Condition: all copy must read as written by people. Run every piece of public copy through the `humanizer:humanizer` skill before it ships.
