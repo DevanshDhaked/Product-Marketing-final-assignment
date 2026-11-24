@@ -11,7 +11,7 @@
 
 /* Hero: headline left, the line and the button right, the core visual full width below. */
 .home main > .hero { padding-block: var(--s-7) var(--s-6); }
-.hero-copy { display: grid; grid-template-columns: 1.45fr 1fr; gap: var(--s-6) var(--s-8); align-items: end; container-type: inline-size; }
+.hero-copy { display: grid; grid-template-columns: 1.45fr 1fr; gap: var(--s-6) var(--s-8); align-items: center; container-type: inline-size; }
 /* One sentence per line: the size follows the headline column so "The engagement ends." never wraps beside the lede. */
 .hero h1 { font-size: clamp(2.5rem, 5.8cqi - 0.25rem, 4.25rem); line-height: 1.04; }
 .hero h1 em { display: block; }
