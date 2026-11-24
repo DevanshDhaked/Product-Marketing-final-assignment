@@ -22,6 +22,8 @@
 .hub-index p { margin: 0; max-width: 60ch; color: var(--text-muted); }
 .hub-index .go { margin-top: var(--s-4); }
 @media (max-width: 640px) { .hub-index > li { grid-template-columns: 1fr; gap: var(--s-2); } .hub-index .hub-n { padding-top: 0; } }
+/* Equal entry heights on desktop. .doc li + li adds a top margin that would sit inside the shared track, so zero it. */
+@media (min-width: 641px) { .hub-index { display: grid; grid-auto-rows: 1fr; } .doc .hub-index > li + li { margin-top: 0; } }
 
 /* Propaganda page: a summary card, then seven short sections beside a contents list. */
 .page-prop .prop-top { padding-block: var(--s-7); }
@@ -81,6 +83,8 @@
 .aud .aud-job { margin-top: var(--s-1); font-size: var(--fs-small); color: var(--text-muted); }
 .aud .aud-belief { margin-top: var(--s-4); }
 .aud .aud-who { margin-top: var(--s-3); font-size: var(--fs-caption); color: var(--text-muted); }
+/* The three columns share four rows (title, job, belief, name) so names line up when one quote runs longer. */
+@container (min-width: 561px) { @supports (grid-template-rows: subgrid) { .aud ul { grid-template-rows: repeat(4, auto); row-gap: 0; } .aud li { display: grid; grid-row: span 4; grid-template-rows: subgrid; row-gap: 0; } } }
 @container (max-width: 560px) {
   .aud ul { grid-template-columns: 1fr; gap: var(--s-5); }
 }

@@ -31,6 +31,8 @@
 .trigger { margin-top: var(--s-5); font-size: var(--fs-lede); max-width: 60ch; }
 .scenes { margin-top: var(--s-7); }
 .scenes dd { color: var(--text); }
+/* The four scenes share the tallest row's height on desktop; their answers differ by one line at most. */
+@media (min-width: 641px) { .scenes { display: grid; grid-auto-rows: 1fr; } }
 .before-after { display: grid; grid-template-columns: 5fr 7fr; gap: var(--s-5) var(--s-8); margin-top: var(--s-8); }
 .before-after > div + div { border-left: 1px solid var(--border); padding-left: var(--s-8); }
 .before-after p { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.375rem, 1.1rem + 0.9vw, 1.75rem); line-height: 1.25; max-width: 32ch; }
