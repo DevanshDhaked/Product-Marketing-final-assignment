@@ -10,6 +10,11 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-25: Pricing section trimmed
+
+- **Decision:** the pricing section was too large. Plan card: ₹149, "per employee per month, billed yearly, plus GST", "Same rate for every employee and firm size", four short bullets (a two-minute card every two weeks; a record for each person, ratings pooled; your firm's values on the cards; setup, training and support by our team), "Clients you invite to give feedback: free", and one example line "A 150-person firm pays ₹22,350 a month, plus GST". Pilot card: ₹25,000 one time, "12 weeks, up to 40 people", and one line "Comes off your first annual bill if you sign. If not, you keep your data."
+- **Moved out:** the bills table, OKRs, spreadsheet import and new-joiner billing stay in [pricing](../pricing/pricing_summary.md). The scorecard sits behind a small "What a pilot measures" toggle under the pilot card. The 02:09 stat moves to the proof section.
+
 ## 2026-11-25: Full-colour logo in nav and footer
 
 - **Decision:** the nav and footer use the full-colour ribbon logo (`class="mark"`) in both themes, replacing the one-colour `mark--mono` variant. Checked on the light and dark backgrounds. The mono and white variants stay available for print and small-icon uses.
