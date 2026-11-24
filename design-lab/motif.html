@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem("sphyr-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<title>Ribbon motif | Sphyr design lab</title>
+<link rel="preload" href="fonts/manrope-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/newsreader-display-normal-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="components.css">
+<link rel="stylesheet" href="motif.css">
+<link rel="icon" href="assets/sphyr-logo.svg" type="image/svg+xml">
+<style>
+  /* Lab-only scaffolding. */
+  .lab-sec { padding-block: var(--s-8); border-top: 1px solid var(--border); }
+  .lab-sec > p { color: var(--text-muted); max-width: 72ch; margin: var(--s-2) 0 var(--s-6); font-size: var(--fs-small); }
+  .variants td, .variants th { vertical-align: middle; }
+</style>
+</head>
+<body data-strands="cool">
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="components.html"><img src="assets/sphyr-logo.svg" alt="" width="28" height="28">Sphyr</a>
+    <nav class="nav-links" aria-label="Design lab">
+      <a href="components.html">Components</a>
+      <a href="faux-ui.html">Faux UI</a>
+      <a href="type.html">Type</a>
+      <a href="motif.html" aria-current="page">Motif</a>
+    </nav>
+    <div class="nav-end">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <span class="track" aria-hidden="true"><span class="knob"></span></span>Dark theme
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div style="padding-block: var(--s-7) var(--s-6)">
+    <h1>Ribbon motif</h1>
+    <p class="lede" style="margin-top:var(--s-4)">The ribbons are the people who saw the work. Compare the two strand palettes, in both themes, before gate 1b.</p>
+    <div class="seg" role="group" aria-label="Strand palette" style="margin-top:var(--s-5)">
+      <button type="button" data-set-strands="cool" aria-pressed="true">Cool logo colours</button>
+      <button type="button" data-set-strands="tonal" aria-pressed="false">Tonal green</button>
+    </div>
+  </div>
+
+  <section class="lab-sec" aria-labelledby="cvh">
+    <h2 id="cvh">The core visual</h2>
+    <p>For the home page hero. Each engagement brings a few people (strands). The engagement ends and fades to an outline; its strands stay in the record, and at April the record is the sphere. It plays once on load; with reduced motion it shows the finished picture. Hover or focus the sphere to see the ribbons part.</p>
+    <figure class="figure" style="margin:0">
+      <svg id="cv1" class="cv cv-wide play" viewBox="0 0 1000 430" role="img" aria-label="Four engagements across the year, April to March. Each one adds coloured strands for the people who worked on it. Each engagement ends and fades, but its strands stay in one record line, which reaches April calibration and forms the Sphyr sphere.">
+<line x1="30" y1="288" x2="800" y2="288" stroke="var(--border)" stroke-width="1"/>
+<text class="record-label" x="30" y="378">One record, the whole year</text>
+<g class="eng" style="--i:0"><rect class="eng-ghost" x="20" y="34" width="148" height="64" rx="12"/><rect class="eng-solid" x="20" y="34" width="148" height="64" rx="12"/><text class="eng-name" x="36" y="62">Engagement 1</text><text class="eng-when" x="36" y="82">Apr to Jun</text><path class="strand" pathLength="1" d="M68.0 98 C68.0 188 108.0 284.0 163.0 284.0 L750 284.0 C805 284.0 775 189.5 870.0 189.5" style="stroke:var(--s1);--j:0"/><path class="strand" pathLength="1" d="M94.0 98 C94.0 188 134.0 290.5 189.0 290.5 L750 290.5 C805 290.5 775 200.5 870.0 200.5" style="stroke:var(--s3);--j:1"/><path class="strand" pathLength="1" d="M120.0 98 C120.0 188 160.0 297.0 215.0 297.0 L750 297.0 C805 297.0 775 211.5 870.0 211.5" style="stroke:var(--s5);--j:2"/></g>
+<g class="eng" style="--i:1"><rect class="eng-ghost" x="182" y="34" width="148" height="64" rx="12"/><rect class="eng-solid" x="182" y="34" width="148" height="64" rx="12"/><text class="eng-name" x="198" y="62">Engagement 2</text><text class="eng-when" x="198" y="82">Jul to Sep</text><path class="strand" pathLength="1" d="M230.0 98 C230.0 188 270.0 303.5 325.0 303.5 L750 303.5 C805 303.5 775 222.5 870.0 222.5" style="stroke:var(--s2);--j:0"/><path class="strand" pathLength="1" d="M256.0 98 C256.0 188 296.0 310.0 351.0 310.0 L750 310.0 C805 310.0 775 233.5 870.0 233.5" style="stroke:var(--s7);--j:1"/><path class="strand" pathLength="1" d="M282.0 98 C282.0 188 322.0 316.5 377.0 316.5 L750 316.5 C805 316.5 775 244.5 870.0 244.5" style="stroke:var(--s6);--j:2"/></g>
+<g class="eng" style="--i:2"><rect class="eng-ghost" x="344" y="34" width="148" height="64" rx="12"/><rect class="eng-solid" x="344" y="34" width="148" height="64" rx="12"/><text class="eng-name" x="360" y="62">Engagement 3</text><text class="eng-when" x="360" y="82">Oct to Dec</text><path class="strand" pathLength="1" d="M392.0 98 C392.0 188 432.0 323.0 487.0 323.0 L750 323.0 C805 323.0 775 255.5 870.0 255.5" style="stroke:var(--s3);--j:0"/><path class="strand" pathLength="1" d="M418.0 98 C418.0 188 458.0 329.5 513.0 329.5 L750 329.5 C805 329.5 775 266.5 870.0 266.5" style="stroke:var(--s8);--j:1"/><path class="strand" pathLength="1" d="M444.0 98 C444.0 188 484.0 336.0 539.0 336.0 L750 336.0 C805 336.0 775 277.5 870.0 277.5" style="stroke:var(--s1);--j:2"/></g>
+<g class="eng" style="--i:3"><rect class="eng-ghost" x="506" y="34" width="148" height="64" rx="12"/><rect class="eng-solid" x="506" y="34" width="148" height="64" rx="12"/><text class="eng-name" x="522" y="62">Engagement 4</text><text class="eng-when" x="522" y="82">Jan to Mar</text><path class="strand" pathLength="1" d="M554.0 98 C554.0 188 594.0 342.5 649.0 342.5 L750 342.5 C805 342.5 775 288.5 870.0 288.5" style="stroke:var(--s4);--j:0"/><path class="strand" pathLength="1" d="M580.0 98 C580.0 188 620.0 349.0 675.0 349.0 L750 349.0 C805 349.0 775 299.5 870.0 299.5" style="stroke:var(--s5);--j:1"/><path class="strand" pathLength="1" d="M606.0 98 C606.0 188 646.0 355.5 701.0 355.5 L750 355.5 C805 355.5 775 310.5 870.0 310.5" style="stroke:var(--s2);--j:2"/></g>
+<g class="april"><text class="april-label" x="892" y="382" text-anchor="middle">April calibration</text><text class="april-sub" x="892" y="402" text-anchor="middle">The whole year is in the file</text></g>
+<svg class="mark mark--strands mark-play" data-mark x="800" y="158" width="184" height="184" viewBox="0 0 1254 1254" tabindex="0" aria-label="Sphyr mark"><use href="assets/sphyr-mark.svg#mark"/></svg>
+      </svg>
+      <svg id="cv1c" class="cv cv-compact play" viewBox="0 0 360 690" role="img" aria-label="Four engagements across the year, April to March. Each one adds coloured strands for the people who worked on it. Each engagement ends and fades, but its strands stay in one record line, which reaches April calibration and forms the Sphyr sphere.">
+<g class="eng" style="--i:0"><rect class="eng-ghost" x="12" y="16" width="168" height="56" rx="12"/><rect class="eng-solid" x="12" y="16" width="168" height="56" rx="12"/><text class="eng-name" x="26" y="41">Engagement 1</text><text class="eng-when" x="26" y="60">Apr to Jun</text><path class="strand" pathLength="1" d="M180 32 C210 32 236 32 236 72 L236 430 C236 480 146 470 146 550" style="stroke:var(--s1);--j:0"/><path class="strand" pathLength="1" d="M180 44 C210 44 244 44 244 84 L244 430 C244 480 156 470 156 550" style="stroke:var(--s3);--j:1"/><path class="strand" pathLength="1" d="M180 56 C210 56 252 56 252 96 L252 430 C252 480 164 470 164 550" style="stroke:var(--s5);--j:2"/></g>
+<g class="eng" style="--i:1"><rect class="eng-ghost" x="12" y="102" width="168" height="56" rx="12"/><rect class="eng-solid" x="12" y="102" width="168" height="56" rx="12"/><text class="eng-name" x="26" y="127">Engagement 2</text><text class="eng-when" x="26" y="146">Jul to Sep</text><path class="strand" pathLength="1" d="M180 118 C210 118 260 118 260 158 L260 430 C260 480 174 470 174 550" style="stroke:var(--s2);--j:0"/><path class="strand" pathLength="1" d="M180 130 C210 130 268 130 268 170 L268 430 C268 480 182 470 182 550" style="stroke:var(--s7);--j:1"/><path class="strand" pathLength="1" d="M180 142 C210 142 276 142 276 182 L276 430 C276 480 192 470 192 550" style="stroke:var(--s6);--j:2"/></g>
+<g class="eng" style="--i:2"><rect class="eng-ghost" x="12" y="188" width="168" height="56" rx="12"/><rect class="eng-solid" x="12" y="188" width="168" height="56" rx="12"/><text class="eng-name" x="26" y="213">Engagement 3</text><text class="eng-when" x="26" y="232">Oct to Dec</text><path class="strand" pathLength="1" d="M180 204 C210 204 284 204 284 244 L284 430 C284 480 200 470 200 550" style="stroke:var(--s3);--j:0"/><path class="strand" pathLength="1" d="M180 216 C210 216 292 216 292 256 L292 430 C292 480 210 470 210 550" style="stroke:var(--s8);--j:1"/><path class="strand" pathLength="1" d="M180 228 C210 228 300 228 300 268 L300 430 C300 480 218 470 218 550" style="stroke:var(--s1);--j:2"/></g>
+<g class="eng" style="--i:3"><rect class="eng-ghost" x="12" y="274" width="168" height="56" rx="12"/><rect class="eng-solid" x="12" y="274" width="168" height="56" rx="12"/><text class="eng-name" x="26" y="299">Engagement 4</text><text class="eng-when" x="26" y="318">Jan to Mar</text><path class="strand" pathLength="1" d="M180 290 C210 290 308 290 308 330 L308 430 C308 480 228 470 228 550" style="stroke:var(--s4);--j:0"/><path class="strand" pathLength="1" d="M180 302 C210 302 316 302 316 342 L316 430 C316 480 236 470 236 550" style="stroke:var(--s5);--j:1"/><path class="strand" pathLength="1" d="M180 314 C210 314 324 314 324 354 L324 430 C324 480 246 470 246 550" style="stroke:var(--s2);--j:2"/></g>
+<text class="record-label" x="12" y="392">One record,</text><text class="record-label" x="12" y="410">the whole year</text>
+<svg class="mark mark--strands mark-play" data-mark x="122" y="486" width="148" height="148" viewBox="0 0 1254 1254" tabindex="0" aria-label="Sphyr mark"><use href="assets/sphyr-mark.svg#mark"/></svg>
+<g class="april"><text class="april-label" x="196" y="662" text-anchor="middle">April calibration</text><text class="april-sub" x="196" y="681" text-anchor="middle">The whole year is in the file</text></g>
+      </svg>
+      <figcaption style="display:flex;gap:var(--s-4);align-items:center;flex-wrap:wrap"><button class="btn btn-secondary" type="button" data-replay="cv1">Play again</button><span class="sample-label">Illustration. Engagement names and months are examples.</span></figcaption>
+    </figure>
+  </section>
+
+  <section class="lab-sec" aria-labelledby="ch">
+    <h2 id="ch">The circle</h2>
+    <p>For "How it works". Fourteen strands for fourteen people, the average circle in the 2018 paper-and-pen pilot run by Sphyr's founder. Every strand turns the same way, like the ribbons in the logo. Pick a group to see its people. The strands draw in as the section scrolls into view.</p>
+    <div class="circle-wrap">
+      <svg id="circle1" class="circle" viewBox="50 6 900 488" role="img" aria-label="A consultant at the centre with fourteen strands coming in from four groups: four peers, three seniors, four juniors and three clients.">
+<path class="rbn g-peers" pathLength="1" d="M198.5 331.3 Q305.4 211.7 472.3 215.8" style="stroke:var(--s1);--j:0"/>
+<path class="rbn g-peers" pathLength="1" d="M173.2 277.8 Q330.4 180.7 482.8 209.5" style="stroke:var(--s2);--j:1"/>
+<path class="rbn g-peers" pathLength="1" d="M173.2 222.2 Q368.5 155.0 494.6 206.3" style="stroke:var(--s5);--j:2"/>
+<path class="rbn g-peers" pathLength="1" d="M198.5 168.7 Q416.8 136.7 506.9 206.5" style="stroke:var(--s3);--j:3"/>
+<path class="rbn g-seniors" pathLength="1" d="M409.0 57.7 Q589.7 138.5 537.7 227.3" style="stroke:var(--s3);--j:4"/>
+<path class="rbn g-seniors" pathLength="1" d="M500.0 50.0 Q636.9 157.9 542.5 238.6" style="stroke:var(--s4);--j:5"/>
+<path class="rbn g-seniors" pathLength="1" d="M591.0 57.7 Q673.5 184.3 544.0 250.8" style="stroke:var(--s7);--j:6"/>
+<path class="rbn g-juniors" pathLength="1" d="M801.5 168.7 Q694.6 288.3 527.7 284.2" style="stroke:var(--s6);--j:7"/>
+<path class="rbn g-juniors" pathLength="1" d="M826.8 222.2 Q669.6 319.3 517.2 290.5" style="stroke:var(--s5);--j:8"/>
+<path class="rbn g-juniors" pathLength="1" d="M826.8 277.8 Q631.5 345.0 505.4 293.7" style="stroke:var(--s1);--j:9"/>
+<path class="rbn g-juniors" pathLength="1" d="M801.5 331.3 Q583.2 363.3 493.1 293.5" style="stroke:var(--s8);--j:10"/>
+<path class="rbn g-clients" pathLength="1" d="M591.0 442.3 Q410.3 361.5 462.3 272.7" style="stroke:var(--s7);--j:11"/>
+<path class="rbn g-clients" pathLength="1" d="M500.0 450.0 Q363.1 342.1 457.5 261.4" style="stroke:var(--s8);--j:12"/>
+<path class="rbn g-clients" pathLength="1" d="M409.0 442.3 Q326.5 315.7 456.0 249.2" style="stroke:var(--s2);--j:13"/>
+<circle class="core" cx="500" cy="250" r="40"/><text class="core-label" x="500" y="255" text-anchor="middle">Consultant</text>
+<text class="grp-label" x="148" y="255" text-anchor="end">Peers</text>
+<text class="grp-label" x="500" y="31" text-anchor="middle">Seniors</text>
+<text class="grp-label" x="852" y="255" text-anchor="start">Juniors</text>
+<text class="grp-label" x="500" y="479" text-anchor="middle">Clients</text>
+      </svg>
+      <div class="groups" data-circle="circle1" role="group" aria-label="Show one group">
+        <button type="button" data-group="peers" aria-pressed="false">Peers <span>4</span></button>
+        <button type="button" data-group="seniors" aria-pressed="false">Seniors <span>3</span></button>
+        <button type="button" data-group="juniors" aria-pressed="false">Juniors <span>4</span></button>
+        <button type="button" data-group="clients" aria-pressed="false">Clients <span>3</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="lab-sec" aria-labelledby="vh">
+    <h2 id="vh">Logo variants</h2>
+    <p>Every variant keeps the sphere and its 15 separate ribbons. One-colour variants draw a thin gap in the page colour around each ribbon so they stay apart. Shown at 120, 28 and 16 pixels.</p>
+    <div class="table-wrap">
+      <table class="variants">
+        <thead><tr><th>Variant</th><th>Sizes</th><th>Where it is used</th></tr></thead>
+        <tbody>
+<tr><th scope="row">Full colour</th><td><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><div class="mark-tile " style="width:152px;height:152px"><img src="assets/sphyr-logo.svg" alt="" width="120" height="120"></div><div class="mark-tile " style="width:64px;height:64px"><img src="assets/sphyr-logo.svg" alt="" width="28" height="28"></div><div class="mark-tile " style="width:64px;height:64px"><img src="assets/sphyr-logo.svg" alt="" width="16" height="16"></div></div></td><td>Hero sphere and large uses only. The original file, unchanged.</td></tr>
+<tr><th scope="row">Mono, follows the theme</th><td><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><div class="mark-tile " style="width:152px;height:152px"><svg class="mark mark--mono" viewBox="0 0 1254 1254" width="120" height="120" aria-hidden="true"><use href="assets/sphyr-mark.svg#mark"/></svg></div><div class="mark-tile " style="width:64px;height:64px"><svg class="mark mark--mono" viewBox="0 0 1254 1254" width="28" height="28" aria-hidden="true"><use href="assets/sphyr-mark.svg#mark"/></svg></div><div class="mark-tile " style="width:64px;height:64px"><svg class="mark mark--mono" viewBox="0 0 1254 1254" width="16" height="16" aria-hidden="true"><use href="assets/sphyr-mark.svg#mark"/></svg></div></div></td><td>Nav, footer, favicon and every small use. Ink on light, near-white on dark, with gaps in the page colour.</td></tr>
+<tr><th scope="row">White on green</th><td><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><div class="mark-tile on-green" style="width:152px;height:152px"><svg class="mark mark--white" viewBox="0 0 1254 1254" width="120" height="120" aria-hidden="true"><use href="assets/sphyr-mark.svg#mark"/></svg></div><div class="mark-tile on-green" style="width:64px;height:64px"><svg class="mark mark--white" viewBox="0 0 1254 1254" width="28" height="28" aria-hidden="true"><use href="assets/sphyr-mark.svg#mark"/></svg></div><div class="mark-tile on-green" style="width:64px;height:64px"><svg class="mark mark--white" viewBox="0 0 1254 1254" width="16" height="16" aria-hidden="true"><use href="assets/sphyr-mark.svg#mark"/></svg></div></div></td><td>On the brand green (buttons, the ad standee) and on photographs.</td></tr>
+<tr><th scope="row">Strand colours</th><td><div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><div class="mark-tile " style="width:152px;height:152px"><svg class="mark mark--strands" viewBox="0 0 1254 1254" width="120" height="120" aria-hidden="true"><use href="assets/sphyr-mark.svg#mark"/></svg></div><div class="mark-tile " style="width:64px;height:64px"><svg class="mark mark--strands" viewBox="0 0 1254 1254" width="28" height="28" aria-hidden="true"><use href="assets/sphyr-mark.svg#mark"/></svg></div><div class="mark-tile " style="width:64px;height:64px"><svg class="mark mark--strands" viewBox="0 0 1254 1254" width="16" height="16" aria-hidden="true"><use href="assets/sphyr-mark.svg#mark"/></svg></div></div></td><td>Where the mark meets the strands: the end of the core visual. Follows the palette switch above.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<script src="theme.js" defer></script>
+<script src="motif.js" defer></script>
+</body>
+</html>
