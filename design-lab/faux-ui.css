@@ -1,0 +1,175 @@
+/* Faux UI: real Sphyr prototype screens rebuilt in HTML and CSS, framed for the site.
+   Method: stageshow framing and craft rules (one hero, at most one satellite straddling its edge,
+   crop only filler, one gutter, a compact design under 440px). Ported by hand, no stageshow code.
+   Placement and copy rules: docs/design/faux_ui.md. */
+
+/* The figure around a stage is the size container, so the stage itself can switch design. */
+.figure { container-type: inline-size; }
+
+/* The stage is the shot: a rounded well that masks everything. Size queries switch to the compact design. */
+.stage { position: relative; overflow: hidden; border-radius: var(--r-surface); background: var(--stage-ground); font-size: 14px; line-height: 1.45; color: var(--text); }
+.stage-card { padding: 24px; }
+.stage .icon { width: 16px; height: 16px; }
+
+/* Product surfaces inside a frame */
+.fx-panel { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-surface); }
+.fx-window { position: absolute; background: var(--bg); border-radius: var(--r-surface); box-shadow: var(--shadow-frame); overflow: hidden; }
+.fx-sat { position: absolute; z-index: 2; background: var(--surface-raised); border-radius: var(--r-surface); box-shadow: var(--shadow-satellite); padding: 16px; }
+
+/* Product page header: the prototype's own uppercase eyebrow stays inside frames (it is the product). */
+.fx-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--link); }
+.fx-title { font-size: 22px; font-weight: 700; letter-spacing: -0.015em; line-height: 1.2; margin-top: 4px; }
+.fx-sub { color: var(--text-muted); margin-top: 4px; font-size: 13px; }
+.fx-row-title { display: flex; align-items: center; gap: 8px; font-weight: 700; }
+.fx-private p { margin-top: 6px; color: var(--text-muted); font-size: 13px; }
+.fx-private { padding: 16px; }
+
+/* People */
+.fx-person { display: flex; align-items: center; gap: 12px; padding: 16px 20px; border-bottom: 1px solid var(--border); }
+.fx-avatar { display: inline-grid; place-items: center; width: 36px; height: 36px; flex: none; border-radius: 50%; font-size: 12px; font-weight: 700; color: var(--text); }
+.av-blue { background: var(--avatar-blue); } .av-mint { background: var(--avatar-mint); } .av-amber { background: var(--avatar-amber); } .av-rose { background: var(--avatar-rose); } .av-violet { background: var(--avatar-violet); }
+.fx-name { font-weight: 700; font-size: 15px; line-height: 1.3; }
+.fx-meta { color: var(--text-muted); font-size: 12.5px; line-height: 1.3; margin-top: 2px; }
+
+/* Feedback card (prototype /feedback) */
+.fx-body { padding: 18px 20px 20px; }
+.fx-q { font-weight: 600; margin-bottom: 12px; }
+.fx-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.fx-tile { display: grid; justify-items: center; gap: 2px; padding: 12px 8px; border: 1px solid var(--border); border-radius: var(--r-surface); background: var(--surface); text-align: center; color: var(--text); cursor: pointer; transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease); }
+.fx-tile .icon { width: 20px; height: 20px; color: var(--text-muted); margin-bottom: 4px; }
+.fx-tile b { font-size: 13.5px; }
+.fx-tile span { font-size: 12px; color: var(--text-muted); }
+.fx-tile.is-selected, .fx-opt:checked + .fx-tile { background: var(--positive-soft); border-color: var(--brand); }
+.fx-tile.is-selected .icon, .fx-opt:checked + .fx-tile .icon { color: var(--on-positive-soft); }
+.fx-opt { position: absolute; opacity: 0; pointer-events: none; }
+.fx-opt:focus-visible + .fx-tile { outline: 2px solid var(--focus); outline-offset: 2px; }
+.fx-fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.fx-fieldset legend { padding: 0; }
+.fx-step { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); display: none; }
+.fx-feedback:has(.fx-opt[value="good"]:checked) .fx-step-good, .fx-feedback:has(.fx-opt[value="improve"]:checked) .fx-step-improve { display: block; }
+.fx-step-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.fx-step-head b { font-size: 14px; }
+.fx-step-head span { font-size: 12px; color: var(--text-muted); }
+.fx-team-tag { display: inline-block; margin-top: 8px; font-size: 11.5px; font-weight: 700; color: var(--on-positive-soft); background: var(--positive-soft); padding: 2px 8px; border-radius: var(--r-pill); }
+.fx-vba { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
+.fx-vba h4 { margin: 0 0 6px; font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); }
+.fx-vba .chips { gap: 6px; }
+.fx-vba .chip { white-space: nowrap; min-height: 26px; padding: 0 10px; font-size: 12px; font-weight: 600; background: var(--surface); box-shadow: inset 0 0 0 1px var(--border); }
+.fx-vba .chip.on { background: var(--positive-soft); color: var(--on-positive-soft); box-shadow: inset 0 0 0 1px var(--brand); }
+.fx-step-improve .chip.on { background: var(--constructive-soft); color: var(--on-constructive-soft); box-shadow: inset 0 0 0 1px var(--constructive); }
+
+/* Composition: feedback frame. Card in flow (the stage grows with it), cut by the stage's bottom edge
+   inside its own padding; the satellite straddles the card's top edge over the empty side of its header row. */
+.fx-feedback { padding: 76px 24px 0; }
+.fx-feedback .fx-hero-card { position: relative; margin-bottom: -14px; }
+.fx-feedback .fx-sat { right: 24px; top: 12px; width: 200px; }
+.fx-feedback .fx-person { padding-right: 188px; } /* keeps the name clear of the satellite */
+@container (max-width: 440px) {
+  .fx-feedback { padding: 104px 16px 0; }
+  .fx-feedback .fx-person { padding-right: 16px; }
+  .fx-feedback .fx-sat { right: 16px; left: 56px; width: auto; padding: 12px 14px; }
+  .fx-tiles { gap: 6px; }
+  .fx-tile { padding: 10px 4px; }
+  .fx-tile span { display: none; }
+  .fx-vba { grid-template-columns: 1fr; gap: 10px; }
+  .fx-person { padding: 14px 16px; } .fx-body { padding: 14px 16px 16px; }
+}
+
+/* KPI tiles (prototype insights and manager header) */
+.fx-kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 18px; }
+.fx-kpi { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-surface); padding: 14px 16px; }
+.fx-kpi .k { font-size: 12.5px; color: var(--text-muted); font-weight: 500; }
+.fx-kpi .v { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 6px; font-size: 24px; font-weight: 800; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; line-height: 1.15; }
+.fx-kpi .v.word { font-size: 18px; }
+.fx-kpi .d { margin-top: 4px; font-size: 12px; color: var(--text-muted); }
+.fx-delta { display: inline-flex; align-items: center; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: var(--r-pill); background: var(--positive-soft); color: var(--on-positive-soft); letter-spacing: 0; }
+.fx-delta.down { background: var(--constructive-soft); color: var(--on-constructive-soft); }
+.fx-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-surface); padding: 16px 18px; margin-top: 12px; }
+.fx-card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.fx-card-head b { font-size: 15px; }
+.fx-card-head p { font-size: 12.5px; color: var(--text-muted); }
+.fx-chart { display: block; width: 100%; height: auto; margin-top: 10px; overflow: visible; }
+.fx-chart .grid { stroke: var(--border); stroke-width: 1; }
+.fx-chart .axis { fill: var(--text-muted); font-size: 11px; font-family: var(--font); }
+.fx-chart .line { fill: none; stroke: var(--chart-1); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; }
+.fx-chart .area { fill: var(--chart-1); opacity: .12; }
+
+/* Anonymized feedback item (prototype) */
+.fx-fb-label { display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; color: var(--on-positive-soft); }
+.fx-fb-label span:last-child { color: var(--text-muted); font-weight: 500; }
+.fx-fb-text { margin-top: 6px; font-size: 13.5px; }
+
+/* Window frames share one recipe: inset one gutter top and left, in flow, running 40px past the
+   stage's bottom edge, faded over its last 120px where only chart or filler sits. */
+.fx-flow { padding: 32px 32px 0; }
+.fx-flow .fx-window { position: relative; margin-bottom: -40px; padding: 24px 26px 40px; }
+.fx-fade { -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 140px), transparent calc(100% - 30px)); mask-image: linear-gradient(to bottom, #000 calc(100% - 140px), transparent calc(100% - 30px)); }
+.fx-filler { margin-top: 12px; padding: 16px 18px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-surface); }
+.fx-bar { display: block; height: 8px; border-radius: 4px; background: var(--surface-sunk); }
+.fx-bar + .fx-bar { margin-top: 10px; }
+
+/* Insights: the satellite sits over the chart's right end (filler) and crosses the window's right edge
+   into the gutter. A wider straddle would leave a dead strip of well above it. */
+.fx-insights .fx-sat { right: 16px; bottom: 40px; width: 300px; }
+@container (max-width: 600px) {
+  .fx-flow { padding: 16px 16px 0; }
+  .fx-flow .fx-window { padding: 18px 16px 40px; }
+  .fx-insights .fx-kpis { grid-template-columns: 1fr 1fr; }
+  .fx-insights .fx-kpi:nth-child(3) { display: none; }
+  .fx-insights .fx-chart .axis { display: none; }
+  .fx-insights .fx-sat { left: 32px; right: 32px; bottom: 24px; width: auto; }
+  .fx-insights .fx-card { padding-bottom: 150px; }
+}
+
+/* Standouts (prototype team insights) */
+.fx-standouts { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+.fx-list { background: var(--surface); border: 1px solid var(--border); border-radius: var(--r-surface); overflow: hidden; }
+.fx-list-head { display: flex; align-items: center; gap: 8px; padding: 12px 16px; font-weight: 700; border-bottom: 1px solid var(--border); }
+.fx-list-head .icon { color: var(--brand); }
+.fx-list-head.support .icon { color: var(--constructive); }
+.fx-member { display: grid; grid-template-columns: 36px 1fr auto; gap: 12px; padding: 12px 16px; }
+.fx-member + .fx-member { border-top: 1px solid var(--border); }
+.fx-member .score { font-weight: 700; font-variant-numeric: tabular-nums; }
+.fx-member .chips { margin-top: 8px; gap: 6px; }
+.fx-member .chip { white-space: nowrap; min-height: 24px; font-size: 11.5px; padding: 0 9px; }
+.fx-radar { display: block; width: 100%; height: auto; }
+.fx-radar .web { fill: none; stroke: var(--border); }
+.fx-radar .org { fill: var(--chart-2); fill-opacity: .14; stroke: var(--chart-2); stroke-width: 1.5; }
+.fx-radar .team { fill: var(--chart-1); fill-opacity: .22; stroke: var(--chart-1); stroke-width: 2; }
+.fx-radar text { fill: var(--text-muted); font-size: 10.5px; font-family: var(--font); }
+.fx-legend { display: flex; gap: 14px; font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+.fx-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+
+/* Team: the window alone, whole across, faded at its foot over a filler card. No satellite:
+   a card over this window would cover names or scores. The benchmark radar is its own frame. */
+@container (max-width: 600px) {
+  .fx-team .fx-kpis { grid-template-columns: 1fr 1fr; }
+  .fx-team .fx-kpi:nth-child(3) { display: none; }
+  .fx-team .fx-standouts { grid-template-columns: 1fr; }
+  .fx-team .fx-list.support { display: none; }
+}
+
+/* Benchmark: the radar card whole in a well, sized for a column beside copy. */
+.fx-benchmark .fx-panel { padding: 16px 18px 18px; max-width: 420px; margin-inline: auto; box-shadow: var(--shadow-frame); border: 0; }
+
+/* Edit approvals (prototype team insights). Shown whole, never cropped, so the reader sees what a manager sees. */
+.fx-approvals { padding: 28px; }
+.fx-approvals .fx-panel { max-width: 640px; margin-inline: auto; box-shadow: var(--shadow-frame); border: 0; }
+.fx-appr-head { padding: 16px 20px; border-bottom: 1px solid var(--border); }
+.fx-appr-head b { font-size: 15px; }
+.fx-appr-head p { font-size: 12.5px; color: var(--text-muted); margin-top: 2px; }
+.fx-req { display: grid; grid-template-columns: 36px 1fr auto; gap: 12px; padding: 16px 20px; }
+.fx-req + .fx-req { border-top: 1px solid var(--border); }
+.fx-req .given { font-size: 12.5px; color: var(--text-muted); }
+.fx-req .given b { color: var(--text); font-weight: 600; }
+.fx-reason { margin-top: 10px; padding: 10px 12px; border: 1px solid var(--border); border-radius: var(--r-control); background: var(--bg); }
+.fx-reason small { display: block; font-size: 11.5px; color: var(--text-muted); }
+.fx-req-actions { display: flex; gap: 8px; align-items: flex-start; }
+.fx-btn { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px; border-radius: var(--r-control); font: 600 12.5px/1 var(--font); border: 1px solid var(--border-strong); background: var(--surface); color: var(--text); }
+.fx-btn .icon { width: 14px; height: 14px; }
+.fx-btn.primary { background: var(--action); color: var(--on-action); border-color: transparent; }
+@container (max-width: 440px) {
+  .fx-approvals { padding: 16px; }
+  .fx-req { grid-template-columns: 36px 1fr; padding: 14px 16px; }
+  .fx-req-actions { grid-column: 2; }
+}

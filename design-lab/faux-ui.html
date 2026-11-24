@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem("sphyr-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<title>Faux UI | Sphyr design lab</title>
+<link rel="preload" href="fonts/manrope-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="components.css">
+<link rel="stylesheet" href="faux-ui.css">
+<link rel="icon" href="assets/sphyr-logo.svg" type="image/svg+xml">
+<style>
+  /* Lab-only scaffolding. */
+  .spec-head { margin-bottom: var(--s-6); }
+  .spec-head p { margin-top: var(--s-2); color: var(--text-muted); max-width: 72ch; font-size: var(--fs-small); }
+  .lab-intro { padding-block: var(--s-7) var(--s-5); }
+  .slot-md { max-width: 720px; }
+  .compact-row { display: flex; flex-wrap: wrap; gap: var(--s-6); align-items: flex-start; }
+  .compact-row > figure { width: 358px; max-width: 100%; }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="components.html"><img src="assets/sphyr-logo.svg" alt="" width="28" height="28">Sphyr</a>
+    <nav class="nav-links" aria-label="Design lab">
+      <a href="components.html">Components</a>
+      <a href="faux-ui.html" aria-current="page">Faux UI</a>
+    </nav>
+    <div class="nav-end">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <span class="track" aria-hidden="true"><span class="knob"></span></span>Dark theme
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap lab-intro">
+    <h1>Product views</h1>
+    <p class="lede" style="margin-top:var(--s-4)">Real screens from the Sphyr prototype, rebuilt in HTML and cropped to the part that carries the point. Layout, labels and microcopy follow the prototype. People, roles and team names are neutral placeholders until the persona copy is final.</p>
+  </div>
+
+  <!-- 1. Feedback card: home hero or walkthrough. Interactive: the three answers switch step 2. -->
+  <section class="section" id="feedback">
+    <div class="wrap split">
+      <div class="spec-head" style="margin:0">
+        <h2>Giving feedback</h2>
+        <p>For the home page hero or the walkthrough. The rater's card from the prototype's Provide Feedback screen, with the "Private by design" card from its right rail as the one satellite. Pick an answer to see the next step change, as it does in the product.</p>
+      </div>
+      <figure class="figure">
+        <div class="stage fx-feedback" role="group" aria-label="Sample feedback card from the Sphyr prototype">
+          <div class="fx-panel fx-hero-card">
+            <div class="fx-person"><span class="fx-avatar av-blue" aria-hidden="true">MB</span><div><div class="fx-name">Member B</div><div class="fx-meta">Senior consultant · Peers</div></div></div>
+            <div class="fx-body">
+              <fieldset class="fx-fieldset">
+                <legend class="fx-q">How was your experience with Member B this fortnight?</legend>
+                <div class="fx-tiles">
+                  <label><input class="fx-opt" type="radio" name="fx-exp" id="fx-good" value="good" checked><span class="fx-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-smile"/></svg><b>Was good</b><span>Great interaction</span></span></label>
+                  <label><input class="fx-opt" type="radio" name="fx-exp" id="fx-improve" value="improve"><span class="fx-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-frown"/></svg><b>Could improve</b><span>Some friction</span></span></label>
+                  <label><input class="fx-opt" type="radio" name="fx-exp" id="fx-none" value="none"><span class="fx-tile"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-minus"/></svg><b>No interaction</b><span>Nothing to review</span></span></label>
+                </div>
+              </fieldset>
+              <div class="fx-step fx-step-good">
+                <div class="fx-step-head"><b>What stood out?</b><span>Select all that apply.</span></div>
+                <span class="fx-team-tag">Engagement team VBAs</span>
+                <div class="fx-vba">
+                  <div><h4>Values</h4><div class="chips"><span class="chip">Transparency</span><span class="chip on">Customer First</span><span class="chip">Innovation</span></div></div>
+                  <div><h4>Behaviors</h4><div class="chips"><span class="chip">Punctual</span><span class="chip">Respectful</span><span class="chip on">Stakeholder-centric</span></div></div>
+                  <div><h4>Attitudes</h4><div class="chips"><span class="chip on">Takes Initiative</span><span class="chip">Solution-oriented</span><span class="chip">Resilient</span></div></div>
+                </div>
+              </div>
+              <div class="fx-step fx-step-improve">
+                <div class="fx-step-head"><b>Where did you experience friction?</b><span>Choose the clearest signals. Your response is anonymized.</span></div>
+                <span class="fx-team-tag">Engagement team VBAs</span>
+                <div class="fx-vba">
+                  <div><h4>Values</h4><div class="chips"><span class="chip on">Share context earlier</span><span class="chip">Consider customer impact</span></div></div>
+                  <div><h4>Behaviors</h4><div class="chips"><span class="chip">Improve punctuality</span><span class="chip">Respond more consistently</span><span class="chip on">Resolve dependencies sooner</span></div></div>
+                  <div><h4>Attitudes</h4><div class="chips"><span class="chip">Take greater ownership</span><span class="chip">Stay open to feedback</span></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fx-sat fx-private">
+            <div class="fx-row-title"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-lock"/></svg>Private by design</div>
+            <p>Individual responses are normalized and grouped before anyone sees them.</p>
+          </div>
+        </div>
+        <figcaption><span class="sample-label"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-info"/></svg>Prototype screen. Sample data, fictional people.</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 2. Member insights: how-it-works, "what the rated person sees". -->
+  <section class="section" id="insights">
+    <div class="wrap">
+      <div class="spec-head">
+        <h2>What the person rated sees</h2>
+        <p>For how-it-works. The prototype's member Insights screen: three of its four score tiles and the trajectory over six fortnightly cycles, with one anonymized comment as the satellite. The window fades at its foot over the chart, never over words.</p>
+      </div>
+      <figure class="figure">
+        <div class="stage fx-flow fx-insights" role="img" aria-label="Sample member insights screen from the Sphyr prototype: overall score 78, up 3; 46 responses from 12 collaborators; strongest signal Quality of Work; overall trajectory improving; one anonymized comment.">
+          <div class="fx-window fx-fade" aria-hidden="true">
+            <div class="fx-eyebrow">Personal insights</div>
+            <div class="fx-title">How your work is landing</div>
+            <div class="fx-sub">A normalized, anonymized view built from your last six feedback cycles.</div>
+            <div class="fx-kpis">
+              <div class="fx-kpi"><div class="k">Overall score</div><div class="v">78 <span class="fx-delta">+3</span></div><div class="d">Mixed signals this cycle</div></div>
+              <div class="fx-kpi"><div class="k">Responses received</div><div class="v">46 <span class="fx-delta">+8</span></div><div class="d">From 12 collaborators</div></div>
+              <div class="fx-kpi"><div class="k">Strongest signal</div><div class="v word">Quality of Work <span class="fx-delta">+4</span></div><div class="d">93 out of 100</div></div>
+            </div>
+            <div class="fx-card">
+              <div class="fx-card-head"><div><b>Overall trajectory</b><p>Composite score across all seven dimensions</p></div><span class="fx-delta"><svg class="icon" style="width:13px;height:13px;margin-right:4px"><use href="assets/icons.svg#i-trending-up"/></svg>Improving</span></div>
+              <svg class="fx-chart" viewBox="0 0 600 160">
+                <line class="grid" x1="40" x2="590" y1="10" y2="10"/><line class="grid" x1="40" x2="590" y1="62" y2="62"/><line class="grid" x1="40" x2="590" y1="101" y2="101"/><line class="grid" x1="40" x2="590" y1="140" y2="140"/>
+                <text class="axis" x="30" y="14" text-anchor="end">100</text><text class="axis" x="30" y="66" text-anchor="end">80</text><text class="axis" x="30" y="105" text-anchor="end">65</text><text class="axis" x="30" y="144" text-anchor="end">50</text>
+                <path class="area" d="M40 75.0 C58.3 74.1 113.3 68.9 150 69.8 C186.7 70.7 223.3 80.6 260 80.2 C296.7 79.8 333.3 68.1 370 67.2 C406.7 66.3 443.3 75.0 480 75.0 C516.7 75.0 571.7 68.5 590 67.2 L590 140 L40 140 Z"/>
+                <path class="line" d="M40 75.0 C58.3 74.1 113.3 68.9 150 69.8 C186.7 70.7 223.3 80.6 260 80.2 C296.7 79.8 333.3 68.1 370 67.2 C406.7 66.3 443.3 75.0 480 75.0 C516.7 75.0 571.7 68.5 590 67.2"/>
+                <text class="axis" x="40" y="158">May 05</text><text class="axis" x="150" y="158">May 19</text><text class="axis" x="260" y="158">Jun 02</text><text class="axis" x="370" y="158">Jun 16</text><text class="axis" x="480" y="158">Jun 30</text>
+              </svg>
+            </div>
+          </div>
+          <div class="fx-sat" aria-hidden="true">
+            <div class="fx-fb-label"><span>Anonymized Feedback</span><span>Jul 22</span></div>
+            <p class="fx-fb-text">"Your handoff was clear and thoughtful. An earlier signal on the research dependency would have helped us plan around it."</p>
+          </div>
+        </div>
+        <figcaption><span class="sample-label"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-info"/></svg>Prototype screen. Sample data, fictional people.</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 3. Manager team insights: home or how-it-works, "what the manager sees". -->
+  <section class="section" id="team">
+    <div class="wrap">
+      <div class="spec-head">
+        <h2>What a manager sees</h2>
+        <p>For the home page or how-it-works. The prototype's Team Insights screen: team score and participation, then standouts and members needing support. No satellite here: any card over this window would cover a name or a score.</p>
+      </div>
+      <figure class="figure">
+        <div class="stage fx-flow fx-team" role="img" aria-label="Sample manager team insights screen from the Sphyr prototype: team score 82, participation 96 percent, 3 edit requests; two top performing members and two members needing support with their feedback tags.">
+          <div class="fx-window fx-fade" aria-hidden="true">
+            <div class="fx-eyebrow">Manager view</div>
+            <div class="fx-title">Team Insights</div>
+            <div class="fx-sub">Compare team health, spot coaching priorities, and decide feedback edit requests.</div>
+            <div class="fx-kpis">
+              <div class="fx-kpi"><div class="k">Team score</div><div class="v">82</div><div class="d">Up 2 points this cycle</div></div>
+              <div class="fx-kpi"><div class="k">Participation</div><div class="v">96%</div><div class="d">24 of 25 reviews given</div></div>
+              <div class="fx-kpi"><div class="k">Edit requests</div><div class="v">3</div><div class="d">Awaiting your decision</div></div>
+            </div>
+            <div class="fx-standouts">
+              <div class="fx-list">
+                <div class="fx-list-head"><svg class="icon"><use href="assets/icons.svg#i-award"/></svg>Top Performing Members</div>
+                <div class="fx-member"><span class="fx-avatar av-mint">MA</span><div><div class="fx-name">Member A</div><div class="fx-meta">Consultant</div><div class="chips"><span class="chip chip-positive">Did a good job</span><span class="chip chip-positive">Was helpful</span></div></div><span class="score">86</span></div>
+                <div class="fx-member"><span class="fx-avatar av-blue">MB</span><div><div class="fx-name">Member B</div><div class="fx-meta">Senior consultant</div><div class="chips"><span class="chip chip-positive">Took initiative</span><span class="chip chip-positive">Met targets</span></div></div><span class="score">82</span></div>
+              </div>
+              <div class="fx-list support">
+                <div class="fx-list-head support"><svg class="icon"><use href="assets/icons.svg#i-trending-up"/></svg>Members Needing Support</div>
+                <div class="fx-member"><span class="fx-avatar av-amber">MC</span><div><div class="fx-name">Member C</div><div class="fx-meta">Analyst</div><div class="chips"><span class="chip chip-constructive">Delayed my work</span><span class="chip chip-constructive">Was unresponsive</span></div></div><span class="score">76</span></div>
+                <div class="fx-member"><span class="fx-avatar av-rose">MD</span><div><div class="fx-name">Member D</div><div class="fx-meta">Associate</div><div class="chips"><span class="chip chip-constructive">Missed work or meetings</span><span class="chip chip-constructive">Delayed my work</span></div></div><span class="score">79</span></div>
+              </div>
+            </div>
+            <div class="fx-filler"><span class="fx-bar" style="width:38%"></span><span class="fx-bar" style="width:72%"></span><span class="fx-bar" style="width:55%"></span></div>
+          </div>
+        </div>
+        <figcaption><span class="sample-label"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-info"/></svg>Prototype screen. Sample data, fictional people.</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 3b. Team benchmark radar: a small frame for a column beside copy. -->
+  <section class="section" id="benchmark">
+    <div class="wrap split">
+      <div class="spec-head" style="margin:0">
+        <h2>Team against the organization</h2>
+        <p>For how-it-works, beside the manager view. The prototype's benchmark card, whole: the team average against the organization average on the seven dimensions.</p>
+      </div>
+      <figure class="figure">
+        <div class="stage stage-card fx-benchmark" role="img" aria-label="Sample radar chart from the Sphyr prototype comparing team average and organization average on seven dimensions: behavior, delivery, quality, policies, dependencies, teamwork and engagement. The two shapes are close.">
+          <div class="fx-panel" aria-hidden="true">
+            <div class="fx-row-title" style="font-size:14px">Team vs. Organization Benchmark</div>
+            <div class="fx-meta">Last cycle comparison across all seven parameters.</div>
+            <svg class="fx-radar" viewBox="-34 6 308 196">
+              <polygon class="web" points="120.0,32.0 176.3,59.1 190.2,120.0 151.2,168.9 88.8,168.9 49.8,120.0 63.7,59.1"/>
+              <polygon class="web" points="120.0,56.5 157.2,74.4 166.3,114.6 140.6,146.8 99.4,146.8 73.7,114.6 82.8,74.4"/>
+              <polygon class="web" points="120.0,80.2 138.6,89.2 143.2,109.3 130.3,125.4 109.7,125.4 96.8,109.3 101.4,89.2"/>
+              <polygon class="org" points="120.0,42.8 166.2,67.2 180.4,117.8 146.2,158.5 95.3,155.2 63.8,116.8 73.3,66.7"/>
+              <polygon class="team" points="120.0,40.6 165.0,68.1 183.2,118.4 146.6,159.1 96.3,153.3 61.7,117.3 74.4,67.6"/>
+              <text x="120" y="21.5" text-anchor="middle">Behavior</text><text x="187.2" y="53.9">Delivery</text><text x="203.8" y="126.6">Quality</text><text x="157.3" y="185">Policies</text><text x="82.7" y="185" text-anchor="end">Dependencies</text><text x="36.2" y="126.6" text-anchor="end">Teamwork</text><text x="52.8" y="53.9" text-anchor="end">Engagement</text>
+            </svg>
+            <div class="fx-legend"><span><i style="background:var(--chart-2)"></i>Organization Average</span><span><i style="background:var(--chart-1)"></i>Team Average</span></div>
+          </div>
+        </div>
+        <figcaption><span class="sample-label"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-info"/></svg>Prototype screen. Sample data. Radar shape traced by eye from the prototype's sample chart.</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 4. Edit approvals: trust page. Shown whole and honestly. -->
+  <section class="section" id="approvals">
+    <div class="wrap">
+      <div class="spec-head">
+        <h2>Edit approvals, shown honestly</h2>
+        <p>For the trust page. The whole card, not a crop, because it shows the one place where a manager sees who gave feedback to whom. The caption says so in plain words.</p>
+      </div>
+      <figure class="figure slot-md">
+        <div class="stage fx-approvals" role="img" aria-label="Sample feedback edit approvals card from the Sphyr prototype. Each request shows who gave the feedback, who it was given to, the reason for the edit, and Reject and Approve buttons.">
+          <div class="fx-panel" aria-hidden="true">
+            <div class="fx-appr-head"><b>Feedback edit approvals</b><p>Review requests before submitted feedback can be reopened.</p></div>
+            <div class="fx-req">
+              <span class="fx-avatar av-mint">MA</span>
+              <div><div class="fx-name">Member A</div><div class="given">Feedback given to <b>Member B</b></div><div class="fx-reason"><small>Reason for edit</small>I selected the wrong delivery tag and want to correct it.</div></div>
+              <div class="fx-req-actions"><span class="fx-btn"><svg class="icon"><use href="assets/icons.svg#i-x"/></svg>Reject</span><span class="fx-btn primary"><svg class="icon"><use href="assets/icons.svg#i-check"/></svg>Approve</span></div>
+            </div>
+            <div class="fx-req">
+              <span class="fx-avatar av-amber">MC</span>
+              <div><div class="fx-name">Member C</div><div class="given">Feedback given to <b>Member E</b></div><div class="fx-reason"><small>Reason for edit</small>My rating was submitted before I finished the comment.</div></div>
+              <div class="fx-req-actions"><span class="fx-btn"><svg class="icon"><use href="assets/icons.svg#i-x"/></svg>Reject</span><span class="fx-btn primary"><svg class="icon"><use href="assets/icons.svg#i-check"/></svg>Approve</span></div>
+            </div>
+          </div>
+        </div>
+        <figcaption>In the prototype, a manager approving an edit request sees who gave the feedback and to whom. Ratings are pooled and comments are anonymized to the person rated.<br><span class="sample-label" style="margin-top:6px"><svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-info"/></svg>Prototype screen. Sample data, fictional people.</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Compact designs, shown at the 358px phone column so they can be reviewed on desktop. -->
+  <section class="section" id="compact">
+    <div class="wrap">
+      <div class="spec-head"><h2>Compact designs at 358px</h2><p>Each frame has a second composition for a phone column, switched by a container query under 440 or 600px. Satellites move or drop; words stay whole.</p></div>
+      <div class="compact-row" id="compact-row"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap"><p>Sphyr design lab. Course project, Product Marketing (PD2.501), IIIT Hyderabad. Product views rebuilt from the Sphyr prototype at sphyr-prototype.raviwarrier.com with placeholder sample data.</p></div>
+</footer>
+<script>
+  // Lab only: clone each frame into the 358px review row, without ids or radio names that would clash.
+  for (const id of ["feedback", "insights", "team", "benchmark", "approvals"]) {
+    const fig = document.querySelector(`#${id} figure`).cloneNode(true);
+    fig.classList.remove("slot-md");
+    fig.querySelectorAll("[id]").forEach((el) => el.removeAttribute("id"));
+    fig.querySelectorAll("input[name]").forEach((el) => { el.name = el.name + "-compact"; el.tabIndex = -1; });
+    fig.setAttribute("aria-hidden", "true");
+    document.getElementById("compact-row").append(fig);
+  }
+</script>
+<script src="theme.js" defer></script>
+</body>
+</html>
