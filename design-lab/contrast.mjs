@@ -33,6 +33,13 @@ const pairs = [
   ["text", "positive-soft", TEXT], ["text-muted", "positive-soft", TEXT], ["on-positive-soft", "surface-raised", TEXT],
   ["text-muted", "constructive-soft", TEXT], ["text", "constructive-soft", TEXT],
   ["destructive", "bg", TEXT], ["destructive", "surface", TEXT],
+  ["text", "surface-sunk", TEXT], ["text-muted", "surface-sunk", TEXT],
+  // Prototype palette inside faux UI frames.
+  ["p-text", "p-bg", TEXT], ["p-text", "p-surface", TEXT], ["p-text", "p-surface-sunk", TEXT],
+  ["p-text-muted", "p-bg", TEXT], ["p-text-muted", "p-surface", TEXT], ["p-text-muted", "p-surface-sunk", TEXT], ["p-text-muted", "p-surface-raised", TEXT],
+  ["link", "p-bg", TEXT], ["link", "p-surface", TEXT], ["on-positive-soft", "p-surface", TEXT], ["on-positive-soft", "p-surface-raised", TEXT],
+  ["p-text", "avatar-blue", TEXT], ["p-text", "avatar-mint", TEXT], ["p-text", "avatar-amber", TEXT],
+  ["p-border-strong", "p-surface", UI], ["action", "p-surface", UI],
   ["border-strong", "bg", UI], ["border-strong", "surface", UI],
   ["focus", "bg", UI], ["focus", "surface", UI],
   ["action", "bg", UI], ["action", "surface", UI],
