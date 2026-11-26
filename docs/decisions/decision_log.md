@@ -10,6 +10,16 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-26: v3 returns to the v2 design; India in the lede
+
+- **Design:** v3 uses the v2 visual system (ribbon hero ending in the logo sphere, the "Who gets a say" circle, v2 cards, captions, grid and spacing) with the v3 words and A-I-D-A order. Replaces "Design: direction A" in "2026-11-26: v3 plan gate". Reason: the user found the direction A build out of place and misaligned, and missed the logo and the v2 design; the professor said he liked the v2 UI. A design review against v2 (`docs/research/v3_design_review.md`) and two polish passes followed. Kept from direction A: nothing visual; the v3 copy, order and the call button stay.
+- **Ribbon:** plays as in v2; its labels use v3 words ("3 colleagues", "Appraisal cycle / Every project, in one view").
+- **Home headline:** "Peer feedback for appraisals at consulting firms". The line under it opens "For firms of 40 to 400 people in India." The ad's first line and the LinkedIn intro say "consulting firms of 40 to 400 people in India". The propaganda page and the ad's audience row keep "homegrown Indian consulting firms" as the segment definition. Replaces the headline in "2026-11-26: v3 headline, sign-off and the packaging refund". Reason: the country is part of the segment, not the hook; rupee pricing, GST and the words already signal India.
+- **Word rule exemptions:** "Member Insights" may appear in body copy (it is the real screen name); course labels (Job, Journey stage, Call to action) may appear on the ad and LinkedIn deliverable pages; "circle" stays (product word).
+- **Ad QR:** opens the v3 home page, whose first button is the call; the standee says "Scan to book a 20-minute call or see the 2-minute walkthrough."
+- **CAC:** no CAC line on the site; it came from the team's class notes, not the professor's feedback.
+- **Cut from home on purpose:** the research statistics row, the FAQ, "What Sphyr does not do", the "Today / With Sphyr" pair, and the end button rows on the ad and LinkedIn pages (one secondary link rule). The pricing rationale and the onboarding timeline live on the hub.
+
 ## 2026-11-26: v3 headline, sign-off and the packaging refund
 
 - **Home headline:** "Peer feedback for appraisals at Indian consulting firms". The firm size moves to the line under it: "For firms of 40 to 400 people. Every two weeks, the people on each project give two minutes of feedback. Partners and engagement managers see it before calibration." Reason: a shorter headline that still names the reader; the first screen keeps what, who and next.
