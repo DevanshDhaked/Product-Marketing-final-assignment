@@ -9,28 +9,26 @@
 .home .lede { color: var(--text-muted); }
 .home p + p { margin-top: var(--s-4); }
 
-/* Hero: headline left, the line and the button right, the core visual full width below. */
-.home main > .hero { padding-block: var(--s-7) var(--s-6); }
-.hero-copy { display: grid; grid-template-columns: 1.45fr 1fr; gap: var(--s-6) var(--s-8); align-items: start; container-type: inline-size; }
-/* One sentence per line: the size follows the headline column so "The engagement ends." never wraps beside the lede. */
-.hero h1 { font-size: clamp(2.5rem, 5.8cqi - 0.25rem, 4.25rem); line-height: 1.04; }
-.hero h1 em { display: block; }
-/* Both columns start at the top; trimming to cap height makes the first letters, not the line boxes, start level. */
-.hero h1, .hero-side .lede { text-box: trim-start cap alphabetic; }
-.hero-side .lede { font-size: var(--fs-lede); color: var(--text); max-width: 30ch; }
-.hero-side .btn { margin-top: var(--s-5); }
-.hero-visual { margin: var(--s-7) auto 0; }
-.hero-visual .cv { max-height: 420px; }
-/* The phone version is tall (viewBox 360 by 594); a height cap would shrink its labels below 11 px. */
-.hero-visual .cv-compact { max-height: none; }
-/* The payoff of the picture: at least as readable as the project names. Size, weight and colour only; the fade-in stays. */
-.hero-visual .cv .round-label { font-size: 15px; }
-.hero-visual .cv .round-sub { font-weight: 500; fill: var(--text); }
-.hero-visual .cv-wide .round-sub { font-size: 14px; }
+/* Direction A: headings and rules in the ink; product green stays on actions. */
+.home h1, .home h2 { color: var(--ink); }
+
+/* Hero (v3): the headline across the full width, then the copy on 5 of 12 columns and Exhibit 1 on 7.
+   On phones the copy comes first and the exhibit follows below the fold. */
+.home main > .hero { padding-block: var(--s-7) var(--s-8); }
+.hero-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--s-6) var(--s-6); align-items: start; }
+.hero h1 { grid-column: 1 / -1; }
+.hero-copy { grid-column: 1 / span 5; }
+.hero-copy .lede { color: var(--text); max-width: 34ch; }
+.hero-copy .btn { margin-top: var(--s-5); }
+.hero-copy .go { margin-top: var(--s-4); }
+.hero-exhibit { grid-column: 6 / -1; }
 @media (max-width: 900px) {
-  .hero-copy { grid-template-columns: 1fr; gap: var(--s-4); }
-  .hero h1 { font-size: clamp(2.5rem, 1.4rem + 3.6vw, 4.25rem); }
-  .hero-visual { margin-top: var(--s-6); }
+  .home main > .hero { padding-block: var(--s-5) var(--s-7); }
+  .hero-grid { display: block; }
+  .hero-copy { margin-top: var(--s-4); }
+  .hero-copy .btn { margin-top: var(--s-4); }
+  .hero-copy .go { margin-top: var(--s-2); min-height: 44px; }
+  .hero-exhibit { margin-top: var(--s-6); }
 }
 
 /* The problem: the trigger as a lead paragraph, four scenes as labelled rows, then the before and after. */
@@ -44,7 +42,7 @@
 .before-after p { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.375rem, 1.1rem + 0.9vw, 1.75rem); line-height: 1.25; max-width: 32ch; }
 .before-after > div:first-child p { color: var(--text-muted); }
 /* The one accent (brand green, text-safe token) marks the payoff lines and the proof numbers. */
-.hero h1 em, .before-after > div + div p, .proof .v { color: var(--link); }
+.before-after > div + div p, .proof .v { color: var(--link); }
 @media (max-width: 760px) {
   .before-after { grid-template-columns: 1fr; }
   .before-after > div + div { border-left: 0; padding-left: 0; border-top: 1px solid var(--border); padding-top: var(--s-5); }
@@ -60,12 +58,12 @@
   .duo.flip > :first-child { order: 0; }
 }
 /* Both tag steps share one cell, so picking an answer never changes the card's height or moves the text beside it. */
-.duo .fx-body { display: grid; }
-.duo .fx-body > .fx-step { display: block; grid-row: 2; grid-column: 1; visibility: hidden; }
-.duo .fx-feedback:has(.fx-opt[value="good"]:checked) .fx-step-good,
-.duo .fx-feedback:has(.fx-opt[value="improve"]:checked) .fx-step-improve,
-.duo .fx-feedback:has(.fx-opt[value="none"]:checked) .fx-step-none { visibility: visible; }
-.duo .fx-body > .fx-step-none { display: grid; place-items: center; color: var(--text-muted); }
+.hero-exhibit .fx-body { display: grid; }
+.hero-exhibit .fx-body > .fx-step { display: block; grid-row: 2; grid-column: 1; visibility: hidden; }
+.hero-exhibit .fx-feedback:has(.fx-opt[value="good"]:checked) .fx-step-good,
+.hero-exhibit .fx-feedback:has(.fx-opt[value="improve"]:checked) .fx-step-improve,
+.hero-exhibit .fx-feedback:has(.fx-opt[value="none"]:checked) .fx-step-none { visibility: visible; }
+.hero-exhibit .fx-body > .fx-step-none { display: grid; place-items: center; color: var(--text-muted); }
 .text-col h2 { margin-bottom: var(--s-5); }
 .text-col h3 { margin-bottom: var(--s-3); }
 .text-col .values-h { margin-top: var(--s-6); }
