@@ -40,7 +40,7 @@ ALLOWED = {
     # Propaganda channel table column header; every answer in it is "No".
     "Tracks anyone?",
     # Ad page: the organisers do not endorse Sphyr, and the ad tracks nobody.
-    "A roll-up standee on a paid sponsor spot, with A6 cards on a stand beside it for people to take. It is planned for an HR community event of the kind national HR network chapters run, and paying for the spot does not mean the organisers endorse Sphyr. We pay for the spot because the course treats advertising as the route where money is spent.",
+    "A roll-up standee on a paid sponsor spot, with A6 cards on a stand beside it for people to take. It is planned for an HR community event of the kind national HR network chapters run, and paying for the spot does not mean the organisers endorse Sphyr. We pay for the spot because the course treats advertising as the route where money is spent. The standee runs in the same weeks as the",
     "Why it tracks nobody",
     "Nobody's badge is scanned and nobody fills in a form. The QR code and the printed address open the same plain page with no tracking parameters, so a scan tells us nothing about who made it.",
     # Cited research fact (message guideline section 3).
