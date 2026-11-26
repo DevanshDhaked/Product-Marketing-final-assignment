@@ -155,3 +155,10 @@
   .flow li:not(:last-child)::before { top: 17px; left: 6px; right: auto; bottom: calc(-1 * var(--s-5) - 3px); width: 2px; height: auto; }
   .flow-when { position: static; display: block; margin-bottom: var(--s-1); white-space: normal; }
 }
+
+/* Hub: "What happens after a firm signs" timeline. When on the left, what on the right; stacked on phones. */
+.after { margin: var(--s-5) 0 0; }
+.after > div { display: grid; grid-template-columns: 11rem 1fr; gap: var(--s-4); padding-block: var(--s-3); border-top: 1px solid var(--border); }
+.after dt { font-size: var(--fs-small); font-weight: 600; color: var(--text-muted); }
+.after dd { margin: 0; }
+@media (max-width: 640px) { .after > div { grid-template-columns: 1fr; gap: var(--s-1); } }
