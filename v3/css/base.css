@@ -194,6 +194,11 @@ a:hover { text-decoration-thickness: 2px; }
 .nav-menu li + li { border-top: 1px solid var(--border); }
 .nav-menu a { display: flex; align-items: center; min-height: 44px; color: var(--text); font: 500 var(--fs-body) var(--font); text-decoration: none; }
 .nav-menu a:hover { text-decoration: underline; }
+/* "Book a 20-minute call" in the Menu is a button (it opens #call-note); it looks like the links above it. */
+.nav-menu button { display: flex; align-items: center; width: 100%; min-height: 44px; padding: 0; border: 0; background: none; color: var(--text); font: 500 var(--fs-body) var(--font); text-align: left; cursor: pointer; }
+.nav-menu button:hover { text-decoration: underline; }
+/* The note opens from the Menu as a nested popover, so the Menu stays open under it; hide it until the note closes. */
+body:has(#call-note:popover-open) .nav-menu { visibility: hidden; }
 .nav-menu a[aria-current="page"] { box-shadow: inset 3px 0 0 var(--brand); padding-left: var(--s-3); }
 @media (max-width: 999px) {
   .nav-inner { gap: var(--s-3); }
@@ -491,7 +496,7 @@ caption { caption-side: bottom; padding: 10px 16px; text-align: left; font-size:
    never ranked people (message guideline, visual rules). The benchmark radar is its own frame. */
 @container (max-width: 600px) {
   .fx-team .fx-kpis { grid-template-columns: 1fr 1fr; }
-  .fx-team .fx-kpi:nth-child(3) { display: none; }
+  .fx-team .fx-kpi:nth-child(3) { grid-column: 1 / -1; } /* edit requests stay visible on phones (slop rules) */
   .fx-team .fx-standouts { grid-template-columns: 1fr; }
   .fx-team .fx-team-fb .fx-fb-item + .fx-fb-item { display: none; }
 }
@@ -558,7 +563,9 @@ caption { caption-side: bottom; padding: 10px 16px; text-align: left; font-size:
 .call { margin-top: var(--s-7); display: flex; flex-wrap: wrap; gap: var(--s-3) var(--s-5); align-items: center; }
 
 /* "Book a 20-minute call" opens an honest note in place. */
-.note-pop { margin: auto; max-width: 420px; padding: var(--s-5) var(--s-6); border: 1px solid var(--border-strong); border-radius: var(--r-surface); background: var(--surface-raised); color: var(--text); font: 400 var(--fs-body)/1.5 var(--font); box-shadow: var(--shadow-satellite); }
+/* Anchored under the nav call button: fixed below the 64 px header, right edge on the wrap's content edge
+   (percentages are of the viewport, so a scrollbar does not shift it). Phones: full width minus the gutters. */
+.note-pop { inset: calc(64px + var(--s-2)) calc(max(0px, (100% - var(--wrap)) / 2) + var(--gutter)) auto auto; margin: 0; width: min(420px, calc(100% - 2 * var(--gutter))); padding: var(--s-5) var(--s-6); border: 1px solid var(--border-strong); border-radius: var(--r-surface); background: var(--surface-raised); color: var(--text); font: 400 var(--fs-body)/1.5 var(--font); box-shadow: var(--shadow-satellite); }
 .note-pop::backdrop { background: transparent; } /* one local answer: the note opens, the page stays as it was */
 .note-pop button { margin-top: var(--s-4); }
 .linkbtn { border: 0; background: none; padding: 0; min-height: 44px; color: var(--link); font: 600 var(--fs-body) var(--font); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }

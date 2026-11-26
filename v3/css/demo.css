@@ -29,7 +29,9 @@
 .wt-legend { font-weight: 700; margin-bottom: var(--s-3); }
 .wt-pick { display: grid; grid-template-columns: 20px 1fr; gap: var(--s-4); padding: var(--s-5) var(--s-4); border-top: 1px solid var(--border); cursor: pointer; border-radius: 0; transition: background var(--dur) var(--ease); }
 .wt-pick:last-of-type { border-bottom: 1px solid var(--border); }
-.wt-pick input { width: 20px; height: 20px; margin: 8px 0 0; accent-color: var(--action); }
+/* Drawn, not native: demo.js disables the radios once the card is in, and a disabled native radio turns grey. */
+.wt-pick input { appearance: none; width: 20px; height: 20px; margin: 8px 0 0; border-radius: 50%; background: var(--surface); box-shadow: inset 0 0 0 1.5px var(--border-strong); }
+.wt-pick input:checked { background: var(--action); box-shadow: inset 0 0 0 2px var(--action), inset 0 0 0 5px var(--surface); }
 .wt-pick:hover { background: var(--surface-sunk); }
 .wt-pick:has(input:disabled) { cursor: default; } /* demo.js locks the pick once the card is in */
 .wt-pick:has(input:checked) { background: var(--positive-soft); }
@@ -65,8 +67,8 @@
 
 /* Step 3: two members side by side, in the member Insights layout. The whole window shows; nothing is faded. */
 .wt-figure { margin-top: var(--s-6); }
-.wt-figure .exhibit-cap { max-width: none; }
-.wt-yours { display: block; margin-top: var(--s-2); font-size: var(--fs-caption); font-weight: 600; color: var(--text); }
+.wt-figure figcaption { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-5); max-width: none; }
+.wt-yours { font-size: var(--fs-caption); font-weight: 600; color: var(--text); }
 .wt-insights { padding: 32px; }
 .wt-insights .fx-window { position: relative; padding: 24px 26px; }
 .wt-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 12px 24px; }
@@ -95,6 +97,6 @@
   .wt-col + .wt-col { padding-top: 20px; border-top: 1px solid var(--border); }
 }
 
-/* Step 4 */
-.wt-end { align-items: end; }
+/* Step 4: the call button sits under the text, one column at the text measure. */
+.wt-end { grid-template-columns: minmax(0, var(--measure)); }
 .wt-next .btn-row { justify-content: flex-start; }
