@@ -13,14 +13,26 @@
 
 /* Hero: headline left, the line and the button right, the core visual full width below. */
 .home main > .hero { padding-block: var(--s-7) var(--s-6); }
-.hero-copy { display: grid; grid-template-columns: 1.45fr 1fr; gap: var(--s-6) var(--s-8); align-items: start; container-type: inline-size; }
-/* The size follows the headline column; three balanced lines keep the headline about as tall as the column beside it. */
-.hero h1 { font-size: clamp(2.5rem, 6cqi, 4rem); line-height: 1.04; text-wrap: balance; }
+/* 2026-11-26 (design review blocker): two equal columns. The right column holds lede, button, pilot line and
+   walkthrough link in v2's height (181 px at 1280), so the ribbon, its caption and Play again fit 1280x800. */
+.hero-copy { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-6) var(--s-7); align-items: start; container-type: inline-size; }
+/* Two lines, as in v2: the second phrase on its own line, the size scaled to the column so line one fits it. */
+.hero h1 { font-size: clamp(1.875rem, 3.6cqi, 4rem); line-height: 1.04; text-wrap: balance; }
+.hero h1 em { display: block; }
 /* Both columns start at the top; trimming to cap height makes the first letters, not the line boxes, start level. */
 .hero h1, .hero-side .lede { text-box: trim-start cap alphabetic; }
-.hero-side .lede { font-size: var(--fs-lede); color: var(--text); max-width: 38ch; }
-.hero-side .btn { margin-top: var(--s-5); }
-.hero-side .go, .close .go { margin-top: var(--s-3); }
+.hero-side { container-type: inline-size; }
+.hero-side .lede { font-size: var(--fs-lede); color: var(--text); max-width: 52ch; }
+/* Button and walkthrough link share a row; the one-line pilot line sits under them. A narrow column stacks
+   them in source order instead (button, pilot line, link). */
+.hero-cta { margin-top: var(--s-5); display: grid; grid-template-columns: auto 1fr; align-items: center; column-gap: var(--s-5); }
+.hero-cta .go { grid-row: 1; grid-column: 2; justify-self: start; margin-top: 0; }
+.hero-cta .pilot-line { grid-column: 1 / -1; grid-row: 2; font-size: var(--fs-caption); max-width: none; }
+@container (max-width: 500px) {
+  .hero-cta { display: block; }
+  .hero-cta .go { margin-top: var(--s-3); }
+}
+.close .go { margin-top: var(--s-3); }
 .hero-visual { margin: var(--s-7) auto 0; }
 .hero-visual .cv { max-height: 420px; }
 /* The phone version is tall (viewBox 360 by 594); a height cap would shrink its labels below 11 px. */
