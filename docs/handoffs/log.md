@@ -7,6 +7,7 @@ timestamp: 2026-11-24T17:11:40Z
 ---
 
 ## 2026-11-26
+* **Creation**: Added [Sign-off swap report](signoff_report.md).
 * **Creation**: Added [v3 home page builder report](home3_report.md).
 * **Creation**: Added [v3 words and supporting pages report](words3_report.md).
 * **Creation**: Added [v3 ad builder report](ad3_report.md).
