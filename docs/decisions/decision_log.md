@@ -10,6 +10,21 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-26: v3 plan gate (iteration-b, hosted at /v3/)
+
+Research behind each point is in [research](../research/index.md).
+- **Why v3:** the professor's v2 review (see [professor feedback](../brief/professor_feedback.md), addendum 2026-11-26): no AIDA, no consulting words, not written from inside the reader's life.
+- **Time:** v3 is finished by the evening of 27 Nov 2026.
+- **Success numbers:** (1) first-screen test, scored with the rubric in `docs/research/v2_baseline.md`: home and ad each 9 of 9 (v2: 6 and 3); (2) the professor's v2 faults left: 0 of 8 (v2: 8); (3) words the product or the segment does not use, on public pages: 0 (v2: about 20 entries; "Deliverables" in the nav is exempt, see below).
+- **Design:** direction A, "The partner's brief" (`docs/research/consulting_visual_language.md`): keep Newsreader, Manrope and the warm palette; one deeper green; no autoplay ribbon in the first screen (the ribbon stays as the logo; any ribbon figure sits lower and the reader starts it); product views become captioned exhibits; numbered sections; a key-numbers row. Replaces the hero ribbon animation in earlier decisions.
+- **Tagline:** "The engagement ends. The evidence stays." leaves the home hero and the ad headline. It is rewritten into the segment's words and used once, as the page sign-off and the ad strapline; the user approves the final line. Replaces the "Tagline" point in "Concise content that still makes every point the brief asks for" (2026-11-25). Reason: homegrown firms say "project" 33 times to "engagement" 3, "evidence" appears in 0 of 19 practitioner threads, and "Engagement" is also a product dimension.
+- **Assurance (Interest):** the existing pilot terms and what the price includes (setup, training and training materials). No refund. One short pilot line under every main button.
+- **Main call to action:** "Book a 20-minute call" on home, ad and posts; "See the 2-minute walkthrough" is the only secondary link. Replaces the walkthrough-first order of v2.
+- **Words:** consulting words for the reader's world (project, project review, appraisal cycle, rating, calibration, hike, designation, engagement manager, partner, head of talent); product screen names only when naming what the reader will see after sign-in ("Fortnightly Feedback", "Insights"). Not used: file, record, evidence, pooled, member, subordinates, VBAs, resources, teammates. Product truth: the product has Member, Manager and Admin roles and no partner role; partners appear only as the firm's decision makers; the cadence is every two weeks.
+- **Nav:** "Deliverables" stays in the top nav so the grader finds it.
+- **Pricing:** the pricing block states, in one short line each, what counts as a seat, any minimum, GST and what happens if the firm leaves, only where `docs/pricing/` already decides it.
+- **Submit URL:** https://devanshdhaked.github.io/Product-Marketing-final-assignment/v3/ . Links and the ad QR code point at /v3/.
+
 ## 2026-11-25: LinkedIn posts rewritten
 
 - **Decision:** the three posts are rewritten in a person's voice, about 110 to 130 words each: post 1 a short story about one consultant, post 2 the Galton ox story as the hook, post 3 how a pilot is judged and what it costs. Disclaimers, author-and-year citation chains, the 02:09 figure and contract terms are out of the posts (they stay in the docs and on the home page). Replaces "LinkedIn posts unchanged" in "Short deliverable pages". Reason: the user read the posts and found them unreadable; verbose is not quality.
