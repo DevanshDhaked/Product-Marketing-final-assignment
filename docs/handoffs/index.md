@@ -31,6 +31,7 @@ timestamp: 2026-11-24T17:11:46Z
 * [Walkthrough pick teammate report](pick_report.md) - The walkthrough card, partner view and ending now follow the visitor's pick of Tara or Nikhil.
 * [Favicon and row heights report](polish_report.md) - Full-colour favicon on every page and equal row heights where answers are close; long lists keep natural height.
 * [LinkedIn posts rewrite report](posts2_report.md) - The three LinkedIn posts rewritten to about 110 to 130 words each, story-led, without disclaimers or citation chains; old and new text in full.
+* [v3 LinkedIn posts writer report](posts3_report.md) - Three posts rewritten for doomscrolling consultants: short scene or number hooks, a save-worthy pilot check, one call, no hashtags.
 * [LinkedIn posts and ad teammate report, phase 2](posts_report.md) - The three LinkedIn post mockups and the standee ad with its rationale: drafts, checks, QR verification, decisions and unverified items.
 * [Pricing teammate report, phase 1b](pricing_report.md) - Plan, progress and final summary from the pricing work: decided terms, six feedback points answered, insights, decisions, rejected approaches and unverified items.
 * [Propaganda and hub fix teammate report, phase 3](propfix_report.md) - The short propaganda page with a summary card and sticky contents, the hub's 01 row, reviewer fixes and checks.
