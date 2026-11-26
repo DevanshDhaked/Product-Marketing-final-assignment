@@ -70,13 +70,32 @@
 .duo .fx-feedback:has(.fx-opt[value="improve"]:checked) .fx-step-improve,
 .duo .fx-feedback:has(.fx-opt[value="none"]:checked) .fx-step-none { visibility: visible; }
 .duo .fx-body > .fx-step-none { display: grid; place-items: center; color: var(--text-muted); }
+/* One column (text above the frame): nothing beside the card can move, so the card holds only the active step
+   and its height follows it, with no empty strip under the last tag (design review 2026-11-26). */
+@media (max-width: 900px) {
+  .duo .fx-body > .fx-step { display: none; }
+  .duo .fx-feedback:has(.fx-opt[value="good"]:checked) .fx-step-good,
+  .duo .fx-feedback:has(.fx-opt[value="improve"]:checked) .fx-step-improve { display: block; }
+  .duo .fx-feedback:has(.fx-opt[value="none"]:checked) .fx-step-none { display: grid; }
+  .duo .fx-feedback .fx-body { padding-bottom: var(--s-6); }
+}
+/* How it works: the text column starts level with the top of the frame. */
+#how .duo { align-items: start; }
+#how .text-col h2 { text-box: trim-start cap alphabetic; }
 .text-col h2 { margin-bottom: var(--s-5); }
 .text-col h3 { margin-bottom: var(--s-3); }
 .text-col .values-h { margin-top: var(--s-6); }
-.text-col .groups { margin-top: var(--s-5); max-width: 320px; }
+/* The counts table runs the width of the text column, like the paragraphs above it. */
+.text-col .groups { margin-top: var(--s-5); }
 .circle-fig { margin: 0; }
-/* On phones "Juniors" runs about 8 px past the viewBox (inherited from v2); let it use the gutter, not clip. */
 .circle-fig .circle { overflow: visible; }
+/* Phones (motif.css hides the centre label and sets side labels to 33 units): the centre label comes back
+   smaller, and the side labels move 21 units inward so "Juniors" and "Peers" stay inside the 16 px gutter. */
+@media (max-width: 600px) {
+  .circle-fig .circle .core-label { display: inline; font-size: 24px; }
+  .circle-fig .circle .grp-label[text-anchor="end"] { transform: translateX(21px); }
+  .circle-fig .circle .grp-label[text-anchor="start"] { transform: translateX(-21px); }
+}
 
 /* Product views under how it works: a short intro over each full-width frame. */
 .back-intro { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-3) var(--s-8); margin: var(--s-8) 0 var(--s-5); align-items: baseline; }
@@ -84,7 +103,7 @@
 .back-intro p { margin: 0 !important; color: var(--text-muted); max-width: 46ch; }
 @media (max-width: 760px) { .back-intro { grid-template-columns: 1fr; } }
 /* A caption runs the width of its frame, never a narrower column under it. */
-.home .figure figcaption { max-width: none; }
+.home .figure figcaption { max-width: none; text-wrap: balance; } /* no one-word last line */
 /* Chart axis in the Insights frame: every other cycle label on phones. */
 @media (max-width: 640px) { .fx-chart .ax-even { display: none; } }
 
