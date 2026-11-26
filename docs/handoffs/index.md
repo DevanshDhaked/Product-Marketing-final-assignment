@@ -21,6 +21,7 @@ timestamp: 2026-11-24T17:11:46Z
 * [Layman clarity test report](layman_report.md) - A first-time visitor's read of the home page: what Sphyr is, jargon, doubts, scores and three fixes.
 * [Headline line analysis report](message_report.md) - What 'The engagement ends. The evidence stays.' is, the job it does on each page, and how it compares with the old site.
 * [Orchestrator handoff, 2026-11-24 20:37 UTC](orchestrator_handoff_2026_11_24_2037z.md) - Everything the next orchestrator needs to finish the Sphyr site on iteration-a: state, open work, user rules, how to run herdr teammates, and the mistakes not to repeat.
+* [Orchestrator handoff, 2026-11-26 09:16 UTC: build v3 on iteration-b](orchestrator_handoff_2026_11_26_0916z.md) - State after v2, the professor's v2 feedback, the goal for v3 (AIDA, consulting language, consulting-grade design), how to run herdr teammates, how to deploy /v3/, and the mistakes not to repeat.
 * [Walkthrough pick teammate report](pick_report.md) - The walkthrough card, partner view and ending now follow the visitor's pick of Tara or Nikhil.
 * [Favicon and row heights report](polish_report.md) - Full-colour favicon on every page and equal row heights where answers are close; long lists keep natural height.
 * [LinkedIn posts rewrite report](posts2_report.md) - The three LinkedIn posts rewritten to about 110 to 130 words each, story-led, without disclaimers or citation chains; old and new text in full.
