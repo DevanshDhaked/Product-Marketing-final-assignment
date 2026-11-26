@@ -491,7 +491,7 @@ caption { caption-side: bottom; padding: 10px 16px; text-align: left; font-size:
    never ranked people (message guideline, visual rules). The benchmark radar is its own frame. */
 @container (max-width: 600px) {
   .fx-team .fx-kpis { grid-template-columns: 1fr 1fr; }
-  .fx-team .fx-kpi:nth-child(3) { display: none; }
+  .fx-team .fx-kpi:nth-child(3) { grid-column: 1 / -1; } /* edit requests stay visible on phones (slop rules) */
   .fx-team .fx-standouts { grid-template-columns: 1fr; }
   .fx-team .fx-team-fb .fx-fb-item + .fx-fb-item { display: none; }
 }
