@@ -194,6 +194,11 @@ a:hover { text-decoration-thickness: 2px; }
 .nav-menu li + li { border-top: 1px solid var(--border); }
 .nav-menu a { display: flex; align-items: center; min-height: 44px; color: var(--text); font: 500 var(--fs-body) var(--font); text-decoration: none; }
 .nav-menu a:hover { text-decoration: underline; }
+/* "Book a 20-minute call" in the Menu is a button (it opens #call-note); it looks like the links above it. */
+.nav-menu button { display: flex; align-items: center; width: 100%; min-height: 44px; padding: 0; border: 0; background: none; color: var(--text); font: 500 var(--fs-body) var(--font); text-align: left; cursor: pointer; }
+.nav-menu button:hover { text-decoration: underline; }
+/* The note opens from the Menu as a nested popover, so the Menu stays open under it; hide it until the note closes. */
+body:has(#call-note:popover-open) .nav-menu { visibility: hidden; }
 .nav-menu a[aria-current="page"] { box-shadow: inset 3px 0 0 var(--brand); padding-left: var(--s-3); }
 @media (max-width: 999px) {
   .nav-inner { gap: var(--s-3); }
