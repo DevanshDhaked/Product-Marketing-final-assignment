@@ -23,7 +23,6 @@
 .li-body p + p, .li-body p + ol, .li-body ol + p, .li-more > p:first-of-type, .li-more > ol:first-of-type { margin-top: 1.1em; }
 .li-body ol { margin-bottom: 0; padding-left: 1.4em; }
 .li-body li + li { margin-top: 2px; }
-.li-tags { color: var(--link); font-weight: 600; }
 
 /* "See more" fold: the opening lines show, the rest opens in place. No script. */
 .li-more summary { display: block; width: max-content; margin-left: auto; padding: 6px 0 2px 12px; min-height: 32px; color: var(--text-muted); font-weight: 600; cursor: pointer; list-style: none; }
@@ -33,7 +32,6 @@
 
 /* The post image (post 2): the core line over the real card frame, edge to edge like a feed image. */
 .li-media { margin: var(--s-4) 0 0; padding: var(--s-5) var(--s-4) var(--s-3); background: var(--stage-ground); border-block: 1px solid var(--border); }
-.li-media-line { font-family: var(--font-display); font-weight: 500; font-size: 1.625rem; line-height: 1.2; letter-spacing: -0.01em; color: var(--text); margin-bottom: var(--s-4); text-wrap: balance; }
 .li-frame { margin: 0; }
 .li-media figcaption { margin-top: var(--s-3); }
 
@@ -61,3 +59,4 @@
 @media (min-width: 521px) { .post-note dl { display: grid; grid-auto-rows: 1fr; } } /* equal note rows on desktop */
 
 .li-next { margin-top: var(--s-6); }
+.li-next-page { margin-top: var(--s-3); }
