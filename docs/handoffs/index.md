@@ -17,6 +17,7 @@ timestamp: 2026-11-24T17:11:46Z
 * [Six content gaps report](content_report.md) - Segment reason, value line, per-tactic reasons, after the first year, hub thread and a plainer hero lede, each with its source.
 * [Design teammate report, phases 1a and 1b](design_report.md) - Design work from tokens to the homepage mockup: decisions, check results, known gaps and next steps for the site build.
 * [v3 design reviewer report](dreview_report.md) - All six pages checked against v2 at 1280 light and dark and 375: one blocker (hero past the fold), visible defects and nits, and the v2 parity list.
+* [v3 final check report](final3_report.md) - Final scores: home and ad 9 of 9, professor's faults 1 of 8 partial (company-page posts), foreign words 1 to 2 on course pages; both themes at both widths with no blocker or visible defect.
 * [Consulting firm life researcher report](firmlife_report.md) - Roles, staffing, appraisals, pain in their words, a 42-term glossary, a do-not-use list with product mismatches, the appraisal calendar and the tagline words.
 * [First-use packaging teammate report, phase 1b](firstuse_report.md) - Plan, progress and final summary from the first-use packaging work: feedback map, research, decisions, rejected approaches and open product questions.
 * [v3 review fixes report](fix3_report.md) - Reviewer fixes: the managing partner's cost on home, Participation, the head of talent's view, the call label in propaganda, the ox paragraph cut, and the ad QR and addresses aimed at the home page.

@@ -6,6 +6,9 @@ tags: [log]
 timestamp: 2026-11-24T17:11:40Z
 ---
 
+## 2026-11-27
+* **Creation**: Added [v3 final check report](final3_report.md).
+
 ## 2026-11-26
 * **Creation**: Added [LinkedIn visuals and tighter copy report](posts4_report.md).
 * **Creation**: Added [Link-preview image report](og3_report.md).
