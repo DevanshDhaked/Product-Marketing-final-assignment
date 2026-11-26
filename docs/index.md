@@ -21,6 +21,7 @@ Read in this order: decisions, then brief (feedback and gap map), then product (
 * [pricing](pricing/index.md) - Sphyr pricing for Indian consulting firms: value per seat, named competitor plans, cost to serve and break-even, the proposed price and pilot, the validation rule, and a one-page summary for writers.
 * [prior_work](prior_work/index.md) - Digests of the team's earlier Sphyr coursework: what was graded, where sources conflict, and research that can back numbers.
 * [product](product/index.md) - What Sphyr really is and does, per the product documentation, whitepaper and the professor's prototype, and what marketing must not claim.
+* [research](research/index.md) - Index of research.
 * [site_audit](site_audit/index.md) - Audit of the site at commit fc85cac: pages, brief compliance, feedback carry-over, design problems and bugs.
 * [strategy](strategy/index.md) - Index of strategy.
 <!-- okf-index:end -->
