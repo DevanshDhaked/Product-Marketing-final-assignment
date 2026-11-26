@@ -7,6 +7,7 @@ timestamp: 2026-11-24T17:11:40Z
 ---
 
 ## 2026-11-26
+* **Creation**: Added [LinkedIn visuals and tighter copy report](posts4_report.md).
 * **Creation**: Added [Link-preview image report](og3_report.md).
 * **Creation**: Added [India in the lede report](india3_report.md).
 * **Creation**: Added [Other pages polish report](ppages_report.md).
