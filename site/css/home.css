@@ -104,11 +104,10 @@
 .term .per > span { white-space: nowrap; }
 .price-pair p.sub { margin-top: var(--s-4); color: var(--text); font-weight: 600; }
 .price-pair p.main { margin-top: var(--s-4); color: var(--text); max-width: 46ch; }
-.price-pair .lower { margin-top: var(--s-4); padding-top: var(--s-3); border-top: 1px solid var(--border-strong); }
+/* One hairline token for the dividers in both cards (design review 2026-11-26). */
+.price-pair .lower { margin-top: var(--s-4); padding-top: var(--s-3); border-top: 1px solid var(--border); }
 .price-pair .lower p { font-size: var(--fs-small); max-width: 52ch; }
-.price-pair .plan .lower { border-top-color: var(--border); }
-.price-pair .act { margin-top: var(--s-5); padding-top: var(--s-5); border-top: 1px solid var(--border-strong); }
-.price-pair .plan .act { border-top-color: var(--border); }
+.price-pair .act { margin-top: var(--s-5); padding-top: var(--s-5); border-top: 1px solid var(--border); }
 .price-pair .act .go { margin-top: 0; min-height: 44px; }
 @supports not (grid-template-rows: subgrid) {
   .price-pair .term { display: flex; flex-direction: column; }
