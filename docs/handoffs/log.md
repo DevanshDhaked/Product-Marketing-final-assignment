@@ -7,6 +7,7 @@ timestamp: 2026-11-24T17:11:40Z
 ---
 
 ## 2026-11-26
+* **Creation**: Added [India in the lede report](india3_report.md).
 * **Creation**: Added [Other pages polish report](ppages_report.md).
 * **Creation**: Added [Home polish report](phome_report.md).
 * **Creation**: Added [v3 design reviewer report](dreview_report.md).

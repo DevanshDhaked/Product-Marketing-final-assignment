@@ -24,6 +24,7 @@ timestamp: 2026-11-24T17:11:46Z
 * [v3 home page builder report](home3_report.md) - Home rebuilt as one A-I-D-A path in direction A: plain headline for Indian consulting firms, captioned product exhibits, key numbers, pilot-first pricing, call-first close and the graded-message sign-off.
 * [Home page teammate report, phase 2](home_report.md) - The new home page built from the approved mockup: problem scenes, nav anchors, pricing cards, checks and open points.
 * [Hub and propaganda teammate report, phase 2](hub_report.md) - The deliverables hub, the propaganda strategy page and the README rewrite: drafts, research, checks and open points.
+* [India in the lede report](india3_report.md) - India moved from the home headline into the lede, the ad first line and the LinkedIn intro; the Insights caption uses the app's word.
 * [Plain words on walkthrough and LinkedIn report](jargon_report.md) - Walkthrough and LinkedIn post 2 prototype screens now use the same plain words as the home page.
 * [Layman clarity test report](layman_report.md) - A first-time visitor's read of the home page: what Sphyr is, jargon, doubts, scores and three fixes.
 * [LinkedIn stopping-power researcher report](linkedin3_report.md) - Feed mechanics, why consultants and talent leaders engage, 13 real posts, what fails, and rules for the three posts.
