@@ -48,6 +48,18 @@ sources:
   - resource: "https://www.awwwards.com/sites/creative-reference-library"
   - resource: "https://www.awwwards.com/sites/studio-loum"
   - resource: "https://mercury.com/"
+  - id: rbb
+    resource: "https://www.rbbecon.com/"
+    title: "RBB Economics home page, HTML and CSS read (accessed 2026-11-26)"
+  - id: hafnia
+    resource: "https://www.awwwards.com/sites/hafnia-law"
+    title: "Hafnia Law, Awwwards Honorable Mention, 9 Feb 2024 (accessed 2026-11-26)"
+  - id: barberhauler
+    resource: "https://barberhauler.com/"
+    title: "Barber Hauler Capital Advisers home page, HTML and CSS read (accessed 2026-11-26)"
+  - id: redseer
+    resource: "https://redseer.com/"
+    title: "Redseer Strategy Consultants home page, HTML and CSS read (accessed 2026-11-26)"
 ---
 
 # Design references for the Sphyr site
