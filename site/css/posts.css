@@ -40,6 +40,12 @@
 .li-img { margin: var(--s-4) 0 0; background: var(--stage-ground); border-block: 1px solid var(--border); container-type: inline-size; }
 .li-img > * { --u: calc(100cqw / 540); }
 .li-art { display: block; width: 100%; height: auto; font-family: var(--font); }
+.li-art .art-hook { font-family: var(--font-display); font-weight: 500; font-size: 48px; letter-spacing: -0.01em; fill: var(--text); }
+.li-art .art-em { font-style: italic; font-weight: 400; fill: var(--ink); }
+.li-art .art-box { fill: var(--surface); stroke: var(--border-strong); stroke-width: 1.5; }
+.li-art .art-label { font-size: 20px; font-weight: 700; fill: var(--text); }
+.li-art .art-seat { fill: var(--ink); }
+.li-art .art-empty { fill: none; stroke: var(--border-strong); stroke-width: 1.5; stroke-dasharray: 5 5; }
 
 /* Post 3: the four checks as a card to save. */
 .li-checks { display: flex; flex-direction: column; aspect-ratio: 4 / 5; padding: calc(52 * var(--u)) calc(48 * var(--u)) calc(44 * var(--u)); color: var(--text); }
