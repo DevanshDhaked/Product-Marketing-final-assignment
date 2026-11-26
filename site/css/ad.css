@@ -49,7 +49,6 @@
 .sd-line { font-size: max(11px, 4.1cqw); line-height: 1.38; }
 .standee .pr-cta { margin-top: 4cqw; }
 .standee .pr-qr { width: 22cqw; }
-.standee .pr-pilot { margin-top: 3cqw; font-size: max(11px, 3.3cqw); }
 .print .sd-strap { margin-top: 4cqw; font-family: var(--font-display); font-weight: 500; font-size: 4.8cqw; line-height: 1.2; text-wrap: balance; }
 
 /* Handout card, A6 (105 by 148 mm). Sizes from v3, tuned for its words. */
