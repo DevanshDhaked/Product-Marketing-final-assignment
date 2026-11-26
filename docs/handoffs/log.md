@@ -7,6 +7,8 @@ timestamp: 2026-11-24T17:11:40Z
 ---
 
 ## 2026-11-26
+* **Creation**: Added [Ad restored to the v2 design report](rad_report.md).
+* **Creation**: Added [Home restored to the v2 design report](rhome_report.md).
 * **Creation**: Added [v3 review fixes report](fix3_report.md).
 * **Creation**: Added [v3 adversarial reviewer report](review3_report.md).
 * **Creation**: Added [Sign-off swap report](signoff_report.md).

@@ -38,8 +38,10 @@ timestamp: 2026-11-24T17:11:46Z
 * [LinkedIn posts and ad teammate report, phase 2](posts_report.md) - The three LinkedIn post mockups and the standee ad with its rationale: drafts, checks, QR verification, decisions and unverified items.
 * [Pricing teammate report, phase 1b](pricing_report.md) - Plan, progress and final summary from the pricing work: decided terms, six feedback points answered, insights, decisions, rejected approaches and unverified items.
 * [Propaganda and hub fix teammate report, phase 3](propfix_report.md) - The short propaganda page with a summary card and sticky contents, the hub's 01 row, reviewer fixes and checks.
+* [Ad restored to the v2 design report](rad_report.md) - Standee and A6 cards back on the v2 design with the ribbon and logo sphere, carrying the v3 headline, first line, QR to /v3/ and sign-off.
 * [v3 adversarial reviewer report](review3_report.md) - v3 scored on the three numbers: first screen home 9 and ad 9 of 9, professor's faults 2 of 8 partial, foreign words 8 minor entries, with a ranked fix list.
 * [Final review report, phase 3](reviewer_report.md) - Read-only review of the six pages against the brief, rubric, the 15 feedback points and the copy rules: findings, checks passed and rubric estimates.
+* [Home restored to the v2 design report](rhome_report.md) - Home rebuilt on the v2 design (ribbon hero with the logo sphere, circle figure, v2 cards and grid, edges 104 to 1176 as v2) with the v3 words and A-I-D-A order.
 * [Other team's site assessor report](rival_report.md) - Team 01's Sphyr site for creative studios: first screen 8 of 9 against our 6, what they do better, where we are stronger, and a design verdict.
 * [Short deliverable pages teammate report](short_report.md) - Ad rationale cut to about 200 words, LinkedIn notes cut to one line each, standee logo spaced from the headline.
 * [Sign-off swap report](signoff_report.md) - The graded-message sign-off placed on the ad, propaganda and hub; propaganda reworded to match it and keep one contrast per page.
