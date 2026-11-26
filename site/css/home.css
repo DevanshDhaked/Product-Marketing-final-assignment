@@ -65,6 +65,8 @@
 .text-col .values-h { margin-top: var(--s-6); }
 .text-col .groups { margin-top: var(--s-5); max-width: 320px; }
 .circle-fig { margin: 0; }
+/* On phones "Juniors" runs about 8 px past the viewBox (inherited from v2); let it use the gutter, not clip. */
+.circle-fig .circle { overflow: visible; }
 
 /* Product views under how it works: a short intro over each full-width frame. */
 .back-intro { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-3) var(--s-8); margin: var(--s-8) 0 var(--s-5); align-items: baseline; }
