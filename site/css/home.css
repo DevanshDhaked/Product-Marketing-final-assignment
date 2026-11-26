@@ -12,20 +12,22 @@
 .home p + p { margin-top: var(--s-4); }
 
 /* Hero: headline left, the line and the button right, the core visual full width below. */
-.home main > .hero { padding-block: var(--s-7) var(--s-6); }
-/* 2026-11-26 (design review blocker): two equal columns. The right column holds lede, button, pilot line and
-   walkthrough link in v2's height (181 px at 1280), so the ribbon, its caption and Play again fit 1280x800. */
-.hero-copy { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-6) var(--s-7); align-items: start; container-type: inline-size; }
+.home main > .hero { padding-block: var(--s-6); }
+/* 2026-11-26 (lead, second hero pass): the headline and lede share a wide left column (7 of 11 parts), the
+   actions stack in the right column, level with the lede's last line. The H1 gets about 50 px on two lines,
+   and the one-step tighter top padding and figure gap keep the ribbon, its caption and Play again in 1280x800. */
+.hero-copy { display: grid; grid-template-columns: 7fr 4fr; grid-template-areas: "h1 side" "lede side"; gap: var(--s-4) var(--s-6); align-items: start; container-type: inline-size; }
+.hero h1 { grid-area: h1; }
+.hero-copy .lede { grid-area: lede; }
+.hero-side { grid-area: side; align-self: end; container-type: inline-size; }
 /* Two lines, as in v2: the second phrase on its own line, the size scaled to the column so line one fits it. */
-.hero h1 { font-size: clamp(1.875rem, 3.6cqi, 4rem); line-height: 1.04; text-wrap: balance; }
+.hero h1 { font-size: clamp(1.875rem, 4.7cqi, 4rem); line-height: 1.04; text-wrap: balance; }
 .hero h1 em { display: block; }
-/* Both columns start at the top; trimming to cap height makes the first letters, not the line boxes, start level. */
-.hero h1, .hero-side .lede { text-box: trim-start cap alphabetic; }
-.hero-side { container-type: inline-size; }
-.hero-side .lede { font-size: var(--fs-lede); color: var(--text); max-width: 52ch; }
-/* Button and walkthrough link share a row; the one-line pilot line sits under them. A narrow column stacks
-   them in source order instead (button, pilot line, link). */
-.hero-cta { margin-top: var(--s-5); display: grid; grid-template-columns: auto 1fr; align-items: center; column-gap: var(--s-5); }
+.hero h1 { text-box: trim-start cap alphabetic; }
+.hero-copy .lede { font-size: var(--fs-lede); color: var(--text); max-width: 60ch; }
+/* Button and walkthrough link share a row with the pilot line under them when the column is wide enough
+   (phones and tablets); a narrow column, as at desktop, stacks them in source order (button, pilot line, link). */
+.hero-cta { display: grid; grid-template-columns: auto 1fr; align-items: center; column-gap: var(--s-5); }
 .hero-cta .go { grid-row: 1; grid-column: 2; justify-self: start; margin-top: 0; }
 .hero-cta .pilot-line { grid-column: 1 / -1; grid-row: 2; font-size: var(--fs-caption); max-width: none; }
 @container (max-width: 500px) {
@@ -33,7 +35,7 @@
   .hero-cta .go { margin-top: var(--s-3); }
 }
 .close .go { margin-top: var(--s-3); }
-.hero-visual { margin: var(--s-7) auto 0; }
+.hero-visual { margin: var(--s-6) auto 0; }
 .hero-visual .cv { max-height: 420px; }
 /* The phone version is tall (viewBox 360 by 594); a height cap would shrink its labels below 11 px. */
 .hero-visual .cv-compact { max-height: none; }
@@ -42,7 +44,8 @@
 .hero-visual .cv .round-sub { font-weight: 500; fill: var(--text); }
 .hero-visual .cv-wide .round-sub { font-size: 14px; }
 @media (max-width: 900px) {
-  .hero-copy { grid-template-columns: 1fr; gap: var(--s-4); }
+  .hero-copy { grid-template-columns: 1fr; grid-template-areas: "h1" "lede" "side"; gap: var(--s-4); }
+  .hero-side { margin-top: var(--s-2); }
   .hero h1 { font-size: clamp(2.25rem, 1.3rem + 3.4vw, 3.5rem); }
   .hero-visual { margin-top: var(--s-6); }
 }
