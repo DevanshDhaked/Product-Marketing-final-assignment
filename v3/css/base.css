@@ -473,7 +473,7 @@ caption { caption-side: bottom; padding: 10px 16px; text-align: left; font-size:
   .fx-flow { padding: 16px 16px 0; }
   .fx-flow .fx-window { padding: 18px 16px 40px; }
   .fx-insights .fx-kpis { grid-template-columns: 1fr 1fr; }
-  .fx-insights .fx-kpi:nth-child(3) { display: none; }
+  .fx-insights .fx-kpi:nth-child(3) { grid-column: 1 / -1; } /* strongest signal stays visible on phones, as edit requests do */
   .fx-insights .fx-chart .axis { display: none; }
   .fx-insights .fx-sat { left: 32px; right: 32px; bottom: 24px; width: auto; }
   .fx-insights .fx-card { padding-bottom: 150px; }
