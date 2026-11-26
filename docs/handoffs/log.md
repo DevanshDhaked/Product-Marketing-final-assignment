@@ -6,6 +6,13 @@ tags: [log]
 timestamp: 2026-11-24T17:11:40Z
 ---
 
+## 2026-11-26
+* **Creation**: Added [Consulting firm life researcher report](firmlife_report.md).
+* **Creation**: Added [LinkedIn stopping-power researcher report](linkedin3_report.md).
+* **Creation**: Added [Visual language researcher report](look_report.md).
+* **Creation**: Added [AIDA researcher report](aida_report.md).
+* **Creation**: Added [v2 baseline auditor report](baseline_report.md).
+
 ## 2026-11-25
 * **Creation**: Added [Orchestrator handoff, 2026-11-24 20:37 UTC](orchestrator_handoff_2026_11_24_2037z.md) for the next orchestrator.
 * **Creation**: Added [Pricing cards redesign teammate report, phase 3](cards_report.md).
