@@ -7,6 +7,7 @@ timestamp: 2026-11-24T17:11:40Z
 ---
 
 ## 2026-11-26
+* **Creation**: Added [v3 words and supporting pages report](words3_report.md).
 * **Creation**: Added [v3 ad builder report](ad3_report.md).
 * **Creation**: Added [v3 LinkedIn posts writer report](posts3_report.md).
 * **Creation**: Added [Other team's site assessor report](rival_report.md).

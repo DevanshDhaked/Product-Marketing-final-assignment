@@ -45,4 +45,5 @@ timestamp: 2026-11-24T17:11:46Z
 * [Pricing trim teammate report, phase 3](trim_report.md) - The trimmed pricing section: equal cards, scorecard toggle, price reasons, moved 02:09 stat, checks.
 * [Visuals teammate report](visuals_report.md) - Four HTML and CSS visuals on the propaganda page: audience map, belief shift, channel table and campaign flow.
 * [Walkthrough teammate report, phase 2](walkthrough_report.md) - The 4-step interactive walkthrough: script, decisions, checks and unverified items.
+* [v3 words and supporting pages report](words3_report.md) - Walkthrough, propaganda and hub moved to consulting words (44 flagged words to 0), Manager role exhibits, call-first ending, pricing rationale and onboarding timeline placed on the hub.
 <!-- okf-index:end -->
