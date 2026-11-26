@@ -12,16 +12,30 @@
 .home p + p { margin-top: var(--s-4); }
 
 /* Hero: headline left, the line and the button right, the core visual full width below. */
-.home main > .hero { padding-block: var(--s-7) var(--s-6); }
-.hero-copy { display: grid; grid-template-columns: 1.45fr 1fr; gap: var(--s-6) var(--s-8); align-items: start; container-type: inline-size; }
-/* The size follows the headline column; three balanced lines keep the headline about as tall as the column beside it. */
-.hero h1 { font-size: clamp(2.5rem, 6cqi, 4rem); line-height: 1.04; text-wrap: balance; }
-/* Both columns start at the top; trimming to cap height makes the first letters, not the line boxes, start level. */
-.hero h1, .hero-side .lede { text-box: trim-start cap alphabetic; }
-.hero-side .lede { font-size: var(--fs-lede); color: var(--text); max-width: 38ch; }
-.hero-side .btn { margin-top: var(--s-5); }
-.hero-side .go, .close .go { margin-top: var(--s-3); }
-.hero-visual { margin: var(--s-7) auto 0; }
+.home main > .hero { padding-block: var(--s-6); }
+/* 2026-11-26 (lead, second hero pass): the headline and lede share a wide left column (7 of 11 parts), the
+   actions stack in the right column, level with the lede's last line. The H1 gets about 50 px on two lines,
+   and the one-step tighter top padding and figure gap keep the ribbon, its caption and Play again in 1280x800. */
+.hero-copy { display: grid; grid-template-columns: 7fr 4fr; grid-template-areas: "h1 side" "lede side"; gap: var(--s-4) var(--s-6); align-items: start; container-type: inline-size; }
+.hero h1 { grid-area: h1; }
+.hero-copy .lede { grid-area: lede; }
+.hero-side { grid-area: side; align-self: end; container-type: inline-size; }
+/* Two lines, as in v2: the second phrase on its own line, the size scaled to the column so line one fits it. */
+.hero h1 { font-size: clamp(1.875rem, 4.7cqi, 4rem); line-height: 1.04; text-wrap: balance; }
+.hero h1 em { display: block; }
+.hero h1 { text-box: trim-start cap alphabetic; }
+.hero-copy .lede { font-size: var(--fs-lede); color: var(--text); max-width: 60ch; }
+/* Button and walkthrough link share a row with the pilot line under them when the column is wide enough
+   (phones and tablets); a narrow column, as at desktop, stacks them in source order (button, pilot line, link). */
+.hero-cta { display: grid; grid-template-columns: auto 1fr; align-items: center; column-gap: var(--s-5); }
+.hero-cta .go { grid-row: 1; grid-column: 2; justify-self: start; margin-top: 0; }
+.hero-cta .pilot-line { grid-column: 1 / -1; grid-row: 2; font-size: var(--fs-caption); max-width: none; }
+@container (max-width: 500px) {
+  .hero-cta { display: block; }
+  .hero-cta .go { margin-top: var(--s-3); }
+}
+.close .go { margin-top: var(--s-3); }
+.hero-visual { margin: var(--s-6) auto 0; }
 .hero-visual .cv { max-height: 420px; }
 /* The phone version is tall (viewBox 360 by 594); a height cap would shrink its labels below 11 px. */
 .hero-visual .cv-compact { max-height: none; }
@@ -30,18 +44,17 @@
 .hero-visual .cv .round-sub { font-weight: 500; fill: var(--text); }
 .hero-visual .cv-wide .round-sub { font-size: 14px; }
 @media (max-width: 900px) {
-  .hero-copy { grid-template-columns: 1fr; gap: var(--s-4); }
+  .hero-copy { grid-template-columns: 1fr; grid-template-areas: "h1" "lede" "side"; gap: var(--s-4); }
+  .hero-side { margin-top: var(--s-2); }
   .hero h1 { font-size: clamp(2.25rem, 1.3rem + 3.4vw, 3.5rem); }
   .hero-visual { margin-top: var(--s-6); }
 }
 
 /* Labelled rows under a section heading (problem, assurance). */
 .home h2 + .rows { margin-top: var(--s-7); }
-/* The problem: five single lines, no labels, on the rows' hairlines. */
-.rows.lines { list-style: none; padding: 0; }
-/* Each line is one sentence and fits one row at desktop; pretty wrapping avoids a lone last word on phones. */
-.rows.lines li { padding-block: var(--s-5); font-size: var(--fs-lede); line-height: 1.4; text-wrap: pretty; }
-.rows.lines li + li { border-top: 1px solid var(--border); }
+/* The problem: v2's labelled rows (base .rows grid), a short bold label and one sentence each (design review 2026-11-26). */
+/* Each sentence fits its row on one line at desktop; pretty wrapping avoids a lone last word on phones. */
+.scenes dd { color: var(--text); max-width: none; text-wrap: pretty; }
 /* The one accent (brand green, text-safe token) marks the payoff lines. */
 .hero h1 em { color: var(--link); }
 
@@ -60,13 +73,32 @@
 .duo .fx-feedback:has(.fx-opt[value="improve"]:checked) .fx-step-improve,
 .duo .fx-feedback:has(.fx-opt[value="none"]:checked) .fx-step-none { visibility: visible; }
 .duo .fx-body > .fx-step-none { display: grid; place-items: center; color: var(--text-muted); }
+/* One column (text above the frame): nothing beside the card can move, so the card holds only the active step
+   and its height follows it, with no empty strip under the last tag (design review 2026-11-26). */
+@media (max-width: 900px) {
+  .duo .fx-body > .fx-step { display: none; }
+  .duo .fx-feedback:has(.fx-opt[value="good"]:checked) .fx-step-good,
+  .duo .fx-feedback:has(.fx-opt[value="improve"]:checked) .fx-step-improve { display: block; }
+  .duo .fx-feedback:has(.fx-opt[value="none"]:checked) .fx-step-none { display: grid; }
+  .duo .fx-feedback .fx-body { padding-bottom: var(--s-6); }
+}
+/* How it works: the text column starts level with the top of the frame. */
+#how .duo { align-items: start; }
+#how .text-col h2 { text-box: trim-start cap alphabetic; }
 .text-col h2 { margin-bottom: var(--s-5); }
 .text-col h3 { margin-bottom: var(--s-3); }
 .text-col .values-h { margin-top: var(--s-6); }
-.text-col .groups { margin-top: var(--s-5); max-width: 320px; }
+/* The counts table runs the width of the text column, like the paragraphs above it. */
+.text-col .groups { margin-top: var(--s-5); }
 .circle-fig { margin: 0; }
-/* On phones "Juniors" runs about 8 px past the viewBox (inherited from v2); let it use the gutter, not clip. */
 .circle-fig .circle { overflow: visible; }
+/* Phones (motif.css hides the centre label and sets side labels to 33 units): the centre label comes back
+   smaller, and the side labels move 21 units inward so "Juniors" and "Peers" stay inside the 16 px gutter. */
+@media (max-width: 600px) {
+  .circle-fig .circle .core-label { display: inline; font-size: 24px; }
+  .circle-fig .circle .grp-label[text-anchor="end"] { transform: translateX(21px); }
+  .circle-fig .circle .grp-label[text-anchor="start"] { transform: translateX(-21px); }
+}
 
 /* Product views under how it works: a short intro over each full-width frame. */
 .back-intro { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-3) var(--s-8); margin: var(--s-8) 0 var(--s-5); align-items: baseline; }
@@ -74,7 +106,7 @@
 .back-intro p { margin: 0 !important; color: var(--text-muted); max-width: 46ch; }
 @media (max-width: 760px) { .back-intro { grid-template-columns: 1fr; } }
 /* A caption runs the width of its frame, never a narrower column under it. */
-.home .figure figcaption { max-width: none; }
+.home .figure figcaption { max-width: none; text-wrap: balance; } /* no one-word last line */
 /* Chart axis in the Insights frame: every other cycle label on phones. */
 @media (max-width: 640px) { .fx-chart .ax-even { display: none; } }
 
@@ -92,11 +124,10 @@
 .term .per > span { white-space: nowrap; }
 .price-pair p.sub { margin-top: var(--s-4); color: var(--text); font-weight: 600; }
 .price-pair p.main { margin-top: var(--s-4); color: var(--text); max-width: 46ch; }
-.price-pair .lower { margin-top: var(--s-4); padding-top: var(--s-3); border-top: 1px solid var(--border-strong); }
+/* One hairline token for the dividers in both cards (design review 2026-11-26). */
+.price-pair .lower { margin-top: var(--s-4); padding-top: var(--s-3); border-top: 1px solid var(--border); }
 .price-pair .lower p { font-size: var(--fs-small); max-width: 52ch; }
-.price-pair .plan .lower { border-top-color: var(--border); }
-.price-pair .act { margin-top: var(--s-5); padding-top: var(--s-5); border-top: 1px solid var(--border-strong); }
-.price-pair .plan .act { border-top-color: var(--border); }
+.price-pair .act { margin-top: var(--s-5); padding-top: var(--s-5); border-top: 1px solid var(--border); }
 .price-pair .act .go { margin-top: 0; min-height: 44px; }
 @supports not (grid-template-rows: subgrid) {
   .price-pair .term { display: flex; flex-direction: column; }
@@ -108,7 +139,7 @@
 }
 
 /* Call: the sign-off as one large line, a few words in the accent green, then the button. */
-.close p.manifesto { font-family: var(--font-display); font-weight: 500; font-size: clamp(2rem, 1.2rem + 3vw, 3.5rem); line-height: 1.12; letter-spacing: -0.015em; max-width: 20ch; }
+.close p.manifesto { font-family: var(--font-display); font-weight: 500; font-size: clamp(2rem, 1.2rem + 3vw, 3.5rem); line-height: 1.12; letter-spacing: -0.015em; max-width: 20ch; text-wrap: balance; }
 .close .accent { color: var(--link); font-style: italic; font-weight: 400; }
 .close .btn { margin-top: var(--s-6); }
 
