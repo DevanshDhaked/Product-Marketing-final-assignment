@@ -169,9 +169,11 @@ a:hover { text-decoration-thickness: 2px; }
 .icon-sm { width: 16px; height: 16px; }
 
 /* Nav (canonical, 2026-11-25 change, replaces the 3-item nav): logo left; How it works, For partners, Pricing
-   and Deliverables; then the walkthrough button and the theme switch. Below 1000px the first three links move
+   and Deliverables; then the button and the theme switch. Below 1000px the first three links move
    into the Menu popover (#nav-menu) and Deliverables stays in the bar. Below 760px the button also hides,
-   because the page itself carries a link to the walkthrough. Behaviour: js/nav.js. */
+   because the page itself carries its main button. Behaviour: js/nav.js.
+   2026-11-26 (v3): the button is "Book a 20-minute call" and opens the #call-note popover
+   (<button class="btn btn-primary" type="button" popovertarget="call-note">); the walkthrough link moves into the page. */
 .nav { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--border); }
 .nav-inner { display: flex; align-items: center; gap: var(--s-5); min-height: 64px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 700; font-size: 1.125rem; letter-spacing: -0.01em; }
@@ -587,6 +589,7 @@ caption { caption-side: bottom; padding: 10px 16px; text-align: left; font-size:
 .report { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gutter); row-gap: var(--s-5); }
 .report > * { grid-column: 2 / span 7; min-width: 0; }
 .report > .sec-num { grid-column: 1; }
+.report > .sec-num, .report > .sec-num + * { align-self: baseline; } /* the number sits on the heading's first baseline */
 .report > .span-9 { grid-column: 2 / span 9; }
 .report > .span-12 { grid-column: 1 / -1; }
 @media (max-width: 760px) {
@@ -603,4 +606,15 @@ caption { caption-side: bottom; padding: 10px 16px; text-align: left; font-size:
 .exhibit-cap .src { display: block; margin-top: 2px; font-size: var(--fs-caption); color: var(--text-muted); }
 
 /* Pilot line: the one short pilot term under every main button. */
-.pilot-line { margin-top: var(--s-2); font-size: var(--fs-small); color: var(--text-muted); max-width: 46ch; }
+.pilot-line { margin-top: var(--s-2); font-size: var(--fs-small); color: var(--text-muted); max-width: 46ch; text-wrap: balance; } /* balance: no one-word last line on phones */
+
+/* Key numbers: 3 or 4 figures in a row over an ink rule, each with its label and source. Only numbers from the
+   product or pricing docs. Markup: <dl class="keynums"><div><dt>label</dt><dd class="v">2 weeks</dd><dd class="src">source</dd></div></dl>;
+   the figure shows first, the label reads first. */
+.keynums { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s-6); margin: var(--s-6) 0 0; padding-top: var(--s-5); border-top: 1px solid var(--ink); }
+.keynums > div { display: flex; flex-direction: column; gap: var(--s-1); }
+.keynums dt { font-size: var(--fs-small); }
+.keynums dd { margin: 0; }
+.keynums .v { order: -1; margin-bottom: var(--s-2); font-family: var(--font-display); font-weight: 500; font-size: clamp(1.75rem, 1rem + 2.6vw, 3rem); line-height: 1; letter-spacing: -0.02em; color: var(--ink); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.keynums .src { font-size: var(--fs-caption); color: var(--text-muted); }
+@media (max-width: 900px) { .keynums { grid-template-columns: 1fr 1fr; } }
