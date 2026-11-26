@@ -65,8 +65,8 @@
 
 /* Step 3: two members side by side, in the member Insights layout. The whole window shows; nothing is faded. */
 .wt-figure { margin-top: var(--s-6); }
-.wt-figure figcaption { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-5); max-width: none; }
-.wt-yours { font-size: var(--fs-caption); font-weight: 600; color: var(--text); }
+.wt-figure .exhibit-cap { max-width: none; }
+.wt-yours { display: block; margin-top: var(--s-2); font-size: var(--fs-caption); font-weight: 600; color: var(--text); }
 .wt-insights { padding: 32px; }
 .wt-insights .fx-window { position: relative; padding: 24px 26px; }
 .wt-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 12px 24px; }

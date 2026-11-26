@@ -10,13 +10,13 @@
   var people = {
     tara: {
       first: "Tara", full: "Tara Menon", initials: "TM", av: "av-amber", others: 10,
-      compare: "Tara's cards came from 10 of the 14 people in that circle, against 13 for Nikhil. The tags they picked most for Tara were Stakeholder-centric and Customer First.",
-      turn: "You picked Tara, and Tara's record backs what you saw in client meetings. It also shows 13 colleagues who saw Nikhil's work over six cycles, and very little of that work reached you. Partners still decide, now with both records open."
+      compare: "Tara's feedback came from 10 of the 14 people in that circle, against 13 for Nikhil. The tags they picked most for Tara were Client handling and Client First.",
+      turn: "You picked Tara, and Tara's Member Insights backs what you saw in client meetings. It also shows 13 colleagues who saw Nikhil's work over six cycles, and very little of that work reached you. Partners still decide, now with both views open."
     },
     nikhil: {
       first: "Nikhil", full: "Nikhil Rao", initials: "NR", av: "av-blue", others: 13,
-      compare: "Nikhil's cards came from 13 of the 14 people in that circle, against 10 for Tara. The tags they picked most for Nikhil were Takes Initiative and Solution-oriented.",
-      turn: "You picked Nikhil on a hunch, and the hunch now has a record behind it: 13 colleagues over six cycles, in their own words. Partners still decide, with what the people who saw the work said in front of them."
+      compare: "Nikhil's feedback came from 13 of the 14 people in that circle, against 10 for Tara. The tags they picked most for Nikhil were Takes Initiative and Solution-oriented.",
+      turn: "You picked Nikhil on a hunch, and the hunch now has feedback behind it: 13 colleagues over six cycles, in their own words. Partners still decide, with what the people who saw the work said in front of them."
     }
   };
   var marks = $$(".wt-progress li");
@@ -76,9 +76,9 @@
     var reply, p = people[pick], col = $('[data-col="' + pick + '"]');
 
     if (answer === "none") {
-      reply = took + " This card tells Sphyr you didn't work with " + p.first + " this fortnight, so it adds nothing to " + p.first + "'s record. The option is there so that people with nothing to rate don't have to make something up.";
+      reply = took + " This tells Sphyr you didn't work with " + p.first + " this fortnight, so it adds nothing to " + p.first + "'s Member Insights. The option is there so that people with nothing to rate don't have to make something up.";
     } else {
-      reply = took + " Your card joins those from " + p.others + " other colleagues in " + p.first + "'s record, and " + p.first + " sees what you said without your name on it.";
+      reply = took + " Your feedback joins that of " + p.others + " other colleagues in " + p.first + "'s Member Insights, and " + p.first + " sees what you said without your name on it.";
       var resp = $(".fx-kpi .v", col);
       resp.textContent = Number(resp.textContent) + 1;
       var list = answer === "good" ? ".wt-tags" : ".wt-areas";
