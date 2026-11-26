@@ -65,6 +65,7 @@
 .li-comment { display: flex; gap: var(--s-2); padding: var(--s-2) var(--s-4) var(--s-4); }
 .li-bubble { flex: 1; min-width: 0; padding: var(--s-2) var(--s-3); border-radius: 0 var(--r-control) var(--r-control) var(--r-control); background: var(--surface-sunk); }
 .li-bubble a { overflow-wrap: anywhere; }
+.li-bubble .nw { white-space: nowrap; } /* URL breaks only after "/" */
 .li-author { margin-left: 6px; padding: 1px 6px; border-radius: 4px; background: var(--surface); color: var(--text-muted); font-size: 12px; font-weight: 600; }
 .li-linkbtn { min-height: 32px; font-size: 14px; }
 
