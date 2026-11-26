@@ -49,11 +49,9 @@
 
 /* Labelled rows under a section heading (problem, assurance). */
 .home h2 + .rows { margin-top: var(--s-7); }
-/* The problem: five single lines, no labels, on the rows' hairlines. */
-.rows.lines { list-style: none; padding: 0; }
-/* Each line is one sentence and fits one row at desktop; pretty wrapping avoids a lone last word on phones. */
-.rows.lines li { padding-block: var(--s-5); font-size: var(--fs-lede); line-height: 1.4; text-wrap: pretty; }
-.rows.lines li + li { border-top: 1px solid var(--border); }
+/* The problem: v2's labelled rows (base .rows grid), a short bold label and one sentence each (design review 2026-11-26). */
+/* Each sentence fits its row on one line at desktop; pretty wrapping avoids a lone last word on phones. */
+.scenes dd { color: var(--text); max-width: none; text-wrap: pretty; }
 /* The one accent (brand green, text-safe token) marks the payoff lines. */
 .hero h1 em { color: var(--link); }
 
