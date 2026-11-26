@@ -7,6 +7,7 @@ timestamp: 2026-11-24T17:11:46Z
 ---
 
 <!-- okf-index:start -->
+* [v3 ad builder report](ad3_report.md) - Standee and A6 card rebuilt with a calibration-week headline as the Attention, the call in the first line, and a feedback card exhibit; 9 of 9 on the first-screen rubric.
 * [Ad medium research report, phase 1b](admedium_report.md) - Verified paid, non-invasive ad placements for December 2026 to March 2027 with dates, prices, audience and tracking checks, scored, with a recommendation.
 * [AIDA researcher report](aida_report.md) - The professor's AIDA against the standard model, with rules for one page, one ad and one post, assurance evidence both ways, and the tagline question.
 * [v2 baseline auditor report](baseline_report.md) - Where v2 stands on the three v3 success numbers: first-screen 6 of 9 home and 3 of 9 ad, 8 of 8 professor faults present, about 20 foreign-word entries.
