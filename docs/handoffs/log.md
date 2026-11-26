@@ -7,6 +7,8 @@ timestamp: 2026-11-24T17:11:40Z
 ---
 
 ## 2026-11-26
+* **Creation**: Added [Other pages polish report](ppages_report.md).
+* **Creation**: Added [Home polish report](phome_report.md).
 * **Creation**: Added [v3 design reviewer report](dreview_report.md).
 * **Creation**: Added [Ad restored to the v2 design report](rad_report.md).
 * **Creation**: Added [Home restored to the v2 design report](rhome_report.md).
