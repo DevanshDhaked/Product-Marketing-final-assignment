@@ -10,6 +10,14 @@ generated: { by: claude-code/opus-5-5, at: 2026-11-24T16:32:35Z }
 
 Append new decisions on top. Do not edit an old decision; add a new one that replaces it and say which.
 
+## 2026-11-26: v3 headline, sign-off and the packaging refund
+
+- **Home headline:** "Peer feedback for appraisals at Indian consulting firms". The firm size moves to the line under it: "For firms of 40 to 400 people. Every two weeks, the people on each project give two minutes of feedback. Partners and engagement managers see it before calibration." Reason: a shorter headline that still names the reader; the first screen keeps what, who and next.
+- **Who sees results:** the copy says partners and engagement managers see the feedback before calibration. The head of talent sets up the firm's values and the two-week cycle (the Admin role in the product has settings only, no results view).
+- **Sign-off:** "Built from everyone on the project, not one manager's memory." It closes the home page, the ad standee and the propaganda core line. It carries the team's graded central message ("Built from everyone who actually worked with them, not one manager's memory. That's Sphyr.", combined assignment, 63/100) into consulting words, so the course work reads as one thread. Replaces the "Tagline" point of "2026-11-26: v3 plan gate" (rewrite as sign-off) with this exact line.
+- **Ad headline:** "Calibration is on Monday. Half the project feedback forms are still blank." (`docs/handoffs/ad3_report.md`).
+- **Refund (deliberate change from the graded packaging):** the packaging assignment (69/100) proposed an annual plan "with a full refund if the first six fortnightly cycles (about 12 weeks) show the founder nothing new". v3 does not offer a refund: the 12-week pilot fee of ₹25,000 plus GST is credited to the first annual bill if the firm signs, and if it does not, the firm keeps a CSV export of its ratings and comments and the rest is deleted; the fee is not returned. Reasons: 0 of 18 HR-tool home and pricing pages scanned show a refund (`docs/research/aida.md` section 3); Sphyr needs about six cycles to show value, so a refund window would sit on the cost to serve; the earlier entry "Price and pilot (gate 1b)" already left the refund out for scope. The pilot credit is the Decision-stage "coupon", and setup, training and training materials are the Interest-stage assurance.
+
 ## 2026-11-26: v3 plan gate (iteration-b, hosted at /v3/)
 
 Research behind each point is in [research](../research/index.md).
