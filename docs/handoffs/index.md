@@ -31,6 +31,7 @@ timestamp: 2026-11-24T17:11:46Z
 * [LinkedIn stopping-power researcher report](linkedin3_report.md) - Feed mechanics, why consultants and talent leaders engage, 13 real posts, what fails, and rules for the three posts.
 * [Visual language researcher report](look_report.md) - How consulting firms, their vendors and award-level corporate sites look, v2 against both, and two directions with a lean to A (the partner's brief).
 * [Headline line analysis report](message_report.md) - What 'The engagement ends. The evidence stays.' is, the job it does on each page, and how it compares with the old site.
+* [Final nits report](nits3_report.md) - Five nits from the final check fixed: hyphen breaks and project wording on propaganda, the LinkedIn comment URL, the colour mark on og.png, and the Strongest signal card on phones.
 * [Link-preview image report](og3_report.md) - og.png remade at 1200 by 630 with the v3 headline, the India line and the full-colour logo sphere, rendered from HTML.
 * [Orchestrator handoff, 2026-11-24 20:37 UTC](orchestrator_handoff_2026_11_24_2037z.md) - Everything the next orchestrator needs to finish the Sphyr site on iteration-a: state, open work, user rules, how to run herdr teammates, and the mistakes not to repeat.
 * [Orchestrator handoff, 2026-11-26 09:16 UTC: build v3 on iteration-b](orchestrator_handoff_2026_11_26_0916z.md) - State after v2, the professor's v2 feedback, the goal for v3 (AIDA, consulting language, consulting-grade design), how to run herdr teammates, how to deploy /v3/, and the mistakes not to repeat.
