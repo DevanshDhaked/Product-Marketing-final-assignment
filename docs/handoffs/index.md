@@ -19,6 +19,7 @@ timestamp: 2026-11-24T17:11:46Z
 * [Consulting firm life researcher report](firmlife_report.md) - Roles, staffing, appraisals, pain in their words, a 42-term glossary, a do-not-use list with product mismatches, the appraisal calendar and the tagline words.
 * [First-use packaging teammate report, phase 1b](firstuse_report.md) - Plan, progress and final summary from the first-use packaging work: feedback map, research, decisions, rejected approaches and open product questions.
 * [Hero alignment report](hero_report.md) - The home hero's headline and lede now sit centred on each other at desktop widths.
+* [v3 home page builder report](home3_report.md) - Home rebuilt as one A-I-D-A path in direction A: plain headline for Indian consulting firms, captioned product exhibits, key numbers, pilot-first pricing, call-first close and the graded-message sign-off.
 * [Home page teammate report, phase 2](home_report.md) - The new home page built from the approved mockup: problem scenes, nav anchors, pricing cards, checks and open points.
 * [Hub and propaganda teammate report, phase 2](hub_report.md) - The deliverables hub, the propaganda strategy page and the README rewrite: drafts, research, checks and open points.
 * [Plain words on walkthrough and LinkedIn report](jargon_report.md) - Walkthrough and LinkedIn post 2 prototype screens now use the same plain words as the home page.
