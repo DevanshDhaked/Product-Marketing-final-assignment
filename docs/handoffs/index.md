@@ -54,6 +54,7 @@ timestamp: 2026-11-24T17:11:46Z
 * [Short deliverable pages teammate report](short_report.md) - Ad rationale cut to about 200 words, LinkedIn notes cut to one line each, standee logo spaced from the headline.
 * [Sign-off swap report](signoff_report.md) - The graded-message sign-off placed on the ad, propaganda and hub; propaganda reworded to match it and keep one contrast per page.
 * [Site CSS teammate report, phase 2](sitecss_report.md) - Shared site files: base CSS, motif, nav, template, favicons and OG image, with browser check results and the page-builder catalogue.
+* [AIDA stage labels report](stage3_report.md) - Journey stage rows removed from the LinkedIn and ad notes; the propaganda campaign flow and channel table carry the AIDA stage once, in the professor's four words.
 * [Strategy teammate report, phase 1a](strategy_report.md) - Plan, progress and final summary from the strategy work: files and commits, insights with sources, decisions, rejected approaches, open questions and unverified items.
 * [Earlier Sphyr tagline submissions report](tagline_report.md) - Every Sphyr one-liner the team submitted before, with grades and professor comments, and how the current line evolved from them.
 * [Pricing trim teammate report, phase 3](trim_report.md) - The trimmed pricing section: equal cards, scorecard toggle, price reasons, moved 02:09 stat, checks.

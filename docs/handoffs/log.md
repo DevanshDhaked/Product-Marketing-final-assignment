@@ -7,6 +7,7 @@ timestamp: 2026-11-24T17:11:40Z
 ---
 
 ## 2026-11-27
+* **Creation**: Added [AIDA stage labels report](stage3_report.md).
 * **Creation**: Added [Final nits report](nits3_report.md).
 * **Creation**: Added [v3 final check report](final3_report.md).
 
