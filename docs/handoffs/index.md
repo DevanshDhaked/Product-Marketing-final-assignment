@@ -34,6 +34,7 @@ timestamp: 2026-11-24T17:11:46Z
 * [Pricing teammate report, phase 1b](pricing_report.md) - Plan, progress and final summary from the pricing work: decided terms, six feedback points answered, insights, decisions, rejected approaches and unverified items.
 * [Propaganda and hub fix teammate report, phase 3](propfix_report.md) - The short propaganda page with a summary card and sticky contents, the hub's 01 row, reviewer fixes and checks.
 * [Final review report, phase 3](reviewer_report.md) - Read-only review of the six pages against the brief, rubric, the 15 feedback points and the copy rules: findings, checks passed and rubric estimates.
+* [Other team's site assessor report](rival_report.md) - Team 01's Sphyr site for creative studios: first screen 8 of 9 against our 6, what they do better, where we are stronger, and a design verdict.
 * [Short deliverable pages teammate report](short_report.md) - Ad rationale cut to about 200 words, LinkedIn notes cut to one line each, standee logo spaced from the headline.
 * [Site CSS teammate report, phase 2](sitecss_report.md) - Shared site files: base CSS, motif, nav, template, favicons and OG image, with browser check results and the page-builder catalogue.
 * [Strategy teammate report, phase 1a](strategy_report.md) - Plan, progress and final summary from the strategy work: files and commits, insights with sources, decisions, rejected approaches, open questions and unverified items.

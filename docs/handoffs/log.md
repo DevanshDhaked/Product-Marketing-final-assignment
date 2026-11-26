@@ -7,6 +7,7 @@ timestamp: 2026-11-24T17:11:40Z
 ---
 
 ## 2026-11-26
+* **Creation**: Added [Other team's site assessor report](rival_report.md).
 * **Creation**: Added [Consulting firm life researcher report](firmlife_report.md).
 * **Creation**: Added [LinkedIn stopping-power researcher report](linkedin3_report.md).
 * **Creation**: Added [Visual language researcher report](look_report.md).
