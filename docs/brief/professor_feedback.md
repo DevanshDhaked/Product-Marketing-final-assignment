@@ -86,3 +86,40 @@ A startup may or may not have money. And may or may not want to market ethically
 The submitted statement was: "Sphyr helps to make feedback so frequent and effortless that, in a growing company, no appraisal depends on a single opinion or a single bad month."
 
 The professor said it is "too focused on the present": it describes the product and is light on vision, and a good positioning statement is "generally a mix of both". Source: `tasks/saas/positioning-statement/log.md` and `professor_lens.md`. He wrote the Sphyr whitepaper (2018), so the vision half should come from his stated beliefs.
+
+## Addendum 2026-11-26: feedback on the final-assignment v2 site (relayed by the user, verbatim)
+
+Site reviewed: https://devanshdhaked.github.io/Product-Marketing-final-assignment/v2/ (branch `iteration-a`).
+
+### Website
+
+1. follow AIDA.
+2. nothing on the top of your homepage tells the viewer what this site is about which is what is needed to grab attention. You started with Interest (problems that a potential user might have), but without A, there is no point going to I.
+3. Words are so vague. what does "What goes wrong when the team moves on?" mean? what is alluding to? what is it implying? wrong in or for what?
+4. if you have to explain a joke, then either you said it poorly, or the joke wasn't good. the same applies to messaging. if you have to make a statement and then spend 100 words explaining the words, then one of the two is done wrong.
+5. none of it is written by putting oneself in the minds and lives of consultants or managing partner. which means while you have identified (maybe) the right problems and scenarios, it's not presented in a way a managing partner might care about.
+6. "file"? what file? see wrong wording. in this digital, cloud-based internet world, what does file mean? the word is also not used anywhere in the app, so where did you get it? and what do you think happens the first time someone looks at a demo or signs in - they look for "file", which doesn't exist.
+7. I like your UI, but the whole website is off because of three main reasons - not following AIDA (decision journey) and not using terms consultants or consulting firms use, and not saying it in a way that would resonate with them.
+8. here are some things, I suggest you do before v3:
+   - understand how a consulting firm works (your market segment) - roles, hierarchies, how appraisals happen, what are their main issues in their own mind
+   - think about AIDA - Attention, Interest, Decision, Action and how would you take the viewer from A-I-D-A across on one page?
+   - while your ui and aesthetics is good, ask your self - would consulting firms be impressed with it or would a creative agency be? there's a reason why all consulting firm or corporate vendors have a specific design style. you HAVE to speak their language (not talking about words, but holistically).
+
+### LinkedIn posts (said to another team; "change the context to your market segment")
+
+just tweak it a bit more (for the better, not worse - will let you be the judge of which way you are tweaking them). consider how people doomscroll, consider what they are on linkedin for (usually to make reputation points and not really learn or buy anything) and what will make them stop to read a 4 paragraph post.
+
+### Advertisement
+
+for the Ads: again, missed the first A of AIDA. what will make someone stop and look (attention). that needs to happen before they take interest and read. the headline (in your case of ad designs) is the A.
+
+but, i really like your ui. [smiley emoji omitted] not for consultants (in it's current version of words and phrasing), but still good.
+
+### Course notes on customer acquisition (from the user's class notes, to be refined with research)
+
+- Customer Acquisition (feasible, viable, desirable).
+- AIDA framework (Awareness, Interest, Decision, Action). Diagram: 4 sequential boxes connected by a line passing through checkpoints to a final circular target.
+  - A (Awareness): the customer wants "info" about everything surrounding the product or service.
+  - I (Interest): the customer wants "assurance" (guarantee, cashback or refund, a manual, and so on).
+  - D (Decision): do: gift coupons for the next purchase; don't: make them fill details manually, or add friction with payment.
+- CAC (customer acquisition cost): money spent to convert one customer. Also consider expectations, norms and so on.
