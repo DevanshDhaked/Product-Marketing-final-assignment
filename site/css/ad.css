@@ -45,32 +45,33 @@
 .standee .pr-in { padding: 7cqw 6cqw 5cqw; }
 .standee::after { content: ""; position: absolute; left: -4%; right: -4%; bottom: -10px; height: 10px; border-radius: 0 0 6px 6px; background: var(--border-strong); }
 .ad-fig-standee > figcaption { margin-top: calc(var(--s-3) + 10px); }
-.print .sd-head { margin-top: 6cqw; font-size: 9.6cqw; line-height: 1.06; }
-.print .sd-line { margin-top: 5cqw; font-size: max(11px, 4.4cqw); line-height: 1.4; }
-.standee .pr-cta { margin-top: 5cqw; }
+.print .sd-head { margin-top: 5cqw; font-size: 9.6cqw; line-height: 1.06; }
+.print .sd-line { margin-top: 4cqw; font-size: max(11px, 4.4cqw); line-height: 1.4; }
+.standee .pr-cta { margin-top: 4cqw; }
 .standee .pr-qr { width: 22cqw; }
-.standee .pr-pilot { margin-top: 4cqw; font-size: max(11px, 3.3cqw); }
+.standee .pr-pilot { margin-top: 3cqw; font-size: max(11px, 3.3cqw); }
 
 /* The exhibit sits at the standee's foot at its natural height. The stage's bottom edge cuts the card inside
    the card's own padding (base.css .fx-hero-card margin-bottom), so no control is sliced.
    The prototype card is shown still, with the first answer selected and no satellite; at standee size
    the second step would be cut through its chips, so it stays closed. */
-.print .sd-exhibit { margin-top: auto; padding-top: 6cqw; }
+.print .sd-exhibit { margin-top: auto; padding-top: 5cqw; }
 .print .fx-feedback { padding: 16px 16px 0; }
 .print .fx-feedback .fx-person { padding-right: 16px; }
 .print .fx-feedback .fx-hero-card { margin-bottom: -8px; } /* keeps about 8px of card under the tiles above the cut */
 .print .fx-avatar { flex: none; }
 /* The product frame is sized in px, not container units, so on a phone-width standee it is scaled with the
-   rest of the picture; otherwise the strapline runs past the standee's foot (32px over at 343px wide). */
-@container (max-width: 320px) { .print .sd-exhibit .stage { zoom: 0.84; } }
+   rest of the picture; otherwise the strapline runs past the standee's foot (measured at 343 and 380px wide). */
+@container (max-width: 340px) { .print .sd-exhibit .stage { zoom: 0.84; } }
+@container (max-width: 310px) { .print .sd-exhibit .stage { zoom: 0.76; } }
 .print .exhibit-cap { margin-top: 3cqw; padding-top: 1.5cqw; font-size: max(11px, 3cqw); line-height: 1.35; max-width: none; }
 .print .exhibit-cap .src { font-size: max(11px, 2.6cqw); }
 .print .sd-strap { margin-top: 4cqw; font-family: var(--font-display); font-weight: 500; font-size: 5.2cqw; line-height: 1.2; color: var(--ink); }
 
 /* Handout card, A6 (105 by 148 mm). */
 .a6 { aspect-ratio: 105 / 148; }
-.a6 .pr-in { gap: 5cqw; padding: 8cqw 7cqw; }
-.print .a6-head { margin-top: 1cqw; font-size: 8.6cqw; line-height: 1.08; }
+.a6 .pr-in { gap: 4cqw; padding: 7cqw 6.5cqw; }
+.print .a6-head { margin-top: 1cqw; font-size: 8.2cqw; line-height: 1.08; }
 .a6-line, .a6-body { font-size: max(11px, 4.2cqw); line-height: 1.42; }
 .a6-price { font-size: max(11px, 4.4cqw); font-weight: 700; line-height: 1.35; }
 .a6 .pr-cta { margin-top: auto; }
