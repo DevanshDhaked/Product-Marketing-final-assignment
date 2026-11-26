@@ -60,3 +60,4 @@
 
 .li-next { margin-top: var(--s-6); }
 .li-next-page { margin-top: var(--s-3); }
+.li-next-page .go { margin-top: 0; } /* the walkthrough link above already sets the gap */

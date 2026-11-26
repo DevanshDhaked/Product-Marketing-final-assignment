@@ -158,7 +158,9 @@
 
 /* Hub: "What happens after a firm signs" timeline. When on the left, what on the right; stacked on phones. */
 .after { margin: var(--s-5) 0 0; }
-.after > div { display: grid; grid-template-columns: 11rem 1fr; gap: var(--s-4); padding-block: var(--s-3); border-top: 1px solid var(--border); }
+.after > div { display: grid; grid-template-columns: 13rem 1fr; gap: var(--s-4); padding-block: var(--s-3); border-top: 1px solid var(--border); }
 .after dt { font-size: var(--fs-small); font-weight: 600; color: var(--text-muted); }
 .after dd { margin: 0; }
 @media (max-width: 640px) { .after > div { grid-template-columns: 1fr; gap: var(--s-1); } }
+/* The two sections after the index sit on the index title column (72px number column plus its gap). */
+@media (min-width: 641px) { #price .doc, #after-signing .doc { margin-left: calc(72px + var(--s-5)); } }
