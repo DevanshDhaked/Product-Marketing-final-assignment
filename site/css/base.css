@@ -51,6 +51,8 @@
   --action-hover: light-dark(#00664A, #5CD3AC);
   --on-action: light-dark(#FFFFFF, #171513);
   --link: light-dark(#007652, #34C696);
+  /* Ink (direction A, v3): headings and rules. Same values as --on-positive-soft, an already tested text green. */
+  --ink: light-dark(#005B38, #A4E9CB);
 
   /* Brand green for non-text use: chart lines, focus ring, large shapes. */
   --brand: light-dark(#009163, #34C696);
