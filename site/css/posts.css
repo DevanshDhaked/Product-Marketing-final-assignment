@@ -35,6 +35,21 @@
 .li-frame { margin: 0; }
 .li-media figcaption { margin-top: var(--s-3); }
 
+/* Post images (posts 1 and 3): edge to edge under the text, like a feed image. Sizes are in units of a 540-wide
+   design (--u), so the image scales as one picture and wraps the same at every width. */
+.li-img { margin: var(--s-4) 0 0; background: var(--stage-ground); border-block: 1px solid var(--border); container-type: inline-size; }
+.li-img > * { --u: calc(100cqw / 540); }
+.li-art { display: block; width: 100%; height: auto; font-family: var(--font); }
+
+/* Post 3: the four checks as a card to save. */
+.li-checks { display: flex; flex-direction: column; aspect-ratio: 4 / 5; padding: calc(52 * var(--u)) calc(48 * var(--u)) calc(44 * var(--u)); color: var(--text); }
+.li-checks-title { max-width: 13em; font-family: var(--font-display); font-weight: 500; font-size: calc(42 * var(--u)); line-height: 1.1; letter-spacing: -0.01em; text-wrap: balance; }
+.li-checks ol { margin: calc(36 * var(--u)) 0 0; padding: 0; list-style: none; counter-reset: check; }
+.li-checks li { display: grid; grid-template-columns: calc(44 * var(--u)) 1fr; align-items: baseline; padding-block: calc(16 * var(--u)); border-top: 1px solid var(--border-strong); font-size: calc(22 * var(--u)); font-weight: 500; line-height: 1.36; counter-increment: check; }
+.li-checks li::before { content: counter(check); font-family: var(--font-display); font-weight: 500; font-size: calc(30 * var(--u)); color: var(--ink); }
+.li-checks-foot { display: flex; align-items: center; gap: calc(10 * var(--u)); margin-top: auto; font-size: calc(20 * var(--u)); font-weight: 700; }
+.li-checks-foot .mark { width: calc(30 * var(--u)); height: calc(30 * var(--u)); }
+
 /* Action bar, drawn with Lucide icons. Shown, not working: it is a picture of the feed. */
 .li-bar { display: flex; justify-content: space-around; margin-top: var(--s-3); padding: 2px var(--s-2); border-top: 1px solid var(--border); }
 .li-bar span { display: inline-flex; align-items: center; gap: 6px; padding: 10px 6px; color: var(--text-muted); font-weight: 600; }
