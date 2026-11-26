@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<title>Sphyr link-preview image source (1200 x 630)</title>
+<!-- Source for site/assets/og.png. Render with Playwright at a 1200 x 630 viewport, device scale 1, clip to the canvas. -->
+<link rel="stylesheet" href="../../site/css/base.css">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: var(--bg); }
+  .og { position: relative; width: 1200px; height: 630px; }
+  .copy { position: absolute; left: 80px; top: 0; bottom: 10px; width: 660px; display: flex; flex-direction: column; justify-content: center; }
+  .og .brand { gap: 14px; font-size: 30px; }
+  .og .brand svg { width: 46px; height: 46px; }
+  .og h1 { margin: 36px 0 0; font-size: 70px; line-height: 1.04; letter-spacing: -0.02em; color: var(--text); text-wrap: nowrap; }
+  .og h1 em { color: var(--link); }
+  .sub { margin: 30px 0 0; font-size: 28px; font-weight: 500; color: var(--text-muted); }
+  .sphere { position: absolute; right: 80px; top: 125px; width: 360px; height: 360px; }
+  .rule { position: absolute; left: 0; right: 0; bottom: 0; height: 10px; background: var(--brand); }
+</style>
+</head>
+<body>
+<div class="og">
+  <div class="copy">
+    <span class="brand"><svg class="mark mark--mono" viewBox="0 0 1254 1254" aria-hidden="true"><use href="../../site/assets/sphyr-mark.svg#mark"/></svg>Sphyr</span>
+    <h1>Peer feedback for<br>appraisals<br><em>at consulting firms</em></h1>
+    <p class="sub">For firms of 40 to 400 people in India.</p>
+  </div>
+  <!-- Same recoloured symbol and paper gaps as the home hero (.mark--strands in site/css/motif.css). -->
+  <svg class="sphere mark" viewBox="0 0 1254 1254" aria-hidden="true" style="--rib-gap: var(--bg); --rib-gap-w: 8;"><use href="../../site/assets/sphyr-mark.svg#mark"/></svg>
+  <div class="rule"></div>
+</div>
+</body>
+</html>
