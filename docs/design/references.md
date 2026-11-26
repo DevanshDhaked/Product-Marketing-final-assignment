@@ -48,6 +48,18 @@ sources:
   - resource: "https://www.awwwards.com/sites/creative-reference-library"
   - resource: "https://www.awwwards.com/sites/studio-loum"
   - resource: "https://mercury.com/"
+  - id: rbb
+    resource: "https://www.rbbecon.com/"
+    title: "RBB Economics home page, HTML and CSS read (accessed 2026-11-26)"
+  - id: hafnia
+    resource: "https://www.awwwards.com/sites/hafnia-law"
+    title: "Hafnia Law, Awwwards Honorable Mention, 9 Feb 2024 (accessed 2026-11-26)"
+  - id: barberhauler
+    resource: "https://barberhauler.com/"
+    title: "Barber Hauler Capital Advisers home page, HTML and CSS read (accessed 2026-11-26)"
+  - id: redseer
+    resource: "https://redseer.com/"
+    title: "Redseer Strategy Consultants home page, HTML and CSS read (accessed 2026-11-26)"
 ---
 
 # Design references for the Sphyr site
@@ -130,3 +142,16 @@ How the homepage plan changes:
 [^mecha]: MECHA, Awwwards Site of the Day, 31 Oct 2026 (accessed 2026-11-24)
 [^granola]: Granola home page, viewed at 1280px (accessed 2026-11-24)
 [^stripepress]: Stripe Press home page, viewed at 1280px (accessed 2026-11-24)
+
+## Addendum 2026-11-26 (v3, direction A): consulting and professional-firm references
+
+Replaces the studio and product references above (Two26 Studio, MECHA, Granola, Stripe Press, Bulletproof) for the home page and every page that copies its look. The rows above stay as the record of v2. Source: [consulting visual language](../research/consulting_visual_language.md), sections 3 and 5 (sites read 2026-11-26, HTML and CSS only; layout inferred from code signals). Sample: 4 references, chosen from 12 live sites read plus 3 from Siteinspire Corporate.
+
+| Reference | Where found | Pattern Sphyr takes | Not taken |
+|---|---|---|---|
+| [RBB Economics](https://www.rbbecon.com/) | Siteinspire Corporate | The first line says what the firm is ("Global leaders in competition economics") and little else; warm paper with one deep ink and a serif display. On Sphyr: the hero H1 says what Sphyr is and for whom, on warm paper, headings in `--ink`. | Its videos; its coral second colour |
+| [Hafnia Law](https://www.awwwards.com/sites/hafnia-law) | Awwwards Honorable Mention, 9 Feb 2024 | One deep green on a plain ground, serif headings, short plainly named sections. On Sphyr: one ink green for headings and rules, product green for actions only, plain section headings. | Its open, image-led sections |
+| [Barber Hauler Capital Advisers](https://barberhauler.com/) | Siteinspire Corporate | Proof as named lists, not adjectives (its mandates by client name). On Sphyr: the assurance rows and the pilot terms are lists of plain facts. | The client-name list: Sphyr cannot claim customers; its slider and videos |
+| [Redseer Strategy Consultants](https://redseer.com/) | Indian consulting firm, home page read | Manrope body with a serif display on warm neutrals, one brand colour, the first line says what the firm is, numbers as proof. On Sphyr: the same type pairing (Manrope with Newsreader), and the key-numbers row with a source under each figure. | Its red; the 30-image page |
+
+What changes on the page: the hero is the headline, one short paragraph, one main button with its pilot line and one product exhibit; sections are numbered in plain text; product views are exhibits with a caption and a source line; key numbers carry their sources. Sections stay parted by air and one hairline (the MECHA rule above still holds).

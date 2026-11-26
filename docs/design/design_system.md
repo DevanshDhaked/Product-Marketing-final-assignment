@@ -189,3 +189,21 @@ Replaces the nav and theme toggle descriptions above (the visible "Dark theme" l
 ## 2026-11-25 addendum (site build)
 
 The 3-item nav in the phase 1b addendum is replaced by the four-link nav (How it works, For partners, Pricing, Deliverables, plus the walkthrough button and theme switch; Menu popover below 1000 px). See [site build](site_build.md) and the decision log entry "Top navigation and pricing section".
+
+## Addendum 2026-11-26 (v3, direction A "The partner's brief")
+
+Adds to the system above; nothing above is removed. Pages opt in. Source: [consulting visual language](../research/consulting_visual_language.md) section 5, direction A, and the decision log entry "2026-11-26: v3 plan gate". First used on the home page (`site/index.html`).
+
+Token (in `site/css/base.css`):
+- `--ink: light-dark(#005B38, #A4E9CB);` A deep green for headings (h1, h2) and for rules that structure a page (exhibit caption rule, key-numbers rule, the hairline over the problem lines). Same values as `--on-positive-soft`, an already tested text green, so no new contrast check was run. Product green (`--action`, `--link`) stays on buttons and links only. Ribbon colours stay in the logo only. On home the ink is applied by `site/css/home.css` (`.home h1, .home h2`); other pages adopt it when their builders opt in.
+
+Classes (in `site/css/base.css`, section "Direction A"):
+- `.report`: a 12-column grid. Column 1 holds the section number; children run on columns 2 to 8 (the reading measure). `.span-9` runs columns 2 to 10 (exhibits, row lists), `.span-12` the full width (key numbers, price pair). One column below 760px.
+- `.sec-num`: the section number in plain body-size text, weight 600, in the ink, sitting on the heading's first baseline. Not uppercase, not mono, not a kicker.
+- `.exhibit` with `.exhibit-cap`: a product view as an exhibit. The caption sits below the frame over a 1px ink rule: one sentence-case line, "Exhibit N. Screen name, Role: what it shows.", then `.src` with "Source: Sphyr prototype screen. Sample data, fictional people." `.exhibit` is a size container, so the faux UI compact designs apply inside it.
+- `.keynums`: 3 or 4 figures over an ink rule, figure in Newsreader in the ink, then a label and a source. Only numbers from the product or pricing docs. Four columns, two below 900px; a figure never wraps.
+- `.pilot-line`: the one short pilot term under every main button, small and muted, balanced so no word sits alone on the last line.
+
+Nav (2026-11-26): the nav button is "Book a 20-minute call" and opens the `#call-note` popover; the walkthrough link moves into the page body. Rest of the nav unchanged.
+
+Motion: none on load. The home page no longer loads `css/motif.css` or `js/motif.js`; feedback motion only (160 ms).
