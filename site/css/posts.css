@@ -16,6 +16,10 @@
 .li-logo .mark { width: 36px; height: 36px; }
 .li-logo-sm { width: 32px; height: 32px; border-radius: 50%; }
 .li-logo-sm .mark { width: 22px; height: 22px; }
+.li-person { border-radius: 50%; background: var(--action); color: var(--on-action); border: 0; font-weight: 700; font-size: 1rem; }
+.li-logo-sm.li-person { font-size: .75rem; }
+.li-reshare { display: flex; align-items: center; gap: 6px; padding: var(--s-3) var(--s-4) var(--s-3); margin: 0; border-bottom: 1px solid var(--border); font-size: var(--fs-caption); color: var(--text-muted); }
+.li-reshare .mark { width: 16px; height: 16px; }
 .li-name { font-weight: 700; }
 .li-sub { font-size: 12px; line-height: 1.35; color: var(--text-muted); }
 
