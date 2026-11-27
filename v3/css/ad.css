@@ -34,6 +34,7 @@
 .pr-cta > div { min-width: 0; }
 .pr-cta-line { font-weight: 700; line-height: 1.25; }
 .pr-url { font-size: max(11px, 2.6cqw); line-height: 1.35; color: var(--text-muted); overflow-wrap: anywhere; }
+.pr-scan { font-weight: 700; line-height: 1.25; }
 .pr-cta-line + .pr-url { margin-top: 1.5cqw; }
 .pr-pilot { line-height: 1.4; color: var(--text-muted); text-wrap: pretty; }
 
@@ -48,7 +49,8 @@
 .print .cv-compact.sd-cv { display: block; flex: 1 1 0; min-height: 0; width: 100%; max-width: none; margin-block: 3cqw; }
 .sd-line { font-size: max(11px, 4.1cqw); line-height: 1.38; }
 .standee .pr-cta { margin-top: 4cqw; }
-.standee .pr-qr { width: 22cqw; }
+.standee .pr-qr { width: 32cqw; }
+.standee .pr-scan { font-size: max(12px, 4.6cqw); }
 .print .sd-strap { margin-top: 4cqw; font-family: var(--font-display); font-weight: 500; font-size: 4.8cqw; line-height: 1.2; text-wrap: balance; }
 
 /* Handout card, A6 (105 by 148 mm). Sizes from v3, tuned for its words. */
@@ -59,7 +61,8 @@
 .a6-price { font-size: max(11px, 4.4cqw); font-weight: 700; line-height: 1.35; }
 .a6 .pr-cta { margin-top: auto; }
 .a6-front .pr-cta + .pr-pilot { margin-top: -1cqw; }
-.a6 .pr-qr { width: 22cqw; }
+.a6 .pr-qr { width: 26cqw; }
+.a6 .pr-scan { font-size: max(11px, 5cqw); }
 .a6 .pr-cta-line { font-size: max(11px, 4.6cqw); }
 .a6 .pr-pilot { font-size: max(11px, 3.4cqw); }
 .a6-small { font-size: max(11px, 3.6cqw); line-height: 1.35; color: var(--text-muted); }
