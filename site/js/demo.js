@@ -7,14 +7,15 @@
   var SCALE = 50; // bar length scale shared by both columns, so the bars compare fairly
 
   // Counts match the Member Insights columns in demo.html (collaborators out of a circle of 14).
+  // "others" is that count minus the visitor, who is one of the collaborators.
   var people = {
     tara: {
-      first: "Tara", full: "Tara Menon", initials: "TM", av: "av-amber", others: 10,
+      first: "Tara", full: "Tara Menon", initials: "TM", av: "av-amber", others: 9,
       compare: "Tara's feedback came from 10 of the 14 people in that circle, against 13 for Nikhil. The tags they picked most for Tara were Client handling and Client First.",
       turn: "You picked Tara, and Tara's Member Insights backs what you saw in client meetings. It also shows 13 colleagues who saw Nikhil's work over six cycles, and very little of that work reached you. Partners still decide, now with both views open."
     },
     nikhil: {
-      first: "Nikhil", full: "Nikhil Rao", initials: "NR", av: "av-blue", others: 13,
+      first: "Nikhil", full: "Nikhil Rao", initials: "NR", av: "av-blue", others: 12,
       compare: "Nikhil's feedback came from 13 of the 14 people in that circle, against 10 for Tara. The tags they picked most for Nikhil were Takes Initiative and Solution-oriented.",
       turn: "You picked Nikhil on a hunch, and the hunch now has feedback behind it: 13 colleagues over six cycles, in their own words. Partners still decide, with what the people who saw the work said in front of them."
     }
